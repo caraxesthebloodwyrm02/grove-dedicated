@@ -1,0 +1,26 @@
+{
+  "force": {
+    "questions": [
+      {
+        "text": "Did this explanation help? (yes/no)",
+        "type": "boolean",
+        "next_steps": {
+          "yes": "Proceed to 'expand' step in dialogue_flows.force.",
+          "no": "Retry with another anchor or simplify the explanation."
+        }
+      }
+    ]
+  },
+  "qubit": {
+    "questions": [
+      {
+        "text": "Does the light switch analogy make sense? (yes/no)",
+        "type": "boolean",
+        "next_steps": {
+          "yes": "Proceed to deep-dive (superposition).",
+          "no": "Switch to 'coin_spin' analogy."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,308 @@
+{
+  "$defs": {
+    "ExplainabilityAndGovernance": {
+      "properties": {
+        "methods": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Methods",
+          "type": "array"
+        },
+        "research_mode": {
+          "title": "Research Mode",
+          "type": "boolean"
+        },
+        "user_controls": {
+          "items": {
+            "type": "string"
+          },
+          "title": "User Controls",
+          "type": "array"
+        }
+      },
+      "required": [
+        "methods",
+        "user_controls",
+        "research_mode"
+      ],
+      "title": "ExplainabilityAndGovernance",
+      "type": "object"
+    },
+    "GeographyFocus": {
+      "properties": {
+        "primary_region": {
+          "title": "Primary Region",
+          "type": "string"
+        },
+        "region_market_size_2030": {
+          "title": "Region Market Size 2030",
+          "type": "number"
+        },
+        "region_trends": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Region Trends",
+          "type": "array"
+        }
+      },
+      "required": [
+        "primary_region",
+        "region_market_size_2030",
+        "region_trends"
+      ],
+      "title": "GeographyFocus",
+      "type": "object"
+    },
+    "GoToMarket": {
+      "properties": {
+        "channels": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Channels",
+          "type": "array"
+        },
+        "entry_beachhead": {
+          "title": "Entry Beachhead",
+          "type": "string"
+        },
+        "revenue_streams": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Revenue Streams",
+          "type": "array"
+        }
+      },
+      "required": [
+        "entry_beachhead",
+        "channels",
+        "revenue_streams"
+      ],
+      "title": "GoToMarket",
+      "type": "object"
+    },
+    "MacroTrends": {
+      "properties": {
+        "cagr": {
+          "title": "Cagr",
+          "type": "number"
+        },
+        "global_market_size_2030": {
+          "title": "Global Market Size 2030",
+          "type": "number"
+        },
+        "key_trends": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Key Trends",
+          "type": "array"
+        }
+      },
+      "required": [
+        "global_market_size_2030",
+        "cagr",
+        "key_trends"
+      ],
+      "title": "MacroTrends",
+      "type": "object"
+    },
+    "ProblemSpace": {
+      "properties": {
+        "current_solutions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Current Solutions",
+          "type": "array"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Limitations",
+          "type": "array"
+        },
+        "stakes": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Stakes",
+          "type": "array"
+        }
+      },
+      "required": [
+        "description",
+        "stakes",
+        "current_solutions",
+        "limitations"
+      ],
+      "title": "ProblemSpace",
+      "type": "object"
+    },
+    "ProductNiche": {
+      "properties": {
+        "core_value_prop": {
+          "title": "Core Value Prop",
+          "type": "string"
+        },
+        "differentiation": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Differentiation",
+          "type": "array"
+        },
+        "use_cases": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Use Cases",
+          "type": "array"
+        }
+      },
+      "required": [
+        "core_value_prop",
+        "differentiation",
+        "use_cases"
+      ],
+      "title": "ProductNiche",
+      "type": "object"
+    },
+    "Roadmap": {
+      "properties": {
+        "phase_1": {
+          "title": "Phase 1",
+          "type": "string"
+        },
+        "phase_2": {
+          "title": "Phase 2",
+          "type": "string"
+        },
+        "phase_3": {
+          "title": "Phase 3",
+          "type": "string"
+        }
+      },
+      "required": [
+        "phase_1",
+        "phase_2",
+        "phase_3"
+      ],
+      "title": "Roadmap",
+      "type": "object"
+    },
+    "TargetUsers": {
+      "properties": {
+        "needs": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Needs",
+          "type": "array"
+        },
+        "primary_segments": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Primary Segments",
+          "type": "array"
+        },
+        "trust_barriers": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Trust Barriers",
+          "type": "array"
+        }
+      },
+      "required": [
+        "primary_segments",
+        "needs",
+        "trust_barriers"
+      ],
+      "title": "TargetUsers",
+      "type": "object"
+    },
+    "Valuation": {
+      "properties": {
+        "assumptions": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Assumptions",
+          "type": "array"
+        },
+        "sam": {
+          "title": "Sam",
+          "type": "number"
+        },
+        "som_year3": {
+          "title": "Som Year3",
+          "type": "number"
+        },
+        "tam": {
+          "title": "Tam",
+          "type": "number"
+        }
+      },
+      "required": [
+        "tam",
+        "sam",
+        "som_year3",
+        "assumptions"
+      ],
+      "title": "Valuation",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "explainability_and_governance": {
+      "$ref": "#/$defs/ExplainabilityAndGovernance"
+    },
+    "geography_focus": {
+      "$ref": "#/$defs/GeographyFocus"
+    },
+    "go_to_market": {
+      "$ref": "#/$defs/GoToMarket"
+    },
+    "macro_trends": {
+      "$ref": "#/$defs/MacroTrends"
+    },
+    "problem_space": {
+      "$ref": "#/$defs/ProblemSpace"
+    },
+    "product_niche": {
+      "$ref": "#/$defs/ProductNiche"
+    },
+    "roadmap": {
+      "$ref": "#/$defs/Roadmap"
+    },
+    "target_users": {
+      "$ref": "#/$defs/TargetUsers"
+    },
+    "valuation": {
+      "$ref": "#/$defs/Valuation"
+    }
+  },
+  "required": [
+    "problem_space",
+    "macro_trends",
+    "geography_focus",
+    "target_users",
+    "product_niche",
+    "explainability_and_governance",
+    "valuation",
+    "go_to_market",
+    "roadmap"
+  ],
+  "title": "MarketAnalysis",
+  "type": "object"
+}

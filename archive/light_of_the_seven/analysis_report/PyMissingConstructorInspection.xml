@@ -1,0 +1,50 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFilter.py</file>
+  <line>123</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFilter.py" />
+  <problem_class id="PyMissingConstructorInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missed call to '__init__' of the super class</problem_class>
+  <description>Call to __init__ of super class is missed</description>
+  <highlighted_element>__init__</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFilter.py</file>
+  <line>138</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFilter.py" />
+  <problem_class id="PyMissingConstructorInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missed call to '__init__' of the super class</problem_class>
+  <description>Call to __init__ of super class is missed</description>
+  <highlighted_element>__init__</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFilter.py</file>
+  <line>153</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFilter.py" />
+  <problem_class id="PyMissingConstructorInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missed call to '__init__' of the super class</problem_class>
+  <description>Call to __init__ of super class is missed</description>
+  <highlighted_element>__init__</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py</file>
+  <line>2034</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py" />
+  <problem_class id="PyMissingConstructorInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Missed call to '__init__' of the super class</problem_class>
+  <description>Call to __init__ of super class is missed</description>
+  <highlighted_element>__init__</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>8</length>
+</problem>
+</problems>

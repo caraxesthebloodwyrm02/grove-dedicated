@@ -1,0 +1,50 @@
+{
+  "force": {
+    "abstract": "Mass × Acceleration (Newton's Second Law)",
+    "anchors": {
+      "car_accelerator": {
+        "script": "When you press the gas pedal, your car speeds up. That’s force!",
+        "user_check": "Do you drive a car? (yes/no)"
+      },
+      "pushing_bed": {
+        "script": "If your bed won’t move, you need more force—like pushing harder.",
+        "user_check": "Have you ever moved furniture? (yes/no)"
+      }
+    },
+    "quantum_link": "quantum_force_gps"
+  },
+  "qubit": {
+    "abstract": "Quantum bit in superposition (|0⟩ + |1⟩)",
+    "anchors": {
+      "light_switch": {
+        "script": "A qubit is like a light switch that can be *both* on and off at once!",
+        "user_check": "Do you use light switches? (yes/no)"
+      }
+    },
+    "quantum_link": "superposition_spinning_coin"
+  },
+  "energy": {
+    "abstract": "The capacity to do work (Conserved quantity)",
+    "anchors": {
+      "battery_life": {
+        "script": "Energy is like your phone's battery percentage—it determines how much 'work' the device can do.",
+        "user_check": "Do you monitor your phone battery? (yes/no)"
+      },
+      "hill_climb": {
+        "script": "Cycling up a hill gives you potential energy. Rolling down converts it to kinetic energy.",
+        "user_check": "Have you ever ridden a bike up a hill? (yes/no)"
+      }
+    },
+    "quantum_link": "quantum_energy_levels"
+  },
+  "momentum": {
+    "abstract": "The quantity of motion (p=mv), conserved in isolated systems.",
+    "anchors": {
+      "freight_train": {
+        "script": "A heavy train is hard to stop even at slow speeds because it has huge momentum.",
+        "user_check": "Have you ever seen a train stopping? (yes/no)"
+      }
+    },
+    "quantum_link": "heisenberg_uncertainty"
+  }
+}

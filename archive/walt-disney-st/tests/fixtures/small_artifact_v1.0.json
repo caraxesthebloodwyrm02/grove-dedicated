@@ -1,0 +1,24 @@
+{
+  "artifact_version": "1.0",
+  "modules": [
+    {
+      "path": "example.py",
+      "has_doc": true,
+      "imports": [
+        "import os"
+      ],
+      "total_lines": 15,
+      "functions": [
+        {
+          "name": "hello",
+          "lineno": 5,
+          "args": 0,
+          "has_doc": true,
+          "is_async": false
+        }
+      ],
+      "classes": []
+    }
+  ]
+}
+

@@ -1,0 +1,37 @@
+# =============================================================================
+# Light of the Seven — Code Owners Configuration
+# =============================================================================
+# This file defines the default reviewers for different parts of the codebase.
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Default Owner (all files)
+# -----------------------------------------------------------------------------
+*                               @irfankabir02
+
+# -----------------------------------------------------------------------------
+# Core Package
+# -----------------------------------------------------------------------------
+/src/light_of_the_seven/        @irfankabir02
+/cognitive_layer/               @irfankabir02
+
+# -----------------------------------------------------------------------------
+# Configuration & Infrastructure
+# -----------------------------------------------------------------------------
+/.github/                       @irfankabir02
+/pyproject.toml                 @irfankabir02
+/setup.py                       @irfankabir02
+
+# -----------------------------------------------------------------------------
+# Tests
+# -----------------------------------------------------------------------------
+/tests/                         @irfankabir02
+
+# -----------------------------------------------------------------------------
+# Documentation
+# -----------------------------------------------------------------------------
+/docs/                          @irfankabir02
+README.md                       @irfankabir02
+CHANGELOG.md                    @irfankabir02
+CONTRIBUTING.md                 @irfankabir02

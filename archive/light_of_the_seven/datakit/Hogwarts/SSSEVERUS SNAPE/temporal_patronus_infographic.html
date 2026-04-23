@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporal Patronus Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d1117; /* Dark background for a magical feel */
+        }
+        .magic-card {
+            background-color: #161b22;
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1), 0 0 15px rgba(0, 255, 255, 0.05);
+            border: 1px solid #30363d;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .magic-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 40px rgba(0, 255, 255, 0.2), 0 0 20px rgba(0, 255, 255, 0.1);
+        }
+        .anchor-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+            flex-shrink: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app" class="p-4 sm:p-8">
+        <header class="text-center mb-10">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-[#79d5ff] tracking-tight">
+                The Temporal Patronus
+            </h1>
+            <p class="mt-2 text-lg text-gray-400 max-w-2xl mx-auto">
+                A Visualization of Light Threaded Through Time (Past, Present, and Future Anchors)
+            </p>
+        </header>
+
+        <div id="patronus-grid" class="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-7xl mx-auto">
+            <!-- Content will be rendered here by JavaScript -->
+        </div>
+
+        <section class="max-w-4xl mx-auto mt-12 p-6 magic-card rounded-xl">
+            <h2 class="text-2xl font-semibold text-gray-200 mb-4 border-b border-gray-700 pb-2">
+                Casting Symptoms
+            </h2>
+            <ul id="symptoms-list" class="space-y-3 text-gray-400 list-none pl-0">
+                <!-- Symptoms will be rendered here by JavaScript -->
+            </ul>
+        </section>
+    </div>
+
+    <script>
+        // --- Embed Data from hogwarts_lore.json ---
+        const LORE_DATA = {
+            "patronus_presets": {
+                "snape": {
+                    "caster": "Severus Snape",
+                    "form": "Silver Doe",
+                    "memory": "Love for Lily Evans - transcending time itself",
+                    "temporal_anchors": {
+                        "present": "Severus Snape casts Silver Doe",
+                        "past": "First meeting with Lily",
+                        "future": "Guiding Harry through the Forbidden Forest"
+                    }
+                },
+                "harry": {
+                    "caster": "Harry Potter",
+                    "form": "Stag",
+                    "memory": "Choosing to live beyond the war and build a family after defeating Voldemort",
+                    "temporal_anchors": {
+                        "present": "Harry Potter casts Stag",
+                        "past": "Final duel with Voldemort in the Great Hall",
+                        "future": "Standing with Albus at the edge of time, choosing a different future"
+                    }
+                }
+            },
+            "casting_symptoms": [
+                "Brief temporal displacement sensation (the 'shimmer' effect)",
+                "Memories feeling more vivid than the present moment",
+                "Eyes briefly reflecting events not yet occurred",
+                "Goosebumps and time-dilation perception",
+                "Patronus form revealing future emotional states"
+            ]
+        };
+
+        const patronusGrid = document.getElementById('patronus-grid');
+        const symptomsList = document.getElementById('symptoms-list');
+
+        /**
+         * Generates the SVG icon for a given anchor type.
+         * @param {string} type - 'past', 'present', or 'future'.
+         * @returns {string} HTML string for the SVG icon.
+         */
+        function getAnchorIcon(type) {
+            let svgPath = '';
+            let color = '';
+            switch (type) {
+                case 'past': // Hourglass for time/memory
+                    svgPath = '<path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />';
+                    color = 'text-red-400';
+                    break;
+                case 'present': // Sparkle for the moment of casting
+                    svgPath = '<path stroke-linecap="round" stroke-linejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.122a.5.5 0 00.475.345h5.512a.562.562 0 01.321.988l-4.596 3.444a.5.5 0 00-.192.684l1.79 5.488a.562.562 0 01-.84 1.05l-4.708-3.929a.5.5 0 00-.636 0l-4.71 3.93a.562.562 0 01-.84-1.05l1.79-5.487a.5.5 0 00-.192-.684l-4.596-3.444a.562.562 0 01.321-.988h5.513a.5.5 0 00.474-.345l2.125-5.122z" />';
+                    color = 'text-cyan-400';
+                    break;
+                case 'future': // Scroll/prophecy for guidance
+                    svgPath = '<path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75A.75.75 0 0112.75 7.5v3h3.75a.75.75 0 010 1.5h-3.75v3a.75.75 0 01-1.5 0v-3h-3.75a.75.75 0 010-1.5h3.75v-3A.75.75 0 0112 6.75z" />';
+                    color = 'text-green-400';
+                    break;
+            }
+
+            return `
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="anchor-icon ${color}">
+                    ${svgPath}
+                </svg>
+            `;
+        }
+
+        /**
+         * Renders a single Temporal Patronus card.
+         * @param {Object} data - The patronus data object.
+         * @param {string} key - The key ('snape' or 'harry').
+         */
+        function renderPatronusCard(data, key) {
+            const isSnape = key === 'snape';
+            const primaryColor = isSnape ? 'text-emerald-400' : 'text-yellow-400'; // Slytherin Emerald vs Gryffindor Gold
+
+            const cardHtml = `
+                <div class="magic-card p-6 rounded-xl flex flex-col h-full">
+                    <div class="mb-4 pb-4 border-b border-gray-700">
+                        <h2 class="text-3xl font-bold ${primaryColor}">${data.caster}</h2>
+                        <p class="text-xl text-gray-300">Form: <span class="font-mono text-cyan-400">${data.form}</span></p>
+                    </div>
+
+                    <p class="text-sm italic text-gray-500 mb-4">
+                        Powered by Core Memory:
+                        <span class="text-gray-200 font-medium block mt-1">${data.memory}</span>
+                    </p>
+
+                    <div class="space-y-4 flex-grow">
+                        ${Object.keys(data.temporal_anchors).map(type => {
+                            const anchorText = data.temporal_anchors[type];
+                            // Clean up the text: remove the "Caster casts Form" part from Present anchor
+                            const displayAnchor = type === 'present' 
+                                ? anchorText.replace(`${data.caster} casts ${data.form}`, 'Moment of Casting')
+                                : anchorText;
+                            
+                            return `
+                                <div class="flex items-start p-3 rounded-lg bg-gray-800/50 hover:bg-gray-800 transition">
+                                    <div class="mr-3 pt-1">
+                                        ${getAnchorIcon(type)}
+                                    </div>
+                                    <div>
+                                        <p class="text-xs font-semibold uppercase tracking-wider text-gray-400">${type} Anchor</p>
+                                        <p class="text-base text-gray-100">${displayAnchor}</p>
+                                    </div>
+                                </div>
+                            `;
+                        }).join('')}
+                    </div>
+                </div>
+            `;
+            patronusGrid.innerHTML += cardHtml;
+        }
+
+        /**
+         * Renders the casting symptoms list.
+         * @param {string[]} symptoms - Array of symptom strings.
+         */
+        function renderSymptoms(symptoms) {
+            symptoms.forEach(symptom => {
+                symptomsList.innerHTML += `
+                    <li class="flex items-start">
+                        <!-- Star icon for visual bullet -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 mr-3 mt-1 text-cyan-400 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.381-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        ${symptom}
+                    </li>
+                `;
+            });
+        }
+
+        // --- Main Execution ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const presets = LORE_DATA.patronus_presets;
+            renderPatronusCard(presets.snape, 'snape');
+            renderPatronusCard(presets.harry, 'harry');
+            renderSymptoms(LORE_DATA.casting_symptoms);
+        });
+
+    </script>
+</body>
+</html>

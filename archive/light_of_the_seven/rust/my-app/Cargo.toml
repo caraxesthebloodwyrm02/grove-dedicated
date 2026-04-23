@@ -1,0 +1,11 @@
+[package]
+name = "my-app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+grid-core = { path = "../grid-core" }
+
+[[bin]]
+name = "my-app"
+path = "src/main.rs"

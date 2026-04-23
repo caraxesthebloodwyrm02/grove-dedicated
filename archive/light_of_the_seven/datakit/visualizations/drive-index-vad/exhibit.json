@@ -1,0 +1,112 @@
+{
+  "$schema": "https://grid.local/schemas/exhibit_manifest_schema.json",
+  "exhibit_id": "drive-index-vad",
+  "version": "1.0.0",
+  "title": "Drive Index (V×A×D): Emotional Vector Intelligence",
+  "description": "Research exhibit exploring the V×A×D drive coefficient for affective computing, with real-world applications in driver monitoring, mental health, education, chatbots, and robotics.",
+  "icon": "🎛️",
+  "canon_policy": {
+    "level": "moderate",
+    "description": "Curated research with academic citations and real-world validation",
+    "sources_required": true,
+    "allow_speculation": false,
+    "citation_format": "markdown_footnotes"
+  },
+  "paths": {
+    "root": "light_of_the_seven/full_datakit/visualizations/drive-index-vad",
+    "canon_docs": [
+      {
+        "path": "docs/",
+        "label": "Documentation",
+        "description": "Canon research and implementation details"
+      }
+    ],
+    "tools": [
+      {
+        "path": "tools/",
+        "label": "Tooling",
+        "description": "Non-canon utilities and demos"
+      }
+    ],
+    "tests": [
+      {
+        "path": "tests/",
+        "framework": "pytest"
+      }
+    ]
+  },
+  "entrypoints": {
+    "cli": [
+      {
+        "command": "python -m pytest tests/test_drive_integration.py -v",
+        "description": "Run drive integration tests"
+      },
+      {
+        "command": "python workspace/dials_and_knobs.py",
+        "description": "Demo dials & knobs snapshot system"
+      }
+    ],
+    "api": [],
+    "launcher": {
+      "script": "workspace/drive_interface_demo.html",
+      "demo_mode": true,
+      "requires": ["modern web browser"]
+    }
+  },
+  "sensory_integration": {
+    "sound_layer": {
+      "enabled": false,
+      "mappings": []
+    },
+    "vision_layer": {
+      "enabled": true,
+      "graph_type": "directed",
+      "node_mappings": [
+        {
+          "node_type": "valence",
+          "color": "#00d4ff",
+          "label": "Polarity (-1 to +1)"
+        },
+        {
+          "node_type": "arousal",
+          "color": "#ff6b6b",
+          "label": "Arousal (0 to 1)"
+        },
+        {
+          "node_type": "dominance",
+          "color": "#7b2cbf",
+          "label": "Dominance (0 to 1)"
+        },
+        {
+          "node_type": "drive",
+          "color": "#4CAF50",
+          "label": "Drive Coefficient"
+        }
+      ],
+      "edge_mappings": [
+        {
+          "relationship": "multiplies",
+          "color": "#9E9E9E",
+          "style": "solid"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "created": "2025-12-18",
+    "updated": "2025-12-18",
+    "maintainers": ["GRID Research Team"],
+    "tags": [
+      "affective-computing",
+      "emotional-intelligence",
+      "VAD-model",
+      "drive-coefficient",
+      "pipeline-gating",
+      "real-world-applications"
+    ],
+    "status": "production",
+    "related_exhibits": [
+      "grep-eq-spectrum"
+    ]
+  }
+}

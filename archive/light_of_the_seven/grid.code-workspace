@@ -1,0 +1,111 @@
+{
+	"folders": [
+		{
+			"path": ".",
+			"name": "Workspace Root"
+		},
+		{
+			"path": "grid",
+			"name": "GRID Core"
+		},
+		{
+			"path": "light_of_the_seven",
+			"name": "Light of the Seven"
+		},
+		{
+			"path": "tools/rag",
+			"name": "RAG Engine"
+		},
+		{
+			"path": "application",
+			"name": "Application"
+		},
+		{
+			"path": "tests",
+			"name": "Tests"
+		},
+		{
+			"path": "docs",
+			"name": "Docs"
+		},
+		{
+			"path": "scripts",
+			"name": "Scripts"
+		}
+	],
+	"settings": {
+		"workbench.colorTheme": "Default Dark+",
+		"editor.fontFamily": "'Fira Code', 'Cascadia Mono', 'JetBrains Mono', Consolas, monospace",
+		"editor.fontSize": 16,
+		"editor.lineHeight": 1.6,
+		"editor.cursorBlinking": "smooth",
+		"editor.cursorStyle": "line",
+		"editor.cursorWidth": 3,
+		"editor.renderLineHighlight": "all",
+		"editor.minimap.enabled": true,
+		"editor.minimap.renderCharacters": false,
+		"workbench.startupEditor": "readme",
+		"workbench.colorCustomizations": {
+			"editor.lineHighlightBackground": "#3a3d5c40",
+			"activityBar.background": "#1e2330",
+			"sideBar.background": "#181a25",
+			"editorCursor.foreground": "#7aa2f7",
+			"editor.selectionBackground": "#3d59a160",
+			"statusBar.background": "#292e42",
+			"statusBar.foreground": "#a9b1d6"
+		},
+		"apc.activityBar": {
+			"position": "bottom",
+			"itemSize": 28,
+			"size": 32
+		},
+		"window.commandCenter": true,
+		"editor.accessibilitySupport": "on"
+	},
+	"tasks": {
+		"version": "2.0.0",
+		"tasks": [
+			{
+				"label": "Run Tests (Pytest)",
+				"type": "shell",
+				"command": "pytest",
+				"group": {
+					"kind": "test",
+					"isDefault": true
+				},
+				"presentation": {
+					"reveal": "always",
+					"panel": "shared"
+				}
+			},
+			{
+				"label": "Query RAG",
+				"type": "shell",
+				"command": "python tools/rag/rag_engine.py --query",
+				"problemMatcher": [],
+				"presentation": {
+					"reveal": "always",
+					"panel": "shared"
+				}
+			},
+			{
+				"label": "Validate Context",
+				"type": "shell",
+				"command": "python scripts/validate_ide_context.py",
+				"problemMatcher": [],
+				"presentation": {
+					"reveal": "always",
+					"panel": "shared"
+				}
+			}
+		]
+	},
+	"extensions": {
+		"recommendations": [
+			"ms-python.python",
+			"ms-toolsai.jupyter",
+			"tamasfe.even-better-toml",
+			"yzhang.markdown-all-in-one"
+		]
+	}
+}

@@ -1,0 +1,878 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py</file>
+  <line>114</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'r' might be referenced before assignment</description>
+  <highlighted_element>r</highlighted_element>
+  <language>Python</language>
+  <offset>35</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py</file>
+  <line>114</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'g' might be referenced before assignment</description>
+  <highlighted_element>g</highlighted_element>
+  <language>Python</language>
+  <offset>38</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py</file>
+  <line>114</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'b' might be referenced before assignment</description>
+  <highlighted_element>b</highlighted_element>
+  <language>Python</language>
+  <offset>41</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py</file>
+  <line>169</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'r' might be referenced before assignment</description>
+  <highlighted_element>r</highlighted_element>
+  <language>Python</language>
+  <offset>31</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py</file>
+  <line>169</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'g' might be referenced before assignment</description>
+  <highlighted_element>g</highlighted_element>
+  <language>Python</language>
+  <offset>34</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py</file>
+  <line>169</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'b' might be referenced before assignment</description>
+  <highlighted_element>b</highlighted_element>
+  <language>Python</language>
+  <offset>37</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py</file>
+  <line>239</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'r' might be referenced before assignment</description>
+  <highlighted_element>r</highlighted_element>
+  <language>Python</language>
+  <offset>31</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py</file>
+  <line>239</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'g' might be referenced before assignment</description>
+  <highlighted_element>g</highlighted_element>
+  <language>Python</language>
+  <offset>34</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py</file>
+  <line>239</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'b' might be referenced before assignment</description>
+  <highlighted_element>b</highlighted_element>
+  <language>Python</language>
+  <offset>37</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py</file>
+  <line>285</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'encoding' might be referenced before assignment</description>
+  <highlighted_element>encoding</highlighted_element>
+  <language>Python</language>
+  <offset>33</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py</file>
+  <line>285</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/BlpImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'alpha_encoding' might be referenced before assignment</description>
+  <highlighted_element>alpha_encoding</highlighted_element>
+  <language>Python</language>
+  <offset>50</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/DdsImagePlugin.py</file>
+  <line>480</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/DdsImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'offset' might be referenced before assignment</description>
+  <highlighted_element>offset</highlighted_element>
+  <language>Python</language>
+  <offset>48</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/DdsImagePlugin.py</file>
+  <line>612</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/DdsImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'dxgi_format' might be referenced before assignment</description>
+  <highlighted_element>dxgi_format</highlighted_element>
+  <language>Python</language>
+  <offset>31</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/FitsImagePlugin.py</file>
+  <line>69</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/FitsImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'offset' might be referenced before assignment</description>
+  <highlighted_element>offset</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/FitsImagePlugin.py</file>
+  <line>70</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/FitsImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'args' might be referenced before assignment</description>
+  <highlighted_element>args</highlighted_element>
+  <language>Python</language>
+  <offset>79</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py</file>
+  <line>420</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'x0' might be referenced before assignment</description>
+  <highlighted_element>x0</highlighted_element>
+  <language>Python</language>
+  <offset>21</offset>
+  <length>2</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py</file>
+  <line>420</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'y0' might be referenced before assignment</description>
+  <highlighted_element>y0</highlighted_element>
+  <language>Python</language>
+  <offset>25</offset>
+  <length>2</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py</file>
+  <line>420</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'x1' might be referenced before assignment</description>
+  <highlighted_element>x1</highlighted_element>
+  <language>Python</language>
+  <offset>29</offset>
+  <length>2</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py</file>
+  <line>420</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'y1' might be referenced before assignment</description>
+  <highlighted_element>y1</highlighted_element>
+  <language>Python</language>
+  <offset>33</offset>
+  <length>2</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py</file>
+  <line>422</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'bits' might be referenced before assignment</description>
+  <highlighted_element>bits</highlighted_element>
+  <language>Python</language>
+  <offset>21</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py</file>
+  <line>869</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'color_table_size' might be referenced before assignment</description>
+  <highlighted_element>color_table_size</highlighted_element>
+  <language>Python</language>
+  <offset>31</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py</file>
+  <line>870</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'palette_bytes' might be referenced before assignment</description>
+  <highlighted_element>palette_bytes</highlighted_element>
+  <language>Python</language>
+  <offset>37</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/IcoImagePlugin.py</file>
+  <line>76</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/IcoImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'provided_im' might be referenced before assignment</description>
+  <highlighted_element>provided_im</highlighted_element>
+  <language>Python</language>
+  <offset>20</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/IcoImagePlugin.py</file>
+  <line>98</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/IcoImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'size' might be referenced before assignment</description>
+  <highlighted_element>size</highlighted_element>
+  <language>Python</language>
+  <offset>42</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py</file>
+  <line>2086</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'alpha' might be referenced before assignment</description>
+  <highlighted_element>alpha</highlighted_element>
+  <language>Python</language>
+  <offset>36</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py</file>
+  <line>3291</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'typemode' might be referenced before assignment</description>
+  <highlighted_element>typemode</highlighted_element>
+  <language>Python</language>
+  <offset>19</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py</file>
+  <line>3291</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'color_modes' might be referenced before assignment</description>
+  <highlighted_element>color_modes</highlighted_element>
+  <language>Python</language>
+  <offset>44</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py</file>
+  <line>3295</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'typemode' might be referenced before assignment</description>
+  <highlighted_element>typemode</highlighted_element>
+  <language>Python</language>
+  <offset>15</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py</file>
+  <line>3316</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'rawmode' might be referenced before assignment</description>
+  <highlighted_element>rawmode</highlighted_element>
+  <language>Python</language>
+  <offset>46</offset>
+  <length>7</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFile.py</file>
+  <line>236</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFile.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'thumbnail_offset' might be referenced before assignment</description>
+  <highlighted_element>thumbnail_offset</highlighted_element>
+  <language>Python</language>
+  <offset>19</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageGrab.py</file>
+  <line>54</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageGrab.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'right' might be referenced before assignment</description>
+  <highlighted_element>right</highlighted_element>
+  <language>Python</language>
+  <offset>40</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageGrab.py</file>
+  <line>54</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageGrab.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'left' might be referenced before assignment</description>
+  <highlighted_element>left</highlighted_element>
+  <language>Python</language>
+  <offset>48</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageGrab.py</file>
+  <line>54</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageGrab.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'bottom' might be referenced before assignment</description>
+  <highlighted_element>bottom</highlighted_element>
+  <language>Python</language>
+  <offset>54</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageGrab.py</file>
+  <line>54</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageGrab.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'top' might be referenced before assignment</description>
+  <highlighted_element>top</highlighted_element>
+  <language>Python</language>
+  <offset>63</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py</file>
+  <line>41</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'left' might be referenced before assignment</description>
+  <highlighted_element>left</highlighted_element>
+  <language>Python</language>
+  <offset>11</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py</file>
+  <line>41</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'top' might be referenced before assignment</description>
+  <highlighted_element>top</highlighted_element>
+  <language>Python</language>
+  <offset>17</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py</file>
+  <line>41</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'right' might be referenced before assignment</description>
+  <highlighted_element>right</highlighted_element>
+  <language>Python</language>
+  <offset>22</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py</file>
+  <line>41</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'bottom' might be referenced before assignment</description>
+  <highlighted_element>bottom</highlighted_element>
+  <language>Python</language>
+  <offset>29</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py</file>
+  <line>150</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'hi' might be referenced before assignment</description>
+  <highlighted_element>hi</highlighted_element>
+  <language>Python</language>
+  <offset>11</offset>
+  <length>2</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py</file>
+  <line>150</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'lo' might be referenced before assignment</description>
+  <highlighted_element>lo</highlighted_element>
+  <language>Python</language>
+  <offset>17</offset>
+  <length>2</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py</file>
+  <line>510</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'mode' might be referenced before assignment</description>
+  <highlighted_element>mode</highlighted_element>
+  <language>Python</language>
+  <offset>40</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py</file>
+  <line>717</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageOps.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'transposed_image' might be referenced before assignment</description>
+  <highlighted_element>transposed_image</highlighted_element>
+  <language>Python</language>
+  <offset>44</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageStat.py</file>
+  <line>138</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageStat.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'j' might be referenced before assignment</description>
+  <highlighted_element>j</highlighted_element>
+  <language>Python</language>
+  <offset>21</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PalmImagePlugin.py</file>
+  <line>196</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PalmImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'colors' might be referenced before assignment</description>
+  <highlighted_element>colors</highlighted_element>
+  <language>Python</language>
+  <offset>22</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PalmImagePlugin.py</file>
+  <line>199</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PalmImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'colormap' might be referenced before assignment</description>
+  <highlighted_element>colormap</highlighted_element>
+  <language>Python</language>
+  <offset>21</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfParser.py</file>
+  <line>290</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfParser.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'offset' might be referenced before assignment</description>
+  <highlighted_element>offset</highlighted_element>
+  <language>Python</language>
+  <offset>16</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py</file>
+  <line>838</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'frame' might be referenced before assignment</description>
+  <highlighted_element>frame</highlighted_element>
+  <language>Python</language>
+  <offset>26</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py</file>
+  <line>1429</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'colors' might be referenced before assignment</description>
+  <highlighted_element>colors</highlighted_element>
+  <language>Python</language>
+  <offset>30</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py</file>
+  <line>1494</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'default_image' might be referenced before assignment</description>
+  <highlighted_element>default_image</highlighted_element>
+  <language>Python</language>
+  <offset>42</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py</file>
+  <line>1494</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'append_images' might be referenced before assignment</description>
+  <highlighted_element>append_images</highlighted_element>
+  <language>Python</language>
+  <offset>57</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/QoiImagePlugin.py</file>
+  <line>107</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/QoiImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'value' might be referenced before assignment</description>
+  <highlighted_element>value</highlighted_element>
+  <language>Python</language>
+  <offset>41</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TgaImagePlugin.py</file>
+  <line>235</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TgaImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'palette' might be referenced before assignment</description>
+  <highlighted_element>palette</highlighted_element>
+  <language>Python</language>
+  <offset>17</offset>
+  <length>7</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py</file>
+  <line>2256</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'offset' might be referenced before assignment</description>
+  <highlighted_element>offset</highlighted_element>
+  <language>Python</language>
+  <offset>32</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/asyncquery.py</file>
+  <line>589</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/asyncquery.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'parsed' might be referenced before assignment</description>
+  <highlighted_element>parsed</highlighted_element>
+  <language>Python</language>
+  <offset>19</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/asyncquery.py</file>
+  <line>822</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/asyncquery.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'the_connection' might be referenced before assignment</description>
+  <highlighted_element>the_connection</highlighted_element>
+  <language>Python</language>
+  <offset>27</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/asyncquery.py</file>
+  <line>873</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/asyncquery.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'udp_sock' might be referenced before assignment</description>
+  <highlighted_element>udp_sock</highlighted_element>
+  <language>Python</language>
+  <offset>35</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/asyncquery.py</file>
+  <line>875</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/asyncquery.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'tcp_sock' might be referenced before assignment</description>
+  <highlighted_element>tcp_sock</highlighted_element>
+  <language>Python</language>
+  <offset>44</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/message.py</file>
+  <line>1262</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/message.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'rd' might be referenced before assignment</description>
+  <highlighted_element>rd</highlighted_element>
+  <language>Python</language>
+  <offset>34</offset>
+  <length>2</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/query.py</file>
+  <line>542</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/query.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'parsed' might be referenced before assignment</description>
+  <highlighted_element>parsed</highlighted_element>
+  <language>Python</language>
+  <offset>19</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/query.py</file>
+  <line>715</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/query.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'the_manager' might be referenced before assignment</description>
+  <highlighted_element>the_manager</highlighted_element>
+  <language>Python</language>
+  <offset>29</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/query.py</file>
+  <line>1260</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/query.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'destination' might be referenced before assignment</description>
+  <highlighted_element>destination</highlighted_element>
+  <language>Python</language>
+  <offset>24</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/query.py</file>
+  <line>1509</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/query.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'the_manager' might be referenced before assignment</description>
+  <highlighted_element>the_manager</highlighted_element>
+  <language>Python</language>
+  <offset>29</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/query.py</file>
+  <line>1513</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/query.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'the_connection' might be referenced before assignment</description>
+  <highlighted_element>the_connection</highlighted_element>
+  <language>Python</language>
+  <offset>13</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/rdtypes/util.py</file>
+  <line>250</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/rdtypes/util.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'weight' might be referenced before assignment</description>
+  <highlighted_element>weight</highlighted_element>
+  <language>Python</language>
+  <offset>21</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/rdtypes/util.py</file>
+  <line>252</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/rdtypes/util.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'rdata' might be referenced before assignment</description>
+  <highlighted_element>rdata</highlighted_element>
+  <language>Python</language>
+  <offset>27</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/rdtypes/util.py</file>
+  <line>253</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/rdtypes/util.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'n' might be referenced before assignment</description>
+  <highlighted_element>n</highlighted_element>
+  <language>Python</language>
+  <offset>23</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>631</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'hang' might be referenced before assignment</description>
+  <highlighted_element>hang</highlighted_element>
+  <language>Python</language>
+  <offset>34</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>651</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'hanging_indent' might be referenced before assignment</description>
+  <highlighted_element>hanging_indent</highlighted_element>
+  <language>Python</language>
+  <offset>17</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>741</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'line' might be referenced before assignment</description>
+  <highlighted_element>line</highlighted_element>
+  <language>Python</language>
+  <offset>37</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>742</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Local variable 'start' might be referenced before assignment</description>
+  <highlighted_element>start</highlighted_element>
+  <language>Python</language>
+  <offset>15</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/six.py</file>
+  <line>680</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/six.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Name 'unichr' can be undefined</description>
+  <highlighted_element>unichr</highlighted_element>
+  <language>Python</language>
+  <offset>13</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/six.py</file>
+  <line>827</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/six.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Name 'reraise' can be undefined</description>
+  <highlighted_element>reraise</highlighted_element>
+  <language>Python</language>
+  <offset>9</offset>
+  <length>7</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>999</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyUnboundLocalVariableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unbound local variables</problem_class>
+  <description>Name 'SingletonMeta' can be undefined</description>
+  <highlighted_element>SingletonMeta</highlighted_element>
+  <language>Python</language>
+  <offset>34</offset>
+  <length>13</length>
+</problem>
+</problems>

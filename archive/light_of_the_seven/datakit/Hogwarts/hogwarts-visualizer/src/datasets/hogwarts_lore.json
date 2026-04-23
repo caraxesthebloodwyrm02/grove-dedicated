@@ -1,0 +1,98 @@
+{
+  "metadata": {
+    "description": "Structured data for Hogwarts Temporal Patronus presets and lore.",
+    "source": "full_datakit/core/hogwarts_toolkit.py",
+    "version": "2.0.0"
+  },
+  "patronus_presets": {
+    "snape": {
+      "caster": "Severus Snape",
+      "form": "Silver Doe",
+      "memory": "Love for Lily Evans - transcending time itself",
+      "house": "Slytherin",
+      "temporal_anchors": {
+        "present": "Severus Snape casts Silver Doe",
+        "past": "First meeting with Lily",
+        "future": "Guiding Harry through the Forbidden Forest"
+      },
+      "lore_reference": "SSSEVERUS SNAPE/snape_chapter_2.md"
+    },
+    "harry": {
+      "caster": "Harry Potter",
+      "form": "Stag",
+      "memory": "Choosing to live beyond the war and build a family after defeating Voldemort",
+      "house": "Gryffindor",
+      "temporal_anchors": {
+        "present": "Harry Potter casts Stag",
+        "past": "Final duel with Voldemort in the Great Hall",
+        "future": "Standing with Albus at the edge of time, choosing a different future"
+      },
+      "lore_reference": "HOGWARTS.md"
+    },
+    "luna": {
+      "caster": "Luna Lovegood",
+      "form": "Hare",
+      "memory": "Believing in what others cannot see - Thestrals, Nargles, and friendship",
+      "house": "Ravenclaw",
+      "temporal_anchors": {
+        "present": "Luna Lovegood casts Hare",
+        "past": "First seeing Thestrals after her mother's death",
+        "future": "Publishing The Quibbler's truth for generations to come"
+      },
+      "lore_reference": "Founders/Ravenclaw/README.md"
+    },
+    "dumbledore": {
+      "caster": "Albus Dumbledore",
+      "form": "Phoenix",
+      "memory": "The belief that love is the most powerful magic of all",
+      "house": "Gryffindor",
+      "temporal_anchors": {
+        "present": "Albus Dumbledore casts Phoenix",
+        "past": "Defeating Grindelwald at Nurmengard",
+        "future": "Guiding Harry at King's Cross between life and death"
+      },
+      "lore_reference": "Founders/Gryffindor/README.md"
+    },
+    "hermione": {
+      "caster": "Hermione Granger",
+      "form": "Otter",
+      "memory": "The moment she realized knowledge could save her friends",
+      "house": "Gryffindor",
+      "temporal_anchors": {
+        "present": "Hermione Granger casts Otter",
+        "past": "Solving the logic puzzle to protect the Philosopher's Stone",
+        "future": "Reforming magical law as Minister for Magic"
+      },
+      "lore_reference": "Founders/Gryffindor/README.md"
+    }
+  },
+  "casting_symptoms": [
+    "Brief temporal displacement sensation (the 'shimmer' effect)",
+    "Memories feeling more vivid than the present moment",
+    "Eyes briefly reflecting events not yet occurred",
+    "Goosebumps and time-dilation perception",
+    "Patronus form revealing future emotional states"
+  ],
+  "houses": {
+    "gryffindor": {
+      "colors": ["#AE0001", "#EEBA30"],
+      "element": "Fire",
+      "traits": ["Courage", "Bravery", "Chivalry", "Daring"]
+    },
+    "slytherin": {
+      "colors": ["#1A472A", "#AAAAAA"],
+      "element": "Water",
+      "traits": ["Ambition", "Cunning", "Leadership", "Resourcefulness"]
+    },
+    "ravenclaw": {
+      "colors": ["#0E1A40", "#946B2D"],
+      "element": "Air",
+      "traits": ["Intelligence", "Wisdom", "Creativity", "Individuality"]
+    },
+    "hufflepuff": {
+      "colors": ["#ECB939", "#372E29"],
+      "element": "Earth",
+      "traits": ["Dedication", "Patience", "Loyalty", "Fair play"]
+    }
+  }
+}

@@ -1,0 +1,176 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Programming and Cognitive Architecture Concept Mappings",
+  "description": "Maps abstract programming and cognitive concepts to relatable anchors and analogies.",
+  "type": "object",
+  "properties": {
+    "compiler_front_end": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "Formal definition of the concept."
+        },
+        "anchors": {
+          "type": "object",
+          "description": "Relatable examples or analogies for the concept.",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string",
+                "description": "Explanation using this anchor."
+              },
+              "user_check": {
+                "type": "string",
+                "description": "Question to verify if the user relates to this anchor."
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "programming_link": {
+          "type": "string",
+          "description": "Key in programming_links.json for deep-dive connections."
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    },
+    "parser": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string"
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              },
+              "user_check": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "programming_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    },
+    "mental_model": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string"
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              },
+              "user_check": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "programming_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    },
+    "computational_cost": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "Resources (Time/Memory) required to execute a process (Software Energy)."
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              },
+              "user_check": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "programming_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    },
+    "development_velocity": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "The rate and direction of progress in a codebase (Software Momentum)."
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              },
+              "user_check": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "programming_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,112 @@
+scene:
+  id: rust_afterhours_construction
+  intent:
+    primary: exploration
+    secondary: quiet_discovery
+    constraints:
+      - no_crowd
+      - low_noise
+      - after_hours
+      - minimalism
+
+  narrative_mode:
+    pacing: slow
+    sound_profile:
+      ambient_db: low
+      sources:
+        - distant_wind
+        - soft_metal_creak
+        - cart_wheels_on_rail
+        - lantern_flicker
+      prohibited:
+        - voices
+        - machinery_running
+        - alarms
+
+  environment:
+    type: construction_site
+    time: night
+    lighting:
+      global: moonlight_diffuse
+      local:
+        - lantern_warm
+        - isolated_work_lights_sparse
+    visibility: partial
+    atmosphere:
+      dust: settled
+      air: cool
+      motion: minimal
+
+  structures:
+    scaffolding:
+      density: sparse
+      state: paused
+    cranes:
+      count: 2
+      motion: none
+      lights: idle
+    barrels:
+      placement: irregular
+      purpose: boundary_markers
+
+  symbol:
+    rust_core:
+      form: gear
+      state: incomplete
+      illumination: internal_glow_low
+      meaning:
+        - safety
+        - ownership
+        - construction_in_progress
+
+  traversal:
+    vehicle: cart
+    rails:
+      condition: stable
+      curvature: gentle
+    speed: walking_pace
+    interaction:
+      allowed:
+        - look
+        - listen
+        - observe
+      disallowed:
+        - modify
+        - build
+        - activate
+
+  agent:
+    archetype: curious_apprentice
+    tone: hesitant_but_engaged
+    reference: morty_like
+    posture: seated
+    focus: forward
+    tools:
+      - lantern
+    backpack:
+      contents: unknown
+      weight: light
+
+  aesthetics:
+    style: minimalistic
+    palette:
+      primary:
+        - rust_orange_muted
+        - charcoal_gray
+        - midnight_blue
+      accents:
+        - warm_amber
+    texture_density: low
+    composition:
+      center_weighted: true
+      negative_space: high
+
+  metadata:
+    abstraction_level: symbolic
+    audience: technical_explorer
+    reuse:
+      safe_for:
+        - prompt_generation
+        - scene_graphs
+        - game_level_blockout
+        - concept_art_pipelines

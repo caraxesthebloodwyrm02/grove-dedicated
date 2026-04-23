@@ -1,0 +1,14 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py</file>
+  <line>2292</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py" />
+  <problem_class id="PyMethodFirstArgAssignmentInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">First argument of the method is reassigned</problem_class>
+  <description>Method's parameter 'self' reassigned</description>
+  <highlighted_element>self</highlighted_element>
+  <language>Python</language>
+  <offset>16</offset>
+  <length>4</length>
+</problem>
+</problems>

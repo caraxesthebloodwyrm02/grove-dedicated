@@ -1,0 +1,163 @@
+{
+  "why_product_exists": {
+    "summary": "Real-world high-stakes decisions (career, finance, projects, research) mirror structured tasks with inputs, steps, and verification, but people lack an indexed, testable, explainable decision framework. The product exists to turn messy decisions into explicit, test-like pipelines with clear recommendations and documentation.",
+    "drivers": [
+      "Need to define structured decision tasks with inputs, context, goals",
+      "Need clear steps and expected outcomes, like test plans",
+      "Lack of a personal DOCUMENTATION_INDEX-style overview of options",
+      "Lack of quick 'fix guides' for common decision situations",
+      "No easy way to run decision 'what-if' scenarios and verify a plan"
+    ],
+    "intended_effects": [
+      "Structure decisions as explicit tasks",
+      "Run what-if scenarios like tests",
+      "Provide explainable recommendations with documentation by default"
+    ]
+  },
+  "who_it_serves": {
+    "primary_users": [
+      "Developers",
+      "Analysts",
+      "Researchers",
+      "Founders",
+      "Advanced students"
+    ],
+    "secondary_users": [
+      "Families planning savings or education",
+      "Early-career professionals choosing skills and projects",
+      "Small teams planning roadmaps and priorities"
+    ],
+    "value_proposition": "Turns structured documentation and checklists into guided, interactive decision flows that non-technical users can follow without reading raw markdown."
+  },
+  "what_gap_it_fills": {
+    "current_alternatives": [
+      "Unstructured AI assistants where users chat and hope outputs are correct",
+      "Rigid, single-purpose tools with hard-coded flows (e.g. narrow finance or planning apps)"
+    ],
+    "missing_capabilities": [
+      "Treating decisions like test plans with steps, expected results, and verification commands",
+      "Providing a navigation hub (DOCUMENTATION_INDEX pattern) for a person’s own decision space",
+      "Maintaining traceable notes and logs similar to artifacts and test documentation"
+    ],
+    "solution": {
+      "core_ideas": [
+        "Model decisions as structured tasks (JUNG_SUBTLE_CUE_ANALYSIS_TASK-style)",
+        "Offer quick guides that say 'if you want X, start here / do this next'",
+        "Log outcomes for audit, learning, and research over time"
+      ]
+    }
+  },
+  "why_bangladesh_is_launchpad": {
+    "environment": [
+      "Fast-growing tech and startup ecosystem suitable for controlled pilots and rapid iteration",
+      "Government initiatives such as Smart Bangladesh 2041 focused on digital services and research",
+      "Developer and data-science culture that values structured guides, success criteria, and automation"
+    ],
+    "fit_with_product": [
+      "Early adopters understand CI-style pipelines and documentation patterns",
+      "Bangladesh can showcase a rigorous, research-driven AI product built and validated locally",
+      "The ecosystem allows phased rollouts similar to test categories and documentation phases"
+    ]
+  },
+  "monetization": {
+    "consumer_subscriptions": {
+      "free_tier": [
+        "Basic decision templates",
+        "Simple quick-fix flows with 1–2 step recommendations"
+      ],
+      "paid_tier": [
+        "Deeper multi-step scenario exploration and what-if tools",
+        "Save and replay decision runs",
+        "Domain packs (finance, career, research planning, project planning)",
+        "Exportable decision documentation similar to TEST_STATUS_AND_FIXES reports"
+      ]
+    },
+    "b2b_and_government": {
+      "offerings": [
+        "White-labeled structured decision pipelines for banks, universities, and ministries",
+        "Custom templates aligned with organizational policies and regulations",
+        "Governance, audit, and oversight features",
+        "Integration with institutional data sources"
+      ],
+      "pricing_basis": [
+        "Customization projects",
+        "Per-seat or per-usage enterprise licenses",
+        "Managed hosting and support"
+      ]
+    },
+    "evaluation_and_tooling": {
+      "products": [
+        "Decision engine test suite analogous to the project’s test documentation",
+        "Hosted evaluation services for third-party AI advisors",
+        "Dashboards and reports from aggregated, anonymized decision telemetry"
+      ],
+      "customers": [
+        "AI product teams",
+        "Regulated institutions",
+        "Researchers and auditors"
+      ]
+    }
+  },
+  "scaling_globally": {
+    "language_and_region_plugins": [
+      "Core decision logic remains constant while data, regulations, and language packs are swapped per region",
+      "Region-specific constraints and datasets are configured rather than hard-coded"
+    ],
+    "domain_modules": [
+      "Each domain is a bundle of templates, scenarios, and recommended flows",
+      "New domains can be added similarly to adding new documentation categories and test suites"
+    ],
+    "trust_and_documentation": [
+      "Ship explainability and evaluation documentation with the product",
+      "Publish decision-quality evaluation reports analogous to TEST_STATUS_AND_FIXES",
+      "Provide transparent views for regulators and enterprises into how decisions are computed"
+    ]
+  },
+  "roadmap": {
+    "months_0_3": {
+      "label": "Quick Fix Guide phase",
+      "goals": [
+        "Implement a minimal web or mobile UI",
+        "Create 1–2 decision templates (e.g. job choice, savings for goal X)",
+        "Add simple navigation such as 'start here if you want…'",
+        "Log each decision as a structured artifact (similar to market_analysis JSON)",
+        "Draft a small DOCUMENTATION_INDEX-style guide for decisions"
+      ],
+      "success_criteria": [
+        "Internally usable prototype with real decisions logged",
+        "First feedback from a small circle of trusted testers"
+      ]
+    },
+    "months_3_12": {
+      "label": "Full test suite phase",
+      "goals": [
+        "Expand templates to more real user decisions and refine flows",
+        "Launch a beta in Bangladesh targeting students, developers, and early professionals",
+        "Add Bengali language support and local financial/regulatory context",
+        "Create a 'decision status and fixes' style view for user goals and blockers",
+        "Introduce a small subscription for power features and secure at least one B2B or university pilot"
+      ],
+      "success_criteria": [
+        "Active beta user base with recurring usage",
+        "Validated willingness to pay for premium features",
+        "At least one institutional pilot or partnership"
+      ]
+    },
+    "months_12_36": {
+      "label": "Documentation complete / research mode phase",
+      "goals": [
+        "Stabilize multi-domain decision flows",
+        "Harden explainability, governance, and safety features",
+        "Mature the what-if explorer and scenario tools",
+        "Expand regionally and globally with additional languages and domains",
+        "Publish evaluation reports and talks based on anonymized decision logs",
+        "Open schemas and docs (e.g. MarketAnalysis and DecisionScenario) for external builders"
+      ],
+      "success_criteria": [
+        "Recognized as a reference framework for explainable AI-assisted decisions",
+        "Sustainable revenue from a mix of consumer, B2B, and evaluation products",
+        "Active research and ecosystem collaborations using the platform"
+      ]
+    }
+  }
+}

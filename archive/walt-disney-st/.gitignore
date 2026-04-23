@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+.env/
+.pytest_cache/
+
+# Instrumentation/perf runtime
+perf/pids/
+perf/logs/
+perf/results/
+
+# Rust
+target/
+rust/target/
+
+artifact.json
+build_log.txt
+
+# Editor
+.vscode/
+.idea/

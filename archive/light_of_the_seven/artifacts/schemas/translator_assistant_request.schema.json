@@ -1,0 +1,139 @@
+{
+  "additionalProperties": true,
+  "description": "Model for translator assistant request form data.",
+  "properties": {
+    "audience": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "general",
+      "description": "Target audience: general, technical, children, etc.",
+      "title": "Audience"
+    },
+    "context": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Additional context to guide the transformation.",
+      "title": "Context"
+    },
+    "mode": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "translate",
+      "description": "Operation mode: translate, explain, bridge, or analyze.",
+      "title": "Mode"
+    },
+    "model_name": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "mock",
+      "description": "Logical backend/model name to use for this request (e.g., 'mock', 'dummy_rule', 'openai').",
+      "title": "Model Name"
+    },
+    "notes": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Extra notes for the assistant.",
+      "title": "Notes"
+    },
+    "preserve_formatting": {
+      "anyOf": [
+        {
+          "type": "boolean"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": true,
+      "description": "Keep line breaks and structure.",
+      "title": "Preserve Formatting"
+    },
+    "source_language": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "auto",
+      "description": "Language code or 'auto' for automatic detection.",
+      "title": "Source Language"
+    },
+    "source_text": {
+      "description": "Main text to translate / transform / explain.",
+      "title": "Source Text",
+      "type": "string"
+    },
+    "target_language": {
+      "description": "Single code or comma-separated list (e.g. 'en' or 'en,fr,es').",
+      "title": "Target Language",
+      "type": "string"
+    },
+    "temperature": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Optional randomness/temperature parameter \u2014 may be ignored by mock backends.",
+      "title": "Temperature"
+    },
+    "tone": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": "neutral",
+      "description": "Desired tone: neutral, formal, casual, etc.",
+      "title": "Tone"
+    }
+  },
+  "required": [
+    "source_text",
+    "target_language"
+  ],
+  "title": "TranslatorAssistantRequest",
+  "type": "object"
+}

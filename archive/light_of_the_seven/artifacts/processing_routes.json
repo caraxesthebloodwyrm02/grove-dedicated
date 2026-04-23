@@ -1,0 +1,214 @@
+{
+  "schema": "processing_routes/v1",
+  "generated_at": "2025-12-01T00:57:00Z",
+  "processing_unit_id": "processing_unit_v1",
+  "sources": {
+    "processing_unit": "artifacts/processing_unit.json",
+    "decision_tasks": "artifacts/decision_tasks.json"
+  },
+  "activation": {
+    "signals": [
+      "goal_clarity",
+      "constraint_specificity",
+      "emotional_intensity",
+      "task_match_score",
+      "user_commitment_signal"
+    ],
+    "thresholds": {
+      "max_retries": 2,
+      "min_clarity_score": 0.7,
+      "min_genuineness_score": 0.6,
+      "activation_threshold": 0.75,
+      "noise_tolerance": 0.3,
+      "max_loops_without_progress": 2
+    }
+  },
+  "routes": [
+    {
+      "task_id": "career_choice_v1",
+      "title": "Choose between two job offers",
+      "user_segment": "Early-career professional",
+      "scenario_type": "career",
+      "description": "Help the user choose between two job offers by comparing pay, growth, stability, learning, and lifestyle fit.",
+      "engine": {
+        "output_type": "job_comparison",
+        "capabilities": [
+          "A/B comparison",
+          "vibe_inference",
+          "opportunity_identification"
+        ]
+      },
+      "inputs": [
+        {
+          "name": "offer_a",
+          "type": "object",
+          "required": true,
+          "fields": [
+            "salary",
+            "location",
+            "working_hours",
+            "role_title",
+            "growth_opportunities",
+            "remote_options"
+          ]
+        },
+        {
+          "name": "offer_b",
+          "type": "object",
+          "required": true,
+          "fields": [
+            "salary",
+            "location",
+            "working_hours",
+            "role_title",
+            "growth_opportunities",
+            "remote_options"
+          ]
+        },
+        {
+          "name": "user_preferences",
+          "type": "object",
+          "required": true,
+          "fields": [
+            "money_vs_time",
+            "learning_vs_stability",
+            "remote_vs_office",
+            "company_mission_importance"
+          ]
+        },
+        {
+          "name": "time_horizon_years",
+          "type": "number",
+          "required": false,
+          "default": 3
+        }
+      ],
+      "context": {
+        "personal": ["risk_tolerance", "current_savings", "family_obligations"],
+        "local": ["job_market_in_region", "cost_of_living_in_region"],
+        "global": ["industry_trend_for_role", "macro_economic_outlook"]
+      },
+      "goals": [
+        {
+          "name": "maximize_fit",
+          "type": "multi-objective",
+          "metrics": [
+            "preference_alignment_score",
+            "projected_learning_score",
+            "lifestyle_fit_score"
+          ]
+        },
+        {
+          "name": "reduce_regret",
+          "type": "qualitative",
+          "metrics": [
+            "coverage_of_factors_explained",
+            "clarity_of_tradeoff_explanation"
+          ]
+        }
+      ],
+      "success_criteria": [
+        "All key factors are explicitly mentioned in the explanation.",
+        "User sees at least one clear recommendation plus an alternative with trade-offs.",
+        "Outputs include a short, bullet-style summary the user can save or share."
+      ]
+    },
+    {
+      "task_id": "savings_goal_v1",
+      "title": "Plan savings for a target goal",
+      "user_segment": "Household planner",
+      "scenario_type": "personal_finance",
+      "description": "Guide the user to plan monthly savings and trade-offs to reach a specific financial goal by a target date.",
+      "engine": {
+        "output_type": "savings_plan",
+        "capabilities": [
+          "timeline_projection",
+          "risk_scenario_generation"
+        ]
+      },
+      "inputs": [
+        {"name": "goal_amount", "type": "number", "required": true},
+        {"name": "target_date", "type": "date", "required": true},
+        {"name": "current_savings", "type": "number", "required": false, "default": 0},
+        {"name": "monthly_income", "type": "number", "required": true},
+        {"name": "monthly_fixed_expenses", "type": "number", "required": true},
+        {"name": "risk_tolerance", "type": "string", "required": false}
+      ],
+      "context": {
+        "personal": ["household_size", "other_major_goals"],
+        "local": ["inflation_rate_estimate", "expected_salary_growth"],
+        "global": ["macro_economic_outlook"]
+      },
+      "goals": [
+        {
+          "name": "reach_goal",
+          "type": "single-objective",
+          "metrics": [
+            "probability_of_reaching_goal",
+            "required_monthly_savings"
+          ]
+        },
+        {
+          "name": "maintain_quality_of_life",
+          "type": "constraint",
+          "metrics": [
+            "recommended_savings_as_percent_of_income"
+          ]
+        }
+      ],
+      "success_criteria": [
+        "Plan includes a clear monthly saving recommendation and timeline.",
+        "User sees at least one alternative scenario (e.g., later date or smaller goal).",
+        "Explanations highlight key risks and assumptions."
+      ]
+    },
+    {
+      "task_id": "test_fix_bug_v1",
+      "title": "Decide how to fix a failing test suite",
+      "user_segment": "Developer",
+      "scenario_type": "engineering_workflow",
+      "description": "Help a developer choose the best next actions to fix failing tests in a large codebase.",
+      "engine": {
+        "output_type": "fix_plan",
+        "capabilities": [
+          "priority_ranking",
+          "doc_linking"
+        ]
+      },
+      "inputs": [
+        {"name": "failing_test_names", "type": "list[string]", "required": true},
+        {"name": "failure_categories", "type": "list[string]", "required": false},
+        {"name": "time_available_minutes", "type": "number", "required": true},
+        {"name": "experience_level", "type": "string", "required": false}
+      ],
+      "context": {
+        "personal": ["developer_familiarity_with_codebase"],
+        "local": ["current_test_status_metrics"],
+        "global": ["project_deadlines"]
+      },
+      "goals": [
+        {
+          "name": "maximize_passes_in_time_window",
+          "type": "single-objective",
+          "metrics": [
+            "expected_tests_fixed",
+            "time_per_fix_estimate"
+          ]
+        },
+        {
+          "name": "prioritize_impact",
+          "type": "multi-objective",
+          "metrics": [
+            "impact_score_per_category",
+            "dependency_unblock_score"
+          ]
+        }
+      ],
+      "success_criteria": [
+        "Developer receives a prioritized list of categories and tests to tackle.",
+        "Each recommendation links to relevant docs or examples when possible.",
+        "Plan fits within the stated time window."
+      ]
+    }
+  ]
+}

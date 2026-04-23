@@ -1,0 +1,38 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2373</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyTypedDictInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Invalid TypedDict definition and usages</problem_class>
+  <description>'Required' can be used only in a TypedDict definition</description>
+  <highlighted_element>typing.Required</highlighted_element>
+  <language>Python</language>
+  <offset>15</offset>
+  <length>15</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2374</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyTypedDictInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Invalid TypedDict definition and usages</problem_class>
+  <description>'NotRequired' can be used only in a TypedDict definition</description>
+  <highlighted_element>typing.NotRequired</highlighted_element>
+  <language>Python</language>
+  <offset>18</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2415</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyTypedDictInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Invalid TypedDict definition and usages</problem_class>
+  <description>'ReadOnly' can be used only in a TypedDict definition</description>
+  <highlighted_element>typing.ReadOnly</highlighted_element>
+  <language>Python</language>
+  <offset>15</offset>
+  <length>15</length>
+</problem>
+</problems>

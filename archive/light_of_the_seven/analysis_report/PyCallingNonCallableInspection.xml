@@ -1,0 +1,26 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfParser.py</file>
+  <line>298</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfParser.py" />
+  <problem_class id="PyCallingNonCallableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attempt to call a non-callable object</problem_class>
+  <description>'items' is not callable</description>
+  <highlighted_element>self.items()</highlighted_element>
+  <language>Python</language>
+  <offset>26</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfParser.py</file>
+  <line>600</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfParser.py" />
+  <problem_class id="PyCallingNonCallableInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Attempt to call a non-callable object</problem_class>
+  <description>'get' is not callable</description>
+  <highlighted_element>self.root.get(b&quot;Pages&quot;)</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>23</length>
+</problem>
+</problems>

@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# commit-msg hook that ensures topic branches follow naming convention
+
+BRANCH=$(git rev-parse --abbrev-ref HEAD 2>/dev/null || echo "")
+PATTERN='^topic/[a-z0-9]+(-[a-z0-9]+)*(-[0-9]+)?$'
+
+if [[ -z "$BRANCH" ]]; then
+  # not on a branch (detached or not in git)
+  exit 0
+fi
+
+if [[ "$BRANCH" =~ $PATTERN ]]; then
+  exit 0
+else
+  echo "ERROR: Commit must be made on a 'topic/...' branch. Current branch: $BRANCH" >&2
+  echo "Follow branch naming policy: topic/<theme>-<short>-<issue?>" >&2
+  exit 1
+fi

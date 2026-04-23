@@ -1,0 +1,40 @@
+# Lo7 corpus (production): allow/deny for markdown document manifest.
+# Default root: arch_data path (print this in scripts; not ~/gruff).
+
+root: /mnt/arch_data/home/caraxes/grove/archive/light_of_the_seven
+
+# §2.1: local wall‑clock day for cells; for CI, document UTC if you switch.
+# week_starts_on: monday | sunday
+week_starts_on: monday
+
+# Level for days with no files (0) — explicit for tests (step 8c).
+empty_cell_level: 0
+
+allow:
+  - "docs/**"
+  - "*.md"
+  # Four knowledge zones (per README) — document-only subtrees; adjust to match on-disk tree.
+  - "the_swift_essence_*/**"
+  - "cognitive_layer/**/*.md"
+  - "knowledge_*/**"
+  - "logistic_*/**"
+
+deny:
+  - "src/**"
+  - "tests/**"
+  - "light_of_the_seven/tests/**"
+  - "grid/**"
+  - "tools/**"
+  - "rust/**"
+  - "go/**"
+  - "application/**"
+  - "archival/**"
+  - ".github/**"
+  - "notebooks/**"
+  - "backend/**"
+  - "data/**"
+  - "artifacts/**"
+  - "integrations/**"
+  - "__pycache__/**"
+  - ".venv/**"
+  - "node_modules/**"

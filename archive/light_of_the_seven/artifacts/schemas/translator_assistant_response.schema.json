@@ -1,0 +1,139 @@
+{
+  "$defs": {
+    "TranslatorAssistantSegment": {
+      "additionalProperties": true,
+      "description": "Model for translator assistant segment form data.",
+      "properties": {
+        "comment": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "description": "Optional note about this mapping.",
+          "title": "Comment"
+        },
+        "result": {
+          "description": "Transformed / bridged slice of text.",
+          "title": "Result",
+          "type": "string"
+        },
+        "source": {
+          "description": "Original slice of text.",
+          "title": "Source",
+          "type": "string"
+        }
+      },
+      "required": [
+        "source",
+        "result"
+      ],
+      "title": "TranslatorAssistantSegment",
+      "type": "object"
+    }
+  },
+  "additionalProperties": true,
+  "description": "Model for translator assistant response form data.",
+  "properties": {
+    "alternatives": {
+      "anyOf": [
+        {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Alternative translations/transformations.",
+      "title": "Alternatives"
+    },
+    "confidence": {
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Confidence score (0-1).",
+      "title": "Confidence"
+    },
+    "explanation": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Explanation of choices made.",
+      "title": "Explanation"
+    },
+    "metadata": {
+      "anyOf": [
+        {
+          "additionalProperties": true,
+          "type": "object"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Additional metadata.",
+      "title": "Metadata"
+    },
+    "notes": {
+      "description": "Additional notes or warnings.",
+      "items": {
+        "type": "string"
+      },
+      "title": "Notes",
+      "type": "array"
+    },
+    "result_text": {
+      "description": "The main translated/transformed text.",
+      "title": "Result Text",
+      "type": "string"
+    },
+    "segments": {
+      "anyOf": [
+        {
+          "items": {
+            "$ref": "#/$defs/TranslatorAssistantSegment"
+          },
+          "type": "array"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null,
+      "description": "Segment-by-segment breakdown.",
+      "title": "Segments"
+    },
+    "target_language": {
+      "description": "Language(s) of the result.",
+      "title": "Target Language",
+      "type": "string"
+    }
+  },
+  "required": [
+    "result_text",
+    "target_language"
+  ],
+  "title": "TranslatorAssistantResponse",
+  "type": "object"
+}

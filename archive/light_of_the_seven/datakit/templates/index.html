@@ -1,0 +1,981 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Circle of Fifths: Interactive Visualizer</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Circle of Fifths: Interactive Visualizer</h1>
+                <p class="subtitle">
+                    Explore the Circle of Fifths as a computational framework
+                    for music theory, AI, hardware, and quantum computing.
+                </p>
+            </header>
+
+            <div class="tabs">
+                <button class="tab-button active" data-tab="visualizer">
+                    Visualizer
+                </button>
+                <button class="tab-button" data-tab="guided-tour">
+                    Guided Tour
+                </button>
+                <button class="tab-button" data-tab="ai-composer">
+                    AI Composer
+                </button>
+                <button class="tab-button" data-tab="docs">
+                    Documentation
+                </button>
+            </div>
+
+            <div class="tab-content" id="visualizer">
+                <div class="visualization-container">
+                    <div class="controls">
+                        <div class="control-group">
+                            <label for="visualization-type"
+                                >Visualization Type:</label
+                            >
+                            <select id="visualization-type">
+                                <option value="circle">Circle of Fifths</option>
+                                <option value="graph">Graph Theory</option>
+                                <option value="fsm">
+                                    Finite State Machine
+                                </option>
+                                <option value="quantum">
+                                    Quantum Analogies
+                                </option>
+                            </select>
+                        </div>
+                        <div class="control-group">
+                            <label for="start-key">Starting Key:</label>
+                            <select id="start-key">
+                                <option value="C">C</option>
+                                <option value="G">G</option>
+                                <option value="D">D</option>
+                                <option value="A">A</option>
+                                <option value="E">E</option>
+                                <option value="B">B</option>
+                                <option value="F#">F#</option>
+                                <option value="C#">C#</option>
+                                <option value="G#">G#</option>
+                                <option value="D#">D#</option>
+                                <option value="A#">A#</option>
+                                <option value="F">F</option>
+                            </select>
+                        </div>
+                        <button id="generate-visualization">Generate</button>
+                        <button id="reset-visualization">Reset</button>
+                    </div>
+                    <div id="visualization"></div>
+                    <div id="explanation"></div>
+                </div>
+            </div>
+
+            <div class="tab-content hidden" id="guided-tour">
+                <div class="guided-tour-container">
+                    <div class="tour-step active" id="step-1">
+                        <h2>Introduction to the Circle of Fifths</h2>
+                        <p>
+                            The Circle of Fifths is a visual representation of
+                            the relationships among the 12 tones of the
+                            chromatic scale, their corresponding key signatures,
+                            and the associated major and minor keys.
+                        </p>
+                        <p>
+                            In this guided tour, we'll explore how the Circle of
+                            Fifths can be represented as a computational
+                            framework, including its applications in:
+                        </p>
+                        <ul>
+                            <li>Finite State Machines (FSM)</li>
+                            <li>Boolean Algebra</li>
+                            <li>Graph Theory</li>
+                            <li>Quantum Computing</li>
+                            <li>AI-Driven Music Generation</li>
+                        </ul>
+                        <div class="tour-nav">
+                            <button class="next-step" data-next="step-2">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tour-step hidden" id="step-2">
+                        <h2>The Circle as a Finite State Machine (FSM)</h2>
+                        <p>
+                            The Circle of Fifths can be modeled as a finite
+                            state machine (FSM), where:
+                        </p>
+                        <ul>
+                            <li>
+                                Each key is a <strong>state</strong> (e.g., C,
+                                G, D).
+                            </li>
+                            <li>
+                                Transitions between keys are
+                                <strong>perfect fifths</strong> (e.g., C → G).
+                            </li>
+                            <li>
+                                Moving clockwise adds sharps, while moving
+                                counterclockwise adds flats.
+                            </li>
+                        </ul>
+                        <p>
+                            This makes it useful for hardware implementations,
+                            such as FPGA-based music generators.
+                        </p>
+                        <div class="tour-nav">
+                            <button class="prev-step" data-prev="step-1">
+                                Previous
+                            </button>
+                            <button class="next-step" data-next="step-3">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tour-step hidden" id="step-3">
+                        <h2>Boolean Algebra and the Circle</h2>
+                        <p>
+                            The Circle of Fifths can also be represented using
+                            Boolean algebra:
+                        </p>
+                        <ul>
+                            <li>
+                                Each key is a
+                                <strong>binary state</strong> (e.g., C = 0000, G
+                                = 0001).
+                            </li>
+                            <li>
+                                Sharps and flats are
+                                <strong>bit flips</strong> (e.g., adding a sharp
+                                flips a bit).
+                            </li>
+                            <li>
+                                Chord progressions can be modeled as
+                                <strong>logic gates</strong> (e.g., AND, OR).
+                            </li>
+                        </ul>
+                        <p>
+                            This is useful for algorithmic music generation and
+                            computational music theory.
+                        </p>
+                        <div class="tour-nav">
+                            <button class="prev-step" data-prev="step-2">
+                                Previous
+                            </button>
+                            <button class="next-step" data-next="step-4">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tour-step hidden" id="step-4">
+                        <h2>Graph Theory and the Circle</h2>
+                        <p>
+                            The Circle of Fifths is a <strong>graph</strong>,
+                            where:
+                        </p>
+                        <ul>
+                            <li>Nodes represent keys (e.g., C, G, D).</li>
+                            <li>
+                                Edges represent intervals (e.g., perfect
+                                fifths).
+                            </li>
+                            <li>
+                                Chord progressions are
+                                <strong>paths</strong> through the graph.
+                            </li>
+                        </ul>
+                        <p>
+                            This allows us to use graph traversal algorithms to
+                            generate music.
+                        </p>
+                        <div class="tour-nav">
+                            <button class="prev-step" data-prev="step-3">
+                                Previous
+                            </button>
+                            <button class="next-step" data-next="step-5">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tour-step hidden" id="step-5">
+                        <h2>Quantum Computing Analogies</h2>
+                        <p>
+                            The Circle of Fifths can be mapped to quantum
+                            computing concepts:
+                        </p>
+                        <ul>
+                            <li>
+                                Each key is a
+                                <strong>qubit state</strong> (e.g., C = |0⟩, G =
+                                |1⟩).
+                            </li>
+                            <li>
+                                Superposition represents a "fuzzy" key (e.g.,
+                                (|C⟩ + |G⟩)/√2).
+                            </li>
+                            <li>
+                                Entanglement represents harmonic relationships
+                                between keys.
+                            </li>
+                        </ul>
+                        <p>
+                            This opens up possibilities for quantum music
+                            generation.
+                        </p>
+                        <div class="tour-nav">
+                            <button class="prev-step" data-prev="step-4">
+                                Previous
+                            </button>
+                            <button class="next-step" data-next="step-6">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tour-step hidden" id="step-6">
+                        <h2>AI and the Circle of Fifths</h2>
+                        <p>
+                            The Circle of Fifths can be used in AI-driven music
+                            generation:
+                        </p>
+                        <ul>
+                            <li>Markov chains can model chord progressions.</li>
+                            <li>
+                                Reinforcement learning can optimize harmonic
+                                transitions.
+                            </li>
+                            <li>
+                                Neural networks can generate music based on the
+                                Circle's rules.
+                            </li>
+                        </ul>
+                        <p>
+                            This enables AI to compose music like a jazz
+                            musician.
+                        </p>
+                        <div class="tour-nav">
+                            <button class="prev-step" data-prev="step-5">
+                                Previous
+                            </button>
+                            <button class="next-step" data-next="step-7">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tour-step hidden" id="step-7">
+                        <h2>Hands-On: Generate a Chord Progression</h2>
+                        <p>
+                            Let's generate a chord progression using the Circle
+                            of Fifths. We'll use the I-IV-V-I progression, which
+                            is common in Western music.
+                        </p>
+                        <div class="control-group">
+                            <label for="tour-start-key">Starting Key:</label>
+                            <select id="tour-start-key">
+                                <option value="C">C</option>
+                                <option value="G">G</option>
+                                <option value="D">D</option>
+                                <option value="A">A</option>
+                                <option value="E">E</option>
+                                <option value="B">B</option>
+                                <option value="F#">F#</option>
+                                <option value="C#">C#</option>
+                                <option value="G#">G#</option>
+                                <option value="D#">D#</option>
+                                <option value="A#">A#</option>
+                                <option value="F">F</option>
+                            </select>
+                        </div>
+                        <button id="generate-progression">
+                            Generate Progression
+                        </button>
+                        <div id="progression-result"></div>
+                        <div class="tour-nav">
+                            <button class="prev-step" data-prev="step-6">
+                                Previous
+                            </button>
+                            <button class="next-step" data-next="step-8">
+                                Next
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="tour-step hidden" id="step-8">
+                        <h2>Conclusion</h2>
+                        <p>
+                            The Circle of Fifths is more than just a music
+                            theory tool—it's a
+                            <strong>computational framework</strong> that can be
+                            applied to:
+                        </p>
+                        <ul>
+                            <li>
+                                Hardware design (e.g., FPGA-based music
+                                generators).
+                            </li>
+                            <li>
+                                Software development (e.g., algorithmic music
+                                generation).
+                            </li>
+                            <li>
+                                AI and machine learning (e.g., reinforcement
+                                learning for composition).
+                            </li>
+                            <li>
+                                Quantum computing (e.g., qubit-based music
+                                generation).
+                            </li>
+                        </ul>
+                        <p>
+                            This guided tour is just the beginning. Explore the
+                            other features of this datakit to dive deeper into
+                            the computational power of the Circle of Fifths!
+                        </p>
+                        <div class="tour-nav">
+                            <button class="prev-step" data-prev="step-7">
+                                Previous
+                            </button>
+                            <button class="restart-tour">Restart Tour</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content hidden" id="ai-composer">
+                <div class="ai-composer-container">
+                    <h2>AI-Driven Music Composer</h2>
+                    <p>
+                        Use AI to generate chord progressions based on the
+                        Circle of Fifths. Choose a composition method and
+                        starting key to get started.
+                    </p>
+                    <div class="control-group">
+                        <label for="composer-method">Composition Method:</label>
+                        <select id="composer-method">
+                            <option value="markov">Markov Chains</option>
+                            <option value="rl">Reinforcement Learning</option>
+                            <option value="nn">
+                                Neural Network (Placeholder)
+                            </option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="composer-start-key">Starting Key:</label>
+                        <select id="composer-start-key">
+                            <option value="C">C</option>
+                            <option value="G">G</option>
+                            <option value="D">D</option>
+                            <option value="A">A</option>
+                            <option value="E">E</option>
+                            <option value="B">B</option>
+                            <option value="F#">F#</option>
+                            <option value="C#">C#</option>
+                            <option value="G#">G#</option>
+                            <option value="D#">D#</option>
+                            <option value="A#">A#</option>
+                            <option value="F">F</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label for="progression-length"
+                            >Progression Length:</label
+                        >
+                        <input
+                            type="number"
+                            id="progression-length"
+                            min="2"
+                            max="8"
+                            value="4"
+                        />
+                    </div>
+                    <button id="generate-composition">
+                        Generate Composition
+                    </button>
+                    <div id="composition-result"></div>
+                </div>
+            </div>
+
+            <div class="tab-content hidden" id="docs">
+                <div class="docs-container">
+                    <h2>Documentation</h2>
+                    <p>
+                        Welcome to the documentation for the Circle of Fifths
+                        Datakit. Here, you'll find information on how to use the
+                        visualizer, guided tour, and AI composer.
+                    </p>
+
+                    <div class="docs-section">
+                        <h3>Visualizer</h3>
+                        <p>
+                            The visualizer allows you to explore the Circle of
+                            Fifths as:
+                        </p>
+                        <ul>
+                            <li>A circular graph of keys and intervals.</li>
+                            <li>A finite state machine (FSM).</li>
+                            <li>A quantum computing analogy.</li>
+                        </ul>
+                        <p>
+                            Use the controls to select a visualization type and
+                            starting key. Click "Generate" to create the
+                            visualization.
+                        </p>
+                    </div>
+
+                    <div class="docs-section">
+                        <h3>Guided Tour</h3>
+                        <p>
+                            The guided tour provides a step-by-step walkthrough
+                            of the Circle of Fifths as a computational
+                            framework. It covers:
+                        </p>
+                        <ul>
+                            <li>Finite State Machines (FSM)</li>
+                            <li>Boolean Algebra</li>
+                            <li>Graph Theory</li>
+                            <li>Quantum Computing Analogies</li>
+                            <li>AI-Driven Music Generation</li>
+                        </ul>
+                        <p>
+                            Use the "Next" and "Previous" buttons to navigate
+                            through the tour.
+                        </p>
+                    </div>
+
+                    <div class="docs-section">
+                        <h3>AI Composer</h3>
+                        <p>
+                            The AI composer uses machine learning to generate
+                            chord progressions based on the Circle of Fifths.
+                            Choose a composition method (Markov Chains,
+                            Reinforcement Learning, or Neural Network) and a
+                            starting key. Click "Generate Composition" to create
+                            a progression.
+                        </p>
+                    </div>
+
+                    <div class="docs-section">
+                        <h3>Data Files</h3>
+                        <p>The datakit includes the following data files:</p>
+                        <ul>
+                            <li>
+                                <code>circle_of_fifths.json</code>: Core data
+                                for the Circle of Fifths.
+                            </li>
+                            <li>
+                                <code>logic_analogies.json</code>: Logic-based
+                                analogies for the Circle.
+                            </li>
+                            <li>
+                                <code>dialogue_flows.json</code>: Guided tour
+                                scripts.
+                            </li>
+                            <li>
+                                <code>chord_progressions.csv</code>:
+                                Pre-generated chord progressions.
+                            </li>
+                            <li>
+                                <code>ai_links.json</code>: AI-driven music
+                                generation rules.
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="docs-section">
+                        <h3>Scripts</h3>
+                        <p>
+                            The datakit includes the following Python scripts:
+                        </p>
+                        <ul>
+                            <li>
+                                <code>chord_generator.py</code>: Generate chord
+                                progressions.
+                            </li>
+                            <li>
+                                <code>guided_tour.py</code>: Interactive guided
+                                tour.
+                            </li>
+                            <li>
+                                <code>ai_composer.py</code>: AI-driven music
+                                generation.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Tab switching logic
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.addEventListener('click', () => {
+                    const tabId = button.getAttribute('data-tab');
+
+                    // Hide all tab contents
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.add('hidden');
+                    });
+
+                    // Show the selected tab content
+                    document.getElementById(tabId).classList.remove('hidden');
+
+                    // Update active tab button
+                    document.querySelectorAll('.tab-button').forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    button.classList.add('active');
+                });
+            });
+
+            // Guided tour logic
+            document.querySelectorAll('.next-step').forEach(button => {
+                button.addEventListener('click', () => {
+                    const nextStepId = button.getAttribute('data-next');
+                    const currentStepId = button.closest('.tour-step').id;
+
+                    document.getElementById(currentStepId).classList.add('hidden');
+                    document.getElementById(nextStepId).classList.remove('hidden');
+                });
+            });
+
+            document.querySelectorAll('.prev-step').forEach(button => {
+                button.addEventListener('click', () => {
+                    const prevStepId = button.getAttribute('data-prev');
+                    const currentStepId = button.closest('.tour-step').id;
+
+                    document.getElementById(currentStepId).classList.add('hidden');
+                    document.getElementById(prevStepId).classList.remove('hidden');
+                });
+            });
+
+            document.querySelectorAll('.restart-tour').forEach(button => {
+                button.addEventListener('click', () => {
+                    document.querySelectorAll('.tour-step').forEach(step => {
+                        step.classList.add('hidden');
+                    });
+                    document.getElementById('step-1').classList.remove('hidden');
+                });
+            });
+
+            // Generate chord progression in guided tour
+            document.getElementById('generate-progression').addEventListener('click', () => {
+                const startKey = document.getElementById('tour-start-key').value;
+                const progression = generateI-IV_V_I_Progression(startKey);
+                document.getElementById('progression-result').innerHTML = `
+                    <h3>Generated Progression:</h3>
+                    <p>${progression.join(' → ')}</p>
+                    <p>This is a classic I-IV-V-I progression in the key of ${startKey}.</p>
+                `;
+            });
+
+            // Generate composition in AI composer
+            document.getElementById('generate-composition').addEventListener('click', () => {
+                const method = document.getElementById('composer-method').value;
+                const startKey = document.getElementById('composer-start-key').value;
+                const length = parseInt(document.getElementById('progression-length').value);
+
+                let progression;
+                if (method === 'markov') {
+                    progression = generateMarkovProgression(startKey, length);
+                } else if (method === 'rl') {
+                    progression = generateRLProgression(startKey, length);
+                } else {
+                    progression = generateRandomProgression(startKey, length);
+                }
+
+                document.getElementById('composition-result').innerHTML = `
+                    <h3>Generated Composition:</h3>
+                    <p>${progression.join(' → ')}</p>
+                    <p>Method: ${method === 'markov' ? 'Markov Chains' : method === 'rl' ? 'Reinforcement Learning' : 'Neural Network'}</p>
+                `;
+            });
+
+            // Generate visualization
+            document.getElementById('generate-visualization').addEventListener('click', () => {
+                const visualizationType = document.getElementById('visualization-type').value;
+                const startKey = document.getElementById('start-key').value;
+
+                if (visualizationType === 'circle') {
+                    generateCircleVisualization(startKey);
+                } else if (visualizationType === 'graph') {
+                    generateGraphVisualization(startKey);
+                } else if (visualizationType === 'fsm') {
+                    generateFSMVisualization(startKey);
+                } else if (visualizationType === 'quantum') {
+                    generateQuantumVisualization(startKey);
+                }
+            });
+
+            // Reset visualization
+            document.getElementById('reset-visualization').addEventListener('click', () => {
+                document.getElementById('visualization').innerHTML = '';
+                document.getElementById('explanation').innerHTML = '';
+            });
+
+            // Helper functions
+            function generateI-IV_V_I_Progression(startKey) {
+                const circle = ["C", "G", "D", "A", "E", "B", "F#", "C#", "G#", "D#", "A#", "F"];
+                const startIdx = circle.indexOf(startKey);
+                return [
+                    circle[startIdx],  // I
+                    circle[(startIdx - 3 + circle.length) % circle.length],  // IV
+                    circle[(startIdx + 1) % circle.length],  // V
+                    circle[startIdx],  // I
+                ];
+            }
+
+            function generateMarkovProgression(startKey, length) {
+                const circle = ["C", "G", "D", "A", "E", "B", "F#", "C#", "G#", "D#", "A#", "F"];
+                const progression = [startKey];
+                for (let i = 1; i < length; i++) {
+                    const lastKey = progression[progression.length - 1];
+                    const nextKey = circle[(circle.indexOf(lastKey) + 1) % circle.length];
+                    progression.push(nextKey);
+                }
+                return progression;
+            }
+
+            function generateRLProgression(startKey, length) {
+                const circle = ["C", "G", "D", "A", "E", "B", "F#", "C#", "G#", "D#", "A#", "F"];
+                const progression = [startKey];
+                for (let i = 1; i < length; i++) {
+                    const lastKey = progression[progression.length - 1];
+                    const nextKey = circle[(circle.indexOf(lastKey) + 1) % circle.length];
+                    progression.push(nextKey);
+                }
+                return progression;
+            }
+
+            function generateRandomProgression(startKey, length) {
+                const circle = ["C", "G", "D", "A", "E", "B", "F#", "C#", "G#", "D#", "A#", "F"];
+                const progression = [startKey];
+                for (let i = 1; i < length; i++) {
+                    const randomKey = circle[Math.floor(Math.random() * circle.length)];
+                    progression.push(randomKey);
+                }
+                return progression;
+            }
+
+            function generateCircleVisualization(startKey) {
+                const circle = ["C", "G", "D", "A", "E", "B", "F#", "C#", "G#", "D#", "A#", "F"];
+                const width = 600;
+                const height = 600;
+                const radius = Math.min(width, height) / 2 - 40;
+
+                const svg = d3.select("#visualization").append("svg")
+                    .attr("width", width)
+                    .attr("height", height);
+
+                const g = svg.append("g")
+                    .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+                // Draw the circle
+                g.append("circle")
+                    .attr("r", radius)
+                    .attr("fill", "none")
+                    .attr("stroke", "#ccc")
+                    .attr("stroke-width", 1);
+
+                // Add keys as nodes
+                const nodes = g.selectAll(".node")
+                    .data(circle)
+                    .enter()
+                    .append("g")
+                    .attr("class", "node")
+                    .attr("transform", (d, i) => {
+                        const angle = (i * 2 * Math.PI / circle.length) - Math.PI / 2;
+                        return `translate(${radius * Math.cos(angle)}, ${radius * Math.sin(angle)})`;
+                    });
+
+                nodes.append("circle")
+                    .attr("r", 20)
+                    .attr("fill", d => d === startKey ? "#4CAF50" : "lightblue")
+                    .attr("stroke", "#333")
+                    .attr("stroke-width", 1);
+
+                nodes.append("text")
+                    .text(d => d)
+                    .attr("text-anchor", "middle")
+                    .attr("dy", "0.3em")
+                    .attr("fill", "#333");
+
+                // Draw transitions (perfect fifths)
+                for (let i = 0; i < circle.length; i++) {
+                    const startAngle = (i * 2 * Math.PI / circle.length) - Math.PI / 2;
+                    const endAngle = ((i + 1) % circle.length * 2 * Math.PI / circle.length) - Math.PI / 2;
+
+                    g.append("path")
+                        .attr("d", d3.arc()
+                            .innerRadius(radius - 20)
+                            .outerRadius(radius - 20)
+                            .startAngle(startAngle)
+                            .endAngle(endAngle)
+                        )
+                        .attr("fill", "none")
+                        .attr("stroke", "#ccc")
+                        .attr("stroke-width", 1);
+                }
+
+                // Explanation
+                document.getElementById('explanation').innerHTML = `
+                    <h3>Circle of Fifths Visualization</h3>
+                    <p>
+                        This visualization represents the Circle of Fifths as a circular graph.
+                        Each node is a key, and each edge represents a perfect fifth interval.
+                    </p>
+                    <p>
+                        The starting key (<strong>${startKey}</strong>) is highlighted in green.
+                    </p>
+                `;
+            }
+
+            function generateGraphVisualization(startKey) {
+                const circle = ["C", "G", "D", "A", "E", "B", "F#", "C#", "G#", "D#", "A#", "F"];
+                const width = 600;
+                const height = 600;
+
+                const svg = d3.select("#visualization").append("svg")
+                    .attr("width", width)
+                    .attr("height", height);
+
+                const g = svg.append("g")
+                    .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+                // Create a force simulation
+                const simulation = d3.forceSimulation()
+                    .force("charge", d3.forceManyBody().strength(-50))
+                    .force("link", d3.forceLink().id(d => d).distance(100))
+                    .force("center", d3.forceCenter());
+
+                // Create nodes and links
+                const nodes = circle.map(key => ({ id: key }));
+                const links = [];
+                for (let i = 0; i < circle.length; i++) {
+                    links.push({ source: circle[i], target: circle[(i + 1) % circle.length] });
+                }
+
+                // Add links
+                const link = g.append("g")
+                    .selectAll("line")
+                    .data(links)
+                    .enter()
+                    .append("line")
+                    .attr("stroke", "#ccc")
+                    .attr("stroke-width", 1);
+
+                // Add nodes
+                const node = g.append("g")
+                    .selectAll("circle")
+                    .data(nodes)
+                    .enter()
+                    .append("circle")
+                    .attr("r", 20)
+                    .attr("fill", d => d.id === startKey ? "#4CAF50" : "lightblue")
+                    .attr("stroke", "#333")
+                    .attr("stroke-width", 1);
+
+                // Add labels
+                const label = g.append("g")
+                    .selectAll("text")
+                    .data(nodes)
+                    .enter()
+                    .append("text")
+                    .text(d => d.id)
+                    .attr("text-anchor", "middle")
+                    .attr("dy", "0.3em")
+                    .attr("fill", "#333");
+
+                // Run the simulation
+                simulation.nodes(nodes).on("tick", ticked);
+                simulation.force("link").links(links);
+
+                function ticked() {
+                    link
+                        .attr("x1", d => d.source.x)
+                        .attr("y1", d => d.source.y)
+                        .attr("x2", d => d.target.x)
+                        .attr("y2", d => d.target.y);
+
+                    node
+                        .attr("cx", d => d.x)
+                        .attr("cy", d => d.y);
+
+                    label
+                        .attr("x", d => d.x)
+                        .attr("y", d => d.y);
+                }
+
+                // Explanation
+                document.getElementById('explanation').innerHTML = `
+                    <h3>Graph Theory Visualization</h3>
+                    <p>
+                        This visualization represents the Circle of Fifths as a graph.
+                        Each node is a key, and each edge represents a perfect fifth interval.
+                    </p>
+                    <p>
+                        The starting key (<strong>${startKey}</strong>) is highlighted in green.
+                    </p>
+                `;
+            }
+
+            function generateFSMVisualization(startKey) {
+                const circle = ["C", "G", "D", "A", "E", "B", "F#", "C#", "G#", "D#", "A#", "F"];
+                const width = 600;
+                const height = 600;
+                const radius = Math.min(width, height) / 2 - 40;
+
+                const svg = d3.select("#visualization").append("svg")
+                    .attr("width", width)
+                    .attr("height", height);
+
+                const g = svg.append("g")
+                    .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+                // Draw the circle
+                g.append("circle")
+                    .attr("r", radius)
+                    .attr("fill", "none")
+                    .attr("stroke", "#ccc")
+                    .attr("stroke-width", 1);
+
+                // Add keys as nodes
+                const nodes = g.selectAll(".node")
+                    .data(circle)
+                    .enter()
+                    .append("g")
+                    .attr("class", "node")
+                    .attr("transform", (d, i) => {
+                        const angle = (i * 2 * Math.PI / circle.length) - Math.PI / 2;
+                        return `translate(${radius * Math.cos(angle)}, ${radius * Math.sin(angle)})`;
+                    });
+
+                nodes.append("circle")
+                    .attr("r", 20)
+                    .attr("fill", d => d === startKey ? "#4CAF50" : "lightblue")
+                    .attr("stroke", "#333")
+                    .attr("stroke-width", 1);
+
+                nodes.append("text")
+                    .text(d => d)
+                    .attr("text-anchor", "middle")
+                    .attr("dy", "0.3em")
+                    .attr("fill", "#333");
+
+                // Draw transitions (perfect fifths)
+                for (let i = 0; i < circle.length; i++) {
+                    const startAngle = (i * 2 * Math.PI / circle.length) - Math.PI / 2;
+                    const endAngle = ((i + 1) % circle.length * 2 * Math.PI / circle.length) - Math.PI / 2;
+
+                    g.append("path")
+                        .attr("d", d3.arc()
+                            .innerRadius(radius - 20)
+                            .outerRadius(radius - 20)
+                            .startAngle(startAngle)
+                            .endAngle(endAngle)
+                        )
+                        .attr("fill", "none")
+                        .attr("stroke", "#ccc")
+                        .attr("stroke-width", 1);
+                }
+
+                // Explanation
+                document.getElementById('explanation').innerHTML = `
+                    <h3>Finite State Machine (FSM) Visualization</h3>
+                    <p>
+                        This visualization represents the Circle of Fifths as a finite state machine (FSM).
+                        Each key is a state, and transitions between keys are perfect fifths.
+                    </p>
+                    <p>
+                        The starting key (<strong>${startKey}</strong>) is highlighted in green.
+                    </p>
+                `;
+            }
+
+            function generateQuantumVisualization(startKey) {
+                const circle = ["C", "G", "D", "A", "E", "B", "F#", "C#", "G#", "D#", "A#", "F"];
+                const width = 600;
+                const height = 600;
+                const radius = Math.min(width, height) / 2 - 40;
+
+                const svg = d3.select("#visualization").append("svg")
+                    .attr("width", width)
+                    .attr("height", height);
+
+                const g = svg.append("g")
+                    .attr("transform", `translate(${width / 2}, ${height / 2})`);
+
+                // Draw the circle
+                g.append("circle")
+                    .attr("r", radius)
+                    .attr("fill", "none")
+                    .attr("stroke", "#ccc")
+                    .attr("stroke-width", 1);
+
+                // Add keys as nodes
+                const nodes = g.selectAll(".node")
+                    .data(circle)
+                    .enter()
+                    .append("g")
+                    .attr("class", "node")
+                    .attr("transform", (d, i) => {
+                        const angle = (i * 2 * Math.PI / circle.length) - Math.PI / 2;
+                        return `translate(${radius * Math.cos(angle)}, ${radius * Math.sin(angle)})`;
+                    });
+
+                nodes.append("circle")
+                    .attr("r", 20)
+                    .attr("fill", d => d === startKey ? "#4CAF50" : "lightblue")
+                    .attr("stroke", "#333")
+                    .attr("stroke-width", 1);
+
+                nodes.append("text")
+                    .text(d => d)
+                    .attr("text-anchor", "middle")
+                    .attr("dy", "0.3em")
+                    .attr("fill", "#333");
+
+                // Draw transitions (perfect fifths)
+                for (let i = 0; i < circle.length; i++) {
+                    const startAngle = (i * 2 * Math.PI / circle.length) - Math.PI / 2;
+                    const endAngle = ((i + 1) % circle.length * 2 * Math.PI / circle.length) - Math.PI / 2;
+
+                    g.append("path")
+                        .attr("d", d3.arc()
+                            .innerRadius(radius - 20)
+                            .outerRadius(radius - 20)
+                            .startAngle(startAngle)
+                            .endAngle(endAngle)
+                        )
+                        .attr("fill", "none")
+                        .attr("stroke", "#ccc")
+                        .attr("stroke-width", 1);
+                }
+
+                // Explanation
+                document.getElementById('explanation').innerHTML = `
+                    <h3>Quantum Computing Visualization</h3>
+                    <p>
+                        This visualization represents the Circle of Fifths as a quantum computing analogy.
+                        Each key is a qubit state (e.g., C = |0⟩, G = |1⟩).
+                    </p>
+                    <p>
+                        The starting key (<strong>${startKey}</strong>) is highlighted in green.
+                    </p>
+                    <p>
+                        Superposition could represent a "fuzzy" key (e.g., (|C⟩ + |G⟩)/√2).
+                    </p>
+                `;
+            }
+        </script>
+    </body>
+</html>

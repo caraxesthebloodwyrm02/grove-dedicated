@@ -1,0 +1,260 @@
+{
+  "$schema": "https://grid.local/schemas/exhibit.schema.json",
+  "exhibit_id": "hogwarts-temporal-magic",
+  "version": "1.0.0",
+  "name": "Hogwarts Temporal Magic Lab",
+  "tagline": "Where Light Travels Through Time and Memory",
+  "description": "A canon-faithful visualization and tooling exhibit exploring Temporal Patronus mechanics, emotion transformation, and the narrative legacy of Hogwarts characters.",
+
+  "canon_policy": {
+    "strictness": "strict",
+    "rules": [
+      "All lore documents must reference canonical Harry Potter sources only",
+      "No fan-created spells, characters, or timeline modifications in canon docs",
+      "Non-canon tooling must be clearly labeled and separated from lore",
+      "Code is explicitly non-canon and exists only as demonstration/visualization"
+    ],
+    "sources_file": "SOURCES.md",
+    "acknowledgements_file": "ACKNOWLEDGEMENT.md"
+  },
+
+  "structure": {
+    "root": "light_of_the_seven/full_datakit/visualizations/Hogwarts",
+    "sections": {
+      "canon": {
+        "label": "🏛️ Canon (Docs)",
+        "paths": [
+          "HOGWARTS.md",
+          "founders_archive.md",
+          "hogwarts_lore.json",
+          "Founders/",
+          "Salazar Slytherin/",
+          "SSSEVERUS SNAPE/"
+        ],
+        "policy": "strict-canon-only"
+      },
+      "tools": {
+        "label": "🪄 Tools (Non-canon)",
+        "paths": [
+          "ancient_magic_lib.py",
+          "hogwarts_toolkit.py",
+          "hogwarts_cli.py",
+          "parseltongue_cli.py",
+          "spellbook_api.py"
+        ],
+        "policy": "non-canon-clearly-labeled"
+      },
+      "visualizations": {
+        "label": "🎭 Visualizations",
+        "paths": [
+          "great_hall/",
+          "output-0.3.0-/",
+          "prototypes/"
+        ],
+        "policy": "demonstration-only"
+      },
+      "tests": {
+        "label": "🧪 Tests",
+        "paths": [
+          "test_hogwarts_toolkit.py",
+          "test_parseltongue_cli.py"
+        ],
+        "policy": "verification"
+      }
+    }
+  },
+
+  "tools_entrypoints": {
+    "cli": [
+      {
+        "name": "parseltongue",
+        "module": "parseltongue_cli",
+        "description": "Temporal Patronus CLI with preset castings",
+        "usage": "python parseltongue_cli.py [snape|harry]"
+      },
+      {
+        "name": "hogwarts",
+        "module": "hogwarts_cli",
+        "description": "General Hogwarts toolkit CLI",
+        "usage": "python hogwarts_cli.py --help"
+      }
+    ],
+    "api": [
+      {
+        "name": "SpellbookAPI",
+        "module": "spellbook_api",
+        "description": "RESTful API for spell and lore queries",
+        "base_path": "/api/spellbook"
+      }
+    ],
+    "libraries": [
+      {
+        "name": "AncientMagicLib",
+        "module": "ancient_magic_lib",
+        "description": "Core emotion-to-Patronus transformation engine",
+        "exports": ["AncientMagicLib", "PatronusCaster", "UserEmotion", "quick_cast"]
+      },
+      {
+        "name": "HogwartsToolkit",
+        "module": "hogwarts_toolkit",
+        "description": "Lore querying and data access utilities",
+        "exports": ["HogwartsToolkit", "get_patronus_preset", "get_house_info"]
+      }
+    ]
+  },
+
+  "visualization_entrypoints": {
+    "great_hall": {
+      "path": "great_hall/",
+      "type": "interactive",
+      "description": "Multi-agent discussion table visualization",
+      "launcher": "great_hall/run_great_hall_cli.ps1",
+      "features": ["agent-discussion", "table-builder", "output-artifacts"]
+    },
+    "prototypes": {
+      "path": "prototypes/",
+      "type": "experimental",
+      "description": "Experimental UI prototypes (Wizard's Tablet, etc.)",
+      "children": [
+        {
+          "name": "A Wizard's Tablet",
+          "path": "prototypes/A Wizard's Tablet/A-wizard-s-tablet/",
+          "type": "react-app",
+          "description": "Interactive resonance chart and knob-based UI"
+        }
+      ]
+    },
+    "temporal_infographic": {
+      "path": "SSSEVERUS SNAPE/temporal_patronus_infographic.html",
+      "type": "static-html",
+      "description": "Visual infographic on Temporal Patronus mechanics"
+    }
+  },
+
+  "tests": {
+    "framework": "unittest",
+    "test_files": [
+      "test_parseltongue_cli.py",
+      "test_hogwarts_toolkit.py"
+    ],
+    "run_command": "python -m unittest discover -s . -p 'test_*.py'",
+    "coverage_target": 0.80
+  },
+
+  "readme": "README.md",
+
+  "grid_integration": {
+    "enabled": true,
+    "mappings": {
+      "emotion_to_polarity": {
+        "description": "Maps UserEmotion states to Grid polarity values",
+        "source": "ancient_magic_lib.UserEmotion",
+        "target": "grid.schemas.sensory.Polarity",
+        "mapping_rules": {
+          "happy": { "polarity": "supportive", "confidence_boost": 0.2 },
+          "sad": { "polarity": "neutral", "confidence_boost": 0.0 },
+          "angry": { "polarity": "adversarial", "confidence_boost": -0.1 },
+          "calm": { "polarity": "supportive", "confidence_boost": 0.1 },
+          "hopeful": { "polarity": "supportive", "confidence_boost": 0.3 },
+          "loving": { "polarity": "supportive", "confidence_boost": 0.25 },
+          "brave": { "polarity": "supportive", "confidence_boost": 0.15 },
+          "nostalgic": { "polarity": "neutral", "confidence_boost": 0.05 }
+        }
+      },
+      "patronus_to_sensory": {
+        "description": "Maps Patronus forms to Sound/Vision layer parameters",
+        "rules": {
+          "Silver *": {
+            "sound": { "timbre_brightness": 0.9, "pitch_base_hz": 440, "loudness_db": -6 },
+            "vision": { "node_glow": 1.0, "edge_style": "solid", "color_saturation": 1.0 }
+          },
+          "Incorporeal * (mist)": {
+            "sound": { "timbre_brightness": 0.3, "pitch_base_hz": 220, "loudness_db": -18 },
+            "vision": { "node_glow": 0.3, "edge_style": "dashed", "color_saturation": 0.4 }
+          },
+          "*": {
+            "sound": { "timbre_brightness": 0.6, "pitch_base_hz": 330, "loudness_db": -12 },
+            "vision": { "node_glow": 0.7, "edge_style": "solid", "color_saturation": 0.8 }
+          }
+        }
+      },
+      "intensity_to_confidence": {
+        "description": "Maps UserEmotion.intensity to Grid confidence scores",
+        "formula": "confidence = min(1.0, intensity * 0.9 + 0.1)"
+      }
+    },
+    "sandbox_dataset": {
+      "enabled": true,
+      "description": "Hogwarts provides a closed-world demo for Grid's pattern engine",
+      "entities": "emotions / patronus_forms / characters",
+      "relationships": "transforms_to / casts / anchors_to",
+      "use_cases": [
+        "Vision graph renderer testing (nodes = emotions, edges = transformations)",
+        "Sound mapping testing (pitch/loudness/timbre from emotional states)",
+        "Pattern engine testing (recurring transformation sequences)"
+      ]
+    }
+  },
+
+  "workspace_shelves": [
+    {
+      "path": "light_of_the_seven/full_datakit/visualizations/Hogwarts",
+      "name": "🏛️ Hogwarts · Exhibit (Root)",
+      "description": "Main exhibit entry point"
+    },
+    {
+      "path": "light_of_the_seven/full_datakit/visualizations/Hogwarts/great_hall",
+      "name": "🪄 Hogwarts · Great Hall (Tools)",
+      "description": "Interactive multi-agent visualization"
+    },
+    {
+      "path": "light_of_the_seven/full_datakit/visualizations/Hogwarts/prototypes",
+      "name": "🧪 Hogwarts · Prototypes (Experimental)",
+      "description": "Experimental UI prototypes"
+    },
+    {
+      "path": "light_of_the_seven/full_datakit/visualizations/Hogwarts/Founders",
+      "name": "📜 Hogwarts · Founders (Canon)",
+      "description": "Canon-only founder lore"
+    },
+    {
+      "path": "light_of_the_seven/full_datakit/visualizations/Hogwarts/Salazar Slytherin",
+      "name": "📜 Hogwarts · Slytherin (Canon)",
+      "description": "Salazar Slytherin deep dive"
+    },
+    {
+      "path": "light_of_the_seven/full_datakit/visualizations/Hogwarts/SSSEVERUS SNAPE",
+      "name": "📜 Hogwarts · Snape Chapters (Canon)",
+      "description": "Severus Snape narrative chapters"
+    }
+  ],
+
+  "launch": {
+    "quick_start": {
+      "command": "python parseltongue_cli.py snape",
+      "description": "See Snape's eternal doe Patronus manifest"
+    },
+    "full_demo": {
+      "command": "python ancient_magic_lib.py",
+      "description": "Run the emotion transformation demo"
+    },
+    "tests": {
+      "command": "python -m unittest discover -s . -p 'test_*.py' -v",
+      "description": "Run all exhibit tests"
+    },
+    "great_hall": {
+      "command": "powershell ./great_hall/run_great_hall_cli.ps1",
+      "description": "Launch the Great Hall interactive session"
+    }
+  },
+
+  "metadata": {
+    "created": "2025-01-01",
+    "updated": "2025-01-15",
+    "authors": ["Grid Research Team"],
+    "license": "MIT (code) / Canon-restricted (lore)",
+    "tags": ["visualization", "harry-potter", "temporal-mechanics", "patronus", "emotion-transformation"],
+    "category": "educational-exhibit",
+    "maturity": "stable"
+  }
+}

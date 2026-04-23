@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft-07/schema",
+  "_meta": {
+    "description": "GRID Workspace Visual Settings - Theme Customizations",
+    "version": "1.0.0",
+    "author": "GRID Team",
+    "notes": "This file contains visual customizations that can be swapped per environment (dark-office, light-presentation, etc.)"
+  },
+  "themes": {
+    "dark-office": {
+      "name": "Dark Office (Default)",
+      "description": "Deep navy/blue palette optimized for extended coding sessions",
+      "colorCustomizations": {
+        "activityBar.background": "#0d1b2a",
+        "activityBar.foreground": "#d4d4d4",
+        "activityBarBadge.background": "#ffb300",
+        "activityBarBadge.foreground": "#0d1b2a",
+        "sideBar.background": "#0d1b2a",
+        "sideBar.foreground": "#d4d4d4",
+        "sideBar.border": "#2d3436",
+        "sideBarSectionHeader.background": "#1e303d",
+        "sideBarSectionHeader.foreground": "#d4d4d4",
+        "statusBar.background": "#1e3a5f",
+        "statusBar.foreground": "#d4d4d4",
+        "statusBar.debuggingBackground": "#8b5e3c",
+        "statusBar.debuggingForeground": "#ffffff",
+        "statusBar.noFolderBackground": "#4b5320",
+        "titleBar.activeBackground": "#0d1b2a",
+        "titleBar.inactiveBackground": "#1e303d",
+        "titleBar.activeForeground": "#d4d4d4",
+        "editor.lineHighlightBackground": "#1e303d",
+        "editor.lineHighlightBorder": "#ffb300cc",
+        "editorGroupHeader.tabsBackground": "#0d1b2a",
+        "tab.activeBackground": "#1e3a5f",
+        "tab.inactiveBackground": "#0d1b2a",
+        "tab.activeBorder": "#ffb300",
+        "tab.activeForeground": "#ffffff",
+        "tab.inactiveForeground": "#888888",
+        "panel.background": "#0d1b2a",
+        "panel.border": "#2d3436",
+        "terminal.background": "#0d1b2a",
+        "terminal.foreground": "#d4d4d4",
+        "badge.background": "#ffb300",
+        "badge.foreground": "#0d1b2a",
+        "list.activeSelectionBackground": "#1e3a5f",
+        "list.hoverBackground": "#283746",
+        "input.background": "#1e303d",
+        "input.border": "#2d3436",
+        "dropdown.background": "#1e303d",
+        "dropdown.border": "#2d3436"
+      }
+    },
+    "light-presentation": {
+      "name": "Light Presentation",
+      "description": "High-contrast light theme for presentations and demos",
+      "colorCustomizations": {
+        "activityBar.background": "#f5f5f5",
+        "activityBar.foreground": "#333333",
+        "activityBarBadge.background": "#007acc",
+        "activityBarBadge.foreground": "#ffffff",
+        "sideBar.background": "#f5f5f5",
+        "sideBar.foreground": "#333333",
+        "sideBar.border": "#e0e0e0",
+        "sideBarSectionHeader.background": "#ebebeb",
+        "sideBarSectionHeader.foreground": "#333333",
+        "statusBar.background": "#007acc",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.debuggingBackground": "#cc6633",
+        "statusBar.debuggingForeground": "#ffffff",
+        "titleBar.activeBackground": "#f5f5f5",
+        "titleBar.inactiveBackground": "#ebebeb",
+        "titleBar.activeForeground": "#333333",
+        "editor.lineHighlightBackground": "#fffae6",
+        "editor.lineHighlightBorder": "#ffcc00",
+        "editorGroupHeader.tabsBackground": "#f5f5f5",
+        "tab.activeBackground": "#ffffff",
+        "tab.inactiveBackground": "#ececec",
+        "tab.activeBorder": "#007acc",
+        "tab.activeForeground": "#333333",
+        "tab.inactiveForeground": "#666666",
+        "panel.background": "#f5f5f5",
+        "panel.border": "#e0e0e0",
+        "terminal.background": "#ffffff",
+        "terminal.foreground": "#333333",
+        "badge.background": "#007acc",
+        "badge.foreground": "#ffffff"
+      }
+    },
+    "high-contrast-dark": {
+      "name": "High Contrast Dark",
+      "description": "Accessibility-focused dark theme with enhanced contrast",
+      "colorCustomizations": {
+        "activityBar.background": "#000000",
+        "activityBar.foreground": "#ffffff",
+        "activityBarBadge.background": "#ffcc00",
+        "activityBarBadge.foreground": "#000000",
+        "sideBar.background": "#000000",
+        "sideBar.foreground": "#ffffff",
+        "sideBar.border": "#6fc3df",
+        "statusBar.background": "#000080",
+        "statusBar.foreground": "#ffffff",
+        "statusBar.debuggingBackground": "#800000",
+        "statusBar.debuggingForeground": "#ffffff",
+        "titleBar.activeBackground": "#000000",
+        "titleBar.activeForeground": "#ffffff",
+        "editor.lineHighlightBackground": "#1a1a1a",
+        "editor.lineHighlightBorder": "#ffcc00",
+        "tab.activeBackground": "#000080",
+        "tab.inactiveBackground": "#000000",
+        "tab.activeBorder": "#ffcc00",
+        "tab.activeForeground": "#ffffff",
+        "panel.background": "#000000",
+        "panel.border": "#6fc3df",
+        "terminal.background": "#000000",
+        "terminal.foreground": "#00ff00"
+      }
+    }
+  },
+  "tierColors": {
+    "tier1": {
+      "emoji": "🟦",
+      "color": "#0d1b2a",
+      "label": "Core Systems",
+      "description": "Intelligence & Foundations"
+    },
+    "tier2": {
+      "emoji": "🟪",
+      "color": "#1e3a5f",
+      "label": "Infrastructure & Services",
+      "description": "Services that keep the lights on"
+    },
+    "tier3": {
+      "emoji": "🟫",
+      "color": "#4b5320",
+      "label": "Tools & Schemas",
+      "description": "Utilities & data models"
+    },
+    "tier4": {
+      "emoji": "🟧",
+      "color": "#8b5e3c",
+      "label": "Learning & Documentation",
+      "description": "Docs, tutorials, and educational content"
+    },
+    "tier5": {
+      "emoji": "🟩",
+      "color": "#2c3e50",
+      "label": "Quality & Process",
+      "description": "Tests, workflows, CI pipelines"
+    },
+    "tier6": {
+      "emoji": "🟦",
+      "color": "#34495e",
+      "label": "Operations & Automation",
+      "description": "Automation scripts and infra-as-code"
+    }
+  },
+  "accentColors": {
+    "primary": "#ffb300",
+    "secondary": "#1e3a5f",
+    "success": "#2ecc71",
+    "warning": "#f39c12",
+    "error": "#e74c3c",
+    "info": "#3498db"
+  },
+  "iconThemeSettings": {
+    "material-icon-theme.folders.color": "#ffb300",
+    "material-icon-theme.saturation": 1,
+    "material-icon-theme.opacity": 1,
+    "material-icon-theme.folders.theme": "specific"
+  },
+  "editorSettings": {
+    "editor.fontSize": 14,
+    "editor.fontFamily": "'Fira Code', 'Cascadia Code', 'JetBrains Mono', 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 1.6,
+    "editor.renderWhitespace": "boundary",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.rulers": [88, 120],
+    "editor.smoothScrolling": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.maxColumn": 80,
+    "editor.minimap.showSlider": "always"
+  },
+  "terminalSettings": {
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.lineHeight": 1.4,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorBlinking": true
+  }
+}

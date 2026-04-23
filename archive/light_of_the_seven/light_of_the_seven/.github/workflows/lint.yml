@@ -1,0 +1,45 @@
+name: Light of the Seven - Lint and Type Check
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - "light_of_the_seven/**"
+      - ".github/workflows/light-of-the-seven-lint.yml"
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - "light_of_the_seven/**"
+      - ".github/workflows/light-of-the-seven-lint.yml"
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./light_of_the_seven
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruff black isort
+
+      - name: Run Ruff linter
+        run: |
+          ruff check src/ tests/ --config pyproject.toml --show-fixes
+
+      - name: Run Black formatter check
+        run: |
+          black --check src/ tests/
+
+      - name: Check import sorting with isort
+        run: |
+          isort --check-only src/ tests/

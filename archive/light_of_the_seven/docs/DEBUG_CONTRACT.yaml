@@ -1,0 +1,88 @@
+# Debug Contract — No-Regression Criteria for Delegation
+# Validate before and after delegated work.
+# Schema: informal (human + script).
+
+schema_version: "1.0.0"
+last_updated: "2026-03-05"
+repository: light_of_the_seven
+default_branch: main
+
+# --- Baseline (must hold after any delegated change) ---
+# Updated 2026-03-05: all tests passing, no allowed failure patterns.
+baseline:
+  lint:
+    scope: [src/, tests/, grid/, tools/]
+    commands:
+      - id: ruff_check
+        command: "uv run ruff check src/ tests/ grid/ tools/"
+        required_exit_code: 0
+      - id: ruff_format
+        command: "uv run ruff format --check src/ tests/ grid/ tools/"
+        required_exit_code: 0
+    guarantee: "All lint commands exit 0."
+
+  test:
+    command: "uv run pytest tests/ -q --tb=no"
+    min_passed: 163
+    max_failures_allowed: 0
+    guarantee: "Pytest: passed >= min_passed, failures <= max_failures_allowed."
+
+# --- Verification commands (run in order for validation) ---
+verification_commands:
+  - id: lint_check
+    command: "uv run ruff check src/ tests/ grid/ tools/"
+    expected_outcome: "exit 0"
+  - id: lint_format
+    command: "uv run ruff format --check src/ tests/ grid/ tools/"
+    expected_outcome: "exit 0"
+  - id: test_suite
+    command: "uv run pytest tests/ -q --tb=no"
+    expected_outcome: "exit 0, passed >= 163, failed = 0"
+
+# --- Protected areas (regression = contract breach) ---
+protected_areas:
+  - name: grid_essence
+    paths: [grid/essence/core_state.py]
+    tests: [tests/test_grid_intelligence.py::TestEssentialState]
+    description: "EssentialState API and _quantum_transform."
+  - name: grid_version_3_5_4_5
+    paths: [grid/version_3_5.py, grid/version_4_5.py]
+    tests: [tests/test_version_3_5.py, tests/test_version_4_5.py]
+    description: "Version metrics, RuntimeBehavior, IntelligenceV35/V45."
+  - name: grid_application_context_interfaces
+    paths: [grid/application.py, grid/awareness/context.py, grid/interfaces/]
+    tests: [tests/test_grid_intelligence.py]
+    description: "Context, QuantumBridge, SensoryProcessor, IntelligenceApplication."
+
+# --- Delegation contract clauses ---
+contract_clauses:
+  - id: no_lint_regression
+    description: "Lint (ruff check + format check on src/, tests/, grid/, tools/) must pass (exit 0)."
+    validation: "Run verification_commands lint_check and lint_format; both exit 0."
+  - id: no_test_regression
+    description: "Test run must have at least 163 passed and 0 failures."
+    validation: "Run test_suite; parse pytest output; assert passed >= 163, failed == 0."
+
+# --- Final polish sequence (run before commit/push to ensure no regression) ---
+final_polish_sequence:
+  - id: polish_1_lint
+    command: "uv run ruff check src/ tests/ grid/ tools/"
+    required_exit_code: 0
+  - id: polish_2_format
+    command: "uv run ruff format --check src/ tests/ grid/ tools/"
+    required_exit_code: 0
+  - id: polish_3_test
+    command: "uv run pytest tests/ -q --tb=no"
+    required_exit_code: 0
+    min_passed: 163
+    max_failures: 0
+
+delegation_instructions:
+  before_start:
+    - "Run all verification_commands; record output."
+    - "Confirm baseline holds (lint 0, passed >= 163, failed == 0)."
+  after_changes:
+    - "Re-run verification_commands (or final_polish_sequence)."
+    - "Confirm no regression: lint still 0; passed >= 163; failed == 0."
+  on_regression:
+    - "Do not merge/push until regression is fixed or baseline/contract is explicitly updated."

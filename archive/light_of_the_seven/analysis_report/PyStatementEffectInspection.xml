@@ -1,0 +1,14 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py</file>
+  <line>4191</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py" />
+  <problem_class id="PyStatementEffectInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Statement has no effect</problem_class>
+  <description>Statement seems to have no effect</description>
+  <highlighted_element>self[tag]</highlighted_element>
+  <language>Python</language>
+  <offset>16</offset>
+  <length>9</length>
+</problem>
+</problems>

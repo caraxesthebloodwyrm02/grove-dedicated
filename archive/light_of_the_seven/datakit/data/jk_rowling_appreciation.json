@@ -1,0 +1,441 @@
+{
+  "metadata": {
+    "name": "JK Rowling Appreciation",
+    "description": "A tribute to the creator of Harry Potter – honoring the stories, craft, and quiet acts of courage that helped millions feel less alone.",
+    "version": "1.0.0",
+    "author": "DataKit Tribute System",
+    "topic_type": "tribute_knowledge_system",
+    "theme": "gratitude",
+    "emotional_purpose": "To thank the person whose stories made Hogwarts a second home, offered comfort in difficult times, and gave us language for hope, friendship, and choice.",
+    "timeframe": "1965-present",
+    "tags_global": ["literary", "emotional", "cultural", "craft", "comfort"]
+  },
+
+  "narrative_segments": {
+    "origins": {
+      "id": "origins",
+      "title": "The Journey Begins",
+      "tags": ["biographical", "emotional"],
+      "levels": {
+        "summary": "From a struggling single mother in Edinburgh to the world's most celebrated author.",
+        "deeper": "Joanne Rowling was born July 31, 1965. The idea for Harry Potter came on a delayed train from Manchester to London in 1990. She wrote in cafes while her daughter slept, surviving on welfare, facing rejection from 12 publishers before Bloomsbury said yes.",
+        "reflection": "Her story teaches us that creative vision persists through hardship. The very circumstances that seemed like obstacles—poverty, single parenthood, depression—became the crucible for something universal."
+      },
+      "timeline": [
+        { "year": 1965, "event": "Born in Yate, Gloucestershire, England" },
+        { "year": 1990, "event": "Harry Potter idea conceived on delayed train" },
+        { "year": 1993, "event": "Moved to Edinburgh, began writing in cafes" },
+        { "year": 1995, "event": "Completed first manuscript" },
+        { "year": 1996, "event": "Bloomsbury accepts after 12 rejections" },
+        { "year": 1997, "event": "Philosopher's Stone published (June 26)" }
+      ]
+    },
+
+    "craft_elements": {
+      "id": "craft",
+      "title": "The Architecture of Wonder",
+      "tags": ["craft", "literary", "technical"],
+      "levels": {
+        "summary": "World-building, character arcs, and moral complexity woven into accessible prose.",
+        "deeper": "Rowling's craft operates on multiple frequencies: surface adventure for young readers, layered symbolism for adults. Her world-building extends beyond Hogwarts—economic systems (Gringotts), governance (Ministry), education philosophy, even sports culture (Quidditch). Character arcs span seven books with Snape's redemption being literature's most patient slow-burn.",
+        "reflection": "She proved that children's literature can bear philosophical weight. Choice vs. destiny. The banality of evil. Love as protection. Death as transition, not ending."
+      },
+      "elements": {
+        "world_building": {
+          "systems": [
+            "Magic taxonomy",
+            "Hogwarts houses",
+            "Wizarding economy",
+            "Ministry structure",
+            "International wizarding relations"
+          ],
+          "depth_markers": [
+            "Consistent internal rules",
+            "Historical depth",
+            "Cultural artifacts",
+            "Language creation"
+          ]
+        },
+        "character_architecture": {
+          "archetypes_subverted": [
+            "Chosen One (Harry questions it)",
+            "Mentor (Dumbledore is flawed)",
+            "Villain (Voldemort fears death)",
+            "Redemption (Snape's lifetime arc)"
+          ],
+          "growth_patterns": [
+            "Harry: innocence → burden → acceptance",
+            "Hermione: rules → principles",
+            "Ron: shadow → self-worth",
+            "Neville: fear → courage"
+          ]
+        },
+        "moral_structure": {
+          "core_themes": [
+            "Choice defines us",
+            "Love as protection and memory",
+            "Courage despite fear",
+            "Kindness in small moments matters",
+            "Friendship sustains and heals",
+            "Found family is real family",
+            "Standing up to prejudice",
+            "Growing up and letting go"
+          ],
+          "complexity": "No pure heroes, no cartoonish villains—even Dumbledore manipulated, even Draco hesitated"
+        }
+      }
+    },
+
+    "global_ripple": {
+      "id": "impact",
+      "title": "A World Transformed",
+      "tags": ["cultural", "impact", "data"],
+      "levels": {
+        "summary": "500+ million books sold, 80 languages, a generation of readers created.",
+        "deeper": "Harry Potter reversed the decline in children's reading. It created theme parks, a film franchise ($7.7B), stage plays, video games, and an enduring fandom. The series introduced 'muggle' to the Oxford English Dictionary and made platform 9¾ a pilgrimage site.",
+        "reflection": "Beyond commerce, she created a shared mythology for a generation. People found their houses, their patronuses, their belonging in a fictional world that felt more accepting than reality."
+      },
+      "statistics": {
+        "books_sold": "500+ million",
+        "languages_translated": 80,
+        "countries_published": 200,
+        "film_franchise_gross": "$7.7 billion",
+        "theme_park_visitors_annual": "10+ million",
+        "fanfiction_stories": "800,000+ on AO3 alone"
+      },
+      "cultural_markers": [
+        "First billionaire author (later lost status through charity)",
+        "Revived interest in reading among youth",
+        "Created global midnight release culture",
+        "Inspired generation of writers",
+        "Academic courses on 'Harry Potter Studies'",
+        "Therapeutic use in child psychology"
+      ]
+    },
+
+    "personal_resonance": {
+      "id": "resonance",
+      "title": "Why This Matters to Me",
+      "tags": ["emotional", "comfort", "personal"],
+      "levels": {
+        "summary": "Hogwarts as refuge. Stories as survival. Gratitude as practice.",
+        "deeper": "For many of us, Harry Potter arrived at exactly the right moment—when we needed to believe that ordinary people could matter, that found families were valid, that the awkward could become heroes. The books didn't just entertain; they provided vocabulary for our inner lives.",
+        "reflection": "This appreciation exists because art deserves acknowledgment. JK Rowling gave millions a second home. That's not small. That's world-making. And world-making deserves thanks."
+      },
+      "resonance_points": [
+        {
+          "theme": "Refuge",
+          "description": "Hogwarts as a place where differences become strengths",
+          "personal_anchor": "The feeling of being sorted—of belonging somewhere"
+        },
+        {
+          "theme": "Found Family",
+          "description": "The Weasleys adopting Harry without question",
+          "personal_anchor": "Learning that family is chosen, not just given"
+        },
+        {
+          "theme": "Courage Despite Fear",
+          "description": "Neville standing up when it mattered most",
+          "personal_anchor": "Permission to be afraid and still act"
+        },
+        {
+          "theme": "Knowledge as Power",
+          "description": "Hermione's brilliance saving everyone repeatedly",
+          "personal_anchor": "Validation that curiosity and study matter"
+        },
+        {
+          "theme": "Mortality Acceptance",
+          "description": "The Deathly Hallows teaching us about death",
+          "personal_anchor": "A framework for processing loss"
+        }
+      ]
+    }
+  },
+
+  "knowledge_blocks": {
+    "book_milestones": [
+      {
+        "title": "Philosopher's Stone",
+        "year": 1997,
+        "pages": 223,
+        "theme": "Discovery"
+      },
+      {
+        "title": "Chamber of Secrets",
+        "year": 1998,
+        "pages": 251,
+        "theme": "Identity"
+      },
+      {
+        "title": "Prisoner of Azkaban",
+        "year": 1999,
+        "pages": 317,
+        "theme": "Truth"
+      },
+      {
+        "title": "Goblet of Fire",
+        "year": 2000,
+        "pages": 636,
+        "theme": "Competition"
+      },
+      {
+        "title": "Order of the Phoenix",
+        "year": 2003,
+        "pages": 766,
+        "theme": "Resistance"
+      },
+      {
+        "title": "Half-Blood Prince",
+        "year": 2005,
+        "pages": 607,
+        "theme": "History"
+      },
+      {
+        "title": "Deathly Hallows",
+        "year": 2007,
+        "pages": 607,
+        "theme": "Sacrifice"
+      }
+    ],
+    "hogwarts_houses": {
+      "Gryffindor": {
+        "trait": "Courage",
+        "element": "Fire",
+        "founder": "Godric Gryffindor"
+      },
+      "Hufflepuff": {
+        "trait": "Loyalty",
+        "element": "Earth",
+        "founder": "Helga Hufflepuff"
+      },
+      "Ravenclaw": {
+        "trait": "Wisdom",
+        "element": "Air",
+        "founder": "Rowena Ravenclaw"
+      },
+      "Slytherin": {
+        "trait": "Ambition",
+        "element": "Water",
+        "founder": "Salazar Slytherin"
+      }
+    },
+    "key_characters": [
+      {
+        "name": "Harry Potter",
+        "role": "Protagonist",
+        "arc": "Chosen one who chooses"
+      },
+      {
+        "name": "Hermione Granger",
+        "role": "Heart/Brain",
+        "arc": "Rules to principles"
+      },
+      {
+        "name": "Ron Weasley",
+        "role": "Loyalty",
+        "arc": "Shadow to self-worth"
+      },
+      {
+        "name": "Albus Dumbledore",
+        "role": "Mentor",
+        "arc": "Power to wisdom"
+      },
+      {
+        "name": "Severus Snape",
+        "role": "Complexity",
+        "arc": "Seven-book redemption"
+      },
+      {
+        "name": "Voldemort",
+        "role": "Antagonist",
+        "arc": "Fear of death personified"
+      },
+      {
+        "name": "Neville Longbottom",
+        "role": "Parallel Hero",
+        "arc": "Fear to courage"
+      }
+    ]
+  },
+
+  "interactive_hooks": {
+    "visualizations": [
+      {
+        "id": "timeline",
+        "type": "temporal",
+        "data_source": "narrative_segments.origins.timeline + knowledge_blocks.book_milestones"
+      },
+      {
+        "id": "character_network",
+        "type": "graph",
+        "data_source": "knowledge_blocks.key_characters"
+      },
+      {
+        "id": "theme_sentiment",
+        "type": "bar",
+        "data_source": "narrative_segments.craft_elements.elements.moral_structure.core_themes"
+      },
+      {
+        "id": "house_wheel",
+        "type": "radial",
+        "data_source": "knowledge_blocks.hogwarts_houses"
+      }
+    ],
+    "generators": [
+      {
+        "id": "tribute_paragraph",
+        "output": "reflective text",
+        "sources": ["personal_resonance", "craft_elements"]
+      },
+      {
+        "id": "trivia_round",
+        "output": "quiz questions",
+        "sources": ["knowledge_blocks", "global_ripple.statistics"]
+      },
+      {
+        "id": "theme_explainer",
+        "output": "educational text",
+        "sources": ["craft_elements.elements.moral_structure"]
+      },
+      {
+        "id": "micro_story",
+        "output": "generative fiction",
+        "sources": ["hogwarts_houses", "key_characters"]
+      }
+    ]
+  },
+
+  "exploration_paths": {
+    "literary": {
+      "description": "Focus on craft, technique, and storytelling mastery",
+      "sequence": [
+        "craft_elements",
+        "knowledge_blocks.book_milestones",
+        "character_network_viz"
+      ]
+    },
+    "emotional": {
+      "description": "Focus on personal meaning and resonance",
+      "sequence": ["personal_resonance", "origins", "tribute_generator"]
+    },
+    "technical": {
+      "description": "Focus on data, statistics, and cultural metrics",
+      "sequence": ["global_ripple", "timeline_viz", "trivia_generator"]
+    }
+  },
+
+  "learning_modules": [
+    {
+      "id": "intro",
+      "title": "Why Appreciation Matters",
+      "description": "Understanding the purpose of this tribute",
+      "duration_minutes": 5,
+      "difficulty": "beginner",
+      "tags": ["emotional", "intro"],
+      "content": "This module isn't just information—it's gratitude made tangible."
+    },
+    {
+      "id": "origins_module",
+      "title": "From Struggle to Story",
+      "description": "JK Rowling's journey from idea to phenomenon",
+      "duration_minutes": 15,
+      "difficulty": "beginner",
+      "tags": ["biographical", "emotional"],
+      "linked_segment": "origins"
+    },
+    {
+      "id": "craft_deep_dive",
+      "title": "The Architecture of Hogwarts",
+      "description": "Analyzing world-building and narrative structure",
+      "duration_minutes": 25,
+      "difficulty": "intermediate",
+      "tags": ["craft", "literary"],
+      "linked_segment": "craft_elements"
+    },
+    {
+      "id": "impact_analysis",
+      "title": "Measuring Magic",
+      "description": "The global cultural footprint of Harry Potter",
+      "duration_minutes": 20,
+      "difficulty": "intermediate",
+      "tags": ["cultural", "data"],
+      "linked_segment": "global_ripple"
+    },
+    {
+      "id": "resonance_exploration",
+      "title": "Personal Meaning",
+      "description": "Reflecting on why stories matter to us",
+      "duration_minutes": 15,
+      "difficulty": "advanced",
+      "tags": ["emotional", "reflection"],
+      "linked_segment": "personal_resonance"
+    },
+    {
+      "id": "synthesis",
+      "title": "Crafting Your Own Tribute",
+      "description": "Using the appreciation generator to create output",
+      "duration_minutes": 20,
+      "difficulty": "advanced",
+      "tags": ["interactive", "creative"],
+      "interactive": true
+    }
+  ],
+
+  "fun_facts": [
+    "Rowling wrote the epilogue of Deathly Hallows years before finishing the series",
+    "The dementors were inspired by Rowling's experience with depression",
+    "Hogwarts has 142 staircases—and they like to move",
+    "The name 'Voldemort' means 'flight from death' in French",
+    "Rowling considered killing Ron halfway through the series",
+    "The first book was rejected by 12 publishers before Bloomsbury accepted",
+    "Platform 9¾ at King's Cross has a permanent installation for fans",
+    "Rowling lost her billionaire status by donating so much to charity",
+    "The longest word in the series is 'Transubstantiation' (not a spell)",
+    "Hedwig's death was meant to represent the end of Harry's innocence",
+    "Rowling and Harry share the same birthday: July 31",
+    "The Hogwarts motto 'Draco dormiens nunquam titillandus' means 'Never tickle a sleeping dragon'"
+  ],
+
+  "challenges": [
+    {
+      "id": "house_sort",
+      "title": "House Alignment",
+      "description": "Reflect on which house values resonate most with you",
+      "type": "reflection",
+      "difficulty": "beginner",
+      "points": 10
+    },
+    {
+      "id": "timeline_quiz",
+      "title": "Chronological Magic",
+      "description": "Order key events from Rowling's journey correctly",
+      "type": "ordering",
+      "difficulty": "intermediate",
+      "points": 20
+    },
+    {
+      "id": "theme_analysis",
+      "title": "Moral Mapping",
+      "description": "Match themes to their narrative expressions in the books",
+      "type": "matching",
+      "difficulty": "intermediate",
+      "points": 25
+    },
+    {
+      "id": "tribute_creation",
+      "title": "Personal Token",
+      "description": "Write your own appreciation paragraph using the generator",
+      "type": "creative",
+      "difficulty": "advanced",
+      "points": 50
+    },
+    {
+      "id": "impact_stats",
+      "title": "By The Numbers",
+      "description": "Quiz on Harry Potter's cultural statistics",
+      "type": "quiz",
+      "difficulty": "intermediate",
+      "points": 15
+    }
+  ]
+}

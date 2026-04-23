@@ -1,0 +1,15 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/html/heat_science_demo_backup.html</file>
+  <line>668</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/html/heat_science_demo_backup.html" />
+  <problem_class id="Annotator" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Annotator</problem_class>
+  <hints />
+  <description>Element div is not closed #loc</description>
+  <highlighted_element>&lt;</highlighted_element>
+  <language>XML</language>
+  <offset>0</offset>
+  <length>1</length>
+</problem>
+</problems>

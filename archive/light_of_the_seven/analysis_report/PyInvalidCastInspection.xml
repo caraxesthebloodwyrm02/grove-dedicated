@@ -1,0 +1,74 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/IptcImagePlugin.py</file>
+  <line>215</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/IptcImagePlugin.py" />
+  <problem_class id="PyInvalidCastInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Type cast with impossible types</problem_class>
+  <description>Cast of type 'FakeImage' to type 'IptcImageFile' may be a mistake because no possible value of one is assignable with the other. If this was intentional, cast the expression to 'object' first.</description>
+  <highlighted_element>cast(IptcImageFile, fake_im)</highlighted_element>
+  <language>Python</language>
+  <offset>14</offset>
+  <length>28</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py</file>
+  <line>1252</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py" />
+  <problem_class id="PyInvalidCastInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Type cast with impossible types</problem_class>
+  <description>Cast of type '_idat' to type 'IO[bytes]' may be a mistake because no possible value of one is assignable with the other. If this was intentional, cast the expression to 'object' first.</description>
+  <highlighted_element>cast(IO[bytes], _idat(fp, chunk))</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>33</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py</file>
+  <line>1289</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py" />
+  <problem_class id="PyInvalidCastInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Type cast with impossible types</problem_class>
+  <description>Cast of type '_idat' to type 'IO[bytes]' may be a mistake because no possible value of one is assignable with the other. If this was intentional, cast the expression to 'object' first.</description>
+  <highlighted_element>cast(IO[bytes], _idat(fp, chunk))</highlighted_element>
+  <language>Python</language>
+  <offset>16</offset>
+  <length>33</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py</file>
+  <line>1296</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py" />
+  <problem_class id="PyInvalidCastInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Type cast with impossible types</problem_class>
+  <description>Cast of type '_fdat' to type 'IO[bytes]' may be a mistake because no possible value of one is assignable with the other. If this was intentional, cast the expression to 'object' first.</description>
+  <highlighted_element>cast(IO[bytes], fdat_chunks)</highlighted_element>
+  <language>Python</language>
+  <offset>16</offset>
+  <length>28</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py</file>
+  <line>1499</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py" />
+  <problem_class id="PyInvalidCastInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Type cast with impossible types</problem_class>
+  <description>Cast of type '_idat' to type 'IO[bytes]' may be a mistake because no possible value of one is assignable with the other. If this was intentional, cast the expression to 'object' first.</description>
+  <highlighted_element>cast(IO[bytes], _idat(fp, chunk))</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>33</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py</file>
+  <line>368</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py" />
+  <problem_class id="PyInvalidCastInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Type cast with impossible types</problem_class>
+  <description>Cast of type 'float' to type '_IntegralLike' may be a mistake because no possible value of one is assignable with the other. If this was intentional, cast the expression to 'object' first.</description>
+  <highlighted_element>cast(IntegralLike, value)</highlighted_element>
+  <language>Python</language>
+  <offset>34</offset>
+  <length>25</length>
+</problem>
+</problems>

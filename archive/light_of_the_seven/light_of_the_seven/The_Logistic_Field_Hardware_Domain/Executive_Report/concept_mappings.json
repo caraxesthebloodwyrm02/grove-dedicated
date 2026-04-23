@@ -1,0 +1,278 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hardware Domain Concept Mappings",
+  "description": "Maps abstract hardware and logistics concepts to relatable anchors and analogies.",
+  "type": "object",
+  "properties": {
+    "finite_state_machine": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "Formal definition of finite state machines."
+        },
+        "anchors": {
+          "type": "object",
+          "description": "Relatable examples or analogies for the concept.",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string",
+                "description": "Explanation using this anchor."
+              },
+              "user_check": {
+                "type": "string",
+                "description": "Question to verify if the user relates to this anchor."
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "hardware_link": {
+          "type": "string",
+          "description": "Key in hardware_links.json for deep-dive connections."
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    },
+    "fpga_prototype": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "Formal definition of FPGA prototyping."
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              },
+              "user_check": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "hardware_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    },
+    "asic_design": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "Formal definition of ASIC design."
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              },
+              "user_check": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "hardware_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    },
+    "verification_flow": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "Formal definition of hardware verification flows."
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              },
+              "user_check": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "hardware_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    },
+    "turing_machine": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "Formal definition of Turing machines."
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              },
+              "user_check": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "hardware_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    },
+    "power_consumption": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "Energy usage per operation (Dynamic + Static Power)."
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              },
+              "user_check": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "hardware_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    },
+    "throughput_momentum": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "The inertia of data in a deep pipeline; difficult to stop instantly without data loss."
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              },
+              "user_check": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "hardware_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "finite_state_machine": {
+        "abstract": "A mathematical model of computation used to design both computer programs and sequential logic circuits. It is conceived as an abstract machine that can be in exactly one of a finite number of states at any given time.",
+        "anchors": {
+          "traffic_light": {
+            "script": "A finite state machine is like a traffic light. It has specific states (red, yellow, green) and transitions between them based on inputs (timers or sensors). Just like a traffic light follows a set sequence, an FSM follows a predefined set of rules to move from one state to another.",
+            "user_check": "Have you ever noticed how traffic lights follow a predictable sequence? (yes/no)"
+          },
+          "vending_machine": {
+            "script": "Think of a vending machine as a finite state machine. It starts in an 'idle' state, waits for you to insert money, then moves to a 'selection' state. After you choose an item, it either dispenses the product or returns to 'idle' if something goes wrong. Each step is a state, and the machine transitions between them based on your inputs.",
+            "user_check": "Have you ever used a vending machine? (yes/no)"
+          }
+        },
+        "hardware_link": "fsm_traffic_light"
+      }
+    },
+    {
+      "fpga_prototype": {
+        "abstract": "A Field-Programmable Gate Array (FPGA) is an integrated circuit designed to be configured by a customer or a designer after manufacturing. FPGA prototyping involves using these reconfigurable chips to test and validate hardware designs before committing to a final ASIC.",
+        "anchors": {
+          "lego_blocks": {
+            "script": "FPGA prototyping is like building with LEGO blocks. You can rearrange the blocks (logic gates) to create different structures (circuits) without permanently gluing them together. This lets you test and modify your design easily before finalizing it.",
+            "user_check": "Have you ever built something with LEGO or similar building blocks? (yes/no)"
+          },
+          "sketch_pad": {
+            "script": "Think of an FPGA like a sketch pad for hardware designers. You can draw and redraw your circuit designs, testing different ideas quickly and easily. Once you're happy with your sketch, you can finalize it into a permanent design (ASIC).",
+            "user_check": "Do you enjoy sketching or doodling? (yes/no)"
+          }
+        },
+        "hardware_link": "fpga_lego_blocks"
+      }
+    }
+  ]
+}

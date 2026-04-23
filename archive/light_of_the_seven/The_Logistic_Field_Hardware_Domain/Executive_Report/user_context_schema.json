@@ -1,0 +1,78 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User Context Schema for Logistic Field & Hardware Domain",
+  "description": "Defines the structure for storing user background and experiences to personalize hardware and logistics explanations.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "User's name or identifier."
+    },
+    "location": {
+      "type": "string",
+      "description": "User's location (optional)."
+    },
+    "experiences": {
+      "type": "array",
+      "description": "List of hardware-related experiences the user has.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "built_hobby_electronics",
+          "worked_with_microcontrollers",
+          "designed_pcb",
+          "used_fpga",
+          "worked_with_asic",
+          "deployed_embedded_systems",
+          "managed_cloud_infra",
+          "worked_with_kubernetes",
+          "deployed_web_services",
+          "used_logic_gates",
+          "programmed_arduino",
+          "worked_with_raspberry_pi"
+        ]
+      }
+    },
+    "knowledge_gaps": {
+      "type": "array",
+      "description": "List of hardware concepts the user wants to learn.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "finite_state_machines",
+          "fpga_prototyping",
+          "asic_design_flow",
+          "verification_methods",
+          "turing_machines",
+          "hardware_description_languages",
+          "digital_circuit_design",
+          "vlsi_design",
+          "computer_architecture"
+        ]
+      }
+    },
+    "preferred_learning_style": {
+      "type": "string",
+      "description": "User's preferred way of learning (e.g., analogies, code examples, theory).",
+      "enum": ["analogies", "code_examples", "theory", "visual_diagrams", "hands_on_projects"]
+    },
+    "current_projects": {
+      "type": "array",
+      "description": "List of current hardware-related projects the user is working on.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "iot_device",
+          "robotics",
+          "custom_pcb",
+          "fpga_accelerator",
+          "embedded_linux",
+          "asic_verification",
+          "digital_signal_processing",
+          "none"
+        ]
+      }
+    }
+  },
+  "required": ["name", "experiences"]
+}

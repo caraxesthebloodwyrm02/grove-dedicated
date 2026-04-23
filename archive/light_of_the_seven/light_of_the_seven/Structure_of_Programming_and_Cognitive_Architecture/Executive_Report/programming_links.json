@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Programming Links for Cognitive Architecture",
+  "description": "Bridges abstract programming concepts to concrete examples and deep-dive connections.",
+  "type": "object",
+  "properties": {
+    "ast_folder_tree": {
+      "classical_concept": "abstract_syntax_tree",
+      "concrete_example": "folder_tree",
+      "script": "An Abstract Syntax Tree (AST) is like a folder structure on your computer. Each folder represents a node in the tree, and the files or subfolders inside represent its children. Just like you navigate folders to find files, compilers navigate ASTs to understand your code.",
+      "deep_dive": "Want to explore how ASTs enable code transformations or optimizations?"
+    },
+    "dsl_config_files": {
+      "classical_concept": "domain_specific_language",
+      "concrete_example": "config_file_formats",
+      "script": "A Domain-Specific Language (DSL) is like the configuration files you use for tools or services (e.g., JSON, YAML, or Dockerfiles). These files are designed for a specific purpose, just like DSLs are tailored to solve problems in a particular domain.",
+      "deep_dive": "Want to see how DSLs can simplify complex workflows or automate repetitive tasks?"
+    },
+    "parser_recipe": {
+      "classical_concept": "parser",
+      "concrete_example": "recipe_instructions",
+      "script": "A parser is like following a recipe. The recipe (your code) is broken down into steps (tokens) and organized into a structure (the parse tree) that the computer can follow, just like you follow a recipe to cook a meal.",
+      "deep_dive": "Want to dive into how parsers handle ambiguity or errors in code?"
+    },
+    "compiler_translator": {
+      "classical_concept": "compiler",
+      "concrete_example": "language_translator",
+      "script": "A compiler is like a translator that converts your code into a language the computer understands. Just as a translator converts a book from one language to another, a compiler converts your high-level code into machine code.",
+      "deep_dive": "Want to explore how compilers optimize code for performance or size?"
+    },
+    "mental_model_map": {
+      "classical_concept": "mental_model",
+      "concrete_example": "map_navigation",
+      "script": "A mental model is like a map in your mind that helps you navigate and understand code. Just as a map helps you find your way in a new city, a mental model helps you predict how code will behave or debug issues.",
+      "deep_dive": "Want to discuss how mental models evolve with experience or how they can lead to misconceptions?"
+    }
+  },
+  "additionalProperties": false
+}

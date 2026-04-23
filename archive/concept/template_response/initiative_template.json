@@ -1,0 +1,220 @@
+{
+  "initiative": {
+    "title": "Temporal Resonance Research Initiative",
+    "tagline": "Retro‑causal information dynamics across disciplines",
+    "overview": {
+      "duration_months": 6,
+      "description": "A 6‑month interdisciplinary program that explores whether high‑intensity information can exhibit retrocausal influence. Emphasis on open science, collective authorship, and rigorous reproducibility."
+    },
+    "timeline": [
+      {"date":"2025-11-20","milestone":"CFP Release","phase":"Foundation"},
+      {"date":"2025-12-15","milestone":"Registration deadline","phase":"Recruitment"},
+      {"date":"2026-01-10","milestone":"Abstracts due","phase":"Content Submission"},
+      {"date":"2026-02-01","milestone":"Methodology proposals due","phase":"Technical Planning"},
+      {"date":"2026-03-15","milestone":"Draft paper due","phase":"Content Development"},
+      {"date":"2026-04-10/2026-04-25","milestone":"Community review window","phase":"Quality Control"},
+      {"date":"2026-05-15","milestone":"Final paper v1.0","phase":"Publication Ready"},
+      {"date":"2026-06-01","milestone":"Workshop + archival","phase":"Dissemination"}
+    ],
+    "domains": [
+      "Physics",
+      "Information Theory",
+      "Cognitive Science",
+      "Archaeology",
+      "Ethics"
+    ],
+    "domain_topic_matrix": {
+      "Physics":            {"Retrocausal":true,  "SignalPropagation":true,  "MemoryFormation":false, "FormalLinguistic":false, "Reproducibility":true},
+      "Information Theory": {"Retrocausal":true,  "SignalPropagation":true,  "MemoryFormation":true,  "FormalLinguistic":false, "Reproducibility":true},
+      "Cognitive Science":  {"Retrocausal":false, "SignalPropagation":true,  "MemoryFormation":true,  "FormalLinguistic":true,  "Reproducibility":true},
+      "Archaeology":        {"Retrocausal":false, "SignalPropagation":false, "MemoryFormation":true,  "FormalLinguistic":true,  "Reproducibility":true},
+      "Ethics":             {"Retrocausal":true,  "SignalPropagation":true,  "MemoryFormation":true,  "FormalLinguistic":true,  "Reproducibility":false}
+    },
+    "network_metrics": {
+      "total_nodes": 32,
+      "total_edges": 80,
+      "density": 0.161,
+      "top_entities": [
+        {"entity":"README","degree_centrality":0.452},
+        {"entity":"CFP","degree_centrality":0.419},
+        {"entity":"LITERATURE_MAP","degree_centrality":0.387},
+        {"entity":"OUTREACH","degree_centrality":0.355},
+        {"entity":"VALIDATION","degree_centrality":0.290}
+      ]
+    },
+    "quality_metrics": {
+      "documentation_completeness":"100% (11/11 core docs)",
+      "timeline_clarity":"High (8/8 milestones defined)",
+      "governance_structure":"Clear (3‑tier system)",
+      "reproducibility_standards":"Comprehensive (5‑point checklist)",
+      "community_engagement":"Multi‑channel (GitHub + async)",
+      "licensing":"Dual‑licensed (CC BY 4.0 + MIT)",
+      "open_science":"Strong (arXiv + Zenodo/OSF)"
+    },
+    "innovation_areas": [
+      "Retrocausal Information Dynamics Models",
+      "Cross‑Domain Evidence Integration",
+      "Community‑Validated Scientific Process",
+      "Collective Authorship Framework",
+      "Real‑Time Open Peer Review",
+      "Interdisciplinary Literature Synthesis"
+    ],
+    "risk_mitigation": {
+      "extraordinary_claims":"Rigorous reproducibility standards + pre‑registration",
+      "interdisciplinary_coordination":"Clear communication channels + documented processes",
+      "quality_control":"Community review + governance oversight",
+      "temporal_constraints":"Buffer periods + flexible milestone definitions",
+      "scope_creep":"Steering group oversight + structured proposal process"
+    },
+    "compression": {
+      "ratio":"11 documents → 8 thematic summaries",
+      "entity_breakdown":"11 documents + 21 key concepts = 32 total entities"
+    },
+    "concept_relationships": [
+      {"pair":"governance ↔ community","co_occurrences":5},
+      {"pair":"governance ↔ validation","co_occurrences":3},
+      {"pair":"community ↔ validation","co_occurrences":3},
+      {"pair":"retrocausal ↔ temporal","co_occurrences":2},
+      {"pair":"retrocausal ↔ resonance","co_occurrences":2},
+      {"pair":"community ↔ reproducibility","co_occurrences":2},
+      {"pair":"temporal ↔ resonance","co_occurrences":2},
+      {"pair":"temporal ↔ formal","co_occurrences":2},
+      {"pair":"evidence ↔ retrocausal","co_occurrences":1},
+      {"pair":"evidence ↔ models","co_occurrences":1}
+    ],
+    "architectural_summary": {
+      "central_hub":"README.md (scope & objectives)",
+      "governance_cluster":["GOVERNANCE","CODE_OF_CONDUCT","COMMUNITY"],
+      "methodology_cluster":["VALIDATION","CONTRIBUTING"],
+      "external_interface":["LITERATURE_MAP","OUTREACH"],
+      "timeline_anchor":"TIMELINE.md",
+      "participation_gateway":"CFP.md"
+    },
+    "documentation_licenses": {
+      "docs":"CC BY 4.0",
+      "code":"MIT"
+    }
+  },
+
+  "example_scenario": {
+    "title":"NBA Scouting Agent (Realtime‑API demo)",
+    "purpose":"Show how to split a monolithic data‑heavy function into focused tools, keep the context window small, and guide the model with hint prompts.",
+    "initial_tool_definition": {
+      "session.update": {
+        "tools": [
+          {
+            "type":"function",
+            "name":"searchDraftProspects",
+            "description":"Search NBA draft prospects by position, year and optional max ranking. Returns a **compact list** of general statistics only.",
+            "parameters":{
+              "type":"object",
+              "properties":{
+                "position":{"type":"string","enum":["Point Guard","Shooting Guard","Small Forward","Power Forward","Center","Any"]},
+                "year":{"type":"integer"},
+                "maxMockDraftRanking":{"type":"integer","description":"Upper bound for mock ranking (e.g., 10 for top‑10)"},
+                "limit":{"type":"integer","default":5,"minimum":1,"maximum":10}
+              },
+              "required":["position","year"]
+            }
+          },
+          {
+            "type":"function",
+            "name":"getProspectDetails",
+            "description":"Retrieve the full record for a single prospect. Caller can toggle optional sections to keep payload small.",
+            "parameters":{
+              "type":"object",
+              "properties":{
+                "playerName":{"type":"string"},
+                "year":{"type":"integer"},
+                "includeAgentInfo":{"type":"boolean","default":false},
+                "includeStats":{"type":"boolean","default":true},
+                "includeScoutingReport":{"type":"boolean","default":true}
+              },
+              "required":["playerName","year"]
+            }
+          }
+        ],
+        "tool_choice":"auto"
+      }
+    },
+
+    "lightweight_search_example_response": {
+      "status":{"code":200,"message":"SUCCESS"},
+      "found":4274,
+      "offset":0,
+      "limit":5,
+      "data":[
+        {
+          "prospectId":10001,
+          "firstName":"Jalen",
+          "lastName":"Storm",
+          "position":"PG",
+          "collegeTeam":"Springfield Tigers",
+          "conference":"Big West",
+          "mockDraftRanking":5,
+          "averagePoints":21,
+          "averageRebounds":4,
+          "averageAssists":7,
+          "heightFeet":6,
+          "heightInches":4,
+          "weightPounds":205
+        }
+      ]
+    },
+
+    "full_detail_example_call": {
+      "type":"function",
+      "name":"getProspectDetails",
+      "arguments":{
+        "playerName":"Jalen Storm",
+        "year":2025,
+        "includeAgentInfo":true,
+        "includeStats":true,
+        "includeScoutingReport":true
+      }
+    },
+
+    "full_detail_example_response": {
+      "status":{"code":200,"message":"SUCCESS"},
+      "prospectId":10001,
+      "playerName":"Jalen Storm",
+      "position":"PG",
+      "height":"6'4\"",
+      "weightPounds":205,
+      "collegeTeam":"Springfield Tigers",
+      "conference":"Big West",
+      "teamRanking":12,
+      "coach":{"coachId":987,"coachName":"Marcus Reed"},
+      "stats":{
+        "gamesPlayed":32,
+        "minutesPerGame":35,
+        "fieldGoalPct":47,
+        "threePtPct":39,
+        "freeThrowPct":86,
+        "pointsPerGame":21,
+        "reboundsPerGame":4,
+        "assistsPerGame":7,
+        "stealsPerGame":2,
+        "blocksPerGame":0
+      },
+      "scouting":{
+        "strengths":["Court vision","Clutch shooting"],
+        "areasForImprovement":["Defensive consistency"]
+      },
+      "draftProjection":{"mockDraftRanking":5,"lotteryPickProbability":88},
+      "media":{"highlightReelUrl":"https://example.com/highlights/jalen-storm"},
+      "agent":{"agentName":"Rick Allen","agency":"Elite Sports Management","contactEmail":"rallen@elitesports.com"}
+    },
+
+    "guiding_principles": [
+      "Split large functions into focused tools (search vs. detail).",
+      "Return only the fields needed for the next step – use `limit` and optional booleans to prune payload.",
+      "Flatten hierarchical data; keep a single‑level JSON where possible.",
+      "Round numbers and convert units (e.g., weight to nearest 5 lb, height to spoken form).",
+      "Periodically summarise the conversation to keep the rolling context < 16 k tokens.",
+      "Re‑inject the system prompt / tool list via `session.update` if the model forgets its role."
+    ],
+
+    "hint_prompt_template": "\nParse NBA prospect data and provide a concise, engaging response.\n\nGeneral Guidelines\n- Act as an NBA scouting expert.\n- Highlight key strengths and notable attributes.\n- Use conversational language; mention each attribute only once.\n- Ignore IDs, URLs, exact birth dates, and agent contact unless explicitly asked.\n\nPlayer Details\n- State height conversationally (e.g., \"six‑foot‑four\").\n- Round weight to the nearest 5 lb.\n\nStats & Draft Info\n- Round all stats to whole numbers.\n- Refer to the draft ranking with phrases like \"top‑five pick\".\n\nExperience\n- Mention class year (freshman, sophomore…) if available.\n- Include hometown city & state.\n\nExamples\n- \"Jalen Storm, a dynamic six‑foot‑four point guard from Springfield, Illinois, averages 21 points per game.\"\n- \"Known for his clutch shooting, he's projected as a top‑five pick.\"\n\nImportant: Respond strictly using the supplied data; do not fabricate information.\n"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "force": [
+    {
+      "step": "anchor",
+      "action": "Check user_context.experiences for 'drives_car' or 'cleans_room'. Use matching anchor script."
+    },
+    {
+      "step": "teach",
+      "action": "Explain F=ma using the anchor (e.g., 'A heavier car needs more gas—just like Newton’s law!')."
+    },
+    {
+      "step": "verify",
+      "action": "Ask 'Does this make sense?' (yes/no). If 'no', retry with another anchor."
+    },
+    {
+      "step": "expand",
+      "action": "Offer to discuss 'brakes (negative force)' or 'quantum forces in GPS'."
+    }
+  ],
+  "qubit": [
+    {
+      "step": "anchor",
+      "action": "Use 'light_switch' script if user_context.experiences includes 'uses_lights'."
+    },
+    {
+      "step": "deep_dive",
+      "action": "Explain superposition with 'spinning_coin' analogy."
+    }
+  ]
+}

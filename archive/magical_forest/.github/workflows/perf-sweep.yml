@@ -1,0 +1,30 @@
+name: Perf Sweep (Simulate Mode)
+
+on:
+  push:
+    branches: [ "perf/spectrum-sweep" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  simulate-sweep:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Rust
+        uses: actions-rs/toolchain@v1
+        with:
+          profile: minimal
+          toolchain: stable
+          override: true
+
+      - name: Run simulate mode
+        run: SIMULATE=1 ./perf/run_sweep.sh
+
+      - name: Upload results
+        uses: actions/upload-artifact@v3
+        with:
+          name: perf-results
+          path: perf/results/all_runs.csv

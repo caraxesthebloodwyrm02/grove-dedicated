@@ -1,0 +1,63 @@
+# Light of the Seven - Platform Integration Requirements
+# =====================================================
+#
+# Core dependencies for exploring the computational garden
+# from foundational theory to hardware implementation.
+#
+# This requirements file supports integration with:
+# - IBM watsonx.ai for AI/ML workflows
+# - NVIDIA CUDA for hardware acceleration
+# - Educational utilities for the learning path
+
+# ===================
+# CORE DEPENDENCIES
+# ===================
+numpy>=1.21.0
+
+# ===================
+# IBM WATSON (Optional)
+# ===================
+# Uncomment to enable IBM watsonx.ai integration:
+# ibm-watsonx-ai>=1.0.0
+# ibm-watson>=7.0.0
+
+# ===================
+# NVIDIA CUDA (Optional)
+# ===================
+# Prerequisites:
+#   - NVIDIA GPU with CUDA support
+#   - NVIDIA Driver compatible with your CUDA version
+#
+# Install the appropriate CuPy version for your CUDA toolkit:
+#   CUDA 11.2-11.8: pip install cupy-cuda11x
+#   CUDA 12.x:      pip install cupy-cuda12x
+#   CUDA 13.x:      pip install cupy-cuda13x
+#
+# For Windows pip wheels (official NVIDIA packages):
+#   pip install nvidia-pyindex
+#   pip install nvidia-cuda-runtime-cu12
+#
+# Optional CUDA libraries (for advanced features):
+#   cuDNN v8.8      - Deep neural network acceleration
+#   NCCL v2.16+     - Multi-GPU/multi-node computations
+#   cuTENSOR v2.0   - Tensor operations acceleration
+
+# ===================
+# PYTORCH (Optional)
+# ===================
+# Visit https://pytorch.org/get-started/locally/ for installation
+# Example for CUDA 12.1:
+# torch>=2.0.0
+# torchvision>=0.15.0
+# torchaudio>=2.0.0
+
+# ===================
+# TENSORFLOW (Optional)
+# ===================
+# tensorflow>=2.13.0
+
+# ===================
+# DEVELOPMENT
+# ===================
+pytest>=7.0.0
+pytest-cov>=4.0.0

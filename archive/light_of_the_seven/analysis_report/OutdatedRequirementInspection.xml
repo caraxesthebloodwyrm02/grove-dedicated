@@ -1,0 +1,74 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>1</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="OutdatedRequirementInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Requirement is outdated</problem_class>
+  <description>'fastapi' version 0.122.0 is outdated (latest: 0.123.4)</description>
+  <highlighted_element>fastapi==0.104.1</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>12</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="OutdatedRequirementInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Requirement is outdated</problem_class>
+  <description>'pytest-cov' version 4.1.0 is outdated (latest: 7.0.0)</description>
+  <highlighted_element>pytest-cov==4.1.0</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>13</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="OutdatedRequirementInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Requirement is outdated</problem_class>
+  <description>'black' version 23.12.1 is outdated (latest: 25.11.0)</description>
+  <highlighted_element>black==23.11.0</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>14</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="OutdatedRequirementInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Requirement is outdated</problem_class>
+  <description>'isort' version 5.13.2 is outdated (latest: 7.0.0)</description>
+  <highlighted_element>isort==5.12.0</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>15</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="OutdatedRequirementInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Requirement is outdated</problem_class>
+  <description>'flake8' version 6.1.0 is outdated (latest: 7.3.0)</description>
+  <highlighted_element>flake8==6.1.0</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>16</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="OutdatedRequirementInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Requirement is outdated</problem_class>
+  <description>'mypy' version 1.7.1 is outdated (latest: 1.19.0)</description>
+  <highlighted_element>mypy==1.7.1</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>11</length>
+</problem>
+</problems>

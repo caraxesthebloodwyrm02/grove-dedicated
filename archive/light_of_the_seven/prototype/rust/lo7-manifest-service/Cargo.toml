@@ -1,0 +1,18 @@
+[package]
+name = "lo7-manifest-service"
+version = "0.1.0"
+edition = "2021"
+description = "Lo7 document manifest (v1) — parity with Python lo7-manifest"
+
+[dependencies]
+chrono = { version = "0.4", default-features = false, features = ["std", "clock"] }
+clap = { version = "4.5", features = ["derive"] }
+regex = "1.10"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = { version = "1.0", features = ["preserve_order"] }
+serde_yaml = "0.9"
+walkdir = "2.4"
+
+[[bin]]
+name = "lo7-manifest-service"
+path = "src/main.rs"

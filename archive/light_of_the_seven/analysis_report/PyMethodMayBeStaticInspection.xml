@@ -1,0 +1,698 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/EpsImagePlugin.py</file>
+  <line>378</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/EpsImagePlugin.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_find_offset&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_find_offset</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/FitsImagePlugin.py</file>
+  <line>72</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/FitsImagePlugin.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_get_size&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_get_size</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py</file>
+  <line>95</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_is_palette_needed&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_is_palette_needed</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py</file>
+  <line>1298</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_crop&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_crop</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py</file>
+  <line>3940</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_fixup&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_fixup</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageMorph.py</file>
+  <line>103</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageMorph.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_string_permute&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_string_permute</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>15</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageMorph.py</file>
+  <line>234</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageMorph.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;get_on_pixels&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>get_on_pixels</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageWin.py</file>
+  <line>232</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageWin.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;mainloop&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>mainloop</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py</file>
+  <line>485</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;chunk_IEND&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>chunk_IEND</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PpmImagePlugin.py</file>
+  <line>172</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PpmImagePlugin.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_find_comment_end&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_find_comment_end</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/QoiImagePlugin.py</file>
+  <line>147</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/QoiImagePlugin.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_delta&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_delta</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py</file>
+  <line>875</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_ensure_read&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_ensure_read</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py</file>
+  <line>2161</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_fmt&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_fmt</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_asyncbackend.py</file>
+  <line>74</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_asyncbackend.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;name&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>name</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_asyncbackend.py</file>
+  <line>90</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_asyncbackend.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;datagram_connection_required&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>datagram_connection_required</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>28</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_asyncio_backend.py</file>
+  <line>216</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_asyncio_backend.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;name&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>name</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_asyncio_backend.py</file>
+  <line>266</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_asyncio_backend.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;sleep&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>sleep</highlighted_element>
+  <language>Python</language>
+  <offset>14</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_asyncio_backend.py</file>
+  <line>269</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_asyncio_backend.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;datagram_connection_required&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>datagram_connection_required</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>28</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_asyncio_backend.py</file>
+  <line>272</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_asyncio_backend.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;get_transport_class&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>get_transport_class</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_asyncio_backend.py</file>
+  <line>275</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_asyncio_backend.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;wait_for&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>wait_for</highlighted_element>
+  <language>Python</language>
+  <offset>14</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_ddr.py</file>
+  <line>40</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_ddr.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;make_tls_context&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>make_tls_context</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_trio_backend.py</file>
+  <line>193</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_trio_backend.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;name&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>name</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_trio_backend.py</file>
+  <line>244</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_trio_backend.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;sleep&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>sleep</highlighted_element>
+  <language>Python</language>
+  <offset>14</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_trio_backend.py</file>
+  <line>247</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_trio_backend.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;get_transport_class&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>get_transport_class</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_trio_backend.py</file>
+  <line>250</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/_trio_backend.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;wait_for&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>wait_for</highlighted_element>
+  <language>Python</language>
+  <offset>14</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/btreezone.py</file>
+  <line>104</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/btreezone.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;is_immutable&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>is_immutable</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/exception.py</file>
+  <line>71</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/exception.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_check_params&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_check_params</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/exception.py</file>
+  <line>87</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/exception.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_fmt_kwargs&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_fmt_kwargs</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/message.py</file>
+  <line>937</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/message.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_get_one_rr_per_rrset&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_get_one_rr_per_rrset</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/message.py</file>
+  <line>943</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/message.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_parse_rr_header&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_parse_rr_header</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/name.py</file>
+  <line>181</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/name.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;is_idna&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>is_idna</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>7</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/quic/_common.py</file>
+  <line>83</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/quic/_common.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_expiration_from_timeout&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_expiration_from_timeout</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>24</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/quic/_common.py</file>
+  <line>90</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/quic/_common.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_timeout_from_expiration&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_timeout_from_expiration</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>24</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/rdata.py</file>
+  <line>179</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/rdata.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;covers&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>covers</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/resolver.py</file>
+  <line>67</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/resolver.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_check_kwargs&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_check_kwargs</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/transaction.py</file>
+  <line>385</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/transaction.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_raise_if_not_empty&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_raise_if_not_empty</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/transaction.py</file>
+  <line>389</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/transaction.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_rdataset_from_args&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_rdataset_from_args</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/update.py</file>
+  <line>353</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/update.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_get_one_rr_per_rrset&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_get_one_rr_per_rrset</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/versioned.py</file>
+  <line>176</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/versioned.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_default_pruning_policy&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_default_pruning_policy</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/win32util.py</file>
+  <line>91</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/win32util.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_split&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_split</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/win32util.py</file>
+  <line>149</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/win32util.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_is_nic_enabled&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_is_nic_enabled</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>15</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/zone.py</file>
+  <line>903</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/zone.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_get_next_version_id&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_get_next_version_id</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/zone.py</file>
+  <line>967</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/zone.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;is_immutable&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>is_immutable</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/zonefile.py</file>
+  <line>277</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/zonefile.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_parse_modify&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_parse_modify</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/h11/_readers.py</file>
+  <line>220</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/h11/_readers.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;read_eof&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>read_eof</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jws.py</file>
+  <line>261</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jws.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_load&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_load</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jws.py</file>
+  <line>334</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jws.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_validate_kid&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_validate_kid</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py</file>
+  <line>87</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_encode_payload&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_encode_payload</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>15</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py</file>
+  <line>179</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_decode_payload&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_decode_payload</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>15</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py</file>
+  <line>278</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_validate_required_claims&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_validate_required_claims</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>25</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py</file>
+  <line>287</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_validate_sub&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_validate_sub</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py</file>
+  <line>306</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_validate_jti&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_validate_jti</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py</file>
+  <line>320</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_validate_iat&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_validate_iat</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py</file>
+  <line>335</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_validate_nbf&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_validate_nbf</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py</file>
+  <line>349</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_validate_exp&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_validate_exp</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py</file>
+  <line>365</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_validate_aud&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_validate_aud</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py</file>
+  <line>415</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jwt.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_validate_iss&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_validate_iss</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>3709</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyMethodMayBeStaticInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Method is not declared static</problem_class>
+  <description>Method &lt;code&gt;_raise_attribute_error&lt;/code&gt; may be 'static'</description>
+  <highlighted_element>_raise_attribute_error</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>22</length>
+</problem>
+</problems>

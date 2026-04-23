@@ -1,0 +1,265 @@
+{
+  "metadata": {
+    "name": "Circle of Fifths",
+    "description": "A visual representation of the relationships among the 12 tones of the chromatic scale, their corresponding key signatures, and the associated major and minor keys.",
+    "version": "1.0.0",
+    "author": "DataKit Learning System",
+    "topic_type": "music_theory_computational"
+  },
+  "keys": ["C", "G", "D", "A", "E", "B", "F#", "C#", "G#", "D#", "A#", "F"],
+  "keys_enharmonic": {
+    "F#": "Gb",
+    "C#": "Db",
+    "G#": "Ab",
+    "D#": "Eb",
+    "A#": "Bb"
+  },
+  "relationships": {
+    "C": ["G", "F"],
+    "G": ["D", "C"],
+    "D": ["A", "G"],
+    "A": ["E", "D"],
+    "E": ["B", "A"],
+    "B": ["F#", "E"],
+    "F#": ["C#", "B"],
+    "C#": ["G#", "F#"],
+    "G#": ["D#", "C#"],
+    "D#": ["A#", "G#"],
+    "A#": ["F", "D#"],
+    "F": ["C", "A#"]
+  },
+  "key_signatures": {
+    "C": {"sharps": 0, "flats": 0, "accidentals": []},
+    "G": {"sharps": 1, "flats": 0, "accidentals": ["F#"]},
+    "D": {"sharps": 2, "flats": 0, "accidentals": ["F#", "C#"]},
+    "A": {"sharps": 3, "flats": 0, "accidentals": ["F#", "C#", "G#"]},
+    "E": {"sharps": 4, "flats": 0, "accidentals": ["F#", "C#", "G#", "D#"]},
+    "B": {"sharps": 5, "flats": 0, "accidentals": ["F#", "C#", "G#", "D#", "A#"]},
+    "F#": {"sharps": 6, "flats": 0, "accidentals": ["F#", "C#", "G#", "D#", "A#", "E#"]},
+    "C#": {"sharps": 7, "flats": 0, "accidentals": ["F#", "C#", "G#", "D#", "A#", "E#", "B#"]},
+    "F": {"sharps": 0, "flats": 1, "accidentals": ["Bb"]},
+    "Bb": {"sharps": 0, "flats": 2, "accidentals": ["Bb", "Eb"]},
+    "Eb": {"sharps": 0, "flats": 3, "accidentals": ["Bb", "Eb", "Ab"]},
+    "Ab": {"sharps": 0, "flats": 4, "accidentals": ["Bb", "Eb", "Ab", "Db"]},
+    "Db": {"sharps": 0, "flats": 5, "accidentals": ["Bb", "Eb", "Ab", "Db", "Gb"]},
+    "Gb": {"sharps": 0, "flats": 6, "accidentals": ["Bb", "Eb", "Ab", "Db", "Gb", "Cb"]}
+  },
+  "relative_minors": {
+    "C": "Am",
+    "G": "Em",
+    "D": "Bm",
+    "A": "F#m",
+    "E": "C#m",
+    "B": "G#m",
+    "F#": "D#m",
+    "C#": "A#m",
+    "G#": "E#m",
+    "D#": "B#m",
+    "A#": "F##m",
+    "F": "Dm"
+  },
+  "intervals": {
+    "perfect_fifth": {
+      "semitones": 7,
+      "direction": "clockwise",
+      "description": "Moving clockwise on the circle represents ascending by a perfect fifth (7 semitones)"
+    },
+    "perfect_fourth": {
+      "semitones": 5,
+      "direction": "counterclockwise",
+      "description": "Moving counterclockwise represents ascending by a perfect fourth (5 semitones)"
+    }
+  },
+  "common_progressions": {
+    "I-IV-V-I": {
+      "name": "Classic Cadence",
+      "description": "The most fundamental chord progression in Western music",
+      "example_in_C": ["C", "F", "G", "C"],
+      "genre": ["pop", "rock", "classical", "folk"]
+    },
+    "I-V-vi-IV": {
+      "name": "Pop Progression",
+      "description": "Extremely common in modern pop music",
+      "example_in_C": ["C", "G", "Am", "F"],
+      "genre": ["pop", "rock"]
+    },
+    "ii-V-I": {
+      "name": "Jazz Turnaround",
+      "description": "The backbone of jazz harmony",
+      "example_in_C": ["Dm", "G", "C"],
+      "genre": ["jazz", "bossa nova"]
+    },
+    "I-vi-IV-V": {
+      "name": "50s Progression",
+      "description": "Doo-wop and early rock and roll staple",
+      "example_in_C": ["C", "Am", "F", "G"],
+      "genre": ["doo-wop", "oldies"]
+    },
+    "vi-IV-I-V": {
+      "name": "Sensitive Female Chord Progression",
+      "description": "Common in emotional ballads",
+      "example_in_C": ["Am", "F", "C", "G"],
+      "genre": ["pop", "singer-songwriter"]
+    }
+  },
+  "computational_models": {
+    "finite_state_machine": {
+      "description": "The Circle of Fifths as a Finite State Machine (FSM)",
+      "states": "Each key represents a state (12 total)",
+      "transitions": "Perfect fifth intervals define state transitions",
+      "properties": {
+        "deterministic": true,
+        "cyclic": true,
+        "states_count": 12,
+        "alphabet": ["clockwise", "counterclockwise"]
+      },
+      "applications": ["FPGA music generators", "Hardware synthesizers", "Embedded systems"]
+    },
+    "boolean_algebra": {
+      "description": "Binary representation of musical keys",
+      "encoding": {
+        "C": "0000",
+        "G": "0001",
+        "D": "0010",
+        "A": "0011",
+        "E": "0100",
+        "B": "0101",
+        "F#": "0110",
+        "C#": "0111",
+        "G#": "1000",
+        "D#": "1001",
+        "A#": "1010",
+        "F": "1011"
+      },
+      "operations": {
+        "sharp_add": "Increment binary value (mod 12)",
+        "flat_add": "Decrement binary value (mod 12)",
+        "relative_minor": "XOR with specific mask"
+      },
+      "applications": ["Digital signal processing", "Algorithmic composition", "Music compression"]
+    },
+    "graph_theory": {
+      "description": "The Circle as a cyclic graph structure",
+      "properties": {
+        "type": "cyclic_graph",
+        "nodes": 12,
+        "edges": 12,
+        "directed": false,
+        "weighted": true,
+        "chromatic_number": 2
+      },
+      "algorithms": ["Dijkstra for shortest path modulation", "DFS for progression exploration", "BFS for harmonic proximity"],
+      "applications": ["Music recommendation", "Automatic harmonization", "Key detection"]
+    },
+    "quantum_computing": {
+      "description": "Quantum analogies in music theory",
+      "mappings": {
+        "qubit_states": "Each key as a basis state |0⟩ to |11⟩",
+        "superposition": "Ambiguous tonality (multiple keys simultaneously)",
+        "entanglement": "Harmonic relationships between parallel keys",
+        "measurement": "Resolving to a specific key/chord"
+      },
+      "concepts": {
+        "key_superposition": "|ψ⟩ = α|C⟩ + β|G⟩ (probability of being in C or G)",
+        "harmonic_entanglement": "Relative major/minor as entangled states",
+        "quantum_walk": "Probabilistic traversal of the circle"
+      },
+      "applications": ["Quantum music generation", "Probabilistic composition", "Novel harmonic exploration"]
+    },
+    "markov_chains": {
+      "description": "Probabilistic modeling of chord progressions",
+      "transition_matrix": {
+        "description": "Probability of moving from one key to another",
+        "dominant_motion": 0.7,
+        "subdominant_motion": 0.3
+      },
+      "applications": ["AI composition", "Style imitation", "Music prediction"]
+    }
+  },
+  "learning_modules": [
+    {
+      "id": "intro",
+      "title": "Introduction to the Circle of Fifths",
+      "description": "Understand the fundamental structure and purpose",
+      "duration_minutes": 10,
+      "difficulty": "beginner"
+    },
+    {
+      "id": "fsm",
+      "title": "Circle as a Finite State Machine",
+      "description": "Model keys as states and intervals as transitions",
+      "duration_minutes": 15,
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "boolean",
+      "title": "Boolean Algebra Representation",
+      "description": "Binary encoding and logical operations on keys",
+      "duration_minutes": 20,
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "graph",
+      "title": "Graph Theory Applications",
+      "description": "Traversal algorithms and network analysis",
+      "duration_minutes": 20,
+      "difficulty": "intermediate"
+    },
+    {
+      "id": "quantum",
+      "title": "Quantum Computing Analogies",
+      "description": "Superposition, entanglement, and qubits in music",
+      "duration_minutes": 25,
+      "difficulty": "advanced"
+    },
+    {
+      "id": "ai",
+      "title": "AI-Driven Composition",
+      "description": "Markov chains, RL, and neural networks for music",
+      "duration_minutes": 30,
+      "difficulty": "advanced"
+    },
+    {
+      "id": "hands_on",
+      "title": "Hands-On: Generate Progressions",
+      "description": "Interactive exercises to create chord progressions",
+      "duration_minutes": 15,
+      "difficulty": "beginner"
+    }
+  ],
+  "fun_facts": [
+    "The Circle of Fifths was first described by Nikolai Diletskii in the late 1670s",
+    "Moving through all 12 keys clockwise visits every note exactly once - like a Hamiltonian path!",
+    "The circle can be used to quickly transpose any song to a new key",
+    "Jazz musicians often use the circle to create 'ii-V-I' progressions in every key",
+    "The pattern of sharps (FCGDAEB) and flats (BEADGCF) are mirror images of each other",
+    "Video game composers use the circle to create seamless key changes in adaptive music",
+    "The circle is isomorphic to the cyclic group Z₁₂ in abstract algebra"
+  ],
+  "challenges": [
+    {
+      "id": "challenge_1",
+      "title": "Key Signature Speed Run",
+      "description": "Name all key signatures as fast as possible",
+      "type": "timed_quiz"
+    },
+    {
+      "id": "challenge_2",
+      "title": "Progression Builder",
+      "description": "Create a chord progression using only circle-adjacent keys",
+      "type": "creative"
+    },
+    {
+      "id": "challenge_3",
+      "title": "Binary Encoder",
+      "description": "Convert a chord progression to binary representation",
+      "type": "puzzle"
+    },
+    {
+      "id": "challenge_4",
+      "title": "Graph Traversal",
+      "description": "Find the shortest path between two distant keys",
+      "type": "algorithm"
+    }
+  ]
+}

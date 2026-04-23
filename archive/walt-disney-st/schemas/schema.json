@@ -1,0 +1,463 @@
+[
+  {
+    "path": "application_bridge.py",
+    "has_doc": false,
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse",
+      "import subprocess",
+      "import sys",
+      "from pathlib import Path",
+      "from typing import List, Sequence"
+    ],
+    "total_lines": 127,
+    "functions": [
+      {
+        "name": "run_cmd",
+        "lineno": 10,
+        "args": 2,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "generate_artifacts",
+        "lineno": 16,
+        "args": 2,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "validate_schema",
+        "lineno": 37,
+        "args": 2,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "validate_types",
+        "lineno": 46,
+        "args": 2,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "validate_build",
+        "lineno": 55,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "execute_runtime",
+        "lineno": 61,
+        "args": 2,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "main",
+        "lineno": 70,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      }
+    ],
+    "classes": []
+  },
+  {
+    "path": "artifact_generator.py",
+    "has_doc": false,
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse",
+      "import ast",
+      "import json",
+      "import textwrap",
+      "from dataclasses import dataclass, asdict",
+      "from pathlib import Path",
+      "from typing import Iterable, List, Sequence"
+    ],
+    "total_lines": 241,
+    "functions": [
+      {
+        "name": "discover_python_files",
+        "lineno": 43,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "parse_module",
+        "lineno": 54,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "_function_from_node",
+        "lineno": 81,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "_class_from_node",
+        "lineno": 93,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "_fallback_unparse",
+        "lineno": 115,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "summarize",
+        "lineno": 125,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "format_artifacts",
+        "lineno": 164,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "main",
+        "lineno": 197,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      }
+    ],
+    "classes": [
+      {
+        "name": "FunctionArtifact",
+        "lineno": 16,
+        "bases": [],
+        "has_doc": false,
+        "methods": []
+      },
+      {
+        "name": "ClassArtifact",
+        "lineno": 25,
+        "bases": [],
+        "has_doc": false,
+        "methods": []
+      },
+      {
+        "name": "ModuleArtifact",
+        "lineno": 34,
+        "bases": [],
+        "has_doc": false,
+        "methods": []
+      }
+    ]
+  },
+  {
+    "path": "build_validator.py",
+    "has_doc": false,
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse",
+      "import subprocess",
+      "import sys",
+      "from pathlib import Path",
+      "from typing import Sequence"
+    ],
+    "total_lines": 40,
+    "functions": [
+      {
+        "name": "run_cargo_build",
+        "lineno": 10,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "main",
+        "lineno": 17,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      }
+    ],
+    "classes": []
+  },
+  {
+    "path": "discussion.py",
+    "has_doc": false,
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse",
+      "import json",
+      "import sys",
+      "from dataclasses import dataclass",
+      "from pathlib import Path",
+      "from typing import Any, Iterable, Sequence"
+    ],
+    "total_lines": 123,
+    "functions": [
+      {
+        "name": "load_artifacts",
+        "lineno": 21,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "summarize",
+        "lineno": 30,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "render_report",
+        "lineno": 60,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "render_generated_code",
+        "lineno": 74,
+        "args": 0,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "main",
+        "lineno": 96,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      }
+    ],
+    "classes": [
+      {
+        "name": "Report",
+        "lineno": 12,
+        "bases": [],
+        "has_doc": false,
+        "methods": []
+      }
+    ]
+  },
+  {
+    "path": "runtime_executor.py",
+    "has_doc": false,
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse",
+      "import subprocess",
+      "import sys",
+      "from pathlib import Path",
+      "from typing import Sequence"
+    ],
+    "total_lines": 48,
+    "functions": [
+      {
+        "name": "run_cargo_run",
+        "lineno": 10,
+        "args": 2,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "main",
+        "lineno": 19,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      }
+    ],
+    "classes": []
+  },
+  {
+    "path": "rust_seeder.py",
+    "has_doc": false,
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse",
+      "import subprocess",
+      "import sys",
+      "from pathlib import Path",
+      "from typing import Sequence"
+    ],
+    "total_lines": 57,
+    "functions": [
+      {
+        "name": "run",
+        "lineno": 10,
+        "args": 2,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "init_workspace",
+        "lineno": 17,
+        "args": 2,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "main",
+        "lineno": 33,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      }
+    ],
+    "classes": []
+  },
+  {
+    "path": "schema_validator.py",
+    "has_doc": false,
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse",
+      "import json",
+      "import sys",
+      "from pathlib import Path",
+      "from typing import Any, Dict, List, Sequence"
+    ],
+    "total_lines": 122,
+    "functions": [
+      {
+        "name": "expect",
+        "lineno": 14,
+        "args": 3,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "validate_function",
+        "lineno": 19,
+        "args": 3,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "validate_class",
+        "lineno": 27,
+        "args": 3,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "validate_module",
+        "lineno": 41,
+        "args": 3,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "validate_artifacts",
+        "lineno": 66,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "load_json",
+        "lineno": 81,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      },
+      {
+        "name": "main",
+        "lineno": 100,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      }
+    ],
+    "classes": [
+      {
+        "name": "ValidationError",
+        "lineno": 10,
+        "bases": [
+          "Exception"
+        ],
+        "has_doc": false,
+        "methods": []
+      }
+    ]
+  },
+  {
+    "path": "type_validator.py",
+    "has_doc": false,
+    "imports": [
+      "from __future__ import annotations",
+      "import argparse",
+      "import re",
+      "import typing",
+      "import sys",
+      "from dataclasses import fields",
+      "from pathlib import Path",
+      "from typing import Dict, List, Sequence, Tuple",
+      "import artifact_generator"
+    ],
+    "total_lines": 190,
+    "functions": [
+      {
+        "name": "load_python_contracts",
+        "lineno": 14,
+        "args": 0,
+        "has_doc": true,
+        "is_async": false
+      },
+      {
+        "name": "normalize_python_type",
+        "lineno": 30,
+        "args": 1,
+        "has_doc": true,
+        "is_async": false
+      },
+      {
+        "name": "extract_pydantic_fields",
+        "lineno": 64,
+        "args": 1,
+        "has_doc": true,
+        "is_async": false
+      },
+      {
+        "name": "load_cognitive_contracts",
+        "lineno": 89,
+        "args": 0,
+        "has_doc": true,
+        "is_async": false
+      },
+      {
+        "name": "parse_rust_structs",
+        "lineno": 112,
+        "args": 1,
+        "has_doc": true,
+        "is_async": false
+      },
+      {
+        "name": "compare_contracts",
+        "lineno": 133,
+        "args": 3,
+        "has_doc": true,
+        "is_async": false
+      },
+      {
+        "name": "main",
+        "lineno": 151,
+        "args": 1,
+        "has_doc": false,
+        "is_async": false
+      }
+    ],
+    "classes": []
+  }
+]

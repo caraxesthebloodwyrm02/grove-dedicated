@@ -1,0 +1,43 @@
+{
+    "platform_id": "mistral",
+    "resonance_tier": 7,
+    "metadata": {
+        "display_name": "Mistral AI",
+        "partner_id": "mistral",
+        "version": "latest",
+        "status": "active"
+    },
+    "core_mapping": [
+        {
+            "component": "awareness",
+            "layer": "silver",
+            "role": "Cognitive Processing"
+        },
+        {
+            "component": "AGENT",
+            "layer": "gold",
+            "role": "Tool Dispatch and Orchestration"
+        }
+    ],
+    "branch_hierarchy": {
+        "root_prefix": "topic/",
+        "theme_mapping": {
+            "model": "engine",
+            "prompt": "prompt",
+            "capability": "tool"
+        }
+    },
+    "compliance": {
+        "contract_verified": true,
+        "resonance_threshold": 0.98
+    },
+    "relationship": {
+        "status": "friend",
+        "principles": [
+            "Cognitive Integrity",
+            "Structured Intelligence",
+            "Unambiguous Helpfulness"
+        ],
+        "trust_score": 0.98
+    }
+}

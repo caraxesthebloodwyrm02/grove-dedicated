@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+pyyaml>=6.0
+openai>=1.0.0
+=======
+# Core dependencies for DataKit tests
+pytest>=7.4.0
+>>>>>>> refactor/code-audit

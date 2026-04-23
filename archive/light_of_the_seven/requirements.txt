@@ -1,0 +1,4 @@
+# Core runtime dependencies. pyproject.toml is the canonical source of truth.
+# For full install: pip install .  or  uv sync
+# For dev/test: pip install -e ".[dev]"  or  uv sync --extra dev
+numpy>=1.21.0

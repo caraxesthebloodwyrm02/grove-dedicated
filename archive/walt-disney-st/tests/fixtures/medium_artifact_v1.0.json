@@ -1,0 +1,89 @@
+{
+  "artifact_version": "1.0",
+  "modules": [
+    {
+      "path": "module1.py",
+      "has_doc": true,
+      "imports": [
+        "import json",
+        "from pathlib import Path"
+      ],
+      "total_lines": 50,
+      "functions": [
+        {
+          "name": "process_data",
+          "lineno": 10,
+          "args": 2,
+          "has_doc": true,
+          "is_async": false
+        },
+        {
+          "name": "async_fetch",
+          "lineno": 20,
+          "args": 1,
+          "has_doc": false,
+          "is_async": true
+        }
+      ],
+      "classes": [
+        {
+          "name": "DataProcessor",
+          "lineno": 30,
+          "bases": ["object"],
+          "has_doc": true,
+          "methods": [
+            {
+              "name": "__init__",
+              "lineno": 31,
+              "args": 1,
+              "has_doc": false,
+              "is_async": false
+            },
+            {
+              "name": "process",
+              "lineno": 35,
+              "args": 1,
+              "has_doc": true,
+              "is_async": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "module2.py",
+      "has_doc": false,
+      "imports": [
+        "import sys"
+      ],
+      "total_lines": 25,
+      "functions": [
+        {
+          "name": "helper",
+          "lineno": 5,
+          "args": 0,
+          "has_doc": false,
+          "is_async": false
+        }
+      ],
+      "classes": []
+    },
+    {
+      "path": "module3.py",
+      "has_doc": true,
+      "imports": [],
+      "total_lines": 10,
+      "functions": [],
+      "classes": [
+        {
+          "name": "BaseClass",
+          "lineno": 3,
+          "bases": [],
+          "has_doc": true,
+          "methods": []
+        }
+      ]
+    }
+  ]
+}
+

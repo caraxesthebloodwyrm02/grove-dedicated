@@ -1,0 +1,15 @@
+{
+  "totals": {
+    "tasks": 1,
+    "duration_seconds": 44.467829,
+    "effort_minutes": 0.7411304833333333,
+    "energy_joules": 74.11304833333332,
+    "loc_added": 0,
+    "loc_deleted": 0
+  },
+  "top_files": [],
+  "decisions": {
+    "count": 0,
+    "by_type": {}
+  }
+}

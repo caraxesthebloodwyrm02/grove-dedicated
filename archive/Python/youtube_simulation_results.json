@@ -1,0 +1,285 @@
+{
+  "baseline_metrics": {
+    "views": 7398,
+    "watch_time_hours": 98.0,
+    "avg_duration_seconds": 47,
+    "retention_rate": 38.1,
+    "subscribers_gained": 37
+  },
+  "simulation_results": {
+    "Current Performance (Baseline)": {
+      "strategy": "Current Performance (Baseline)",
+      "avg_views": 12150.768,
+      "avg_watch_time_hours": 158.63502666666668,
+      "avg_retention_rate": 38.1,
+      "avg_subscribers_gained": 60.418,
+      "avg_click_through_rate": 0.05,
+      "success_tier_distribution": {
+        "Poor": 0.0,
+        "Average": 1.0,
+        "Good": 0.0,
+        "Viral": 0.0
+      },
+      "best_case": {
+        "strategy": "ContentStrategy.CURRENT",
+        "total_views": 14197,
+        "watch_time_hours": 185.34972222222223,
+        "avg_duration_seconds": 47,
+        "retention_rate": 38.1,
+        "subscribers_gained": 75,
+        "click_through_rate": 0.05,
+        "viral_coefficient": 0.3,
+        "algorithm_boost": 1.2,
+        "success_tier": "Average",
+        "key_insights": [
+          "Strong subscriber growth (75) building audience"
+        ]
+      },
+      "worst_case": {
+        "strategy": "ContentStrategy.CURRENT",
+        "total_views": 10213,
+        "watch_time_hours": 133.33638888888888,
+        "avg_duration_seconds": 47,
+        "retention_rate": 38.1,
+        "subscribers_gained": 61,
+        "click_through_rate": 0.05,
+        "viral_coefficient": 0.3,
+        "algorithm_boost": 1.2,
+        "success_tier": "Average",
+        "key_insights": [
+          "Strong subscriber growth (61) building audience"
+        ]
+      }
+    },
+    "Improved First 30 Seconds": {
+      "strategy": "Improved First 30 Seconds",
+      "avg_views": 13167.222,
+      "avg_watch_time_hours": 219.4537,
+      "avg_retention_rate": 48.7,
+      "avg_subscribers_gained": 65.496,
+      "avg_click_through_rate": 0.05,
+      "success_tier_distribution": {
+        "Poor": 0.0,
+        "Average": 0.907,
+        "Good": 0.093,
+        "Viral": 0.0
+      },
+      "best_case": {
+        "strategy": "ContentStrategy.BETTER_HOOKS",
+        "total_views": 15380,
+        "watch_time_hours": 256.3333333333333,
+        "avg_duration_seconds": 60,
+        "retention_rate": 48.7,
+        "subscribers_gained": 82,
+        "click_through_rate": 0.05,
+        "viral_coefficient": 0.3,
+        "algorithm_boost": 1.3,
+        "success_tier": "Good",
+        "key_insights": [
+          "Strong subscriber growth (82) building audience"
+        ]
+      },
+      "worst_case": {
+        "strategy": "ContentStrategy.BETTER_HOOKS",
+        "total_views": 11064,
+        "watch_time_hours": 184.4,
+        "avg_duration_seconds": 60,
+        "retention_rate": 48.7,
+        "subscribers_gained": 66,
+        "click_through_rate": 0.05,
+        "viral_coefficient": 0.3,
+        "algorithm_boost": 1.3,
+        "success_tier": "Average",
+        "key_insights": [
+          "Strong subscriber growth (66) building audience"
+        ]
+      }
+    },
+    "Optimized Video Length": {
+      "strategy": "Optimized Video Length",
+      "avg_views": 13798.675,
+      "avg_watch_time_hours": 130.32081944444442,
+      "avg_retention_rate": 46.300000000000004,
+      "avg_subscribers_gained": 68.678,
+      "avg_click_through_rate": 0.05,
+      "success_tier_distribution": {
+        "Poor": 0.0,
+        "Average": 0.726,
+        "Good": 0.274,
+        "Viral": 0.0
+      },
+      "best_case": {
+        "strategy": "ContentStrategy.SHORTER_CONTENT",
+        "total_views": 16636,
+        "watch_time_hours": 157.11777777777777,
+        "avg_duration_seconds": 34,
+        "retention_rate": 46.300000000000004,
+        "subscribers_gained": 88,
+        "click_through_rate": 0.05,
+        "viral_coefficient": 0.4,
+        "algorithm_boost": 1.25,
+        "success_tier": "Good",
+        "key_insights": [
+          "Strong subscriber growth (88) building audience"
+        ]
+      },
+      "worst_case": {
+        "strategy": "ContentStrategy.SHORTER_CONTENT",
+        "total_views": 11102,
+        "watch_time_hours": 104.85222222222222,
+        "avg_duration_seconds": 34,
+        "retention_rate": 46.300000000000004,
+        "subscribers_gained": 66,
+        "click_through_rate": 0.05,
+        "viral_coefficient": 0.4,
+        "algorithm_boost": 1.25,
+        "success_tier": "Average",
+        "key_insights": [
+          "Strong subscriber growth (66) building audience"
+        ]
+      }
+    },
+    "Enhanced Click-Through Rate": {
+      "strategy": "Enhanced Click-Through Rate",
+      "avg_views": 41022.527,
+      "avg_watch_time_hours": 535.5718802777778,
+      "avg_retention_rate": 38.1,
+      "avg_subscribers_gained": 307.923,
+      "avg_click_through_rate": 0.15,
+      "success_tier_distribution": {
+        "Poor": 0.0,
+        "Average": 0.0,
+        "Good": 1.0,
+        "Viral": 0.0
+      },
+      "best_case": {
+        "strategy": "ContentStrategy.BETTER_THUMBNAILS",
+        "total_views": 47916,
+        "watch_time_hours": 625.57,
+        "avg_duration_seconds": 47,
+        "retention_rate": 38.1,
+        "subscribers_gained": 383,
+        "click_through_rate": 0.15,
+        "viral_coefficient": 0.3,
+        "algorithm_boost": 1.35,
+        "success_tier": "Good",
+        "key_insights": [
+          "High CTR (15.0%) suggests effective thumbnail/title",
+          "Strong subscriber growth (383) building audience"
+        ]
+      },
+      "worst_case": {
+        "strategy": "ContentStrategy.BETTER_THUMBNAILS",
+        "total_views": 34471,
+        "watch_time_hours": 450.03805555555556,
+        "avg_duration_seconds": 47,
+        "retention_rate": 38.1,
+        "subscribers_gained": 309,
+        "click_through_rate": 0.15,
+        "viral_coefficient": 0.3,
+        "algorithm_boost": 1.35,
+        "success_tier": "Good",
+        "key_insights": [
+          "High CTR (15.0%) suggests effective thumbnail/title",
+          "Strong subscriber growth (309) building audience"
+        ]
+      }
+    },
+    "Better Search & Discovery": {
+      "strategy": "Better Search & Discovery",
+      "avg_views": 18211.425,
+      "avg_watch_time_hours": 237.76027083333335,
+      "avg_retention_rate": 38.1,
+      "avg_subscribers_gained": 90.793,
+      "avg_click_through_rate": 0.062,
+      "success_tier_distribution": {
+        "Poor": 0.0,
+        "Average": 0.0,
+        "Good": 1.0,
+        "Viral": 0.0
+      },
+      "best_case": {
+        "strategy": "ContentStrategy.SEO_OPTIMIZED",
+        "total_views": 21272,
+        "watch_time_hours": 277.71777777777777,
+        "avg_duration_seconds": 47,
+        "retention_rate": 38.1,
+        "subscribers_gained": 113,
+        "click_through_rate": 0.062,
+        "viral_coefficient": 0.3,
+        "algorithm_boost": 1.45,
+        "success_tier": "Good",
+        "key_insights": [
+          "Strong subscriber growth (113) building audience"
+        ]
+      },
+      "worst_case": {
+        "strategy": "ContentStrategy.SEO_OPTIMIZED",
+        "total_views": 15303,
+        "watch_time_hours": 199.78916666666666,
+        "avg_duration_seconds": 47,
+        "retention_rate": 38.1,
+        "subscribers_gained": 91,
+        "click_through_rate": 0.062,
+        "viral_coefficient": 0.3,
+        "algorithm_boost": 1.45,
+        "success_tier": "Good",
+        "key_insights": [
+          "Strong subscriber growth (91) building audience"
+        ]
+      }
+    },
+    "Highly Shareable Content": {
+      "strategy": "Highly Shareable Content",
+      "avg_views": 23103.01,
+      "avg_watch_time_hours": 352.96265277777775,
+      "avg_retention_rate": 44.6,
+      "avg_subscribers_gained": 115.252,
+      "avg_click_through_rate": 0.05,
+      "success_tier_distribution": {
+        "Poor": 0.0,
+        "Average": 0.0,
+        "Good": 1.0,
+        "Viral": 0.0
+      },
+      "best_case": {
+        "strategy": "ContentStrategy.VIRAL_CONTENT",
+        "total_views": 31047,
+        "watch_time_hours": 474.32916666666665,
+        "avg_duration_seconds": 55,
+        "retention_rate": 44.6,
+        "subscribers_gained": 165,
+        "click_through_rate": 0.05,
+        "viral_coefficient": 1.0,
+        "algorithm_boost": 1.4,
+        "success_tier": "Good",
+        "key_insights": [
+          "High viral potential (1.00) creating organic growth",
+          "Strong subscriber growth (165) building audience"
+        ]
+      },
+      "worst_case": {
+        "strategy": "ContentStrategy.VIRAL_CONTENT",
+        "total_views": 15553,
+        "watch_time_hours": 237.61527777777778,
+        "avg_duration_seconds": 55,
+        "retention_rate": 44.6,
+        "subscribers_gained": 93,
+        "click_through_rate": 0.05,
+        "viral_coefficient": 1.0,
+        "algorithm_boost": 1.4,
+        "success_tier": "Good",
+        "key_insights": [
+          "High viral potential (1.00) creating organic growth",
+          "Strong subscriber growth (93) building audience"
+        ]
+      }
+    }
+  },
+  "recommendations": [
+    "BEST STRATEGY: Enhanced Click-Through Rate with 41023 avg views",
+    "HIGH RETENTION: Improved First 30 Seconds, Optimized Video Length",
+    "QUICK WINS: Better Search & Discovery"
+  ],
+  "generated_at": "2025-11-14T12:49:03.049586"
+}

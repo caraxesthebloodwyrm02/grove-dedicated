@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User Context Schema for Programming & Cognitive Architecture",
+  "description": "Defines the structure for storing user background and experiences to personalize explanations.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "User's name or identifier."
+    },
+    "location": {
+      "type": "string",
+      "description": "User's location (optional)."
+    },
+    "experiences": {
+      "type": "array",
+      "description": "List of programming-related experiences the user has.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "writes_scripts",
+          "debugged_code",
+          "built_websites",
+          "uses_version_control",
+          "teaches_programming",
+          "worked_with_compilers",
+          "designed_databases",
+          "developed_apis",
+          "used_cloud_services"
+        ]
+      }
+    },
+    "knowledge_gaps": {
+      "type": "array",
+      "description": "List of concepts the user wants to learn.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "compiler_design",
+          "parsing_techniques",
+          "cognitive_models",
+          "programming_language_theory",
+          "mental_models_in_code"
+        ]
+      }
+    },
+    "preferred_learning_style": {
+      "type": "string",
+      "description": "User's preferred way of learning (e.g., analogies, code examples, theory).",
+      "enum": ["analogies", "code_examples", "theory", "visual_diagrams"]
+    }
+  },
+  "required": ["name", "experiences"]
+}

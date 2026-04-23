@@ -1,0 +1,62 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Jpeg2KImagePlugin.py</file>
+  <line>325</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Jpeg2KImagePlugin.py" />
+  <problem_class id="PyMethodOverridingInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Method signature does not match signature of overridden method</problem_class>
+  <description>Signature of method 'Jpeg2KImageFile.reduce()' does not match signature of the base method in class 'Image'</description>
+  <highlighted_element>( self, )</highlighted_element>
+  <language>Python</language>
+  <offset>14</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/algorithms.py</file>
+  <line>268</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/algorithms.py" />
+  <problem_class id="PyMethodOverridingInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Method signature does not match signature of overridden method</problem_class>
+  <description>Signature of method 'HMACAlgorithm.to_jwk()' does not match signature of the base method in class 'Algorithm'</description>
+  <highlighted_element>( key_obj: str | bytes, as_dict: Literal[True] )</highlighted_element>
+  <language>Python</language>
+  <offset>14</offset>
+  <length>60</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/algorithms.py</file>
+  <line>355</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/algorithms.py" />
+  <problem_class id="PyMethodOverridingInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Method signature does not match signature of overridden method</problem_class>
+  <description>Signature of method 'RSAAlgorithm.to_jwk()' does not match signature of the base method in class 'Algorithm'</description>
+  <highlighted_element>( key_obj: AllowedRSAKeys, as_dict: Literal[True] )</highlighted_element>
+  <language>Python</language>
+  <offset>18</offset>
+  <length>71</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/algorithms.py</file>
+  <line>553</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/algorithms.py" />
+  <problem_class id="PyMethodOverridingInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Method signature does not match signature of overridden method</problem_class>
+  <description>Signature of method 'ECAlgorithm.to_jwk()' does not match signature of the base method in class 'Algorithm'</description>
+  <highlighted_element>( key_obj: AllowedECKeys, as_dict: Literal[True] )</highlighted_element>
+  <language>Python</language>
+  <offset>18</offset>
+  <length>70</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/algorithms.py</file>
+  <line>785</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/algorithms.py" />
+  <problem_class id="PyMethodOverridingInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Method signature does not match signature of overridden method</problem_class>
+  <description>Signature of method 'OKPAlgorithm.to_jwk()' does not match signature of the base method in class 'Algorithm'</description>
+  <highlighted_element>( key: AllowedOKPKeys, as_dict: Literal[True] )</highlighted_element>
+  <language>Python</language>
+  <offset>18</offset>
+  <length>67</length>
+</problem>
+</problems>

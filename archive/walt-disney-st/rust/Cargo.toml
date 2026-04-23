@@ -1,0 +1,5 @@
+[workspace]
+members = [
+    "grid-core", "grid-crate", "my-app", "my-crate", "grid-report",
+]
+resolver = "2"

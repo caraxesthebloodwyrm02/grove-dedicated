@@ -1,0 +1,28 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/html/heat_science_demo_backup.html</file>
+  <line>229</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/html/heat_science_demo_backup.html" />
+  <problem_class id="CssUnusedSymbol" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused selector</problem_class>
+  <hints />
+  <description>Selector btn-secondary is never used</description>
+  <highlighted_element>.btn-secondary</highlighted_element>
+  <language>CSS</language>
+  <offset>8</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/html/heat_science_demo_backup.html</file>
+  <line>235</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/html/heat_science_demo_backup.html" />
+  <problem_class id="CssUnusedSymbol" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused selector</problem_class>
+  <hints />
+  <description>Selector btn-secondary is never used</description>
+  <highlighted_element>.btn-secondary</highlighted_element>
+  <language>CSS</language>
+  <offset>8</offset>
+  <length>14</length>
+</problem>
+</problems>

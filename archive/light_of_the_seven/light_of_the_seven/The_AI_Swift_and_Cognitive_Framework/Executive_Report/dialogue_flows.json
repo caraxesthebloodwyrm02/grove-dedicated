@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dialogue Flows for AI Swift & Cognitive Framework",
+  "description": "Predefined conversational paths for teaching AI and cognitive framework concepts.",
+  "type": "object",
+  "properties": {
+    "reinforcement_learning": [
+      {
+        "step": "anchor",
+        "action": "Check user_context.experiences for relevant experiences (e.g., 'uses_streaming_services', 'plays_video_games'). Use matching anchor script from concept_mappings.json."
+      },
+      {
+        "step": "teach",
+        "action": "Explain reinforcement learning using the selected anchor. Example: 'Reinforcement learning is like training a dog with treats. The dog (AI) learns to perform actions (tricks) that maximize rewards (treats).'"
+      },
+      {
+        "step": "verify",
+        "action": "Ask 'Does this analogy help you understand reinforcement learning? (yes/no)'. If 'no', retry with another anchor or simplify the explanation."
+      },
+      {
+        "step": "expand",
+        "action": "Offer to discuss related topics like 'Q-learning' or 'policy gradients'."
+      }
+    ],
+    "neural_architecture_search": [
+      {
+        "step": "anchor",
+        "action": "Check user_context.experiences for 'works_with_ml' or 'manages_infra'. Use matching anchor script from concept_mappings.json."
+      },
+      {
+        "step": "teach",
+        "action": "Explain neural architecture search using the anchor. Example: 'Neural Architecture Search is like an automated chef trying different recipes to find the best dish. It experiments with different neural network designs to find the most efficient one for your task.'"
+      },
+      {
+        "step": "verify",
+        "action": "Ask 'Can you explain what Neural Architecture Search does in your own words?'"
+      },
+      {
+        "step": "expand",
+        "action": "Offer to discuss 'how NAS impacts hardware choices' or 'real-world applications of NAS'."
+      }
+    ],
+    "adaptive_learning_system": [
+      {
+        "step": "anchor",
+        "action": "Check user_context.experiences for 'uses_streaming_services' or 'uses_recommender_systems'. Use matching anchor script from concept_mappings.json."
+      },
+      {
+        "step": "teach",
+        "action": "Explain adaptive learning systems using the anchor. Example: 'An adaptive learning system is like a streaming service that recommends shows based on what you've watched. It learns from your interactions and adjusts its content to match your preferences.'"
+      },
+      {
+        "step": "verify",
+        "action": "Ask 'How would you describe an adaptive learning system to someone else?'"
+      },
+      {
+        "step": "expand",
+        "action": "Offer to discuss 'personalization techniques' or 'how adaptive systems are used in education'."
+      }
+    ],
+    "user_model": [
+      {
+        "step": "anchor",
+        "action": "Check user_context.experiences for 'uses_social_media' or 'works_with_data'. Use matching anchor script from concept_mappings.json."
+      },
+      {
+        "step": "teach",
+        "action": "Explain user modeling using the anchor. Example: 'User modeling is like a shopkeeper remembering your preferences. The system learns about your habits and tailors its behavior to better serve you.'"
+      },
+      {
+        "step": "verify",
+        "action": "Ask 'Can you think of a time when a system seemed to understand your preferences?'"
+      },
+      {
+        "step": "expand",
+        "action": "Offer to discuss 'how user models are built' or 'privacy concerns in user modeling'."
+      }
+    ]
+  },
+  "additionalProperties": false
+}

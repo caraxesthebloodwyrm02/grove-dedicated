@@ -1,0 +1,19 @@
+# hello-app Python Dependencies
+# Pin exact versions for reproducibility and stability
+
+# Core Testing Framework
+pytest==7.4.3
+pytest-cov==4.1.0
+
+# Code Quality & Linting
+flake8==6.1.0
+black==23.12.1
+ruff==0.1.11
+isort==5.13.2
+
+# Type Checking
+mypy==1.7.1
+
+# Logging & Utilities
+python-json-logger==2.0.7
+

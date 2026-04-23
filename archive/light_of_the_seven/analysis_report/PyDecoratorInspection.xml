@@ -1,0 +1,14 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>763</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyDecoratorInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Class-specific decorator is used outside the class</problem_class>
+  <description>Decorator @classmethod on a method outside the class</description>
+  <highlighted_element>@classmethod</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>12</length>
+</problem>
+</problems>

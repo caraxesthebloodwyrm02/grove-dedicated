@@ -1,0 +1,27 @@
+{
+  "AND": {
+    "vector": 0.92,
+    "semantic": 0.88,
+    "temporal": 0.83
+  },
+  "OR": {
+    "vector": 0.89,
+    "semantic": 0.86,
+    "temporal": 0.80
+  },
+  "NAND": {
+    "vector": 0.90,
+    "semantic": 0.82,
+    "temporal": 0.78
+  },
+  "NOR": {
+    "vector": 0.87,
+    "semantic": 0.81,
+    "temporal": 0.76
+  },
+  "XOR": {
+    "vector": 0.78,
+    "semantic": 0.72,
+    "temporal": 0.69
+  }
+}

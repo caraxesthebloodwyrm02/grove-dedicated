@@ -1,0 +1,384 @@
+{
+  "monte_carlo": {
+    "A: YouTube Tutorial Generator": {
+      "variant": "A: YouTube Tutorial Generator",
+      "overall_success_rate": 0.03,
+      "technical_success_rate": 0.03,
+      "traction_success_rate": 0.03,
+      "sustainable_success_rate": 0.028,
+      "avg_users_12_months": 431.029,
+      "avg_revenue_12_months": 424.48,
+      "avg_months_to_pmtf": 9.266666666666667,
+      "best_case": {
+        "variant": "Variant.YOUTUBE_TUTORIAL",
+        "months_to_product_market_fit": 6,
+        "total_users_12_months": 149341,
+        "revenue_12_months": 141700.0,
+        "technical_success": true,
+        "traction_success": true,
+        "sustainable_success": true,
+        "failure_reason": "",
+        "key_events": [
+          "Month 1: Competitor launched similar product",
+          "Month 2: Viral growth event (2.2x)",
+          "Month 3: Viral growth event (3.6x)",
+          "Month 3: Traction milestone reached (25+ users)",
+          "Month 4: Viral growth event (2.9x)",
+          "Month 5: Viral growth event (4.2x)",
+          "Month 6: Viral growth event (3.4x)",
+          "Month 6: Product-market fit achieved!",
+          "Month 6: Sustainable revenue achieved",
+          "Month 7: Viral growth event (3.7x)",
+          "Month 7: Sustainable revenue achieved",
+          "Month 7: Competitor launched similar product",
+          "Month 8: Viral growth event (4.0x)",
+          "Month 8: Sustainable revenue achieved",
+          "Month 9: Viral growth event (2.5x)",
+          "Month 9: Sustainable revenue achieved",
+          "Month 10: Viral growth event (3.7x)",
+          "Month 10: Sustainable revenue achieved",
+          "Month 10: Competitor launched similar product",
+          "Month 11: Viral growth event (3.6x)",
+          "Month 11: Sustainable revenue achieved",
+          "Month 12: Viral growth event (3.0x)",
+          "Month 12: Sustainable revenue achieved",
+          "Month 12: Technical debt accumulation"
+        ]
+      },
+      "worst_case": {
+        "variant": "Variant.YOUTUBE_TUTORIAL",
+        "months_to_product_market_fit": 3,
+        "total_users_12_months": 0,
+        "revenue_12_months": 0,
+        "technical_success": false,
+        "traction_success": false,
+        "sustainable_success": false,
+        "failure_reason": "Technical implementation failed",
+        "key_events": [
+          "Month 1: Critical technical issues discovered",
+          "Month 3: Project abandoned"
+        ]
+      }
+    },
+    "B: Developer Daily Journal": {
+      "variant": "B: Developer Daily Journal",
+      "overall_success_rate": 0.024,
+      "technical_success_rate": 0.024,
+      "traction_success_rate": 0.024,
+      "sustainable_success_rate": 0.009,
+      "avg_users_12_months": 28.726,
+      "avg_revenue_12_months": 61.24,
+      "avg_months_to_pmtf": 11.5,
+      "best_case": {
+        "variant": "Variant.DEV_JOURNAL",
+        "months_to_product_market_fit": 10,
+        "total_users_12_months": 4672,
+        "revenue_12_months": 7488.0,
+        "technical_success": true,
+        "traction_success": true,
+        "sustainable_success": true,
+        "failure_reason": "",
+        "key_events": [
+          "Month 1: Viral growth event (3.5x)",
+          "Month 1: Positive press coverage",
+          "Month 2: Viral growth event (4.7x)",
+          "Month 2: Traction milestone reached (25+ users)",
+          "Month 2: Positive press coverage",
+          "Month 3: Viral growth event (4.9x)",
+          "Month 3: Positive press coverage",
+          "Month 4: Viral growth event (4.4x)",
+          "Month 5: Viral growth event (3.0x)",
+          "Month 7: Viral growth event (3.7x)",
+          "Month 8: Viral growth event (3.9x)",
+          "Month 8: Positive press coverage",
+          "Month 10: Product-market fit achieved!",
+          "Month 10: Sustainable revenue achieved",
+          "Month 11: Viral growth event (2.7x)",
+          "Month 11: Sustainable revenue achieved",
+          "Month 12: Viral growth event (3.7x)",
+          "Month 12: Sustainable revenue achieved"
+        ]
+      },
+      "worst_case": {
+        "variant": "Variant.DEV_JOURNAL",
+        "months_to_product_market_fit": 3,
+        "total_users_12_months": 0,
+        "revenue_12_months": 0,
+        "technical_success": false,
+        "traction_success": false,
+        "sustainable_success": false,
+        "failure_reason": "Technical implementation failed",
+        "key_events": [
+          "Month 1: Critical technical issues discovered",
+          "Month 3: Project abandoned"
+        ]
+      }
+    },
+    "C: Timeline Analyzer": {
+      "variant": "C: Timeline Analyzer",
+      "overall_success_rate": 0.025,
+      "technical_success_rate": 0.025,
+      "traction_success_rate": 0.025,
+      "sustainable_success_rate": 0.005,
+      "avg_users_12_months": 6.959,
+      "avg_revenue_12_months": 121.35,
+      "avg_months_to_pmtf": 11.88,
+      "best_case": {
+        "variant": "Variant.TIMELINE_ANALYZER",
+        "months_to_product_market_fit": 11,
+        "total_users_12_months": 933,
+        "revenue_12_months": 12650.0,
+        "technical_success": true,
+        "traction_success": true,
+        "sustainable_success": true,
+        "failure_reason": "",
+        "key_events": [
+          "Month 1: Viral growth event (3.6x)",
+          "Month 2: Viral growth event (3.3x)",
+          "Month 2: Traction milestone reached (25+ users)",
+          "Month 2: Technical debt accumulation",
+          "Month 4: Technical debt accumulation",
+          "Month 6: Viral growth event (3.7x)",
+          "Month 6: Competitor launched similar product",
+          "Month 8: Technical debt accumulation",
+          "Month 9: Viral growth event (2.9x)",
+          "Month 10: Viral growth event (3.5x)",
+          "Month 11: Product-market fit achieved!",
+          "Month 11: Sustainable revenue achieved",
+          "Month 12: Sustainable revenue achieved"
+        ]
+      },
+      "worst_case": {
+        "variant": "Variant.TIMELINE_ANALYZER",
+        "months_to_product_market_fit": 3,
+        "total_users_12_months": 0,
+        "revenue_12_months": 0,
+        "technical_success": false,
+        "traction_success": false,
+        "sustainable_success": false,
+        "failure_reason": "Technical implementation failed",
+        "key_events": [
+          "Month 1: Critical technical issues discovered",
+          "Month 3: Project abandoned"
+        ]
+      }
+    },
+    "D: Bug Reproduction Tool": {
+      "variant": "D: Bug Reproduction Tool",
+      "overall_success_rate": 0.02,
+      "technical_success_rate": 0.02,
+      "traction_success_rate": 0.018,
+      "sustainable_success_rate": 0.0,
+      "avg_users_12_months": 1.54,
+      "avg_revenue_12_months": 68.6,
+      "avg_months_to_pmtf": 12.0,
+      "best_case": {
+        "variant": "Variant.BUG_REPRODUCER",
+        "months_to_product_market_fit": 12,
+        "total_users_12_months": 247,
+        "revenue_12_months": 8700.0,
+        "technical_success": true,
+        "traction_success": true,
+        "sustainable_success": false,
+        "failure_reason": "",
+        "key_events": [
+          "Month 1: Viral growth event (3.6x)",
+          "Month 2: Viral growth event (3.3x)",
+          "Month 2: Traction milestone reached (25+ users)",
+          "Month 2: Technical debt accumulation",
+          "Month 4: Technical debt accumulation",
+          "Month 6: Viral growth event (3.7x)",
+          "Month 6: Competitor launched similar product",
+          "Month 8: Technical debt accumulation",
+          "Month 9: Viral growth event (2.9x)",
+          "Month 10: Viral growth event (3.5x)"
+        ]
+      },
+      "worst_case": {
+        "variant": "Variant.BUG_REPRODUCER",
+        "months_to_product_market_fit": 3,
+        "total_users_12_months": 0,
+        "revenue_12_months": 0,
+        "technical_success": false,
+        "traction_success": false,
+        "sustainable_success": false,
+        "failure_reason": "Technical implementation failed",
+        "key_events": [
+          "Month 1: Critical technical issues discovered",
+          "Month 3: Project abandoned"
+        ]
+      }
+    }
+  },
+  "scenarios": [
+    {
+      "variant": "Variant.YOUTUBE_TUTORIAL",
+      "months_to_product_market_fit": 3,
+      "total_users_12_months": 0,
+      "revenue_12_months": 0,
+      "technical_success": false,
+      "traction_success": false,
+      "sustainable_success": false,
+      "failure_reason": "Technical implementation failed",
+      "key_events": [
+        "Month 1: Critical technical issues discovered",
+        "Month 3: Project abandoned"
+      ]
+    },
+    {
+      "variant": "Variant.YOUTUBE_TUTORIAL",
+      "months_to_product_market_fit": 3,
+      "total_users_12_months": 0,
+      "revenue_12_months": 0,
+      "technical_success": false,
+      "traction_success": false,
+      "sustainable_success": false,
+      "failure_reason": "Technical implementation failed",
+      "key_events": [
+        "Month 1: Critical technical issues discovered",
+        "Month 3: Project abandoned"
+      ]
+    },
+    {
+      "variant": "Variant.YOUTUBE_TUTORIAL",
+      "months_to_product_market_fit": 3,
+      "total_users_12_months": 0,
+      "revenue_12_months": 0,
+      "technical_success": false,
+      "traction_success": false,
+      "sustainable_success": false,
+      "failure_reason": "Technical implementation failed",
+      "key_events": [
+        "Month 1: Critical technical issues discovered",
+        "Month 3: Project abandoned"
+      ]
+    },
+    {
+      "variant": "Variant.DEV_JOURNAL",
+      "months_to_product_market_fit": 3,
+      "total_users_12_months": 0,
+      "revenue_12_months": 0,
+      "technical_success": false,
+      "traction_success": false,
+      "sustainable_success": false,
+      "failure_reason": "Technical implementation failed",
+      "key_events": [
+        "Month 1: Critical technical issues discovered",
+        "Month 3: Project abandoned"
+      ]
+    },
+    {
+      "variant": "Variant.DEV_JOURNAL",
+      "months_to_product_market_fit": 3,
+      "total_users_12_months": 0,
+      "revenue_12_months": 0,
+      "technical_success": false,
+      "traction_success": false,
+      "sustainable_success": false,
+      "failure_reason": "Technical implementation failed",
+      "key_events": [
+        "Month 1: Critical technical issues discovered",
+        "Month 3: Project abandoned"
+      ]
+    },
+    {
+      "variant": "Variant.DEV_JOURNAL",
+      "months_to_product_market_fit": 3,
+      "total_users_12_months": 0,
+      "revenue_12_months": 0,
+      "technical_success": false,
+      "traction_success": false,
+      "sustainable_success": false,
+      "failure_reason": "Technical implementation failed",
+      "key_events": [
+        "Month 1: Critical technical issues discovered",
+        "Month 3: Project abandoned"
+      ]
+    },
+    {
+      "variant": "Variant.TIMELINE_ANALYZER",
+      "months_to_product_market_fit": 3,
+      "total_users_12_months": 0,
+      "revenue_12_months": 0,
+      "technical_success": false,
+      "traction_success": false,
+      "sustainable_success": false,
+      "failure_reason": "Technical implementation failed",
+      "key_events": [
+        "Month 1: Critical technical issues discovered",
+        "Month 3: Project abandoned"
+      ]
+    },
+    {
+      "variant": "Variant.TIMELINE_ANALYZER",
+      "months_to_product_market_fit": 3,
+      "total_users_12_months": 0,
+      "revenue_12_months": 0,
+      "technical_success": false,
+      "traction_success": false,
+      "sustainable_success": false,
+      "failure_reason": "Technical implementation failed",
+      "key_events": [
+        "Month 1: Critical technical issues discovered",
+        "Month 3: Project abandoned"
+      ]
+    },
+    {
+      "variant": "Variant.TIMELINE_ANALYZER",
+      "months_to_product_market_fit": 3,
+      "total_users_12_months": 0,
+      "revenue_12_months": 0,
+      "technical_success": false,
+      "traction_success": false,
+      "sustainable_success": false,
+      "failure_reason": "Technical implementation failed",
+      "key_events": [
+        "Month 1: Critical technical issues discovered",
+        "Month 3: Project abandoned"
+      ]
+    },
+    {
+      "variant": "Variant.BUG_REPRODUCER",
+      "months_to_product_market_fit": 3,
+      "total_users_12_months": 0,
+      "revenue_12_months": 0,
+      "technical_success": false,
+      "traction_success": false,
+      "sustainable_success": false,
+      "failure_reason": "Technical implementation failed",
+      "key_events": [
+        "Month 1: Critical technical issues discovered",
+        "Month 3: Project abandoned"
+      ]
+    },
+    {
+      "variant": "Variant.BUG_REPRODUCER",
+      "months_to_product_market_fit": 3,
+      "total_users_12_months": 0,
+      "revenue_12_months": 0,
+      "technical_success": false,
+      "traction_success": false,
+      "sustainable_success": false,
+      "failure_reason": "Technical implementation failed",
+      "key_events": [
+        "Month 1: Critical technical issues discovered",
+        "Month 3: Project abandoned"
+      ]
+    },
+    {
+      "variant": "Variant.BUG_REPRODUCER",
+      "months_to_product_market_fit": 3,
+      "total_users_12_months": 0,
+      "revenue_12_months": 0,
+      "technical_success": false,
+      "traction_success": false,
+      "sustainable_success": false,
+      "failure_reason": "Technical implementation failed",
+      "key_events": [
+        "Month 1: Critical technical issues discovered",
+        "Month 3: Project abandoned"
+      ]
+    }
+  ],
+  "generated_at": "2025-11-14T12:42:59.953386"
+}

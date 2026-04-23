@@ -1,0 +1,353 @@
+// GRID Modern Inbox Workspace
+// Inspired by Windows Fluent Design, optimized for serene, accessible cognitive coding
+// Colors, layout, and tasks designed for high-awareness, minimal strain, and flow state preservation
+//
+// USAGE: Rename this file to "GRID.code-workspace" and open with VS Code/Cursor
+// The .code-workspace extension is gitignored for security, so keep a personal copy
+{
+    "folders": [
+        {
+            "name": "🧠 grid",
+            "path": "../grid"
+        },
+        {
+            "name": "💡 light_of_the_seven",
+            "path": "../light_of_the_seven"
+        },
+        {
+            "name": "🔧 tools",
+            "path": "../tools"
+        },
+        {
+            "name": "🚀 application",
+            "path": "../application"
+        },
+        {
+            "name": "🧪 tests",
+            "path": "../tests"
+        },
+        {
+            "name": "📚 docs",
+            "path": "../docs"
+        },
+        {
+            "name": "⚙️ scripts",
+            "path": "../scripts"
+        },
+        {
+            "name": "📋 context",
+            "path": "../.cursor"
+        }
+    ],
+    "settings": {
+        "workbench.startupEditor": "none",
+        "workbench.editor.openPositioning": "last",
+        "workbench.editor.limit.enabled": true,
+        "workbench.editor.limit.value": 5,
+        "workbench.editor.limit.perEditorGroup": true,
+        "editor.fontFamily": "'Fira Code', 'Cascadia Code', 'JetBrains Mono', Consolas, monospace",
+        "editor.fontSize": 18,
+        "editor.lineHeight": 1.6,
+        "editor.fontLigatures": true,
+        "editor.cursorStyle": "block",
+        "editor.cursorWidth": 3,
+        "editor.cursorBlinking": "smooth",
+        "editor.smoothScrolling": true,
+        "editor.renderLineHighlight": "all",
+        "editor.minimap.enabled": true,
+        "editor.minimap.maxColumn": 80,
+        "editor.minimap.renderCharacters": false,
+        "editor.minimap.scale": 2,
+        "editor.bracketPairColorization.enabled": true,
+        "editor.guides.bracketPairs": "active",
+        "editor.rulers": [
+            120
+        ],
+        "editor.wordWrap": "off",
+        "editor.padding.top": 10,
+        "editor.padding.bottom": 10,
+        "editor.accessibilitySupport": "auto",
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.stickyScroll.enabled": true,
+        "breadcrumbs.enabled": true,
+        "outline.showVariables": true,
+        "outline.showFunctions": true,
+        "outline.showClasses": true,
+        "workbench.colorCustomizations": {
+            "editor.background": "#181e28",
+            "editor.foreground": "#e0e6ed",
+            "editor.lineHighlightBackground": "#1e3a5f40",
+            "editor.lineHighlightBorder": "#2d5a8f30",
+            "editorCursor.foreground": "#9f7aea",
+            "editorCursor.background": "#181e28",
+            "editor.selectionBackground": "#9ae6b430",
+            "editor.selectionHighlightBackground": "#8adae620",
+            "editor.wordHighlightBackground": "#9f7aea20",
+            "editor.findMatchBackground": "#f6ad5540",
+            "editor.findMatchHighlightBackground": "#f6ad5525",
+            "editorLineNumber.foreground": "#4a5568",
+            "editorLineNumber.activeForeground": "#8adae6",
+            "editorGutter.background": "#0d141c",
+            "sideBar.background": "#0d141c",
+            "sideBar.foreground": "#a0aec0",
+            "sideBarTitle.foreground": "#8adae6",
+            "activityBar.background": "#0d141c",
+            "activityBar.foreground": "#8adae6",
+            "activityBar.inactiveForeground": "#4a5568",
+            "activityBarBadge.background": "#9f7aea",
+            "activityBarBadge.foreground": "#ffffff",
+            "statusBar.background": "#1a4e5e",
+            "statusBar.foreground": "#e0e6ed",
+            "statusBar.debuggingBackground": "#9f7aea",
+            "statusBar.noFolderBackground": "#2d3748",
+            "titleBar.activeBackground": "#0d141c",
+            "titleBar.activeForeground": "#e0e6ed",
+            "titleBar.inactiveBackground": "#0d141c",
+            "titleBar.inactiveForeground": "#718096",
+            "tab.activeBackground": "#1e3a5f",
+            "tab.activeForeground": "#e0e6ed",
+            "tab.inactiveBackground": "#0d141c",
+            "tab.inactiveForeground": "#718096",
+            "tab.activeBorderTop": "#8adae6",
+            "tab.border": "#0d141c",
+            "editorGroupHeader.tabsBackground": "#0d141c",
+            "terminal.background": "#0d141c",
+            "terminal.foreground": "#e0e6ed",
+            "terminalCursor.foreground": "#9f7aea",
+            "panel.background": "#0d141c",
+            "panel.border": "#1e3a5f",
+            "panelTitle.activeForeground": "#8adae6",
+            "panelTitle.inactiveForeground": "#718096",
+            "input.background": "#1e3a5f",
+            "input.foreground": "#e0e6ed",
+            "input.border": "#2d5a8f",
+            "input.placeholderForeground": "#718096",
+            "dropdown.background": "#1e3a5f",
+            "dropdown.foreground": "#e0e6ed",
+            "button.background": "#9f7aea",
+            "button.foreground": "#ffffff",
+            "button.hoverBackground": "#805ad5",
+            "list.activeSelectionBackground": "#1e3a5f",
+            "list.activeSelectionForeground": "#e0e6ed",
+            "list.hoverBackground": "#1e3a5f80",
+            "list.focusBackground": "#2d5a8f",
+            "scrollbarSlider.background": "#4a556850",
+            "scrollbarSlider.hoverBackground": "#71809680",
+            "scrollbarSlider.activeBackground": "#8adae680",
+            "editorError.foreground": "#fc8181",
+            "editorWarning.foreground": "#f6ad55",
+            "editorInfo.foreground": "#63b3ed",
+            "errorForeground": "#fc8181",
+            "gitDecoration.addedResourceForeground": "#68d391",
+            "gitDecoration.modifiedResourceForeground": "#63b3ed",
+            "gitDecoration.deletedResourceForeground": "#fc8181",
+            "gitDecoration.untrackedResourceForeground": "#9ae6b4",
+            "minimap.background": "#0d141c",
+            "minimap.selectionHighlight": "#9f7aea60",
+            "editorBracketHighlight.foreground1": "#8adae6",
+            "editorBracketHighlight.foreground2": "#9f7aea",
+            "editorBracketHighlight.foreground3": "#f6ad55",
+            "editorBracketHighlight.foreground4": "#68d391",
+            "editorBracketHighlight.foreground5": "#fc8181",
+            "editorBracketHighlight.foreground6": "#63b3ed"
+        },
+        "files.exclude": {
+            "**/__pycache__": true,
+            "**/*.pyc": true,
+            "**/.pytest_cache": true,
+            "**/.mypy_cache": true,
+            "**/.ruff_cache": true,
+            "**/.venv": true,
+            "**/.venv_*": true,
+            "**/venv": true,
+            "**/node_modules": true,
+            "**/.rag_db": true,
+            "**/.rag_cache": true,
+            "**/.rag_logs": true,
+            "**/dist": true,
+            "**/build": true
+        },
+        "files.watcherExclude": {
+            "**/.venv/**": true,
+            "**/.venv_*/**": true,
+            "**/venv/**": true,
+            "**/node_modules/**": true,
+            "**/.rag_db/**": true,
+            "**/__pycache__/**": true,
+            "**/.pytest_cache/**": true,
+            "**/.mypy_cache/**": true
+        },
+        "search.exclude": {
+            "**/__pycache__": true,
+            "**/*.pyc": true,
+            "**/.pytest_cache": true,
+            "**/.mypy_cache": true,
+            "**/.venv": true,
+            "**/.venv_*": true,
+            "**/venv": true,
+            "**/node_modules": true,
+            "**/.rag_db": true,
+            "**/dist": true,
+            "**/build": true,
+            "**/archival": true
+        },
+        "files.trimTrailingWhitespace": true,
+        "files.insertFinalNewline": true,
+        "files.trimFinalNewlines": true,
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python.exe",
+        "python-envs.workspaceSearchPaths": [".venv"],
+        "python.analysis.typeCheckingMode": "basic",
+        "python.analysis.autoImportCompletions": true,
+        "python.analysis.diagnosticMode": "workspace",
+        "python.testing.pytestEnabled": true,
+        "python.testing.pytestArgs": [
+            "tests"
+        ],
+        "[python]": {
+            "editor.defaultFormatter": "ms-python.black-formatter",
+            "editor.formatOnSave": true,
+            "editor.codeActionsOnSave": {
+                "source.organizeImports": "explicit"
+            },
+            "editor.rulers": [
+                120
+            ]
+        },
+        "[markdown]": {
+            "editor.wordWrap": "on",
+            "editor.fontSize": 16,
+            "editor.lineHeight": 1.8,
+            "editor.quickSuggestions": {
+                "comments": "off",
+                "strings": "off",
+                "other": "off"
+            }
+        },
+        "zenMode.hideLineNumbers": false,
+        "zenMode.hideTabs": false,
+        "zenMode.hideStatusBar": false,
+        "zenMode.centerLayout": true,
+        "zenMode.fullScreen": false
+    },
+    "tasks": {
+        "version": "2.0.0",
+        "tasks": [
+            {
+                "label": "🔍 RAG · Query",
+                "type": "shell",
+                "command": "python -m tools.rag.cli query",
+                "group": "none",
+                "problemMatcher": [],
+                "presentation": {
+                    "reveal": "always",
+                    "panel": "dedicated",
+                    "focus": true
+                }
+            },
+            {
+                "label": "✅ IDE · Validate Context",
+                "type": "shell",
+                "command": "python scripts/validate_ide_context.py",
+                "group": "none",
+                "problemMatcher": [],
+                "presentation": {
+                    "reveal": "always",
+                    "panel": "shared"
+                }
+            },
+            {
+                "label": "🧪 Tests · Run All",
+                "type": "shell",
+                "command": "pytest tests/ -v --tb=short",
+                "group": {
+                    "kind": "test",
+                    "isDefault": true
+                },
+                "problemMatcher": [],
+                "presentation": {
+                    "reveal": "always",
+                    "panel": "shared"
+                }
+            },
+            {
+                "label": "📊 RAG · Index Docs",
+                "type": "shell",
+                "command": "python -m tools.rag.cli index docs/",
+                "group": "build",
+                "problemMatcher": [],
+                "presentation": {
+                    "reveal": "always",
+                    "panel": "shared"
+                }
+            },
+            {
+                "label": "🛰️ PULSAR · Dashboard",
+                "type": "shell",
+                "command": "powershell scripts/start_pulsar.ps1",
+                "group": "build",
+                "presentation": {
+                    "reveal": "silent",
+                    "panel": "shared"
+                }
+            },
+            {
+                "label": "📈 System · Vitals",
+                "type": "shell",
+                "command": "python -c \"import psutil, time; [print(f'CPU: {psutil.cpu_percent()}% | MEM: {psutil.virtual_memory().percent}%') or time.sleep(1) for _ in range(30)]\"",
+                "group": "none",
+                "presentation": {
+                    "reveal": "always",
+                    "panel": "dedicated"
+                }
+            }
+        ]
+    },
+    "extensions": {
+        "recommendations": [
+            "ms-python.python",
+            "ms-python.black-formatter",
+            "charliermarsh.ruff",
+            "ms-python.vscode-pylance",
+            "yzhang.markdown-all-in-one",
+            "bierner.markdown-preview-github-styles",
+            "streetsidesoftware.code-spell-checker"
+        ]
+    },
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "Python: Current File",
+                "type": "debugpy",
+                "request": "launch",
+                "program": "${file}",
+                "console": "integratedTerminal",
+                "justMyCode": true
+            },
+            {
+                "name": "Python: RAG CLI",
+                "type": "debugpy",
+                "request": "launch",
+                "module": "tools.rag.cli",
+                "args": [
+                    "query"
+                ],
+                "console": "integratedTerminal",
+                "justMyCode": true
+            },
+            {
+                "name": "Python: pytest",
+                "type": "debugpy",
+                "request": "launch",
+                "module": "pytest",
+                "args": [
+                    "tests/",
+                    "-v"
+                ],
+                "console": "integratedTerminal",
+                "justMyCode": true
+            }
+        ]
+    }
+}

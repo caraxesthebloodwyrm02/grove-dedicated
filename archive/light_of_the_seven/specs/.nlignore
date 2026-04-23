@@ -1,0 +1,22 @@
+# .nlignore patterns
+# Similar to .gitignore - patterns to ignore when watching .nl files
+
+# Temporary files
+*.tmp
+*.bak
+~*
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+__pycache__/
+*.pyc
+*.pyo

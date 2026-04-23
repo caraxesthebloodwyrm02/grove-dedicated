@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dialogue Flows for Logistic Field & Hardware Domain",
+  "description": "Predefined conversational paths for teaching hardware and logistics concepts.",
+  "type": "object",
+  "properties": {
+    "finite_state_machine": [
+      {
+        "step": "anchor",
+        "action": "Check user_context.experiences for relevant experiences (e.g., 'built_hobby_electronics', 'used_traffic_lights'). Use matching anchor script from concept_mappings.json."
+      },
+      {
+        "step": "teach",
+        "action": "Explain finite state machines using the selected anchor. Example: 'A finite state machine is like a traffic light. It has specific states (red, yellow, green) and transitions between them based on inputs (timers or sensors).'"
+      },
+      {
+        "step": "verify",
+        "action": "Ask 'Does this analogy help you understand finite state machines? (yes/no)'. If 'no', retry with another anchor or simplify the explanation."
+      },
+      {
+        "step": "expand",
+        "action": "Offer to discuss related topics like 'how FSMs are used in digital design' or 'the difference between Mealy and Moore machines'."
+      }
+    ],
+    "fpga_prototype": [
+      {
+        "step": "anchor",
+        "action": "Check user_context.experiences for 'built_hobby_electronics' or 'programmed_arduino'. Use matching anchor script from concept_mappings.json."
+      },
+      {
+        "step": "teach",
+        "action": "Explain FPGA prototyping using the anchor. Example: 'FPGA prototyping is like building with LEGO blocks. You can rearrange the blocks (logic gates) to create different structures (circuits) without permanently gluing them together.'"
+      },
+      {
+        "step": "verify",
+        "action": "Ask 'Can you explain what an FPGA does in your own words?'"
+      },
+      {
+        "step": "expand",
+        "action": "Offer to discuss 'how FPGAs differ from ASICs' or 'real-world applications of FPGAs'."
+      }
+    ],
+    "asic_design": [
+      {
+        "step": "anchor",
+        "action": "Check user_context.experiences for 'designed_pcb' or 'worked_with_asic'. Use matching anchor script from concept_mappings.json."
+      },
+      {
+        "step": "teach",
+        "action": "Explain ASIC design using the anchor. Example: 'ASIC design is like creating a custom chip for a specific task, much like designing a specialized tool for a unique job. Once it's made, you can't change it, but it's highly optimized for its purpose.'"
+      },
+      {
+        "step": "verify",
+        "action": "Ask 'How would you describe the difference between an FPGA and an ASIC?'"
+      },
+      {
+        "step": "expand",
+        "action": "Offer to discuss 'the ASIC design flow' or 'how ASICs are manufactured'."
+      }
+    ],
+    "verification_flow": [
+      {
+        "step": "anchor",
+        "action": "Check user_context.experiences for 'worked_with_software_testing' or 'deployed_web_services'. Use matching anchor script from concept_mappings.json."
+      },
+      {
+        "step": "teach",
+        "action": "Explain hardware verification using the anchor. Example: 'Hardware verification is like proofreading a book before publishing. You check every part of the design to ensure it works as intended and catch any errors before production.'"
+      },
+      {
+        "step": "verify",
+        "action": "Ask 'Can you think of a time when testing was crucial in a project you worked on?'"
+      },
+      {
+        "step": "expand",
+        "action": "Offer to discuss 'different verification methodologies' or 'how verification impacts time-to-market'."
+      }
+    ],
+    "turing_machine": [
+      {
+        "step": "anchor",
+        "action": "Check user_context.experiences for 'worked_with_algorithms' or 'studied_computer_science'. Use matching anchor script from concept_mappings.json."
+      },
+      {
+        "step": "teach",
+        "action": "Explain Turing machines using the anchor. Example: 'A Turing machine is like a simple computer with an infinite tape. It reads and writes symbols on the tape, moving left or right based on a set of rules. This model forms the foundation of modern computing.'"
+      },
+      {
+        "step": "verify",
+        "action": "Ask 'How would you describe a Turing machine to someone who's never heard of it?'"
+      },
+      {
+        "step": "expand",
+        "action": "Offer to discuss 'the Church-Turing thesis' or 'how Turing machines relate to modern computers'."
+      }
+    ]
+  },
+  "additionalProperties": false
+}

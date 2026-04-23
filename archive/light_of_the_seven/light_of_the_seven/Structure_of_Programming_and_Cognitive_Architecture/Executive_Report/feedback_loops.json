@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Feedback Loops for Programming & Cognitive Architecture",
+  "description": "Structured checks for understanding and user feedback during Socratic AI dialogues.",
+  "type": "object",
+  "properties": {
+    "compiler_design": {
+      "questions": [
+        {
+          "text": "Did this explanation of compiler design help? (yes/no)",
+          "type": "boolean",
+          "next_steps": {
+            "yes": "Proceed to 'expand' step in dialogue_flows.compiler_design.",
+            "no": "Retry with another anchor or simplify the explanation."
+          }
+        },
+        {
+          "text": "Can you explain what a compiler does in your own words?",
+          "type": "open_ended",
+          "next_steps": {
+            "positive": "Proceed to discuss specific compiler phases (lexing, parsing, optimization).",
+            "negative": "Clarify the explanation with a different analogy."
+          }
+        }
+      ]
+    },
+    "parser": {
+      "questions": [
+        {
+          "text": "Does the explanation of parsing make sense? (yes/no)",
+          "type": "boolean",
+          "next_steps": {
+            "yes": "Proceed to 'expand' step in dialogue_flows.parser.",
+            "no": "Try explaining with a different analogy or example."
+          }
+        },
+        {
+          "text": "How would you describe parsing to someone else?",
+          "type": "open_ended",
+          "next_steps": {
+            "positive": "Discuss abstract syntax trees and their role in parsing.",
+            "negative": "Revisit the explanation with more concrete examples."
+          }
+        }
+      ]
+    },
+    "mental_model": {
+      "questions": [
+        {
+          "text": "Did the explanation of mental models help you understand how programmers think? (yes/no)",
+          "type": "boolean",
+          "next_steps": {
+            "yes": "Proceed to discuss how mental models evolve with experience.",
+            "no": "Provide another example of a mental model in programming."
+          }
+        },
+        {
+          "text": "Can you think of a mental model you use when writing or debugging code?",
+          "type": "open_ended",
+          "next_steps": {
+            "positive": "Explore how that mental model helps or hinders your coding.",
+            "negative": "Discuss common mental models in programming and their uses."
+          }
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,46 @@
+{
+  "session": {
+    "id": "s-001",
+    "title": "Great Hall demo: tense -> clear slip",
+    "participants_count": 3
+  },
+  "stats": {
+    "rows_count": 7,
+    "decisions_count": 1,
+    "actions_count": 1
+  },
+  "decisions": [
+    {
+      "decision_id": "d1",
+      "title": "Proceed with minimal streaming CLI now",
+      "status": "made",
+      "chosen_option_id": "o_a",
+      "rationale": "Need a quantifiable slip now; keep it resilient to schema evolution.",
+      "bridge_used": "Time-boxed trial: implement v1 CLI now; upgrade JSON parsing once the ecosystem root is visible.",
+      "at_": "2025-12-14T00:05:00Z"
+    }
+  ],
+  "actions": [
+    {
+      "action_id": "a1",
+      "title": "Run table builder on example_stream.jsonl and inspect outputs",
+      "owner_id": "p_scr",
+      "due_at": "2025-12-14T02:00:00Z",
+      "status": "open",
+      "notes": "Verify outputs/discussion_table.csv and outputs/receipt.json; check warnings.log for ignored/unknown fields.",
+      "at_": "2025-12-14T00:06:00Z"
+    }
+  ],
+  "outstanding_questions": [
+    {
+      "row_id": "r1",
+      "speaker_id": "p_fac",
+      "kind": "question",
+      "content": "What exactly is our task right now, in one sentence?",
+      "criteria_touched": ["c_clarity"],
+      "option_refs": [],
+      "tone_tag": "calm",
+      "at_": "2025-12-14T00:01:00Z"
+    }
+  ]
+}

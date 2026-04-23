@@ -1,0 +1,26 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jws.py</file>
+  <line>211</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/jwt/api_jws.py" />
+  <problem_class id="PySimplifyBooleanCheckInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Redundant boolean variable check</problem_class>
+  <description>Expression can be simplified</description>
+  <highlighted_element>header.get(&quot;b64&quot;, True) is False</highlighted_element>
+  <language>Python</language>
+  <offset>11</offset>
+  <length>32</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>753</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PySimplifyBooleanCheckInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Redundant boolean variable check</problem_class>
+  <description>Expression can be simplified</description>
+  <highlighted_element>abc.ABCMeta.__eq__(cls, other) is True</highlighted_element>
+  <language>Python</language>
+  <offset>15</offset>
+  <length>38</length>
+</problem>
+</problems>

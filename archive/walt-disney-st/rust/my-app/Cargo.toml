@@ -1,0 +1,10 @@
+[package]
+name = "my-app"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+grid-core = { path = "../grid-core" }
+grid-report = { path = "../grid-report" }
+serde_json = "1.0"
+clap = { version = "4", features = ["derive"] }

@@ -1,0 +1,58 @@
+feat: Extend type validator to support cognitive Pydantic models
+
+Extend the Python-Rust type validation system to validate cognitive layer
+types (CognitiveState, UserCognitiveProfile, DecisionContext) in addition to
+artifact schema types, with robust error handling, field mapping, and mode-based
+validation.
+
+## Changes
+
+### Python (`python/type_validator.py`)
+- Add `normalize_python_type()` for type annotation normalization
+- Add `extract_pydantic_fields()` with Pydantic v1/v2 compatibility
+- Add `load_cognitive_contracts()` with graceful import error handling
+- Add `FIELD_NAME_MAPPING` for Python/Rust field name differences
+- Update `compare_contracts()` to support mode-based validation:
+  - `artifact`: Validate only artifact schema types (default, backward compatible)
+  - `cognitive`: Validate only cognitive types
+  - `both`: Validate all types
+- Add `--mode` CLI argument for explicit validation scope
+- Handle Python-only metadata fields as warnings (not errors) in cognitive mode
+- Update `load_python_contracts()` to optionally include cognitive contracts
+
+### Rust (`rust/grid-core/src/lib.rs`)
+- Add missing fields to `ModuleArtifact` struct:
+  - `component_type: Option<String>`
+  - `cognitive_metrics: HashMap<String, f64>`
+  - `dependencies: Vec<String>`
+
+## Features
+
+- **Cognitive Type Validation**: Validates Pydantic models from cognitive layer
+- **Mode-Based Validation**: Explicit control over validation scope
+- **Field Name Mapping**: Handles Python/Rust naming differences (e.g., `estimated_load` → `load_estimate`)
+- **Graceful Degradation**: Missing cognitive layer imports log warnings, don't crash
+- **Metadata Field Handling**: Python-only metadata fields generate warnings, not errors
+- **Backward Compatibility**: Default `artifact` mode preserves existing behavior
+
+## Field Mappings
+
+- `CognitiveState.estimated_load` (Python) → `load_estimate` (Rust)
+
+## Known Warnings (Expected)
+
+- Python-only metadata fields in cognitive types (timestamp, context, metadata, etc.)
+- Extra Rust structs not in Python contracts (e.g., `CognitiveMetrics`)
+
+## Testing
+
+- ✅ Artifact mode (default): Passes
+- ✅ Cognitive mode: Passes with expected warnings
+- ✅ Both mode: Works with appropriate Rust files
+- ✅ Backward compatibility: Maintained
+- ✅ Rust compilation: Successful
+
+## Breaking Changes
+
+None. Default behavior unchanged.
+

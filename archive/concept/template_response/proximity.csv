@@ -1,0 +1,99 @@
+Section,Subsection,Item,Value
+Executive Summary,Description,, "Temporal Resonance is a 6‑month interdisciplinary research initiative exploring retrocausal information dynamics across physics, information theory, cognitive science, and archaeology. The program emphasizes open science, collective authorship, and rigorous reproducibility standards."
+Document Hierarchy,Foundation Docs,Scope and objectives,"Primary scope and objectives"
+Document Hierarchy,Foundation Docs,Participation,"Participation guidelines and topics"
+Document Hierarchy,Foundation Docs,Milestones,"Milestone schedule"
+Document Hierarchy,Governance,Decision making,"Decision‑making structure"
+Document Hierarchy,Governance,Behavioural standards,"Behavioral standards"
+Document Hierarchy,Governance,Collaboration channels,"Collaboration channels"
+Document Hierarchy,Methodology,Methodology & reproducibility,"Methodology and reproducibility"
+Document Hierarchy,Methodology,Authorship & review,"Authorship and review process"
+Document Hierarchy,External,Research domains & keywords,"Research domains and keywords"
+Document Hierarchy,External,Publication & dissemination,"Publication and dissemination strategy"
+Temporal Framework,Milestone,2025-11-20,"CFP Release (Foundation)"
+Temporal Framework,Milestone,2025-12-15,"Registration Deadline (Recruitment)"
+Temporal Framework,Milestone,2026-01-10,"Abstracts Due (Content Submission)"
+Temporal Framework,Milestone,2026-02-01,"Methodology Proposals (Technical Planning)"
+Temporal Framework,Milestone,2026-03-15,"Draft Paper Due (Content Development)"
+Temporal Framework,Milestone,2026-04-10–04-25,"Community Review (Quality Control)"
+Temporal Framework,Milestone,2026-05-15,"Final Paper v1.0 (Publication Ready)"
+Temporal Framework,Milestone,2026-06-01,"Workshop + Archival (Dissemination)"
+Domain‑Topic Matrix,Physics,Retrocausal,●
+Domain‑Topic Matrix,Physics,Signal Propagation,●
+Domain‑Topic Matrix,Physics,Memory Formation,○
+Domain‑Topic Matrix,Physics,Formal Linguistic,○
+Domain‑Topic Matrix,Physics,Reproducibility,●
+Domain‑Topic Matrix,Information Theory,Retrocausal,●
+Domain‑Topic Matrix,Information Theory,Signal Propagation,●
+Domain‑Topic Matrix,Information Theory,Memory Formation,●
+Domain‑Topic Matrix,Information Theory,Formal Linguistic,○
+Domain‑Topic Matrix,Information Theory,Reproducibility,●
+Domain‑Topic Matrix,Cognitive Science,Retrocausal,○
+Domain‑Topic Matrix,Cognitive Science,Signal Propagation,●
+Domain‑Topic Matrix,Cognitive Science,Memory Formation,●
+Domain‑Topic Matrix,Cognitive Science,Formal Linguistic,●
+Domain‑Topic Matrix,Cognitive Science,Reproducibility,●
+Domain‑Topic Matrix,Archaeology,Retrocausal,○
+Domain‑Topic Matrix,Archaeology,Signal Propagation,○
+Domain‑Topic Matrix,Archaeology,Memory Formation,●
+Domain‑Topic Matrix,Archaeology,Formal Linguistic,●
+Domain‑Topic Matrix,Archaeology,Reproducibility,●
+Domain‑Topic Matrix,Ethics,Retrocausal,●
+Domain‑Topic Matrix,Ethics,Signal Propagation,●
+Domain‑Topic Matrix,Ethics,Memory Formation,●
+Domain‑Topic Matrix,Ethics,Formal Linguistic,●
+Domain‑Topic Matrix,Ethics,Reproducibility,○
+Network Analysis,Metric,Total nodes in network,32
+Network Analysis,Metric,Total edges in network,80
+Network Analysis,Metric,Network density,0.161
+Network Analysis,Top Entities,README,0.452
+Network Analysis,Top Entities,CFP,0.419
+Network Analysis,Top Entities,LITERATURE_MAP,0.387
+Network Analysis,Top Entities,OUTREACH,0.355
+Network Analysis,Top Entities,VALIDATION,0.290
+Quality Metrics,Documentation Completeness,"100% (11/11 core docs)",""
+Quality Metrics,Timeline Clarity,High,"8/8 milestones defined"
+Quality Metrics,Governance Structure,Clear,"3‑tier system"
+Quality Metrics,Reproducibility Standards,Comprehensive,"5‑point checklist"
+Quality Metrics,Community Engagement,Multi‑channel,"GitHub + async"
+Quality Metrics,Licensing Clarity,Dual‑licensed,"CC BY 4.0 + MIT"
+Quality Metrics,Open Science Commitment,Strong,"arXiv + Zenodo/OSF"
+Innovation Areas,1,Retrocausal Information Dynamics Models,""
+Innovation Areas,2,Cross‑Domain Evidence Integration,""
+Innovation Areas,3,Community‑Validated Scientific Process,""
+Innovation Areas,4,Collective Authorship Framework,""
+Innovation Areas,5,Real‑Time Open Peer Review,""
+Innovation Areas,6,Interdisciplinary Literature Synthesis,""
+Risk Mitigation,Extraordinary Claims,"Rigorous reproducibility standards + pre‑registration",""
+Risk Mitigation,Interdisciplinary Coordination,"Clear communication channels + documented processes",""
+Risk Mitigation,Quality Control,"Community review + governance oversight",""
+Risk Mitigation,Temporal Constraints,"Buffer periods + flexible milestone definitions",""
+Risk Mitigation,Scope Creep,"Steering group oversight + structured proposal process",""
+Compression Ratio,Metric,Value,"11 documents → 8 thematic summaries"
+Compression Ratio,Total Entities,"11 documents + 21 key concepts = 32 total",""
+Concept Relationships,Pair,Co‑occurrences,"governance ↔ community",5
+Concept Relationships,Pair,Co‑occurrences,"governance ↔ validation",3
+Concept Relationships,Pair,Co‑occurrences,"community ↔ validation",3
+Concept Relationships,Pair,Co‑occurrences,"retrocausal ↔ temporal",2
+Concept Relationships,Pair,Co‑occurrences,"retrocausal ↔ resonance",2
+Concept Relationships,Pair,Co‑occurrences,"community ↔ reproducibility",2
+Concept Relationships,Pair,Co‑occurrences,"temporal ↔ resonance",2
+Concept Relationships,Pair,Co‑occurrences,"temporal ↔ formal",2
+Concept Relationships,Pair,Co‑occurrences,"evidence ↔ retrocausal",1
+Concept Relationships,Pair,Co‑occurrences,"evidence ↔ models",1
+Temporal Progression,Progress%,Date,Event (Phase)
+Temporal Progression,0,2025-11-20,"CFP Release (Foundation)"
+Temporal Progression,25,2025-12-15,"Registration (Recruitment)"
+Temporal Progression,50,2026-01-10,"Abstracts (Content)"
+Temporal Progression,66,2026-02-01,"Methodology (Technical)"
+Temporal Progression,83,2026-03-15,"Draft Paper (Development)"
+Temporal Progression,92,2026-04-10,"Review Start (Quality)"
+Temporal Progression,98,2026-05-15,"Final Paper (Publication)"
+Temporal Progression,100,2026-06-01,"Workshop (Dissemination)"
+Architectural Summary,Component,Elements,Description
+Architectural Summary,Central Hub,README.md,"Scope & objectives"
+Architectural Summary,Governance Cluster,"GOVERNANCE; CODE_OF_CONDUCT; COMMUNITY","Decision‑making, conduct, collaboration"
+Architectural Summary,Methodology Cluster,"VALIDATION; CONTRIBUTING","Methods, reproducibility, authorship"
+Architectural Summary,External Interface,"LITERATURE_MAP; OUTREACH","Domain mapping & outreach"
+Architectural Summary,Timeline Anchor,TIMELINE.md,"Milestone schedule"
+Architectural Summary,Participation Gateway,CFP.md,"Call for participation"

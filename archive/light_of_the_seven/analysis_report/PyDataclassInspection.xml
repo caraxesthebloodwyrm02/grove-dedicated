@@ -1,0 +1,38 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/h11/_events.py</file>
+  <line>168</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/h11/_events.py" />
+  <problem_class id="PyDataclassInspection" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Invalid definition and usage of Data Classes</problem_class>
+  <description>'__post_init__' would not be called until 'init' parameter is set to True</description>
+  <highlighted_element>__post_init__</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/h11/_events.py</file>
+  <line>206</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/h11/_events.py" />
+  <problem_class id="PyDataclassInspection" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Invalid definition and usage of Data Classes</problem_class>
+  <description>'__post_init__' would not be called until 'init' parameter is set to True</description>
+  <highlighted_element>__post_init__</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/h11/_events.py</file>
+  <line>247</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/h11/_events.py" />
+  <problem_class id="PyDataclassInspection" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Invalid definition and usage of Data Classes</problem_class>
+  <description>'__post_init__' would not be called until 'init' parameter is set to True</description>
+  <highlighted_element>__post_init__</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+</problems>

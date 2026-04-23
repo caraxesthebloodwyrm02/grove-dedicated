@@ -1,0 +1,48 @@
+{
+    "platform_id": "windsurf",
+    "resonance_tier": 7,
+    "metadata": {
+        "version": "1.0.0",
+        "author": "Grid Team",
+        "status": "stable"
+    },
+    "core_mapping": [
+        {
+            "component": "AGENT",
+            "layer": "silver",
+            "role": "Governance and Rule Enforcement"
+        },
+        {
+            "component": "patterns",
+            "layer": "silver",
+            "role": "Signal Recognition"
+        },
+        {
+            "component": "interfaces",
+            "layer": "gold",
+            "role": "Exhibit Management"
+        }
+    ],
+    "branch_hierarchy": {
+        "root_prefix": "topic/",
+        "theme_mapping": {
+            "rules": "governance",
+            "exhibits": "exhibit",
+            "onboarding": "welcome"
+        }
+    },
+    "compliance": {
+        "contract_verified": true,
+        "citation_required": true,
+        "resonance_threshold": 0.85
+    },
+    "relationship": {
+        "status": "friend",
+        "principles": [
+            "Context Persistence",
+            "Locomotive Agency",
+            "Seamless Intent Execution"
+        ],
+        "trust_score": 1.0
+    }
+}

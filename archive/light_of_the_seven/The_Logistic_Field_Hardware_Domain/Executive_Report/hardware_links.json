@@ -1,0 +1,51 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Hardware Links for Logistic Field",
+  "description": "Bridges abstract hardware concepts to concrete examples and deep-dive connections.",
+  "type": "object",
+  "properties": {
+    "fsm_traffic_light": {
+      "classical_concept": "finite_state_machine",
+      "concrete_example": "traffic_light_controller",
+      "script": "A traffic light controller is a classic example of a finite state machine. It cycles through states (red, yellow, green) based on inputs like timers or pedestrian signals. This same principle is used in hardware design to create controllers for everything from vending machines to complex digital systems.",
+      "deep_dive": "Want to explore how FSMs are implemented in hardware description languages like Verilog or VHDL?"
+    },
+    "fpga_lego_blocks": {
+      "classical_concept": "fpga_prototype",
+      "concrete_example": "reconfigurable_hardware",
+      "script": "An FPGA is like a box of LEGO blocks for hardware designers. You can rearrange the logic blocks to create different circuits without permanently committing to a design. This flexibility makes FPGAs ideal for prototyping and testing hardware before moving to ASIC production.",
+      "deep_dive": "Want to dive into how FPGAs are used in hardware acceleration or signal processing?"
+    },
+    "asic_custom_tool": {
+      "classical_concept": "asic_design",
+      "concrete_example": "specialized_hardware",
+      "script": "An ASIC is like a custom-made tool designed for a specific job. Once it's manufactured, you can't change it, but it's highly optimized for its task. This is why ASICs are used in everything from smartphones to cryptocurrency mining rigs, where performance and power efficiency are critical.",
+      "deep_dive": "Want to explore the ASIC design flow from RTL to tape-out?"
+    },
+    "verification_proofreading": {
+      "classical_concept": "verification_flow",
+      "concrete_example": "hardware_testing",
+      "script": "Hardware verification is like proofreading a book before it goes to print. You simulate and test every part of the design to ensure it works as intended, catching errors before they become costly mistakes in silicon. This process is crucial for ensuring the reliability and performance of hardware.",
+      "deep_dive": "Want to discuss different verification methodologies like simulation, formal verification, or emulation?"
+    },
+    "turing_machine_computer": {
+      "classical_concept": "turing_machine",
+      "concrete_example": "computational_theory",
+      "script": "A Turing machine is the theoretical foundation of modern computers. It's a simple model that can simulate any computer algorithm, no matter how complex. Understanding Turing machines helps us grasp the limits of computation and the principles behind programming languages and compilers.",
+      "deep_dive": "Want to explore how Turing machines relate to the Church-Turing thesis or modern computing architectures?"
+    },
+    "ecc_sram_macro": {
+      "classical_concept": "error_correction_code",
+      "concrete_example": "memory_reliability",
+      "script": "Error Correction Codes (ECC) in SRAM macros are like spell-check for memory. They detect and correct bit errors that can occur due to radiation, noise, or manufacturing defects. This ensures that data stored in memory remains accurate, which is critical for everything from servers to spacecraft.",
+      "deep_dive": "Want to dive into how ECC is implemented in memory systems or its impact on performance?"
+    },
+    "nas_mac_array_geometry": {
+      "classical_concept": "neural_architecture_search",
+      "concrete_example": "hardware_optimization",
+      "script": "Neural Architecture Search (NAS) is like an automated engineer designing the perfect chip for a specific AI task. The result—like a MAC (Multiply-Accumulate) array geometry—directly impacts how efficiently the hardware can perform computations, influencing everything from power consumption to processing speed.",
+      "deep_dive": "Want to explore how NAS results influence floorplanning or physical design in chip manufacturing?"
+    }
+  },
+  "additionalProperties": false
+}

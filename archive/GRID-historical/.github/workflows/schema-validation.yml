@@ -1,0 +1,361 @@
+name: Schema Validation
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'schemas/**'
+      - '**.json'
+      - '**.schema.json'
+      - '.github/workflows/schema-validation.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'schemas/**'
+      - '**.json'
+      - '**.schema.json'
+      - '.github/workflows/schema-validation.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate-schemas:
+    name: Validate JSON against Schemas
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install validation dependencies
+        run: |
+          pip install --no-input jsonschema referencing
+
+      - name: Discover schemas and documents
+        id: discover
+        run: |
+          python3 - <<'PYEOF'
+          import json
+          import os
+          from pathlib import Path
+
+          repo = Path(".")
+
+          # Find schema files: *.schema.json or schemas/**/*.json
+          schemas = sorted(
+              str(p) for p in repo.rglob("*.schema.json")
+          ) + sorted(
+              str(p) for p in (repo / "schemas").rglob("*.json")
+              if (repo / "schemas").is_dir()
+          )
+          # Deduplicate
+          schemas = sorted(set(schemas))
+
+          # Find JSON data files (exclude schemas themselves, node_modules, .venv, lock files)
+          SKIP_DIRS = {
+              "node_modules", ".venv", "venv", ".git", "__pycache__",
+              "site-packages", "dist", "build", ".mypy_cache", ".ruff_cache",
+          }
+          SKIP_SUFFIXES = {"lock", "package-lock"}
+          data_files = []
+          for p in repo.rglob("*.json"):
+              parts = set(p.parts)
+              if parts & SKIP_DIRS:
+                  continue
+              stem = p.stem.lower()
+              if "schema" in stem:
+                  continue
+              if any(s in stem for s in SKIP_SUFFIXES):
+                  continue
+              if p.name in ("package.json", "tsconfig.json", "pyproject.json"):
+                  continue
+              data_files.append(str(p))
+          data_files = sorted(set(data_files))
+
+          # Write discovery results
+          result = {
+              "schemas": schemas,
+              "data_files": data_files,
+              "schema_count": len(schemas),
+              "data_count": len(data_files),
+          }
+          with open("schema-discovery.json", "w") as f:
+              json.dump(result, f, indent=2)
+
+          # Summary for GITHUB_STEP_SUMMARY
+          print(f"Discovered {len(schemas)} schema(s) and {len(data_files)} JSON data file(s).")
+          PYEOF
+
+      - name: Validate JSON files against schemas
+        id: validate
+        run: |
+          python3 - <<'PYEOF'
+          import json
+          import sys
+          from pathlib import Path
+
+          try:
+              from jsonschema import Draft202012Validator, ValidationError
+              from referencing import Registry, Resource
+          except ImportError:
+              print("ERROR: jsonschema not installed. Install with: pip install jsonschema referencing")
+              sys.exit(1)
+
+          discovery = json.loads(Path("schema-discovery.json").read_text())
+          schemas = discovery["schemas"]
+          data_files = discovery["data_files"]
+
+          violations: list[dict] = []
+          validated: list[dict] = []
+          skipped: list[str] = []
+
+          # Build a registry of all schemas for $ref resolution
+          registry_entries = []
+          for schema_path in schemas:
+              try:
+                  schema_doc = json.loads(Path(schema_path).read_text())
+                  registry_entries.append(
+                      Resource.from_contents(schema_doc, default_specification=Draft202012Validator.ID)
+                  )
+              except Exception as exc:
+                  violations.append({
+                      "file": schema_path,
+                      "error": f"Invalid schema JSON: {exc}",
+                      "severity": "schema_error",
+                  })
+
+          registry = Registry().with_resources(
+              [(str(i), r) for i, r in enumerate(registry_entries)]
+          )
+
+          # Validate each schema itself is valid JSON Schema
+          for schema_path in schemas:
+              try:
+                  schema_doc = json.loads(Path(schema_path).read_text())
+                  validator = Draft202012Validator(schema_doc, registry=registry)
+                  # Meta-validate the schema structure
+                  validator.check_schema(schema_doc)
+                  validated.append({"file": schema_path, "status": "schema_valid"})
+              except Exception as exc:
+                  violations.append({
+                      "file": schema_path,
+                      "error": f"Schema validation error: {exc}",
+                      "severity": "schema_error",
+                  })
+
+          # Validate data files against matching schemas
+          for data_path in data_files:
+              try:
+                  data_doc = json.loads(Path(data_path).read_text())
+              except json.JSONDecodeError as exc:
+                  violations.append({
+                      "file": data_path,
+                      "error": f"Invalid JSON: {exc}",
+                      "severity": "json_parse_error",
+                  })
+                  continue
+
+              # Heuristic: find schema by $schema field, sibling .schema.json, or schemas/ directory
+              schema_doc = None
+              matched_schema_path = None
+
+              # 1. Check if data has $schema field
+              if isinstance(data_doc, dict) and "$schema" in data_doc:
+                  schema_ref = data_doc["$schema"]
+                  # Try to resolve as local file
+                  if not schema_ref.startswith("http"):
+                      candidate = Path(schema_ref)
+                      if candidate.is_file():
+                          try:
+                              schema_doc = json.loads(candidate.read_text())
+                              matched_schema_path = str(candidate)
+                          except Exception:
+                              pass
+
+              # 2. Check for sibling .schema.json
+              if schema_doc is None:
+                  data = Path(data_path)
+                  sibling = data.parent / f"{data.stem}.schema.json"
+                  if sibling.is_file():
+                      try:
+                          schema_doc = json.loads(sibling.read_text())
+                          matched_schema_path = str(sibling)
+                      except Exception:
+                          pass
+
+              # 3. Check schemas/ directory for matching name
+              if schema_doc is None:
+                  data = Path(data_path)
+                  name = data.stem
+                  for schema_path in schemas:
+                      sp = Path(schema_path)
+                      if sp.stem.replace(".schema", "").replace("-schema", "") == name:
+                          try:
+                              schema_doc = json.loads(sp.read_text())
+                              matched_schema_path = str(sp)
+                          except Exception:
+                              pass
+                          break
+
+              if schema_doc is None:
+                  skipped.append(data_path)
+                  continue
+
+              # Validate data against matched schema
+              try:
+                  validator = Draft202012Validator(schema_doc, registry=registry)
+                  errors = list(validator.iter_errors(data_doc))
+                  if errors:
+                      for err in errors:
+                          violations.append({
+                              "file": data_path,
+                              "schema": matched_schema_path,
+                              "error": err.message,
+                              "path": ".".join(str(p) for p in err.absolute_path) if err.absolute_path else "$",
+                              "severity": "data_violation",
+                          })
+                  else:
+                      validated.append({
+                          "file": data_path,
+                          "schema": matched_schema_path,
+                          "status": "valid",
+                      })
+              except Exception as exc:
+                  violations.append({
+                      "file": data_path,
+                      "schema": matched_schema_path,
+                      "error": f"Validation error: {exc}",
+                      "severity": "validation_error",
+                  })
+
+          # Write results
+          results = {
+              "violations": violations,
+              "validated": validated,
+              "skipped": skipped,
+              "total_data": len(data_files),
+              "total_schemas": len(schemas),
+              "violation_count": len(violations),
+              "coverage": (
+                  f"{len(validated)}/{len(data_files)}"
+                  if data_files
+                  else "no data files"
+              ),
+          }
+          Path("schema-validation-results.json").write_text(json.dumps(results, indent=2))
+
+          # Print summary
+          print(f"\n{'='*60}")
+          print(f"SCHEMA VALIDATION REPORT")
+          print(f"{'='*60}")
+          print(f"Schemas found:    {len(schemas)}")
+          print(f"Data files found:  {len(data_files)}")
+          print(f"Validated:         {len(validated)}")
+          print(f"Skipped (no schema match): {len(skipped)}")
+          print(f"Violations:        {len(violations)}")
+          print(f"Coverage:          {results['coverage']}")
+          print(f"{'='*60}")
+
+          if violations:
+              print("\nVIOLATIONS:")
+              for v in violations:
+                  print(f"  [{v.get('severity', 'unknown')}] {v['file']}: {v['error']}")
+                  if 'path' in v:
+                      print(f"    at path: {v['path']}")
+
+          # Fail if any violations
+          if violations:
+              print(f"\n❌ FAILED: {len(violations)} violation(s) found.")
+              sys.exit(1)
+          else:
+              print(f"\n✅ PASSED: All validated files conform to their schemas.")
+          PYEOF
+
+      - name: Check schema coverage
+        if: always()
+        run: |
+          python3 - <<'PYEOF'
+          import json
+          import sys
+          from pathlib import Path
+
+          results = json.loads(Path("schema-validation-results.json").read_text())
+          total = results["total_data"]
+          validated = len(results["validated"])
+          skipped = len(results["skipped"])
+          violations = results["violation_count"]
+
+          coverage_pct = (validated / total * 100) if total > 0 else 100.0
+
+          # Generate GITHUB_STEP_SUMMARY
+          summary_lines = [
+              "## Schema Validation Report",
+              "",
+              f"| Metric | Value |",
+              f"|--------|-------|",
+              f"| Schemas found | {results['total_schemas']} |",
+              f"| JSON data files | {total} |",
+              f"| Validated against schema | {validated} |",
+              f"| Skipped (no matching schema) | {skipped} |",
+              f"| Violations | {violations} |",
+              f"| Coverage | {coverage_pct:.1f}% |",
+              "",
+          ]
+
+          if violations:
+              summary_lines.append("### Violations")
+              summary_lines.append("")
+              summary_lines.append("| File | Schema | Error | Path |")
+              summary_lines.append("|------|--------|-------|------|")
+              for v in results["violations"]:
+                  file_ = v.get("file", "?")
+                  schema_ = v.get("schema", "—")
+                  error_ = v.get("error", "?")[:80]
+                  path_ = v.get("path", "—")
+                  summary_lines.append(f"| {file_} | {schema_} | {error_} | {path_} |")
+              summary_lines.append("")
+
+          if skipped:
+              summary_lines.append("<details>")
+              summary_lines.append("<summary>Skipped files (no matching schema)</summary>")
+              summary_lines.append("")
+              for s in skipped:
+                  summary_lines.append(f"- `{s}`")
+              summary_lines.append("")
+              summary_lines.append("</details>")
+              summary_lines.append("")
+
+          # Write summary
+          summary_path = Path(os.environ.get("GITHUB_STEP_SUMMARY", "/dev/null"))
+          if summary_path != Path("/dev/null"):
+              summary_path.write_text("\n".join(summary_lines))
+          else:
+              print("\n".join(summary_lines))
+
+          # Coverage threshold: require at least 50% coverage if data files exist
+          MIN_COVERAGE = 50.0
+          if total > 0 and coverage_pct < MIN_COVERAGE:
+              print(f"\n⚠️ WARNING: Schema coverage {coverage_pct:.1f}% is below minimum {MIN_COVERAGE}%.")
+              print(f"  {skipped} file(s) have no matching schema. Consider adding schemas.")
+              # Don't fail on low coverage — it's advisory
+          else:
+              print(f"\n✅ Schema coverage: {coverage_pct:.1f}%")
+
+          import os
+          PYEOF
+
+      - name: Upload validation results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: schema-validation-results
+          path: |
+            schema-discovery.json
+            schema-validation-results.json
+          retention-days: 30

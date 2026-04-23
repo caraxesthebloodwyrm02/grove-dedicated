@@ -1,0 +1,147 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://light-of-the-seven.local/schema/lo7_manifest_v1.json",
+  "title": "Lo7 document manifest v1",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "type_name", "body", "domain_batches", "heatmap"],
+  "properties": {
+    "schema_version": { "const": "1" },
+    "type_name": {
+      "type": "string",
+      "description": "Code name: OctopusManifest; kept for v1 with documentation."
+    },
+    "meta": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "day_bucket": { "type": "string" },
+        "empty_cell_level": { "type": "integer", "minimum": 0, "maximum": 4 },
+        "mtime_only": { "type": "boolean" },
+        "level_thresholds": { "type": "string" }
+      }
+    },
+    "body": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "file_count",
+        "date_min",
+        "date_max",
+        "path_dedupe_applied"
+      ],
+      "properties": {
+        "file_count": { "type": "integer", "minimum": 0 },
+        "date_min": { "type": "string" },
+        "date_max": { "type": "string" },
+        "path_dedupe_applied": { "type": "boolean" }
+      }
+    },
+    "domain_batches": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/domainBatch" }
+    },
+    "heatmap": { "$ref": "#/$defs/heatmap" }
+  },
+  "$defs": {
+    "fileEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "mtime_unix",
+        "title",
+        "day",
+        "weight"
+      ],
+      "properties": {
+        "path": { "type": "string" },
+        "mtime_unix": { "type": "integer" },
+        "title": { "type": "string" },
+        "h2": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "day": { "type": "string" },
+        "source_date": {
+          "type": ["string", "null"]
+        },
+        "weight": { "type": "number", "minimum": 0 }
+      }
+    },
+    "domainBatch": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "path_prefix", "files"],
+      "properties": {
+        "id": { "type": "string" },
+        "path_prefix": { "type": "string" },
+        "files": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/fileEntry" }
+        }
+      }
+    },
+    "heatmap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "week_starts_on",
+        "rows",
+        "columns",
+        "cell_levels",
+        "cell_dates",
+        "days"
+      ],
+      "properties": {
+        "week_starts_on": { "enum": ["monday", "sunday"] },
+        "rows": { "type": "integer", "const": 52 },
+        "columns": { "type": "integer", "const": 7 },
+        "grid_start": { "type": "string" },
+        "cell_dates": {
+          "type": "array",
+          "minItems": 52,
+          "maxItems": 52,
+          "items": {
+            "type": "array",
+            "minItems": 7,
+            "maxItems": 7,
+            "items": { "type": "string" }
+          }
+        },
+        "cell_levels": {
+          "type": "array",
+          "minItems": 52,
+          "maxItems": 52,
+          "items": {
+            "type": "array",
+            "minItems": 7,
+            "maxItems": 7,
+            "items": { "type": "integer", "minimum": 0, "maximum": 4 }
+          }
+        },
+        "days": {
+          "type": "object",
+          "additionalProperties": { "$ref": "#/$defs/dayCell" }
+        }
+      }
+    },
+    "dayCell": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["level", "paths", "titles"],
+      "properties": {
+        "level": { "type": "integer", "minimum": 0, "maximum": 4 },
+        "paths": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "titles": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "weight": { "type": "number" }
+      }
+    }
+  }
+}

@@ -1,0 +1,266 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageDraw.py</file>
+  <line>506</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageDraw.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>Missing return statement on some paths</description>
+  <highlighted_element>if ink is not None and ink != fill_ink and width != 0:</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>54</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/JpegImagePlugin.py</file>
+  <line>728</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/JpegImagePlugin.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>Missing return statement on some paths</description>
+  <highlighted_element>if isinstance(qtables, (tuple, list, dict)):</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>44</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py</file>
+  <line>369</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>Missing return statement on some paths</description>
+  <highlighted_element>self.add(b&quot;zTXt&quot;, key + b&quot;\0\0&quot; + zlib.compress(value))</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>55</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py</file>
+  <line>371</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PngImagePlugin.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>Missing return statement on some paths</description>
+  <highlighted_element>self.add(b&quot;tEXt&quot;, key + b&quot;\0&quot; + value)</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>38</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/query.py</file>
+  <line>240</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/query.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>Missing return statement on some paths</description>
+  <highlighted_element>if not sel.select(timeout):</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>27</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/resolver.py</file>
+  <line>287</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/resolver.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>Missing return statement on some paths</description>
+  <highlighted_element>if attr == &quot;name&quot;:</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/win32util.py</file>
+  <line>375</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/win32util.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>'return' without value is inconsistent with other paths</description>
+  <highlighted_element>return</highlighted_element>
+  <language>Python</language>
+  <offset>20</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/mccabe.py</file>
+  <line>149</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/mccabe.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>'return' without value is inconsistent with other paths</description>
+  <highlighted_element>return</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/mccabe.py</file>
+  <line>299</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/mccabe.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>Missing return statement on some paths</description>
+  <highlighted_element>if (2, 5) &lt; sys.version_info &lt; (3, 0):</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>38</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/nodeenv.py</file>
+  <line>600</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/nodeenv.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>Missing return statement on some paths</description>
+  <highlighted_element>while n_attempt &gt; 0:</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>207</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>Missing return statement on some paths</description>
+  <highlighted_element>for offset, char in enumerate(indent):</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>38</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>220</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>Missing return statement on some paths</description>
+  <highlighted_element>if '\t' in indent:</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>239</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>Missing return statement on some paths</description>
+  <highlighted_element>if physical_line != stripped:</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>29</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>255</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>Missing return statement on some paths</description>
+  <highlighted_element>if line_number == total_lines:</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>30</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>279</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>Missing return statement on some paths</description>
+  <highlighted_element>if length &gt; max_line_length and not noqa:</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>41</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>282</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>'return' without value is inconsistent with other paths</description>
+  <highlighted_element>return</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>290</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>'return' without value is inconsistent with other paths</description>
+  <highlighted_element>return</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>2002</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>Missing return statement on some paths</description>
+  <highlighted_element>for name, cls, __ in self._ast_checks:</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>38</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>2160</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>'return' without value is inconsistent with other paths</description>
+  <highlighted_element>return</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>2168</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>'return' without value is inconsistent with other paths</description>
+  <highlighted_element>return</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>2279</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>'return' without value is inconsistent with other paths</description>
+  <highlighted_element>return</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py</file>
+  <line>2363</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pycodestyle.py" />
+  <problem_class id="PyInconsistentReturnsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Inconsistent return statements</problem_class>
+  <description>Missing return statement on some paths</description>
+  <highlighted_element>for root, dirs, files in os.walk(dirname):</highlighted_element>
+  <language>Python</language>
+  <offset>8</offset>
+  <length>42</length>
+</problem>
+</problems>

@@ -1,0 +1,141 @@
+#!/usr/bin/env python3
+"""git-topic: small PoC for topic-oriented git operations
+
+Usage:
+  python scripts/git-topic create --theme research --short "entity clustering" --issue 123 [--push]
+  python scripts/git-topic info
+  python scripts/git-topic finish [--open-pr]
+
+This is a minimal, dependency-free PoC. It uses `git` subprocess calls.
+"""
+
+import argparse
+import os
+import subprocess
+import sys
+from pathlib import Path
+
+from git_topic_utils import build_branch_name, is_valid_branch_name
+
+
+def run(cmd, **kwargs):
+    return subprocess.run(cmd, check=True, capture_output=True, text=True, **kwargs)
+
+
+def git_current_branch():
+    try:
+        out = run(["git", "rev-parse", "--abbrev-ref", "HEAD"]) 
+        return out.stdout.strip()
+    except subprocess.CalledProcessError:
+        return None
+
+
+def git_checkout_new(branch: str):
+    run(["git", "checkout", "-b", branch])
+
+
+def git_push_set_upstream(branch: str):
+    run(["git", "push", "-u", "origin", branch])
+
+
+def git_set_config(key: str, value: str):
+    run(["git", "config", "--local", key, value])
+
+
+def create_branch(args):
+    branch = build_branch_name(args.theme, args.short, args.issue)
+    print("Creating branch:", branch)
+    git_checkout_new(branch)
+    # store metadata in local config
+    git_set_config(f"branch.{branch}.topic.theme", args.theme)
+    git_set_config(f"branch.{branch}.topic.short", args.short)
+    if args.issue:
+        git_set_config(f"branch.{branch}.topic.issue", str(args.issue))
+    if args.push:
+        print("Pushing to origin and setting upstream")
+        git_push_set_upstream(branch)
+    print("Done. Use `git topic info` to view metadata.")
+
+
+def info(args):
+    cur = git_current_branch()
+    if not cur:
+        print("Not in a git repo or unable to determine current branch.")
+        sys.exit(1)
+    print("Current branch:", cur)
+    theme = None
+    try:
+        theme = run(["git", "config", "--get", f"branch.{cur}.topic.theme"]).stdout.strip()
+    except subprocess.CalledProcessError:
+        pass
+    short = None
+    try:
+        short = run(["git", "config", "--get", f"branch.{cur}.topic.short"]).stdout.strip()
+    except subprocess.CalledProcessError:
+        pass
+    issue = None
+    try:
+        issue = run(["git", "config", "--get", f"branch.{cur}.topic.issue"]).stdout.strip()
+    except subprocess.CalledProcessError:
+        pass
+    print("Metadata:")
+    print("  theme:", theme or "(none)")
+    print("  short:", short or "(none)")
+    print("  issue:", issue or "(none)")
+
+
+def finish(args):
+    cur = git_current_branch()
+    if not cur:
+        print("Not in a git repo or unable to determine current branch.")
+        sys.exit(1)
+    if not is_valid_branch_name(cur):
+        print("Current branch does not follow topic/ naming; aborting PR draft creation.")
+        sys.exit(2)
+    drafts_dir = Path(".github") / "pr_drafts"
+    drafts_dir.mkdir(parents=True, exist_ok=True)
+    pr_file = drafts_dir / f"pr_for_{cur.replace('/', '_')}.md"
+    with pr_file.open("w", encoding="utf-8") as fh:
+        fh.write(f"# PR draft for {cur}\n\n" +
+                 "Describe the change, link to issue, and add reviewers/labels.\n")
+    print("PR draft written to", pr_file)
+    if args.open_pr:
+        print("Note: automatic PR creation is not implemented in this PoC. See docs for GitHub integration.")
+
+
+def ensure_git_repo():
+    try:
+        run(["git", "rev-parse", "--is-inside-work-tree"]) 
+    except subprocess.CalledProcessError:
+        print("Not a git repository (or git not installed). Exiting.")
+        sys.exit(1)
+
+
+def main():
+    parser = argparse.ArgumentParser(prog="git topic")
+    sub = parser.add_subparsers(dest="cmd")
+
+    p_create = sub.add_parser("create")
+    p_create.add_argument("--theme", required=True)
+    p_create.add_argument("--short", required=True)
+    p_create.add_argument("--issue", required=False)
+    p_create.add_argument("--push", action="store_true")
+    p_create.set_defaults(func=create_branch)
+
+    p_info = sub.add_parser("info")
+    p_info.set_defaults(func=info)
+
+    p_finish = sub.add_parser("finish")
+    p_finish.add_argument("--open-pr", action="store_true")
+    p_finish.set_defaults(func=finish)
+
+    args = parser.parse_args()
+    if not args.cmd:
+        parser.print_help()
+        sys.exit(0)
+    ensure_git_repo()
+    args.func(args)
+
+
+if __name__ == "__main__":
+    main()

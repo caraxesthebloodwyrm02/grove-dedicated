@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Error Heat Map – Chaplin Visualisation</title>
+
+  <!-- -------------------------------------------------
+       Design System – Dark theme (shared with the main kit)
+       ------------------------------------------------- -->
+  <style>
+    :root{
+      --bg-primary:   #050505;
+      --bg-panel:     rgba(5,5,5,.9);
+      --bg-card:      #0d1117;
+      --text-primary:#e0e0e0;
+      --text-muted:  #888;
+      --accent-amber: #ffcc00;
+      --accent-red:   #ff4444;
+      --accent-blue:  #58a6ff;
+      --accent-orange:#f97316;
+      --border-radius:8px;
+      --transition:.2s ease;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      background:var(--bg-primary);
+      color:var(--text-primary);
+      font-family:'JetBrains Mono',monospace;
+      overflow:hidden;
+      position:relative;
+    }
+    canvas{display:block;}
+
+    /* Film‑grain overlay – keeps original visual flavour */
+    .film-grain{
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:10;
+      opacity:.05;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* Intertitle (Chaplin card) */
+    .intertitle{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      pointer-events:none;
+      opacity:0;
+      transition:opacity .4s ease;
+      z-index:20;
+    }
+    .intertitle-card{
+      background:#000;
+      border:4px double #fff;
+      padding:2rem 4rem;
+      box-shadow:0 0 50px rgba(0,0,0,.8);
+      max-width:800px;
+      text-align:center;
+    }
+    .intertitle-text{
+      color:#fff;
+      font-size:2rem;
+      line-height:1.4;
+      text-shadow:0 0 10px rgba(255,255,255,.3);
+    }
+    .intertitle-sub{
+      color:#888;
+      font-size:1.2rem;
+      margin-top:.8rem;
+      font-style:italic;
+    }
+
+    /* Triage board (bottom‑left) */
+    .triage{
+      position:absolute;
+      bottom:30px;
+      left:30px;
+      width:340px;
+      background:rgba(10,10,10,.9);
+      border:1px solid #333;
+      border-left:4px solid var(--accent-amber);
+      padding:0;
+      font-family:'JetBrains Mono',monospace;
+      z-index:15;
+      box-shadow:0 10px 30px rgba(0,0,0,.5);
+      transform:translateY(120%);
+      transition:transform .4s cubic-bezier(.175,.885,.32,1.275);
+    }
+    .triage.visible{transform:translateY(0);}
+    .triage-header{
+      background:#1a1a1a;
+      padding:10px 15px;
+      border-bottom:1px solid #333;
+      display:flex;justify-content:space-between;align-items:center;
+    }
+    .triage-title{color:var(--accent-amber);font-weight:600;text-transform:uppercase;font-size:.85rem;}
+    .triage-content{padding:15px;}
+    .triage-row{display:flex;justify-content:space-between;margin-bottom:8px;font-size:.8rem;}
+    .triage-label{color:#666;}
+    .triage-value{color:#eee;font-weight:600;}
+    .triage-value.error{color:var(--accent-red);}
+    .triage-value.warn{color:#ffbb33;}
+
+    /* Controls (right side) */
+    .controls{
+      position:absolute;
+      top:30px;
+      right:30px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+      z-index:30;
+    }
+    .btn{
+      background:rgba(0,0,0,.6);
+      border:1px solid #444;
+      color:#fff;
+      padding:.5rem 1rem;
+      font-family:'JetBrains Mono',monospace;
+      cursor:pointer;
+      transition:var(--transition);
+    }
+    .btn:hover{
+      background:var(--accent-amber);
+      color:#000;
+      border-color:var(--accent-amber);
+    }
+    .btn-group-label{
+      color:#666;
+      font-size:.7rem;
+      text-transform:uppercase;
+      margin-top:.5rem;
+      font-family:'JetBrains Mono',monospace;
+    }
+
+    /* Contract panel (bottom‑right) */
+    .contract{
+      position:absolute;
+      bottom:30px;
+      right:30px;
+      width:360px;
+      background:var(--bg-panel);
+      border:1px solid #333;
+      border-right:4px solid var(--accent-amber);
+      font-family:'JetBrains Mono',monospace;
+      z-index:25;
+      box-shadow:0 10px 30px rgba(0,0,0,.6);
+    }
+    .contract-header{
+      padding:8px 10px;
+      border-bottom:1px solid #222;
+      font-size:.75rem;
+      text-transform:uppercase;
+      color:var(--accent-amber);
+      background:#0f0f0f;
+    }
+    .contract-body{padding:8px 10px 10px;}
+    .contract-textarea{
+      width:100%;height:120px;
+      background:#080808;
+      color:#ddd;
+      border:1px solid #333;
+      font-family:'JetBrains Mono',monospace;
+      font-size:.75rem;
+      resize:vertical;
+      padding:6px 8px;
+    }
+    .contract-action{text-align:right;margin-top:6px;}
+    .contract-button{
+      background:rgba(0,0,0,.7);
+      border:1px solid #444;
+      color:#fff;
+      padding:.4rem .8rem;
+      font-family:'JetBrains Mono',monospace;
+      font-size:.75rem;
+      cursor:pointer;
+      transition:var(--transition);
+    }
+    .contract-button:hover{
+      background:var(--accent-amber);
+      color:#000;
+      border-color:var(--accent-amber);
+    }
+
+    @media (prefers-reduced-motion:reduce){
+      *{animation-duration:.001ms!important;transition-duration:.001ms!important;}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="film-grain"></div>
+  <canvas id="main-canvas"></canvas>
+
+  <!-- Chaplin intertitle -->
+  <div class="intertitle" id="intertitle">
+    <div class="intertitle-card">
+      <div class="intertitle-text" id="intertitle-text">THE MISSING INGREDIENT</div>
+      <div class="intertitle-sub" id="intertitle-sub">Cupboard Search: Opening empty cabinets repeatedly.</div>
+    </div>
+  </div>
+
+  <!-- Triage board -->
+  <div class="triage" id="triage">
+    <div class="triage-header">
+      <div class="triage-title">VISION // ANALYSIS</div>
+      <div style="font-size:.7rem;color:#444;">ID: <span id="event-id">0000</span></div>
+    </div>
+    <div class="triage-content">
+      <div class="triage-row"><span class="triage-label">ERROR TYPE</span><span class="triage-value error" id="triage-type">ModuleNotFound</span></div>
+      <div class="triage-row"><span class="triage-label">HEAT LEVEL</span><span class="triage-value warn" id="triage-heat">40.0%</span></div>
+      <div class="triage-row"><span class="triage-label">GAG MAPPING</span><span class="triage-value" id="triage-gag" style="max-width:150px;text-align:right;">Cupboard Search</span></div>
+      <div class="triage-row" style="margin-top:10px;border-top:1px solid #222;padding-top:5px;">
+        <span class="triage-label">STATUS</span><span class="triage-value" style="color:#0f0;">ANALYZED</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <div class="btn-group-label">Inject Error</div>
+    <button class="btn" onclick="injectError('module_not_found')">ModuleNotFound</button>
+    <button class="btn" onclick="injectError('import_error')">ImportError</button>
+    <button class="btn" onclick="injectError('syntax_error')">SyntaxError</button>
+    <button class="btn" onclick="injectError('recursion_error')">RecursionError</button>
+
+    <div class="btn-group-label">System</div>
+    <button class="btn" onclick="clearSystem()">Clear / Reset</button>
+  </div>
+
+  <!-- Contract panel (JSON input) -->
+  <div class="contract">
+    <div class="contract-header">Structured Contract // Input</div>
+    <div class="contract-body">
+      <textarea id="contract-input" class="contract-textarea"
+        placeholder='{
+  "input": { ... },
+  "output": { ... }
+}' spellcheck="false"></textarea>
+      <div class="contract-action">
+        <button class="contract-button" onclick="renderFromTextarea()">Render Contract</button>
+      </div>
+    </div>
+  </div>
+
+<script>
+(() => {
+  'use strict';
+
+  // -------------------------------------------------------------------
+  //  Theme data – colour & animation definitions for each error type
+  // -------------------------------------------------------------------
+  const THEME_DATA = {
+    module_not_found: {
+      type: "ModuleNotFoundError",
+      heat: 40,
+      gag: "Cupboard Search",
+      desc: "Opening empty cabinets repeatedly.",
+      card: "THE MISSING INGREDIENT",
+      colors: ["#ffcc00","#ff6600"], // amber → orange
+      pattern: "circular"
+    },
+    import_error: {
+      type: "ImportError",
+      heat: 45,
+      gag: "Milk Pour",
+      desc: "Trying to pour from an empty carton.",
+      card: "THE EMPTY CARTON",
+      colors: ["#ffcc00","#ff4400"],
+      pattern: "downward"
+    },
+    syntax_error: {
+      type: "SyntaxError",
+      heat: 60,
+      gag: "Typewriter Jam",
+      desc: "Fingers getting stuck between keys.",
+      card: "THE TANGLED FINGERS",
+      colors: ["#ff4444","#cc0000"],
+      pattern: "chaotic"
+    },
+    recursion_error: {
+      type: "RecursionError",
+      heat: 95,
+      gag: "Revolving Door",
+      desc: "Spinning endlessly in a doorway.",
+      card: "THE ENDLESS SPIN",
+      colors: ["#ff00ff","#880088"],
+      pattern: "spiral"
+    }
+  };
+
+  // -------------------------------------------------------------------
+  //  Canvas + particle engine
+  // -------------------------------------------------------------------
+  const canvas = document.getElementById('main-canvas');
+  const ctx    = canvas.getContext('2d');
+  let w, h, cx, cy;
+
+  function resizeCanvas() {
+    w = canvas.width = window.innerWidth;
+    h = canvas.height = window.innerHeight;
+    cx = w/2; cy = h/2;
+  }
+  window.addEventListener('resize', resizeCanvas);
+  resizeCanvas();
+
+  class Particle{
+    constructor(x,y,z,clrStart,clrEnd,pattern){
+      this.x = x; this.y = y; this.z = z;
+      this.c1 = clrStart; this.c2 = clrEnd;
+      this.life = 1;
+      this.size = 2 + Math.random()*4;
+
+      const a = Math.random()*Math.PI*2;
+      const s = 20 + Math.random()*30;
+
+      // simple motion per pattern
+      if(pattern==="circular"){
+        this.vx = Math.cos(a)*s; this.vy = Math.sin(a)*s; this.vz = (Math.random()-0.5)*20;
+      }else if(pattern==="downward"){
+        this.vx = (Math.random()-0.5)*10; this.vy = s*0.5; this.vz = (Math.random()-0.5)*10;
+      }else if(pattern==="spiral"){
+        this.vx = Math.cos(a)*s; this.vy = (Math.random()-0.5)*10; this.vz = Math.sin(a)*s;
+      }else{ // chaotic
+        this.vx = (Math.random()-0.5)*s*2; this.vy = (Math.random()-0.5)*s*2; this.vz = (Math.random()-0.5)*s*2;
+      }
+    }
+    update(dt){
+      this.x += this.vx*dt; this.y += this.vy*dt; this.z += this.vz*dt;
+      this.vx *= .95; this.vy *= .95; this.vz *= .95;
+      this.life -= dt*.4;
+    }
+    draw(ctx){
+      const scale = 300/(300+this.z);
+      const sx = cx + this.x*scale;
+      const sy = cy + this.y*scale;
+      const ss = this.size*scale;
+      if(this.life<=0) return;
+      ctx.globalAlpha = this.life;
+      ctx.fillStyle = this.c1;
+      ctx.beginPath(); ctx.arc(sx,sy,ss,0,Math.PI*2); ctx.fill();
+      ctx.globalAlpha = 1;
+    }
+  }
+
+  const particles = [];
+
+  function animate(){
+    ctx.fillStyle = 'rgba(5,5,5,.2)'; // trailing effect
+    ctx.fillRect(0,0,w,h);
+    const dt = .016;
+    for(let i=particles.length-1;i>=0;--i){
+      const p = particles[i];
+      p.update(dt);
+      p.draw(ctx);
+      if(p.life<=0) particles.splice(i,1);
+    }
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  // -------------------------------------------------------------------
+  //  Utility: colour handling
+  // -------------------------------------------------------------------
+  function rgbArrayToHex(arr){
+    if(!Array.isArray(arr)||arr.length<3) return '#ffcc00';
+    const toHex = n => Math.max(0,Math.min(255,Math.floor(n))).toString(16).padStart(2,'0');
+    return `#${toHex(arr[0])}${toHex(arr[1])}${toHex(arr[2])}`;
+  }
+  function hexToRgbArray(hex){
+    if(typeof hex!=='string' || !hex.startsWith('#')) return [255,204,0];
+    const clean = hex.slice(1);
+    if(clean.length!==6) return [255,204,0];
+    const r = parseInt(clean.slice(0,2),16);
+    const g = parseInt(clean.slice(2,4),16);
+    const b = parseInt(clean.slice(4,6),16);
+    return [isNaN(r)?255:r, isNaN(g)?204:g, isNaN(b)?0:b];
+  }
+
+  // -------------------------------------------------------------------
+  //  Intertitle helpers
+  // -------------------------------------------------------------------
+  const intertitle = document.getElementById('intertitle');
+  const intertitleText = document.getElementById('intertitle-text');
+  const intertitleSub  = document.getElementById('intertitle-sub');
+
+  function showIntertitle(title, sub){
+    intertitleText.textContent = title;
+    intertitleSub.textContent  = sub;
+    intertitle.style.opacity = '1';
+    setTimeout(()=>{ intertitle.style.opacity = '0'; }, 3000);
+  }
+
+  // -------------------------------------------------------------------
+  //  Rendering a contract (or a mock error)
+  // -------------------------------------------------------------------
+  function renderContract(contract){
+    try{
+      // Guard against malformed input
+      if(!contract || typeof contract!=='object')
+        throw new Error('Invalid contract object');
+
+      const out = contract.output || {};
+      const errState = out.error_state || {status:'ok',message:null};
+
+      // Safe‑mode – if the backend signals a problem, show a generic card
+      if(errState.status!=='ok'){
+        particles.length = 0;
+        showIntertitle('PROJECTION ROOM ERROR', errState.message||'Invalid contract – safe mode');
+        return;
+      }
+
+      const vhs   = out.visual_heat_signature || {};
+      const meta  = out.visual_meta || {};
+
+      // Heat level → particle count (scaled)
+      const heat      = typeof vhs.heat_level === 'number' ? Math.max(0,Math.min(100,vhs.heat_level)) : 20;
+      const particleCount = Math.floor(heat * 1.5);
+
+      // Colour (first gradient entry) → hex → rgb array
+      const baseRgb   = Array.isArray(vhs.color_gradient) ? vhs.color_gradient : [255,204,0];
+      const baseHex   = rgbArrayToHex(baseRgb);
+      const colour    = baseHex; // we keep a single colour for simplicity
+
+      // Pattern – fall back to a sensible default
+      const patternKey = meta.particle_pattern || 'circular';
+      const pattern = ['circular','downward','spiral','chaotic'].includes(patternKey) ? patternKey : 'circular';
+
+      // Update triage board
+      const triage = document.getElementById('triage');
+      document.getElementById('event-id').textContent   = String(Math.floor(Math.random()*9000)+1000);
+      document.getElementById('triage-type').textContent = vhs.error_type || 'UnknownError';
+      document.getElementById('triage-heat').textContent = `${heat.toFixed(1)}%`;
+      document.getElementById('triage-gag').textContent  = vhs.comedy_gag || 'Unmapped';
+      triage.classList.remove('visible');
+      setTimeout(()=>triage.classList.add('visible'),100);
+
+      // Update intertitle
+      showIntertitle(vhs.visual_card_text||'UNSPECIFIED SCENE', vhs.comedy_gag||'');
+
+      // Spawn particles
+      for(let i=0;i<particleCount;i++){
+        particles.push(
+          new Particle(0,0,0, colour, colour, pattern)
+        );
+      }
+    }catch(e){
+      particles.length = 0;
+      showIntertitle('REEL JAMMED // VISUALIZER IN SAFE MODE','An internal error occurred while rendering the error heat map.');
+    }
+  }
+
+  // -------------------------------------------------------------------
+  //  UI actions
+  // -------------------------------------------------------------------
+  function injectError(key){
+    const data = THEME_DATA[key];
+    if(!data){
+      renderContract({output:{error_state:{status:'processing_error',message:'Unknown error key injected',fallback_level:'safe_mode'}}});
+      return;
+    }
+    // Build a minimal contract that follows the expected schema
+    const rgb = hexToRgbArray(data.colors[0]);
+    const mockContract = {
+      input:{},
+      output:{
+        error_state:{status:'ok',message:null},
+        visual_heat_signature:{
+          error_type: data.type,
+          heat_level: data.heat,
+          comedy_gag: data.gag,
+          visual_card_text: data.card,
+          color_gradient: rgb
+        },
+        visual_meta:{
+          particle_pattern: data.pattern,
+          background_theme: 'silent_film_heat',
+          foreground_theme: 'chaplin_vision_board'
+        },
+        explanation: data.desc
+      }
+    };
+    renderContract(mockContract);
+  }
+
+  function clearSystem(){
+    particles.length = 0;
+    document.getElementById('triage').classList.remove('visible');
+    intertitle.style.opacity = '0';
+  }
+
+  function renderFromTextarea(){
+    const txt = document.getElementById('contract-input').value.trim();
+    if(!txt){
+      renderContract({output:{error_state:{status:'schema_error',message:'No contract JSON provided.',fallback_level:'safe_mode'}}});
+      return;
+    }
+    try{
+      const parsed = JSON.parse(txt);
+      renderContract(parsed);
+    }catch{
+      renderContract({output:{error_state:{status:'schema_error',message:'Invalid JSON.',fallback_level:'safe_mode'}}});
+    }
+  }
+
+  // -------------------------------------------------------------------
+  //  Expose UI hooks
+  // -------------------------------------------------------------------
+  window.injectError   = injectError;
+  window.clearSystem   = clearSystem;
+  window.renderFromTextarea = renderFromTextarea;
+})();
+</script>
+</body>
+</html>

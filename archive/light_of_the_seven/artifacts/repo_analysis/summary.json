@@ -1,0 +1,77 @@
+{
+  "root": "E:\\grid",
+  "generated_at": "2025-12-01T00:35:56.220986",
+  "total_files": 1937,
+  "total_bytes": 96064205,
+  "categories": {
+    "other": 554,
+    "doc": 321,
+    "config": 208,
+    "code": 537,
+    "test": 278,
+    "ci": 31,
+    "data": 8
+  },
+  "languages": {
+    "markdown": 229,
+    "json": 104,
+    "python": 740,
+    "toml": 28,
+    "yaml": 154,
+    "shell": 9,
+    "powershell": 6,
+    "ini": 8,
+    "rst": 28
+  },
+  "earliest_file": "src/realtime/glimpse/TRANSFORMERS_THE_BASICS_on_MINI-CONS_20251009_190958.txt",
+  "latest_file": "tests/unit/test_analyze_repo.py",
+  "scoring": {
+    "value_score": "Heuristic: category weight × log10(size_bytes+1), normalized to [0,1].",
+    "progress_score": "Heuristic: older creation times map to higher progress, normalized to [0,1].",
+    "difficulty_score": "Heuristic: category difficulty weight × log10(size_bytes+1), normalized to [0,1]."
+  },
+  "signals": {
+    "has_docs": true,
+    "has_tests": true,
+    "has_ci": true,
+    "code_to_test_ratio": 0.5177,
+    "doc_to_code_ratio": 0.5978,
+    "test_coverage_proxy": 0.3411,
+    "top_value_files": [
+      "docs/visual_references/gold_combination.png",
+      "src/ares/docs/source/_static/ares-orchestrate.png",
+      "src/ares/ares/docs/source/_static/ares-orchestrate.png",
+      "docs/visual_references/silver_temporal.png",
+      "docs/visual_references/yellow_rhythms.png",
+      "docs/visual_references/green_flow.png",
+      "docs/visual_references/red_deviation.png",
+      "docs/visual_references/orange_light.png",
+      "docs/visual_references/purple_repetition.png",
+      "docs/visual_references/Centralize communication through a VPC Transit Hub and Spoke architecture - Part one _ IBM Cloud Docs.pdf"
+    ],
+    "top_difficulty_files": [
+      "aiu-trace-analyzer/src/aiu_trace_analyzer/pipeline/coll_group.py",
+      "aiu-trace-analyzer/src/aiu_trace_analyzer/core/acelyzer.py",
+      "aiu-trace-analyzer/src/aiu_trace_analyzer/pipeline/rcu_utilization.py",
+      "Python/sora_prompt_generator.py",
+      "scripts/scripts/analyze_directory.py",
+      "scripts/scripts/foundational_constraint_system.py",
+      "engine.py",
+      "aiu-trace-analyzer/src/aiu_trace_analyzer/ingest/ingestion.py",
+      "src/concept/template_response/field.py",
+      "aiu-trace-analyzer/src/aiu_trace_analyzer/trace_view.py"
+    ],
+    "most_recent_files": [
+      "tests/unit/test_analyze_repo.py",
+      "artifacts/repo_analysis/summary.json",
+      "artifacts/repo_analysis/contribution_log.jsonl",
+      "artifacts/repo_analysis/files_index.jsonl",
+      "scripts/analyze_repo.py",
+      "artifacts/schemas/translator_assistant_response.schema.json",
+      "artifacts/schemas/translator_assistant_request.schema.json",
+      "scripts/generate_translator_schema.py",
+      "transformer/tests/test_main.py",
+      "transformer/main.py"
+    ]
+  }
+}

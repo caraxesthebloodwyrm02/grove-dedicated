@@ -1,0 +1,118 @@
+name: Contract Validation
+
+on:
+  pull_request:
+    branches: [main, master]
+  push:
+    branches: [main, master]
+
+jobs:
+  validate:
+    name: Validate Contract Pipeline
+    runs-on: ${{ matrix.os }}
+    env:
+      PYTHONPATH: ${{ github.workspace }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            toolchain: stable
+          - os: windows-latest
+            toolchain: stable-x86_64-pc-windows-gnu
+
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pytest pytest-asyncio
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: ${{ matrix.toolchain }}
+
+      - name: Cache Rust dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cargo/bin/
+            ~/.cargo/registry/index/
+            ~/.cargo/registry/cache/
+            ~/.cargo/git/db/
+            rust/target/
+          key: ${{ runner.os }}-cargo-${{ hashFiles('**/Cargo.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-cargo-
+
+      - name: Validate fixtures
+        run: |
+          python -m pip install jsonschema || echo "jsonschema not available, using handwritten only"
+          for fixture in tests/fixtures/*.json; do
+            echo "Validating fixture: $fixture"
+            # Try both engines, but don't fail if jsonschema isn't available
+            python schema_validator.py "$fixture" --engine handwritten || exit 1
+            python schema_validator.py "$fixture" --engine jsonschema || echo "JSON Schema validation skipped (jsonschema not available)"
+          done
+
+      - name: Test Rust deserialization of fixtures
+        run: |
+          cd rust
+          for fixture in ../tests/fixtures/*.json; do
+            echo "Testing Rust deserialization: $fixture"
+            # ARTIFACT_PATH is resolved relative to repo root by my-app
+            ARTIFACT_PATH="${fixture#../}" cargo run --bin my-app -- --json > /dev/null || exit 1
+          done
+
+      - name: Run Python unit tests
+        run: |
+          pytest tests/python/ -v
+
+      - name: Run Rust unit tests
+        run: |
+          cd rust
+          cargo test --workspace
+
+      - name: Run integration tests
+        run: |
+          pytest tests/integration/ -v
+
+      - name: Run contract validation pipeline
+        run: |
+          bash run_pipeline.sh
+        env:
+          ARTIFACT: artifact.json
+          RUST_FILE: rust/grid-core/src/lib.rs
+          RUST_ROOT: rust
+          MODE: artifact
+
+      - name: Upload artifact.json
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: artifact-${{ matrix.os }}
+          path: artifact.json
+          retention-days: 7
+
+      - name: Upload validation logs
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: validation-logs-${{ matrix.os }}
+          path: |
+            build_log.txt
+          retention-days: 7
+          if-no-files-found: ignore
+

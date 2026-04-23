@@ -1,0 +1,101 @@
+{
+  "id": "processing_unit_v1",
+  "description": "Transistor-logic decision processing unit for structured inputs.",
+  "resource_profile": {
+    "mode": "hibernation_first",
+    "idle_cost": "low",
+    "active_cost": "high",
+    "activation_policy": "threshold_based"
+  },
+  "transistor_laws": {
+    "thresholds": {
+      "max_retries": 2,
+      "min_clarity_score": 0.7,
+      "min_genuineness_score": 0.6
+    },
+    "gain": {
+      "target_flow_state": "high_momentum_light_mode",
+      "max_allowed_friction_steps": 3
+    },
+    "linearity": {
+      "require_factor_to_explanation_mapping": true,
+      "max_jargon_level": "low"
+    },
+    "cut_off": {
+      "noise_tolerance": 0.3,
+      "max_loops_without_progress": 2,
+      "actions": [
+        "abort_run",
+        "summarize_noise",
+        "suggest_reset"
+      ]
+    }
+  },
+  "inputs": {
+    "conversational_stream": true,
+    "structured_tasks_ref": "artifacts/decision_tasks.json",
+    "product_context_ref": "artifacts/product.json",
+    "journal_context_ref": "docs/journal"
+  },
+  "memory": {
+    "store_type": "event_log_with_embeddings",
+    "retention_policy": "recent_high_signal",
+    "fields": [
+      "timestamp",
+      "user_goal_summary",
+      "constraints_summary",
+      "vibe_features",
+      "task_id",
+      "decision_outcome"
+    ]
+  },
+  "activation_logic": {
+    "signals": [
+      "goal_clarity",
+      "constraint_specificity",
+      "emotional_intensity",
+      "task_match_score",
+      "user_commitment_signal"
+    ],
+    "activation_score_formula": "weighted_sum_normalized",
+    "activation_threshold": 0.75
+  },
+  "decision_engines": [
+    {
+      "task_id": "career_choice_v1",
+      "output_type": "job_comparison",
+      "capabilities": [
+        "A/B comparison",
+        "vibe_inference",
+        "opportunity_identification"
+      ]
+    },
+    {
+      "task_id": "savings_goal_v1",
+      "output_type": "savings_plan",
+      "capabilities": [
+        "timeline_projection",
+        "risk_scenario_generation"
+      ]
+    },
+    {
+      "task_id": "test_fix_bug_v1",
+      "output_type": "fix_plan",
+      "capabilities": [
+        "priority_ranking",
+        "doc_linking"
+      ]
+    }
+  ],
+  "outputs": {
+    "format": "structured_and_natural_language",
+    "fields": [
+      "task_id",
+      "recommendations",
+      "comparisons",
+      "explanation",
+      "what_if_scenarios",
+      "confidence_scores"
+    ]
+  }
+}

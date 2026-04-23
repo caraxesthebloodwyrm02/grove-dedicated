@@ -1,0 +1,110 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageDraw.py</file>
+  <line>284</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageDraw.py" />
+  <problem_class id="PyChainedComparisonsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Too complex chained comparisons</problem_class>
+  <description>Simplify chained comparison</description>
+  <highlighted_element>angles[1] &lt; angles[0] and angles[1] + 180 &gt; angles[0]</highlighted_element>
+  <language>Python</language>
+  <offset>26</offset>
+  <length>53</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py</file>
+  <line>1508</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py" />
+  <problem_class id="PyChainedComparisonsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Too complex chained comparisons</problem_class>
+  <description>Simplify chained comparison</description>
+  <highlighted_element>samples_per_pixel &gt; bps_actual_count and bps_actual_count == 1</highlighted_element>
+  <language>Python</language>
+  <offset>13</offset>
+  <length>62</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/edns.py</file>
+  <line>438</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/edns.py" />
+  <problem_class id="PyChainedComparisonsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Too complex chained comparisons</problem_class>
+  <description>Simplify chained comparison</description>
+  <highlighted_element>c &gt;= 0x20 and c &lt;= 0x7E</highlighted_element>
+  <language>Python</language>
+  <offset>15</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/inet.py</file>
+  <line>110</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/inet.py" />
+  <problem_class id="PyChainedComparisonsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Too complex chained comparisons</problem_class>
+  <description>Simplify chained comparison</description>
+  <highlighted_element>first &gt;= 224 and first &lt;= 239</highlighted_element>
+  <language>Python</language>
+  <offset>15</offset>
+  <length>29</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/name.py</file>
+  <line>157</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/name.py" />
+  <problem_class id="PyChainedComparisonsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Too complex chained comparisons</problem_class>
+  <description>Simplify chained comparison</description>
+  <highlighted_element>c &gt; 0x20 and c &lt; 0x7F</highlighted_element>
+  <language>Python</language>
+  <offset>17</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/rdata.py</file>
+  <line>108</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/rdata.py" />
+  <problem_class id="PyChainedComparisonsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Too complex chained comparisons</problem_class>
+  <description>Simplify chained comparison</description>
+  <highlighted_element>c &gt;= 0x20 and c &lt; 0x7F</highlighted_element>
+  <language>Python</language>
+  <offset>13</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/rdtypes/svcbbase.py</file>
+  <line>94</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/rdtypes/svcbbase.py" />
+  <problem_class id="PyChainedComparisonsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Too complex chained comparisons</problem_class>
+  <description>Simplify chained comparison</description>
+  <highlighted_element>c &gt;= 0x20 and c &lt; 0x7F</highlighted_element>
+  <language>Python</language>
+  <offset>13</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/xfr.py</file>
+  <line>309</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/xfr.py" />
+  <problem_class id="PyChainedComparisonsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Too complex chained comparisons</problem_class>
+  <description>Simplify chained comparison</description>
+  <highlighted_element>serial &gt; 0 and serial &lt; 4294967296</highlighted_element>
+  <language>Python</language>
+  <offset>9</offset>
+  <length>34</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>545</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyChainedComparisonsInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Too complex chained comparisons</problem_class>
+  <description>Simplify chained comparison</description>
+  <highlighted_element>self._defaults and len(params) &lt; self._nparams and len(params) + len...</highlighted_element>
+  <language>Python</language>
+  <offset>16</offset>
+  <length>133</length>
+</problem>
+</problems>

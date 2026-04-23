@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GRID Watch - Animated</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Consolas', 'Monaco', monospace;
+            background: linear-gradient(135deg, #0a0e27 0%, #1a1f3a 100%);
+            color: #e0e0e0;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .header h1 {
+            color: #00d4ff;
+            font-size: 2em;
+            text-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+        }
+
+        .status {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+
+        .status-item {
+            padding: 5px 15px;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 20px;
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .view-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        .view-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.3);
+            border-color: rgba(0, 212, 255, 0.5);
+        }
+
+        .view-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(0, 212, 255, 0.3);
+        }
+
+        .view-title {
+            font-size: 1.2em;
+            color: #00d4ff;
+            font-weight: bold;
+        }
+
+        .view-stats {
+            display: flex;
+            gap: 15px;
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+
+        .stat {
+            padding: 5px 10px;
+            background: rgba(0, 212, 255, 0.1);
+            border-radius: 5px;
+        }
+
+        .files-list {
+            margin-top: 10px;
+        }
+
+        .file-item {
+            padding: 8px;
+            margin: 5px 0;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            transition: all 0.2s ease;
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        .file-item:hover {
+            background: rgba(0, 212, 255, 0.1);
+            transform: translateX(5px);
+        }
+
+        .file-name {
+            color: #a0a0a0;
+        }
+
+        .file-size {
+            color: #00d4ff;
+            font-weight: bold;
+        }
+
+        .changes-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            background: rgba(255, 193, 7, 0.2);
+            border: 1px solid rgba(255, 193, 7, 0.5);
+            border-radius: 12px;
+            color: #ffc107;
+            font-size: 0.85em;
+            margin-left: 10px;
+            animation: pulse 1s infinite;
+        }
+
+        .error {
+            color: #f44336;
+            padding: 10px;
+            background: rgba(244, 67, 54, 0.1);
+            border-radius: 5px;
+            border-left: 3px solid #f44336;
+        }
+
+        .connection-status {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            z-index: 1000;
+        }
+
+        .connected {
+            background: rgba(76, 175, 80, 0.2);
+            border: 1px solid #4caf50;
+            color: #4caf50;
+        }
+
+        .disconnected {
+            background: rgba(244, 67, 54, 0.2);
+            border: 1px solid #f44336;
+            color: #f44336;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 5px rgba(0, 212, 255, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(0, 212, 255, 0.8); }
+        }
+    </style>
+</head>
+<body>
+    <div class="connection-status" id="connectionStatus">
+        🔴 Connecting...
+    </div>
+
+    <div class="header">
+        <h1>🎮 GRID WATCH - LIVE</h1>
+        <div class="status">
+            <div class="status-item">⏰ <span id="timestamp">--:--:--</span></div>
+            <div class="status-item">💓 Pulse: <span id="pulseCount">0</span></div>
+            <div class="status-item">📊 Changes: <span id="totalChanges">0</span></div>
+        </div>
+    </div>
+
+    <div class="grid-container" id="viewsContainer">
+        <!-- Views will be dynamically inserted here -->
+    </div>
+
+    <script>
+        const ws = new WebSocket('ws://localhost:8001/ws/watch');
+        const statusEl = document.getElementById('connectionStatus');
+        const timestampEl = document.getElementById('timestamp');
+        const pulseCountEl = document.getElementById('pulseCount');
+        const totalChangesEl = document.getElementById('totalChanges');
+        const viewsContainer = document.getElementById('viewsContainer');
+
+        ws.onopen = () => {
+            statusEl.textContent = '🟢 Connected';
+            statusEl.className = 'connection-status connected';
+            console.log('WebSocket connected');
+        };
+
+        ws.onclose = () => {
+            statusEl.textContent = '🔴 Disconnected';
+            statusEl.className = 'connection-status disconnected';
+            console.log('WebSocket disconnected');
+        };
+
+        ws.onerror = (error) => {
+            console.error('WebSocket error:', error);
+        };
+
+        ws.onmessage = (event) => {
+            const data = JSON.parse(event.data);
+            updateUI(data);
+        };
+
+        function updateUI(data) {
+            // Update header
+            const time = new Date(data.timestamp).toLocaleTimeString();
+            timestampEl.textContent = time;
+            pulseCountEl.textContent = data.pulse_count;
+
+            // Calculate total changes
+            let totalChanges = 0;
+            for (const label in data.views) {
+                totalChanges += data.views[label].changes.length;
+            }
+            totalChangesEl.textContent = totalChanges;
+
+            // Update views
+            viewsContainer.innerHTML = '';
+            for (const [label, viewData] of Object.entries(data.views)) {
+                viewsContainer.appendChild(createViewCard(label, viewData));
+            }
+        }
+
+        function createViewCard(label, viewData) {
+            const card = document.createElement('div');
+            card.className = 'view-card';
+
+            const snapshot = viewData.snapshot;
+            const changes = viewData.changes;
+
+            if (snapshot.error) {
+                card.innerHTML = `
+                    <div class="view-header">
+                        <div class="view-title">📁 ${label.toUpperCase()}</div>
+                    </div>
+                    <div class="error">❌ ${snapshot.error}</div>
+                `;
+                return card;
+            }
+
+            const changesHTML = changes.length > 0
+                ? `<span class="changes-badge">${changes.join(' | ')}</span>`
+                : '';
+
+            const filesHTML = snapshot.files
+                .map(f => `
+                    <div class="file-item">
+                        <span class="file-name">📄 ${f.name}</span>
+                        <span class="file-size">${formatSize(f.size)}</span>
+                    </div>
+                `).join('');
+
+            card.innerHTML = `
+                <div class="view-header">
+                    <div class="view-title">📁 ${label.toUpperCase()}</div>
+                    ${changesHTML}
+                </div>
+                <div class="view-stats">
+                    <div class="stat">📄 ${snapshot.file_count} files</div>
+                    <div class="stat">📂 ${snapshot.dir_count} dirs</div>
+                    <div class="stat">💾 ${formatSize(snapshot.total_size)}</div>
+                </div>
+                <div class="files-list">
+                    ${filesHTML}
+                </div>
+            `;
+
+            return card;
+        }
+
+        function formatSize(bytes) {
+            const units = ['B', 'KB', 'MB', 'GB'];
+            let size = bytes;
+            let unitIndex = 0;
+
+            while (size >= 1024 && unitIndex < units.length - 1) {
+                size /= 1024;
+                unitIndex++;
+            }
+
+            return `${size.toFixed(1)}${units[unitIndex]}`;
+        }
+
+        // Keep connection alive
+        setInterval(() => {
+            if (ws.readyState === WebSocket.OPEN) {
+                ws.send('ping');
+            }
+        }, 30000);
+    </script>
+</body>
+</html>

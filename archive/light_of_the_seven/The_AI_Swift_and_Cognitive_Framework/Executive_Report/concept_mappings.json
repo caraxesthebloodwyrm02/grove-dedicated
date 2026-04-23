@@ -1,0 +1,229 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Swift & Cognitive Framework Concept Mappings",
+  "description": "Maps abstract AI and cognitive concepts to relatable anchors and analogies.",
+  "type": "object",
+  "properties": {
+    "adaptive_learning_system": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "Formal definition of adaptive learning systems."
+        },
+        "anchors": {
+          "type": "object",
+          "description": "Relatable examples or analogies for the concept.",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string",
+                "description": "Explanation using this anchor."
+              },
+              "user_check": {
+                "type": "string",
+                "description": "Question to verify if the user relates to this anchor."
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "ai_link": {
+          "type": "string",
+          "description": "Key in ai_links.json for deep-dive connections."
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    },
+    "reinforcement_learning": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "Formal definition of reinforcement learning."
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              },
+              "user_check": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "ai_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    },
+    "neural_architecture_search": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "Formal definition of neural architecture search."
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              },
+              "user_check": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "ai_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    },
+    "user_model": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "Formal definition of user modeling."
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              },
+              "user_check": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "ai_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    },
+    "energy_function": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "A scalar function defining the 'cost' or 'loss' landscape of a model (Energy-Based Models)."
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              },
+              "user_check": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "ai_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    },
+    "momentum_optimizer": {
+      "type": "object",
+      "properties": {
+        "abstract": {
+          "type": "string",
+          "description": "Technique to accelerate gradients in the right direction (e.g., SGD with Momentum)."
+        },
+        "anchors": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "script": {
+                "type": "string"
+              },
+              "user_check": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "script"
+            ]
+          }
+        },
+        "ai_link": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "abstract",
+        "anchors"
+      ]
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "adaptive_learning_system": {
+        "abstract": "A system that adjusts its teaching method based on user performance and feedback.",
+        "anchors": {
+          "streaming_service": {
+            "script": "An adaptive learning system is like a streaming service that recommends shows based on what you've watched before. It learns from your interactions and adjusts its suggestions to match your preferences.",
+            "user_check": "Do you use streaming services like Netflix or Spotify? (yes/no)"
+          },
+          "personal_trainer": {
+            "script": "Think of an adaptive learning system like a personal trainer. It observes your performance, identifies areas for improvement, and tailors exercises to help you progress.",
+            "user_check": "Have you ever worked with a personal trainer or coach? (yes/no)"
+          }
+        },
+        "ai_link": "adaptive_learning_streaming"
+      }
+    }
+  ]
+}

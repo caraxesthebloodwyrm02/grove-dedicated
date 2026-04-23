@@ -1,0 +1,14 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GimpGradientFile.py</file>
+  <line>91</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GimpGradientFile.py" />
+  <problem_class id="PyTupleAssignmentBalanceInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Tuple assignment balance is incorrect</problem_class>
+  <description>Need more values to unpack</description>
+  <highlighted_element>self.gradient[ix]</highlighted_element>
+  <language>Python</language>
+  <offset>42</offset>
+  <length>17</length>
+</problem>
+</problems>

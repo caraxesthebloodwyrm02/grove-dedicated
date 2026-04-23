@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/your-org/your-repo/schemas/artifact.schema.json",
+  "title": "Artifact Schema",
+  "description": "Schema for Python code artifacts (ModuleArtifact, ClassArtifact, FunctionArtifact). Supports both legacy array format and new object format with artifact_version.",
+  "definitions": {
+    "FunctionArtifact": {
+      "type": "object",
+      "required": ["name", "lineno", "args", "has_doc", "is_async"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Function name"
+        },
+        "lineno": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Line number where function is defined"
+        },
+        "args": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Number of arguments"
+        },
+        "has_doc": {
+          "type": "boolean",
+          "description": "Whether function has a docstring"
+        },
+        "is_async": {
+          "type": "boolean",
+          "description": "Whether function is async"
+        }
+      },
+      "additionalProperties": false
+    },
+    "ClassArtifact": {
+      "type": "object",
+      "required": ["name", "lineno", "bases", "has_doc", "methods"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "description": "Class name"
+        },
+        "lineno": {
+          "type": "integer",
+          "minimum": 1,
+          "description": "Line number where class is defined"
+        },
+        "bases": {
+          "type": "array",
+          "description": "List of base class names",
+          "items": {
+            "type": "string"
+          }
+        },
+        "has_doc": {
+          "type": "boolean",
+          "description": "Whether class has a docstring"
+        },
+        "methods": {
+          "type": "array",
+          "description": "List of method artifacts",
+          "items": {
+            "$ref": "#/definitions/FunctionArtifact"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "ModuleArtifact": {
+      "type": "object",
+      "required": ["path", "has_doc", "imports", "total_lines", "functions", "classes"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "description": "File path of the module"
+        },
+        "has_doc": {
+          "type": "boolean",
+          "description": "Whether module has a docstring"
+        },
+        "imports": {
+          "type": "array",
+          "description": "List of import statements",
+          "items": {
+            "type": "string"
+          }
+        },
+        "total_lines": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Total number of lines in the module"
+        },
+        "functions": {
+          "type": "array",
+          "description": "List of function artifacts",
+          "items": {
+            "$ref": "#/definitions/FunctionArtifact"
+          }
+        },
+        "classes": {
+          "type": "array",
+          "description": "List of class artifacts",
+          "items": {
+            "$ref": "#/definitions/ClassArtifact"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "oneOf": [
+    {
+      "type": "array",
+      "description": "Legacy format: array of ModuleArtifact (without artifact_version)",
+      "minItems": 0,
+      "items": {
+        "$ref": "#/definitions/ModuleArtifact"
+      }
+    },
+    {
+      "type": "object",
+      "description": "New format: object with artifact_version and modules",
+      "required": ["artifact_version", "modules"],
+      "properties": {
+        "artifact_version": {
+          "type": "string",
+          "description": "Version of the artifact format (e.g., '1.0')"
+        },
+        "modules": {
+          "type": "array",
+          "description": "List of module artifacts",
+          "minItems": 0,
+          "items": {
+            "$ref": "#/definitions/ModuleArtifact"
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  ]
+}

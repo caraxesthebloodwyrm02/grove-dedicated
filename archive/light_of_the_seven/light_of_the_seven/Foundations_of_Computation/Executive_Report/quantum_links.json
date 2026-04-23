@@ -1,0 +1,14 @@
+{
+  "quantum_force_gps": {
+    "classical_concept": "force",
+    "quantum_concept": "relativistic_correction",
+    "script": "Your car’s GPS uses *Einstein’s* theory of relativity to adjust for gravity’s effect on time—because satellites experience weaker gravity, their clocks tick faster! This is a *quantum-level* force at work.",
+    "deep_dive": "Want to explore how *qubits* could make GPS even more precise?"
+  },
+  "superposition_spinning_coin": {
+    "classical_concept": "qubit",
+    "quantum_concept": "superposition",
+    "script": "A qubit is like a spinning coin: while it’s in the air, it’s *both* heads and tails. Only when you look (measure) does it 'choose' one state.",
+    "deep_dive": "Want to see how this lets quantum computers solve problems faster?"
+  }
+}

@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UBI Heat Credits Integration Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0a url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" seed="1"/></filter><rect width="100" height="100" fill="%23000" filter="url(%23noise)" opacity="0.05"/></svg>');
+            color: #e0e0e0;
+            font-family: 'Georgia', serif;
+            overflow: hidden;
+            height: 100vh;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 300px;
+            height: 100vh;
+            gap: 0;
+        }
+
+        /* Main visualization area */
+        #canvas-container {
+            position: relative;
+            background: #0a0a0a;
+            overflow: hidden;
+            border-right: 2px solid rgba(100, 200, 100, 0.3);
+        }
+
+        canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Boundary glow (security heartbeat) */
+        #boundary-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 8px;
+            background: linear-gradient(90deg, rgba(100, 200, 100, 0), rgba(100, 200, 100, 0.8), rgba(100, 200, 100, 0));
+            animation: pulse-glow 5s infinite;
+            box-shadow: 0 0 10px rgba(100, 200, 100, 0.5);
+            z-index: 100;
+        }
+
+        #boundary-glow.bottom {
+            top: auto;
+            bottom: 0;
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 0.8; }
+        }
+
+        /* Intertitle cards (Chaplin style) */
+        .intertitle-card {
+            position: absolute;
+            background: rgba(0, 0, 0, 0.9);
+            border: 3px solid #fff;
+            padding: 20px 30px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #fff;
+            text-align: center;
+            font-family: 'Georgia', serif;
+            letter-spacing: 2px;
+            animation: intertitle-fade 2s ease-in-out forwards;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        .intertitle-card.center {
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .intertitle-card.top {
+            left: 50%;
+            top: 20%;
+            transform: translateX(-50%);
+        }
+
+        .intertitle-card.bottom {
+            left: 50%;
+            bottom: 20%;
+            transform: translateX(-50%);
+        }
+
+        @keyframes intertitle-fade {
+            0% { opacity: 0; transform: translateY(-10px) scale(0.9); }
+            10% { opacity: 1; transform: translateY(0) scale(1); }
+            90% { opacity: 1; transform: translateY(0) scale(1); }
+            100% { opacity: 0; transform: translateY(10px) scale(0.9); }
+        }
+
+        /* Right sidebar: Vision triage board */
+        #triage-sidebar {
+            background: #0f0f0f;
+            border-left: 2px solid rgba(255, 200, 0, 0.2);
+            padding: 20px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .triage-section {
+            background: rgba(20, 20, 20, 0.8);
+            border: 1px solid rgba(255, 200, 0, 0.2);
+            padding: 12px;
+            border-radius: 4px;
+        }
+
+        .triage-section h3 {
+            color: #ffc800;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            border-bottom: 1px solid rgba(255, 200, 0, 0.3);
+            padding-bottom: 5px;
+        }
+
+        .triage-item {
+            font-size: 11px;
+            color: #b0b0b0;
+            margin: 5px 0;
+            line-height: 1.4;
+            font-family: 'Courier New', monospace;
+        }
+
+        .triage-value {
+            color: #ffc800;
+            font-weight: bold;
+        }
+
+        .triage-status {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            margin-right: 5px;
+            animation: status-pulse 1.5s infinite;
+        }
+
+        .triage-status.active {
+            background: #ff6600;
+        }
+
+        .triage-status.normal {
+            background: #66cc00;
+        }
+
+        @keyframes status-pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+
+        /* Control panel */
+        #control-panel {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(0, 0, 0, 0.9);
+            border: 2px solid rgba(255, 200, 0, 0.5);
+            padding: 15px 20px;
+            border-radius: 4px;
+            z-index: 100;
+            max-width: 300px;
+        }
+
+        #control-panel h4 {
+            color: #ffc800;
+            font-size: 12px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .control-group {
+            margin-bottom: 10px;
+        }
+
+        .control-group label {
+            display: block;
+            font-size: 11px;
+            color: #b0b0b0;
+            margin-bottom: 5px;
+        }
+
+        button {
+            background: rgba(255, 200, 0, 0.2);
+            border: 1px solid rgba(255, 200, 0, 0.6);
+            color: #ffc800;
+            padding: 8px 12px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.2s;
+        }
+
+        button:hover {
+            background: rgba(255, 200, 0, 0.4);
+            box-shadow: 0 0 8px rgba(255, 200, 0, 0.5);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        input[type="range"] {
+            width: 100%;
+            margin-top: 5px;
+        }
+
+        input[type="text"] {
+            background: rgba(255, 200, 0, 0.1);
+            border: 1px solid rgba(255, 200, 0, 0.3);
+            color: #ffc800;
+            padding: 6px 8px;
+            border-radius: 3px;
+            font-size: 11px;
+            width: 100%;
+        }
+
+        input[type="text"]::placeholder {
+            color: rgba(255, 200, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Main visualization -->
+        <div id="canvas-container">
+            <div id="boundary-glow"></div>
+            <canvas id="mainCanvas"></canvas>
+            <div id="control-panel">
+                <h4>🎬 UBI Demo Control</h4>
+                <div class="control-group">
+                    <button onclick="logEffort('easy', 5)">Log 5m Easy Task</button>
+                    <button onclick="logEffort('normal', 10)">Log 10m Normal Task</button>
+                    <button onclick="logEffort('hard', 15)">Log 15m Hard Task</button>
+                </div>
+                <div class="control-group">
+                    <label>Auto-generate (interval ms):</label>
+                    <input type="range" id="autoGenInterval" min="0" max="3000" step="100" value="0">
+                </div>
+                <div class="control-group">
+                    <button onclick="resetDemo()">Reset Demo</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Triage sidebar -->
+        <div id="triage-sidebar">
+            <div class="triage-section">
+                <h3>System State</h3>
+                <div class="triage-item">
+                    <span class="triage-status normal"></span>
+                    <strong>Status:</strong> <span class="triage-value" id="status-text">Active</span>
+                </div>
+                <div class="triage-item">
+                    <strong>Heat:</strong> <span class="triage-value" id="heat-value">0.0</span>%
+                </div>
+                <div class="triage-item">
+                    <strong>Load Mode:</strong> <span class="triage-value" id="mode-text">Normal</span>
+                </div>
+            </div>
+
+            <div class="triage-section">
+                <h3>UBI Metrics</h3>
+                <div class="triage-item">
+                    <strong>Total Credits:</strong> <span class="triage-value" id="total-credits">0.0</span>
+                </div>
+                <div class="triage-item">
+                    <strong>Active:</strong> <span class="triage-value" id="active-credits">0.0</span>
+                </div>
+                <div class="triage-item">
+                    <strong>Maturing:</strong> <span class="triage-value" id="maturing-credits">0.0</span>
+                </div>
+                <div class="triage-item">
+                    <strong>Matured:</strong> <span class="triage-value" id="matured-credits">0.0</span>
+                </div>
+            </div>
+
+            <div class="triage-section">
+                <h3>Effort Tracked</h3>
+                <div class="triage-item">
+                    <strong>Tasks:</strong> <span class="triage-value" id="task-count">0</span>
+                </div>
+                <div class="triage-item">
+                    <strong>Minutes:</strong> <span class="triage-value" id="total-minutes">0.0</span>
+                </div>
+            </div>
+
+            <div class="triage-section">
+                <h3>Last Event</h3>
+                <div class="triage-item" id="last-event-text" style="color: #666;">
+                    Waiting...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Canvas setup
+        const canvas = document.getElementById('mainCanvas');
+        const ctx = canvas.getContext('2d');
+        canvas.width = canvas.parentElement.clientWidth;
+        canvas.height = canvas.parentElement.clientHeight;
+
+        // Physics simulation state
+        let heat = 0.0;
+        let heatCapacity = 100.0;
+        let heatDissipationRate = 0.1;
+        let heatThreshold = 50.0;
+
+        // UBI credit state
+        let credits = {
+            total: 0.0,
+            active: 0.0,
+            maturing: 0.0,
+            matured: 0.0,
+        };
+
+        let effort = {
+            totalMinutes: 0.0,
+            taskCount: 0,
+        };
+
+        // Particles
+        class Particle {
+            constructor(x, y, type, color, lifetime, velocity, pattern) {
+                this.x = x;
+                this.y = y;
+                this.type = type;
+                this.color = color;
+                this.lifetime = lifetime;
+                this.age = 0;
+                this.velocity = velocity;
+                this.pattern = pattern;
+            }
+
+            update(dt) {
+                this.age += dt;
+
+                if (this.pattern === 'spiral') {
+                    const angle = this.age * 0.01;
+                    this.x += Math.cos(angle) * 0.5 + this.velocity[0];
+                    this.y += Math.sin(angle) * 0.5 + this.velocity[1];
+                } else if (this.pattern === 'pulse') {
+                    // Stay in place, just pulse
+                } else {
+                    // Linear movement
+                    this.x += this.velocity[0];
+                    this.y += this.velocity[1];
+                }
+            }
+
+            draw(ctx) {
+                const progress = this.age / this.lifetime;
+                const alpha = Math.max(0, 1 - progress);
+
+                let size = 3;
+                if (this.pattern === 'pulse') {
+                    size = 3 + Math.sin(this.age * 0.02) * 2;
+                }
+
+                ctx.fillStyle = this.color.replace('rgb', 'rgba').replace(')', `, ${alpha})`);
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+
+            isDead() {
+                return this.age >= this.lifetime;
+            }
+        }
+
+        let particles = [];
+
+        // Add particle
+        function spawnParticles(count, color, type, lifetime, velocity, pattern) {
+            const cx = canvas.width / 2;
+            const cy = canvas.height / 2;
+
+            for (let i = 0; i < count; i++) {
+                const angle = (Math.PI * 2 * i) / count;
+                const x = cx + Math.cos(angle) * 50;
+                const y = cy + Math.sin(angle) * 50;
+
+                particles.push(new Particle(
+                    x, y, type, color, lifetime,
+                    [velocity[0] + Math.random() * 0.2, velocity[1] + Math.random() * 0.2],
+                    pattern
+                ));
+            }
+        }
+
+        // Show intertitle
+        function showIntertitle(text, position = 'center', duration = 2000) {
+            const card = document.createElement('div');
+            card.className = `intertitle-card ${position}`;
+            card.textContent = text;
+            document.getElementById('canvas-container').appendChild(card);
+
+            setTimeout(() => card.remove(), duration);
+        }
+
+        // Log effort
+        function logEffort(difficulty, minutes) {
+            const effortScore = minutes * (
+                difficulty === 'easy' ? 0.5 :
+                difficulty === 'hard' ? 1.5 :
+                1.0
+            );
+
+            // Add heat
+            heat = Math.min(heat + effortScore * 2, heatCapacity);
+
+            // Add effort metrics
+            effort.totalMinutes += minutes;
+            effort.taskCount += 1;
+
+            // Determine particle type
+            const isPhysical = difficulty !== 'hard';
+            const color = isPhysical ? 'rgb(255, 180, 0)' : 'rgb(100, 150, 255)';
+            const pattern = isPhysical ? 'linear' : 'spiral';
+            const velocity = isPhysical ? [0, -0.5] : [0.5, -0.3];
+
+            // Spawn particles
+            const count = Math.max(1, Math.floor(minutes / 5));
+            spawnParticles(count, color, 'effort', 3000, velocity, pattern);
+
+            // Show intertitle
+            const text = `${difficulty.toUpperCase()} EFFORT: ${minutes}m`;
+            showIntertitle(text, 'center', 2000);
+
+            // Update sidebar
+            updateSidebar();
+            updateLastEvent(`Effort logged: ${minutes}m ${difficulty}`);
+        }
+
+        // Physics tick
+        function physicsTick(dt) {
+            // Cool the heat
+            const dissipatedHeat = heat * heatDissipationRate * dt;
+            heat = Math.max(0, heat - dissipatedHeat);
+
+            // Generate credits from dissipation
+            const creditsEarned = dissipatedHeat * 0.5;
+            credits.active += creditsEarned;
+            credits.total += creditsEarned;
+
+            // Transition credits
+            if (credits.active > 0) {
+                const transition = credits.active * 0.02;
+                credits.active -= transition;
+                credits.maturing += transition;
+            }
+
+            if (credits.maturing > 0) {
+                const mature = credits.maturing * 0.01;
+                credits.maturing -= mature;
+                credits.matured += mature;
+            }
+        }
+
+        // Update sidebar
+        function updateSidebar() {
+            const heatPercent = (heat / heatCapacity) * 100;
+            document.getElementById('heat-value').textContent = heatPercent.toFixed(1);
+            document.getElementById('mode-text').textContent = heatPercent > 70 ? 'Throttled' : 'Normal';
+
+            document.getElementById('total-credits').textContent = credits.total.toFixed(2);
+            document.getElementById('active-credits').textContent = credits.active.toFixed(2);
+            document.getElementById('maturing-credits').textContent = credits.maturing.toFixed(2);
+            document.getElementById('matured-credits').textContent = credits.matured.toFixed(2);
+
+            document.getElementById('task-count').textContent = effort.taskCount;
+            document.getElementById('total-minutes').textContent = effort.totalMinutes.toFixed(1);
+        }
+
+        function updateLastEvent(text) {
+            document.getElementById('last-event-text').textContent = text;
+        }
+
+        // Animation loop
+        let lastTime = Date.now();
+        let autoGenInterval = 0;
+
+        function animate() {
+            const now = Date.now();
+            const dt = Math.min((now - lastTime) / 1000, 0.016); // Max 16ms
+            lastTime = now;
+
+            // Clear canvas
+            ctx.fillStyle = '#0a0a0a';
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Update and draw particles
+            particles = particles.filter(p => !p.isDead());
+            particles.forEach(p => {
+                p.update(dt);
+                p.draw(ctx);
+            });
+
+            // Physics simulation
+            physicsTick(dt);
+
+            // Auto-generate if interval set
+            const interval = parseInt(document.getElementById('autoGenInterval').value);
+            if (interval > 0) {
+                autoGenInterval += dt * 1000;
+                if (autoGenInterval > interval) {
+                    const difficulties = ['easy', 'normal', 'hard'];
+                    const difficulty = difficulties[Math.floor(Math.random() * difficulties.length)];
+                    const minutes = Math.floor(Math.random() * 10) + 5;
+                    logEffort(difficulty, minutes);
+                    autoGenInterval = 0;
+                }
+            }
+
+            // Update sidebar
+            updateSidebar();
+
+            requestAnimationFrame(animate);
+        }
+
+        function resetDemo() {
+            heat = 0.0;
+            credits = { total: 0, active: 0, maturing: 0, matured: 0 };
+            effort = { totalMinutes: 0, taskCount: 0 };
+            particles = [];
+            updateSidebar();
+            updateLastEvent('Demo reset');
+        }
+
+        // Start animation
+        window.addEventListener('resize', () => {
+            canvas.width = canvas.parentElement.clientWidth;
+            canvas.height = canvas.parentElement.clientHeight;
+        });
+
+        animate();
+        updateSidebar();
+    </script>
+</body>
+</html>

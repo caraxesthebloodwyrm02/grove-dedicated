@@ -1,0 +1,26 @@
+[project]
+name = "magical-bridge"
+version = "0.2.0"
+description = "A contract-first Python→JSON→Rust bridge that turns Python code into typed Rust data—with schema/type/build/run checks you can wire into CI."
+authors = [{ name = "Your Name" }]
+requires-python = ">=3.8"
+dependencies = [
+    "jsonschema>=4.0.0",
+]
+
+[project.optional-dependencies]
+api = [
+    "fastapi>=0.104.0",
+    "uvicorn>=0.24.0",
+]
+
+[project.scripts]
+magical-bridge = "magical_bridge.__main__:main"
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["magical_bridge*"]

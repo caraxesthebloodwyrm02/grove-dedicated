@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Feedback Loops for AI Swift & Cognitive Framework",
+  "description": "Structured checks for understanding and user feedback during Socratic AI dialogues.",
+  "type": "object",
+  "properties": {
+    "reinforcement_learning": {
+      "questions": [
+        {
+          "text": "Did this explanation of reinforcement learning help? (yes/no)",
+          "type": "boolean",
+          "next_steps": {
+            "yes": "Proceed to 'expand' step in dialogue_flows.reinforcement_learning.",
+            "no": "Retry with another anchor or simplify the explanation."
+          }
+        },
+        {
+          "text": "Can you explain reinforcement learning in your own words?",
+          "type": "open_ended",
+          "next_steps": {
+            "positive": "Proceed to discuss specific RL algorithms (Q-learning, policy gradients).",
+            "negative": "Clarify the explanation with a different analogy."
+          }
+        }
+      ]
+    },
+    "neural_architecture_search": {
+      "questions": [
+        {
+          "text": "Does the explanation of Neural Architecture Search make sense? (yes/no)",
+          "type": "boolean",
+          "next_steps": {
+            "yes": "Proceed to 'expand' step in dialogue_flows.neural_architecture_search.",
+            "no": "Try explaining with a different analogy or example."
+          }
+        },
+        {
+          "text": "How would you describe Neural Architecture Search to someone else?",
+          "type": "open_ended",
+          "next_steps": {
+            "positive": "Discuss how NAS impacts hardware design choices.",
+            "negative": "Revisit the explanation with more concrete examples."
+          }
+        }
+      ]
+    },
+    "adaptive_learning_system": {
+      "questions": [
+        {
+          "text": "Did the explanation of adaptive learning systems help you understand how they work? (yes/no)",
+          "type": "boolean",
+          "next_steps": {
+            "yes": "Proceed to discuss personalization techniques.",
+            "no": "Provide another example of an adaptive system."
+          }
+        },
+        {
+          "text": "Can you think of an example of an adaptive system you've used?",
+          "type": "open_ended",
+          "next_steps": {
+            "positive": "Explore how that system adapts to user behavior.",
+            "negative": "Discuss common adaptive systems in everyday life."
+          }
+        }
+      ]
+    },
+    "user_model": {
+      "questions": [
+        {
+          "text": "Did the explanation of user modeling help? (yes/no)",
+          "type": "boolean",
+          "next_steps": {
+            "yes": "Proceed to discuss how user models are built and maintained.",
+            "no": "Provide another example of user modeling."
+          }
+        },
+        {
+          "text": "Can you think of a time when a system seemed to understand your preferences?",
+          "type": "open_ended",
+          "next_steps": {
+            "positive": "Discuss how the system might have modeled your behavior.",
+            "negative": "Explore common techniques in user modeling."
+          }
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}

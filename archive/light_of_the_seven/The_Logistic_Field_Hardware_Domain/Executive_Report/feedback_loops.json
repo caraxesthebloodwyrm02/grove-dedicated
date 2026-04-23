@@ -1,0 +1,109 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Feedback Loops for Logistic Field & Hardware Domain",
+  "description": "Structured checks for understanding and user feedback during Socratic AI dialogues.",
+  "type": "object",
+  "properties": {
+    "finite_state_machine": {
+      "questions": [
+        {
+          "text": "Did this explanation of finite state machines help? (yes/no)",
+          "type": "boolean",
+          "next_steps": {
+            "yes": "Proceed to 'expand' step in dialogue_flows.finite_state_machine.",
+            "no": "Retry with another anchor or simplify the explanation."
+          }
+        },
+        {
+          "text": "Can you explain what a finite state machine is in your own words?",
+          "type": "open_ended",
+          "next_steps": {
+            "positive": "Proceed to discuss specific applications of FSMs in hardware design.",
+            "negative": "Clarify the explanation with a different analogy."
+          }
+        }
+      ]
+    },
+    "fpga_prototype": {
+      "questions": [
+        {
+          "text": "Does the explanation of FPGA prototyping make sense? (yes/no)",
+          "type": "boolean",
+          "next_steps": {
+            "yes": "Proceed to 'expand' step in dialogue_flows.fpga_prototype.",
+            "no": "Try explaining with a different analogy or example."
+          }
+        },
+        {
+          "text": "How would you describe FPGA prototyping to someone else?",
+          "type": "open_ended",
+          "next_steps": {
+            "positive": "Discuss how FPGAs are used in real-world applications like signal processing or hardware acceleration.",
+            "negative": "Revisit the explanation with more concrete examples."
+          }
+        }
+      ]
+    },
+    "asic_design": {
+      "questions": [
+        {
+          "text": "Did the explanation of ASIC design help you understand the concept? (yes/no)",
+          "type": "boolean",
+          "next_steps": {
+            "yes": "Proceed to discuss the ASIC design flow in more detail.",
+            "no": "Provide another example of ASIC design."
+          }
+        },
+        {
+          "text": "Can you think of a scenario where an ASIC would be more suitable than an FPGA?",
+          "type": "open_ended",
+          "next_steps": {
+            "positive": "Explore the trade-offs between ASICs and FPGAs in terms of cost, performance, and flexibility.",
+            "negative": "Discuss common use cases for ASICs and FPGAs."
+          }
+        }
+      ]
+    },
+    "verification_flow": {
+      "questions": [
+        {
+          "text": "Did this explanation of hardware verification help? (yes/no)",
+          "type": "boolean",
+          "next_steps": {
+            "yes": "Proceed to discuss different verification methodologies (e.g., simulation, formal verification).",
+            "no": "Provide another analogy or example of verification."
+          }
+        },
+        {
+          "text": "Why is verification important in hardware design?",
+          "type": "open_ended",
+          "next_steps": {
+            "positive": "Discuss the impact of verification on time-to-market and product reliability.",
+            "negative": "Explain the consequences of skipping verification in hardware design."
+          }
+        }
+      ]
+    },
+    "turing_machine": {
+      "questions": [
+        {
+          "text": "Did the explanation of Turing machines help you understand the concept? (yes/no)",
+          "type": "boolean",
+          "next_steps": {
+            "yes": "Proceed to discuss the Church-Turing thesis or the relationship between Turing machines and modern computers.",
+            "no": "Provide another analogy or example of Turing machines."
+          }
+        },
+        {
+          "text": "How would you explain a Turing machine to a friend?",
+          "type": "open_ended",
+          "next_steps": {
+            "positive": "Explore how Turing machines form the foundation of computability theory.",
+            "negative": "Discuss simpler models of computation and their limitations."
+          }
+        }
+      ]
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,26 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/dnssec.py</file>
+  <line>966</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/dnssec.py" />
+  <problem_class id="PySetFunctionToLiteralInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Function call can be replaced with set literal</problem_class>
+  <description>Function call can be replaced with set literal</description>
+  <highlighted_element>set( [ dns.rdatatype.RdataType.DNSKEY, dns.rdatatype.RdataType.CDS, ...</highlighted_element>
+  <language>Python</language>
+  <offset>23</offset>
+  <length>160</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/dns/dnssec.py</file>
+  <line>1124</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/dns/dnssec.py" />
+  <problem_class id="PySetFunctionToLiteralInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Function call can be replaced with set literal</problem_class>
+  <description>Function call can be replaced with set literal</description>
+  <highlighted_element>set( [dns.rdatatype.RdataType.RRSIG, dns.rdatatype.RdataType.NSEC] )</highlighted_element>
+  <language>Python</language>
+  <offset>26</offset>
+  <length>88</length>
+</problem>
+</problems>

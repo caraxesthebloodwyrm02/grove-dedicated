@@ -1,0 +1,225 @@
+# SORA QUICK REFERENCE
+
+## 🚀 Get Started in 60 Seconds
+
+```bash
+# 1. Install (once)
+pip install openai requests
+
+# 2. Set API key
+$env:SORA_API_KEY = "sk-..."
+
+# 3. Test (dry run - no charges)
+python sora_integration.py --dry-run
+
+# 4. Generate (real video)
+python sora_integration.py --real
+```
+
+---
+
+## 📋 Command Cheat Sheet
+
+```bash
+# Dry run (test, no charges)
+python sora_integration.py --dry-run
+
+# Generate video (real API call)
+python sora_integration.py --real
+
+# Low quality (cheaper)
+python sora_integration.py --budget ultra-low --real
+
+# High quality (better)
+python sora_integration.py --budget standard --real
+
+# Custom budget ($100/month)
+python sora_integration.py --monthly-budget 100 --real
+
+# Show detailed help
+python sora_integration.py --help
+
+# Verbose logging
+python sora_integration.py --dry-run --verbose
+
+# View budget report
+cat sora_budget_report.txt
+```
+
+---
+
+## 💻 Python API Quick Reference
+
+### Generate Prompt
+```python
+from sora_prompt_generator import build_prompt_from_repo, TokenBudgetLevel
+
+prompt = build_prompt_from_repo(
+    repo_path=Path("e:/projects/python/hello"),
+    budget=TokenBudgetLevel.LOW,  # or MEDIUM, STANDARD, ULTRA_LOW
+)
+```
+
+### Create Client
+```python
+from sora_client import SoraClient
+
+client = SoraClient(
+    api_key="sk-...",
+    monthly_budget_usd=50.0,
+)
+```
+
+### Generate Video
+```python
+from sora_client import VideoGenerationRequest
+
+request = VideoGenerationRequest(
+    prompt=prompt,
+    duration=90.0,
+    quality="high",  # or "low", "medium"
+)
+
+# Check budget first
+if client.check_budget(request.estimate_cost_usd()):
+    response = client.generate_video(request)
+    print(f"Video ID: {response.video_id}")
+```
+
+### Poll Status
+```python
+response = client.get_video_status(video_id)
+print(f"Status: {response.status}")  # pending, processing, completed, failed
+```
+
+---
+
+## 💰 Cost Reference
+
+| Budget | Duration | Estimated Cost |
+|--------|----------|-----------------|
+| LOW | 60s | $1.20 |
+| LOW | 90s | $1.80 |
+| MEDIUM | 60s | $1.80 |
+| MEDIUM | 90s | $2.70 |
+| HIGH | 60s | $3.00 |
+| HIGH | 90s | $4.50 |
+
+**Monthly with $50 budget:**
+- HIGH quality: ~11 videos
+- MEDIUM quality: ~18 videos
+- LOW quality: ~27 videos
+- **With optimization: 4-6× more**
+
+---
+
+## 📖 Full Documentation
+
+| Guide | Purpose | Read Time |
+|-------|---------|-----------|
+| [SORA_INTEGRATION_GUIDE.md](SORA_INTEGRATION_GUIDE.md) | Complete setup & usage | 15 min |
+| [SORA_WORKFLOW.md](SORA_WORKFLOW.md) | Architecture & optimization | 20 min |
+| [SORA_PROJECT_INDEX.md](SORA_PROJECT_INDEX.md) | Navigation & reference | 10 min |
+| [SORA_COMPLETION_SUMMARY.md](SORA_COMPLETION_SUMMARY.md) | Project overview | 5 min |
+
+---
+
+## 🔧 Troubleshooting
+
+| Problem | Solution |
+|---------|----------|
+| "API key not set" | `$env:SORA_API_KEY = "sk-..."` |
+| "Budget exceeded" | Use `--budget low` or `--monthly-budget 100` |
+| "Module not found" | `pip install openai requests` |
+| "Path not found" | Use absolute path: `--repo-path e:/projects/python/hello` |
+| "Prompt too long" | Use `--budget ultra-low` |
+
+---
+
+## 📊 Performance
+
+| Step | Time | Notes |
+|------|------|-------|
+| Repository analysis | 2-5s | One-time |
+| Prompt generation | 5-9s | Ready to use |
+| API call | <1s | Instant |
+| Video generation | 30-90s | Depends on duration |
+| **Total** | **40-100s** | End-to-end |
+
+---
+
+## 🎯 Story Arc (90 seconds)
+
+```
+0-15s   → AI hype myth
+15-40s  → Tools setup (VS Code, Python)
+40-60s  → First code attempt (error cascade)
+60-80s  → 🎬 BREAKFAST COMEDY (70% mark)
+80-90s  → Resolution (code success)
+```
+
+### Kitchen Comedy Highlights
+- `import mil` → milk won't pour
+- `path not found` → lost in apartment
+- `module error` → wrong cupboards
+- Friend rescues with right fridge
+
+---
+
+## ✅ Deployment Checklist
+
+- [ ] Install Python 3.9+
+- [ ] `pip install openai requests`
+- [ ] Get API key from https://platform.openai.com/api-keys
+- [ ] Set `$env:SORA_API_KEY = "sk-..."`
+- [ ] Run dry-run: `python sora_integration.py --dry-run`
+- [ ] Review prompt output
+- [ ] Generate test video: `python sora_integration.py --real`
+- [ ] Check result quality
+- [ ] Review budget: `cat sora_budget_report.txt`
+- [ ] Ready for production! 🚀
+
+---
+
+## 🔗 Resources
+
+- **API Keys:** https://platform.openai.com/api-keys
+- **Sora Docs:** https://platform.openai.com/docs/guides/video
+- **OpenAI Platform:** https://platform.openai.com
+- **IDE Recorder:** `e:\Projects\Python\hello\src\ide_recorder\`
+
+---
+
+## 📁 Files
+
+```
+sora_prompt_generator.py   ← Repo analysis + prompt generation
+sora_client.py             ← Sora 2 API client
+sora_integration.py        ← End-to-end workflow
+```
+
+---
+
+## 🎬 Generate Your First Video
+
+```bash
+# Quick start (one command)
+python sora_integration.py --real
+```
+
+That's it! 🎉
+
+---
+
+## Support
+
+Read full guides:
+- Setup: [SORA_INTEGRATION_GUIDE.md](SORA_INTEGRATION_GUIDE.md)
+- Details: [SORA_WORKFLOW.md](SORA_WORKFLOW.md)
+- Index: [SORA_PROJECT_INDEX.md](SORA_PROJECT_INDEX.md)
+
+---
+
+**Status: ✅ Production Ready**
+
+Last updated: December 2024

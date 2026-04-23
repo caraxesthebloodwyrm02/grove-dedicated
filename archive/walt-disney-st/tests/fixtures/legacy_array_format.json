@@ -1,0 +1,21 @@
+[
+  {
+    "path": "legacy.py",
+    "has_doc": false,
+    "imports": [
+      "import os"
+    ],
+    "total_lines": 10,
+    "functions": [
+      {
+        "name": "old_function",
+        "lineno": 5,
+        "args": 0,
+        "has_doc": false,
+        "is_async": false
+      }
+    ],
+    "classes": []
+  }
+]
+

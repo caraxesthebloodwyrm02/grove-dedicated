@@ -1,0 +1,110 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/pip/__pip-runner__.py</file>
+  <line>38</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/pip/__pip-runner__.py" />
+  <problem_class id="PyMethodParametersInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Improper first parameter</problem_class>
+  <description>Usually first parameter of such methods is named 'cls'</description>
+  <highlighted_element>self</highlighted_element>
+  <language>Python</language>
+  <offset>18</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>670</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyMethodParametersInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Improper first parameter</problem_class>
+  <description>Usually first parameter of such methods is named 'cls'</description>
+  <highlighted_element>mcls</highlighted_element>
+  <language>Python</language>
+  <offset>20</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>686</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyMethodParametersInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Improper first parameter</problem_class>
+  <description>Usually first parameter of a method is named 'self'</description>
+  <highlighted_element>cls</highlighted_element>
+  <language>Python</language>
+  <offset>21</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>691</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyMethodParametersInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Improper first parameter</problem_class>
+  <description>Usually first parameter of a method is named 'self'</description>
+  <highlighted_element>cls</highlighted_element>
+  <language>Python</language>
+  <offset>30</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>717</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyMethodParametersInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Improper first parameter</problem_class>
+  <description>Usually first parameter of a method is named 'self'</description>
+  <highlighted_element>cls</highlighted_element>
+  <language>Python</language>
+  <offset>30</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>749</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyMethodParametersInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Improper first parameter</problem_class>
+  <description>Usually first parameter of a method is named 'self'</description>
+  <highlighted_element>cls</highlighted_element>
+  <language>Python</language>
+  <offset>19</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>760</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyMethodParametersInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Improper first parameter</problem_class>
+  <description>Usually first parameter of a method is named 'self'</description>
+  <highlighted_element>cls</highlighted_element>
+  <language>Python</language>
+  <offset>21</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2604</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyMethodParametersInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Improper first parameter</problem_class>
+  <description>Usually first parameter of such methods is named 'cls'</description>
+  <highlighted_element>self</highlighted_element>
+  <language>Python</language>
+  <offset>30</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2681</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyMethodParametersInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Improper first parameter</problem_class>
+  <description>Usually first parameter of such methods is named 'cls'</description>
+  <highlighted_element>self</highlighted_element>
+  <language>Python</language>
+  <offset>30</offset>
+  <length>4</length>
+</problem>
+</problems>

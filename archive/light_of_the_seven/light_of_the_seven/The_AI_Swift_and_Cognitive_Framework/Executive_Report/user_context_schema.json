@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "User Context Schema for AI Swift & Cognitive Framework",
+  "description": "Defines the structure for storing user background and experiences to personalize AI explanations.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "User's name or identifier."
+    },
+    "location": {
+      "type": "string",
+      "description": "User's location (optional)."
+    },
+    "experiences": {
+      "type": "array",
+      "description": "List of AI-related experiences the user has.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "uses_social_media",
+          "uses_streaming_services",
+          "works_with_ml",
+          "manages_infra",
+          "develops_ai_models",
+          "uses_recommender_systems",
+          "works_with_data",
+          "teaches_ai"
+        ]
+      }
+    },
+    "knowledge_gaps": {
+      "type": "array",
+      "description": "List of AI concepts the user wants to learn.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "reinforcement_learning",
+          "neural_architecture_search",
+          "adaptive_learning_systems",
+          "user_modeling",
+          "deep_learning",
+          "ai_workloads"
+        ]
+      }
+    },
+    "preferred_learning_style": {
+      "type": "string",
+      "description": "User's preferred way of learning (e.g., analogies, code examples, theory).",
+      "enum": ["analogies", "code_examples", "theory", "visual_diagrams"]
+    }
+  },
+  "required": ["name", "experiences"]
+}

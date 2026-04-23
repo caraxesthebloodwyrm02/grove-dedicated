@@ -1,0 +1,8 @@
+row_id,at,speaker,kind,content,tone_tag,criteria_touched,options_referenced,decision_ref,action_ref
+r1,2025-12-14T00:01:00Z,Facilitator,question,"What exactly is our task right now, in one sentence?",calm,Clarity,,,
+r2,2025-12-14T00:01:20Z,Scientist,claim,This version should show how parts work in unison; we still need more time to know what's really going on.,tense,Clarity; Risk,,,
+r3,2025-12-14T00:02:00Z,Scribe,evidence,"We cannot currently locate expected files (e.g., semantic_grep.py); searches return 0 matches. Tool-visible roots seem limited.",direct,Risk; Clarity,,,
+r4,2025-12-14T00:03:00Z,Facilitator,proposal,"Choose A: build a streaming table builder that generates CSV + receipt, even if schema evolves.",calm,Speed; Clarity,Option A: build the CLI table builder now,,
+r5,2025-12-14T00:03:30Z,Scientist,proposal,Choose B: fix root visibility and schema first to reduce rework.,analytical,Risk; Clarity,Option B: wait for full schema/tool visibility first,,
+r6,2025-12-14T00:04:00Z,Facilitator,bridge,"Meet halfway: ship a minimal CLI now (A), but treat parsing/schema as flexible; revisit after root visibility is fixed.",calm,Risk; Speed; Clarity,Option A: build the CLI table builder now; Option B: wait for full schema/tool visibility first,,
+r7,2025-12-14T00:06:10Z,Scribe,note,"After outputs look right, integrate real stream sources and expand parser to full JSON library.",calm,Speed; Risk,,Proceed with minimal streaming CLI now (made),Run table builder on example_stream.jsonl and inspect outputs (Owner: Scribe)

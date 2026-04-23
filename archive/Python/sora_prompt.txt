@@ -1,0 +1,68 @@
+[SORA 2 GENERATION SETTINGS]
+Duration: 90 seconds
+Aspect Ratio: 16:9
+Style: Black and white, high-contrast silent film (1920s Chaplin-inspired)
+Music: Solo piano only (no dialogue or voiceover)
+Resolution: 1080p or higher
+
+[KEY VISUAL CONSTRAINTS]
+- No spoken dialogue or voiceover; intertitle cards only.
+- Strictly black and white, no color.
+- Apartment interior, small modern space with a few vintage furniture pieces.
+- Laptop with a simple "code editor" UI visible (no specific brand required).
+
+[MAIN CHARACTERS]
+- Protagonist: Likeable, slightly overwhelmed young programmer (20s–30s).
+- Friend: Calm, supportive roommate who appears mainly in the kitchen sequence.
+
+[STORY STRUCTURE - 90 SECONDS]
+SCENE 1 – Title & Myth (0–15s)
+- Title card: "They said: you dont need to learn to code. The machines will do it all."
+- Protagonist sits at laptop, dismissively closes an AI chat window.
+- Brief flash of an error message on screen, like "ModuleNotFoundError".
+
+SCENE 2 – Tools Setup (15–40s)
+- Quick montage of installing tools: icons of a code editor and Python appear.
+- Folder windows open and close, files being created.
+- Pace is upbeat and optimistic, with playful piano music.
+
+SCENE 3 – First Code Attempts (40–60s)
+- Close-ups of code editor: a tiny script is typed.
+- Terminal area flashes errors in quick succession:
+  - "ModuleNotFoundError"
+  - "FileNotFoundError"
+  - "ImportError"
+- Between shots, intertitle cards appear:
+  - "Module not found."
+  - "Path not found."
+  - "Try again."
+- Protagonist rubs temples, sighs dramatically, and slumps in the chair.
+
+SCENE 4 – BREAKFAST COMEDY (60–80s)
+- Exhausted, protagonist stumbles away from desk into a small kitchen.
+- Camera follows in a slightly exaggerated, Chaplin-style walk.
+- Intertitle: "import mil"
+  - Protagonist pours from a milk carton labeled "mil". Nothing comes out.
+  - Shakes and squeezes the carton in confusion.
+- Intertitle: "PATH TO FRIDGE NOT FOUND"
+  - Protagonist repeatedly opens the wrong cupboards and doors.
+  - Friend appears, gently shaking their head in the background.
+- Intertitle: "FILE NOT FOUND"
+  - Protagonist looks at utensils and tries to "eat" a spoon before noticing real food.
+- Friend finally guides protagonist to the correct fridge.
+  - Warm light spills out when the door opens.
+  - Properly labeled milk and breakfast items are clearly visible.
+
+SCENE 5 – Quiet Resolution (80–90s)
+- Cut back to the laptop and code editor.
+- The script now runs successfully; a small green checkmark or simple success icon appears.
+- Protagonist relaxes, leans back, and smiles in quiet satisfaction.
+- Final intertitle cards:
+  - "AI can help. But the joy is in learning the instrument."
+  - "VS Code + Python. Free. The rest is play." (or a neutral equivalent if branding is not allowed)
+
+[VISUAL & TONE NOTES]
+- Overall tone: affectionate, humorous, and encouraging toward beginners.
+- Comedy should be physical and gentle, never cruel.
+- Camera work: simple and readable, with occasional playful cuts.
+- Emphasize the contrast between chaotic errors and calm guidance in the kitchen.

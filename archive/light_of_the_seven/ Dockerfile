@@ -1,0 +1,75 @@
+# =============================================================================
+# GRID - Docker Container Image
+# Multi-stage build for optimized production deployment
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Stage 1: Builder
+# -----------------------------------------------------------------------------
+FROM python:3.11-slim AS builder
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1
+
+WORKDIR /build
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+COPY pyproject.toml requirements.txt ./
+COPY circuits/ ./circuits/
+
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+RUN pip install --upgrade pip setuptools wheel build && \
+    python -m build --wheel --outdir /build/dist && \
+    pip install /build/dist/*.whl[api]
+
+# -----------------------------------------------------------------------------
+# Stage 2: Production
+# -----------------------------------------------------------------------------
+FROM python:3.11-slim AS production
+
+LABEL org.opencontainers.image.title="GRID" \
+      org.opencontainers.image.version="0.2.0" \
+      org.opencontainers.image.licenses="MIT"
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    PATH="/opt/venv/bin:$PATH" \
+    GRID_ENV=production
+
+RUN groupadd --gid 1000 grid && \
+    useradd --uid 1000 --gid grid --shell /bin/bash --create-home grid
+
+WORKDIR /app
+
+COPY --from=builder /opt/venv /opt/venv
+COPY --from=builder /build/dist/*.whl /tmp/
+COPY --chown=grid:grid config/ ./config/
+COPY --chown=grid:grid schemas/ ./schemas/
+
+USER grid
+EXPOSE 8000
+
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/docs')" || exit 1
+
+CMD ["uvicorn", "grid.api.main:app", "--host", "0.0.0.0", "--port", "8000"]
+
+# -----------------------------------------------------------------------------
+# Stage 3: Development (optional target)
+# -----------------------------------------------------------------------------
+FROM production AS development
+USER root
+COPY pyproject.toml ./
+COPY circuits/ ./circuits/
+RUN pip install -e ".[api,dev]"
+USER grid
+CMD ["uvicorn", "grid.api.main:app", "--host", "0.0.0.0", "--port", "8000", "--reload"]

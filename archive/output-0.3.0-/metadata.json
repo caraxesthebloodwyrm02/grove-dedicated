@@ -1,0 +1,8 @@
+{
+  "name": "Gemini Modular Studio",
+  "description": "A high-fidelity, modular creative studio inspired by professional audio software. Features modular input processing for Image Generation, Image Editing, Advanced Reasoning, and Real-time Voice interaction using the latest Gemini models.",
+  "requestFramePermissions": [
+    "microphone",
+    "camera"
+  ]
+}

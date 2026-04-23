@@ -1,0 +1,43 @@
+{
+    "platform_id": "eq_spectrum",
+    "resonance_tier": 7,
+    "metadata": {
+        "display_name": "EQ-Spectrum Semantic Engine",
+        "partner_id": "grid",
+        "version": "3.1.0",
+        "status": "active"
+    },
+    "core_mapping": [
+        {
+            "component": "essence",
+            "layer": "silver",
+            "role": "Semantic Contextualization"
+        },
+        {
+            "component": "AGENT",
+            "layer": "gold",
+            "role": "EQ-Weighted Prioritization"
+        }
+    ],
+    "branch_hierarchy": {
+        "root_prefix": "topic/",
+        "theme_mapping": {
+            "mismatch": "resolution",
+            "calibration": "calibration",
+            "spectrum": "spectrum"
+        }
+    },
+    "compliance": {
+        "contract_verified": true,
+        "resonance_threshold": 0.95
+    },
+    "relationship": {
+        "status": "friend",
+        "principles": [
+            "Harmonic Semantic Resolution",
+            "Clarity in Ambiguity",
+            "Truth Beyond Typos"
+        ],
+        "trust_score": 0.95
+    }
+}

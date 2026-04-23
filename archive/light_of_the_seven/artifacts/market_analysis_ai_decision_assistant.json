@@ -1,0 +1,106 @@
+{
+  "problem_space": {
+    "description": "High-stakes, complex and time-sensitive decisions (money, career, projects, markets) lack an explainable, structured AI framework for normal users.",
+    "stakes": ["personal", "financial", "societal"],
+    "current_solutions": [
+      "general-purpose chatbots and voice assistants",
+      "domain-specific trading or budgeting tools",
+      "internal enterprise decision engines"
+    ],
+    "limitations": [
+      "black-box recommendations with little transparency",
+      "weak support for what-if exploration and counterfactuals",
+      "poor localization for Bangladesh and similar markets",
+      "no unified, Google-Maps-like tool for decisions across domains"
+    ]
+  },
+  "macro_trends": {
+    "global_market_size_2030": 26000000000.0,
+    "cagr": 38.7,
+    "key_trends": [
+      "rapid growth of AI apps and decision-support tools",
+      "dominance of NLP chatbots and recommendation engines",
+      "rising demand for explainable and trustworthy AI"
+    ]
+  },
+  "geography_focus": {
+    "primary_region": "Bangladesh-first, global-ready",
+    "region_market_size_2030": 12070000000.0,
+    "region_trends": [
+      "Smart Bangladesh 2041 and government support for ICT",
+      "growing startup ecosystem and foreign investment",
+      "rising internet and smartphone penetration"
+    ]
+  },
+  "target_users": {
+    "primary_segments": [
+      "knowledge workers and solo founders",
+      "students and young professionals",
+      "households planning education, migration and savings"
+    ],
+    "needs": [
+      "clear and transparent reasoning behind recommendations",
+      "fast, up-to-date insights for time-sensitive choices",
+      "local language and context awareness"
+    ],
+    "trust_barriers": [
+      "fear of AI hallucinations and hidden biases",
+      "privacy and surveillance concerns",
+      "belief that serious decisions must be done by humans"
+    ]
+  },
+  "product_niche": {
+    "core_value_prop": "An explainable decision companion that guides users through a structured decision pipeline with interactive what-if exploration.",
+    "differentiation": [
+      "built-in explainability and counterfactual scenario exploration",
+      "personal-local-global context integration",
+      "continuous evaluation using an open test suite and telemetry"
+    ],
+    "use_cases": [
+      "personal finance and savings decisions",
+      "career and learning roadmaps",
+      "project and roadmap planning for small teams"
+    ]
+  },
+  "explainability_and_governance": {
+    "methods": [
+      "textual explanations of key factors",
+      "interactive counterfactual scenarios",
+      "scenario-based evaluation tests"
+    ],
+    "user_controls": [
+      "show-why and drill-down views",
+      "ability to pause or override the AI",
+      "configurable risk and preference profiles"
+    ],
+    "research_mode": true
+  },
+  "valuation": {
+    "tam": 2000000000.0,
+    "sam": 500000000.0,
+    "som_year3": 1500000.0,
+    "assumptions": [
+      "5-10 percent of global AI apps spend is addressable by explainable decision support",
+      "initial focus on English and Bengali-speaking serious AI users",
+      "0.1-0.3 percent of SAM captured within 3-5 years"
+    ]
+  },
+  "go_to_market": {
+    "entry_beachhead": "Bangladesh knowledge workers and students using a mobile-first decision assistant",
+    "channels": [
+      "app stores and web app",
+      "university and startup ecosystem partnerships",
+      "developer and data-science communities"
+    ],
+    "revenue_streams": [
+      "freemium consumer subscriptions",
+      "B2B and government licensing or white-labelling",
+      "hosted evaluation and insights services based on the decision test suite"
+    ]
+  },
+  "roadmap": {
+    "phase_1": "Prototype assistant, decision schema and small test suite; launch closed beta in Bangladesh (0-12 months)",
+    "phase_2": "Scale features, add domain modules and expand to regional and global users (1-3 years)",
+    "phase_3": "Mature into a widely used decision infrastructure with strong research collaborations and open benchmarks (3-7 years)"
+  }
+}

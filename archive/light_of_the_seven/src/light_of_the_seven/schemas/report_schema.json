@@ -1,0 +1,234 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "GRID Performance and Schema Report",
+    "type": "object",
+    "required": [
+        "timestamp",
+        "grep_performance",
+        "schema_validation",
+        "recommendations"
+    ],
+    "properties": {
+        "timestamp": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Report generation timestamp"
+        },
+        "grep_performance": {
+            "type": "object",
+            "required": [
+                "metrics",
+                "scopes",
+                "patterns"
+            ],
+            "properties": {
+                "metrics": {
+                    "type": "object",
+                    "properties": {
+                        "simple_pattern_ms": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "default": 7
+                        },
+                        "regex_pattern_ms": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "default": 2
+                        },
+                        "import_pattern_ms": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "default": 16
+                        },
+                        "searchable_files": {
+                            "type": "integer",
+                            "minimum": 0,
+                            "default": 53
+                        }
+                    }
+                },
+                "scopes": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "path",
+                            "safe"
+                        ],
+                        "properties": {
+                            "path": {
+                                "type": "string"
+                            },
+                            "safe": {
+                                "type": "boolean"
+                            },
+                            "reason": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "patterns": {
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "required": [
+                            "pattern",
+                            "type",
+                            "execution_time_ms",
+                            "matches"
+                        ],
+                        "properties": {
+                            "pattern": {
+                                "type": "string"
+                            },
+                            "type": {
+                                "type": "string",
+                                "enum": [
+                                    "simple",
+                                    "regex",
+                                    "import",
+                                    "comment",
+                                    "async"
+                                ]
+                            },
+                            "execution_time_ms": {
+                                "type": "integer",
+                                "minimum": 0
+                            },
+                            "matches": {
+                                "type": "integer",
+                                "minimum": 0
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "schema_validation": {
+            "type": "object",
+            "required": [
+                "sound_layer",
+                "vision_layer",
+                "exhibits"
+            ],
+            "properties": {
+                "sound_layer": {
+                    "type": "object",
+                    "required": [
+                        "schema_present",
+                        "properties_count"
+                    ],
+                    "properties": {
+                        "schema_present": {
+                            "type": "boolean"
+                        },
+                        "properties_count": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "validation_errors": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "vision_layer": {
+                    "type": "object",
+                    "required": [
+                        "schema_present",
+                        "properties_count"
+                    ],
+                    "properties": {
+                        "schema_present": {
+                            "type": "boolean"
+                        },
+                        "properties_count": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "validation_errors": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                },
+                "exhibits": {
+                    "type": "object",
+                    "required": [
+                        "total_count",
+                        "valid_count"
+                    ],
+                    "properties": {
+                        "total_count": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "valid_count": {
+                            "type": "integer",
+                            "minimum": 0
+                        },
+                        "invalid_exhibits": {
+                            "type": "array",
+                            "items": {
+                                "type": "object",
+                                "required": [
+                                    "path",
+                                    "error"
+                                ],
+                                "properties": {
+                                    "path": {
+                                        "type": "string"
+                                    },
+                                    "error": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "recommendations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "category",
+                    "priority",
+                    "action"
+                ],
+                "properties": {
+                    "category": {
+                        "type": "string",
+                        "enum": [
+                            "performance",
+                            "schema",
+                            "tooling",
+                            "documentation"
+                        ]
+                    },
+                    "priority": {
+                        "type": "string",
+                        "enum": [
+                            "high",
+                            "medium",
+                            "low"
+                        ]
+                    },
+                    "action": {
+                        "type": "string"
+                    },
+                    "rationale": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

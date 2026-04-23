@@ -1,0 +1,10 @@
+# Test corpus: only synthetic fixture tree (step 8). tools/** is denied in production config.
+# Allowlist is intentionally narrow.
+root: /mnt/arch_data/home/caraxes/grove/archive/light_of_the_seven
+week_starts_on: monday
+empty_cell_level: 0
+
+allow:
+  - "tools/octopus_fixtures/mini_docs/**"
+
+deny: []

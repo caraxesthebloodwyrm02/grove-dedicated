@@ -1,0 +1,63 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Dialogue Flows for Programming & Cognitive Architecture",
+  "description": "Predefined conversational paths for teaching programming and cognitive concepts.",
+  "type": "object",
+  "properties": {
+    "compiler_design": [
+      {
+        "step": "anchor",
+        "action": "Check user_context.experiences for relevant experiences (e.g., 'worked_with_compilers', 'debugged_code'). Use matching anchor script from concept_mappings.json."
+      },
+      {
+        "step": "teach",
+        "action": "Explain compiler design using the selected anchor. Example: 'A compiler is like a translator that converts your code into machine language, just like how you might translate a recipe into another language.'"
+      },
+      {
+        "step": "verify",
+        "action": "Ask 'Does this make sense? (yes/no)'. If 'no', retry with another anchor or simplify the explanation."
+      },
+      {
+        "step": "expand",
+        "action": "Offer to discuss related topics like 'lexical analysis' or 'code optimization'."
+      }
+    ],
+    "parser": [
+      {
+        "step": "anchor",
+        "action": "Check user_context.experiences for 'built_websites' or 'worked_with_compilers'. Use matching anchor script from concept_mappings.json."
+      },
+      {
+        "step": "teach",
+        "action": "Explain parsing using the anchor. Example: 'A parser is like a librarian organizing books into categories—it takes your code and organizes it into a structure the computer can understand.'"
+      },
+      {
+        "step": "verify",
+        "action": "Ask 'Can you restate what a parser does in your own words?'"
+      },
+      {
+        "step": "expand",
+        "action": "Offer to discuss 'abstract syntax trees' or 'grammar rules'."
+      }
+    ],
+    "mental_model": [
+      {
+        "step": "anchor",
+        "action": "Check user_context.experiences for 'teaches_programming' or 'debugged_code'. Use matching anchor script from concept_mappings.json."
+      },
+      {
+        "step": "teach",
+        "action": "Explain mental models using the anchor. Example: 'A mental model is like a map in your mind—it helps you navigate and understand how code works.'"
+      },
+      {
+        "step": "verify",
+        "action": "Ask 'Can you think of a mental model you use when coding?'"
+      },
+      {
+        "step": "expand",
+        "action": "Offer to discuss 'how mental models evolve' or 'common misconceptions in programming'."
+      }
+    ]
+  },
+  "additionalProperties": false
+}

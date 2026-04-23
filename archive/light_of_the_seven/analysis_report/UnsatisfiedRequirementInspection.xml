@@ -1,0 +1,266 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>1</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package fastapi==0.104.1 is not installed</description>
+  <highlighted_element>fastapi==0.104.1</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>2</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package uvicorn[standard]==0.24.0 is not installed</description>
+  <highlighted_element>uvicorn[standard]==0.24.0</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>25</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>6</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package alembic==1.13.1 is not installed</description>
+  <highlighted_element>alembic==1.13.1</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>15</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>7</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package click==8.1.7 is not installed</description>
+  <highlighted_element>click==8.1.7</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>8</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package rich==13.7.0 is not installed</description>
+  <highlighted_element>rich==13.7.0</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>9</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package loguru==0.7.2 is not installed</description>
+  <highlighted_element>loguru==0.7.2</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>10</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package pytest==7.4.3 is not installed</description>
+  <highlighted_element>pytest==7.4.3</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>11</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package pytest-asyncio==0.21.1 is not installed</description>
+  <highlighted_element>pytest-asyncio==0.21.1</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>13</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package black==23.11.0 is not installed</description>
+  <highlighted_element>black==23.11.0</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>14</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package isort==5.12.0 is not installed</description>
+  <highlighted_element>isort==5.12.0</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>17</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package pre-commit==3.6.0 is not installed</description>
+  <highlighted_element>pre-commit==3.6.0</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>17</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>18</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package python-multipart==0.0.6 is not installed</description>
+  <highlighted_element>python-multipart==0.0.6</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>19</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package python-jose[cryptography]==3.3.0 is not installed</description>
+  <highlighted_element>python-jose[cryptography]==3.3.0</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>32</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>20</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package passlib[bcrypt]==1.7.4 is not installed</description>
+  <highlighted_element>passlib[bcrypt]==1.7.4</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>21</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package redis==5.0.1 is not installed</description>
+  <highlighted_element>redis==5.0.1</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>22</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package celery==5.3.4 is not installed</description>
+  <highlighted_element>celery==5.3.4</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>23</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package openai&gt;=1.0.0 is not installed</description>
+  <highlighted_element>openai&gt;=1.0.0</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>24</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package httpx==0.23.3 is not installed</description>
+  <highlighted_element>httpx==0.23.3</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>26</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package python-dateutil&gt;=2.8 is not installed</description>
+  <highlighted_element>python-dateutil&gt;=2.8</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>28</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package qiskit&gt;=1.0.0,&lt;2.0.0 is not installed</description>
+  <highlighted_element>qiskit&gt;=1.0.0,&lt;2.0.0</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>20</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>29</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package qiskit-ibm-runtime&gt;=0.20.0 is not installed</description>
+  <highlighted_element>qiskit-ibm-runtime&gt;=0.20.0</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>26</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/docs/requirements.txt</file>
+  <line>30</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/docs/requirements.txt" />
+  <problem_class id="UnsatisfiedRequirementInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Requirement is not satisfied</problem_class>
+  <description>Package qiskit-algorithms&gt;=0.3.0 is not installed</description>
+  <highlighted_element>qiskit-algorithms&gt;=0.3.0</highlighted_element>
+  <language>Requirements</language>
+  <offset>0</offset>
+  <length>24</length>
+</problem>
+</problems>

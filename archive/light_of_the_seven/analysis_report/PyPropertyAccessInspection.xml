@@ -1,0 +1,50 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py</file>
+  <line>2037</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffImagePlugin.py" />
+  <problem_class id="PyPropertyAccessInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inappropriate access to properties</problem_class>
+  <description>Property 'name' cannot be set</description>
+  <highlighted_element>self.name</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>1693</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyPropertyAccessInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inappropriate access to properties</problem_class>
+  <description>Property '__infer_variance__' cannot be set</description>
+  <highlighted_element>typevar.__infer_variance__</highlighted_element>
+  <language>Python</language>
+  <offset>16</offset>
+  <length>26</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>1801</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyPropertyAccessInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inappropriate access to properties</problem_class>
+  <description>Property '__infer_variance__' cannot be set</description>
+  <highlighted_element>paramspec.__infer_variance__</highlighted_element>
+  <language>Python</language>
+  <offset>16</offset>
+  <length>28</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2120</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyPropertyAccessInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Inappropriate access to properties</problem_class>
+  <description>Property '__parameters__' cannot be set</description>
+  <highlighted_element>concatenate.__parameters__</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>26</length>
+</problem>
+</problems>

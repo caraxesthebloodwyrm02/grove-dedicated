@@ -1,0 +1,74 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py</file>
+  <line>1180</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/GifImagePlugin.py" />
+  <problem_class id="PyIncorrectDocstringInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect docstring</problem_class>
+  <description>Unexpected parameter \\**params in docstring</description>
+  <highlighted_element>\\**params</highlighted_element>
+  <language>Python</language>
+  <offset>11</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py</file>
+  <line>3630</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py" />
+  <problem_class id="PyIncorrectDocstringInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect docstring</problem_class>
+  <description>Unexpected parameter function in docstring</description>
+  <highlighted_element>function</highlighted_element>
+  <language>Python</language>
+  <offset>11</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageMath.py</file>
+  <line>248</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageMath.py" />
+  <problem_class id="PyIncorrectDocstringInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect docstring</problem_class>
+  <description>Unexpected parameter **kw in docstring</description>
+  <highlighted_element>**kw</highlighted_element>
+  <language>Python</language>
+  <offset>11</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageMath.py</file>
+  <line>279</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageMath.py" />
+  <problem_class id="PyIncorrectDocstringInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect docstring</problem_class>
+  <description>Unexpected parameter **kw in docstring</description>
+  <highlighted_element>**kw</highlighted_element>
+  <language>Python</language>
+  <offset>11</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageShow.py</file>
+  <line>57</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageShow.py" />
+  <problem_class id="PyIncorrectDocstringInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect docstring</problem_class>
+  <description>Unexpected parameter \**options in docstring</description>
+  <highlighted_element>\**options</highlighted_element>
+  <language>Python</language>
+  <offset>11</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/_deprecate.py</file>
+  <line>15</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/_deprecate.py" />
+  <problem_class id="PyIncorrectDocstringInspection" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Incorrect docstring</problem_class>
+  <description>Missing parameter stacklevel in docstring</description>
+  <highlighted_element>stacklevel: int = 3</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>19</length>
+</problem>
+</problems>

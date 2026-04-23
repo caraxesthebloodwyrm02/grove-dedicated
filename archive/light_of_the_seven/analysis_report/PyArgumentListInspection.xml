@@ -1,0 +1,374 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py</file>
+  <line>2293</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/Image.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>box=reduce_box</highlighted_element>
+  <language>Python</language>
+  <offset>40</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFont.py</file>
+  <line>272</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/ImageFont.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Parameter 'font_bytes' unfilled</description>
+  <highlighted_element>)</highlighted_element>
+  <language>Python</language>
+  <offset>12</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfParser.py</file>
+  <line>546</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfParser.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument(s). Possible callees: NamedTuple(self: NamedTuple, typename: str, fields: Iterable[tuple[str, Any]], /) NamedTuple(self: NamedTuple, typename: str, fields: None = None, /, **kwargs)</description>
+  <highlighted_element>(*ref)</highlighted_element>
+  <language>Python</language>
+  <offset>39</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfParser.py</file>
+  <line>546</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfParser.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Parameter(s) unfilled. Possible callees: NamedTuple(self: NamedTuple, typename: str, fields: Iterable[tuple[str, Any]], /) NamedTuple(self: NamedTuple, typename: str, fields: None = None, /, **kwargs)</description>
+  <highlighted_element>)</highlighted_element>
+  <language>Python</language>
+  <offset>44</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfParser.py</file>
+  <line>1055</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfParser.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument(s). Possible callees: NamedTuple(self: NamedTuple, typename: str, fields: Iterable[tuple[str, Any]], /) NamedTuple(self: NamedTuple, typename: str, fields: None = None, /, **kwargs)</description>
+  <highlighted_element>(*ref)</highlighted_element>
+  <language>Python</language>
+  <offset>45</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfParser.py</file>
+  <line>1055</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/PdfParser.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Parameter(s) unfilled. Possible callees: NamedTuple(self: NamedTuple, typename: str, fields: Iterable[tuple[str, Any]], /) NamedTuple(self: NamedTuple, typename: str, fields: None = None, /, **kwargs)</description>
+  <highlighted_element>)</highlighted_element>
+  <language>Python</language>
+  <offset>50</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffTags.py</file>
+  <line>43</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffTags.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>name</highlighted_element>
+  <language>Python</language>
+  <offset>43</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffTags.py</file>
+  <line>43</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffTags.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>type</highlighted_element>
+  <language>Python</language>
+  <offset>49</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffTags.py</file>
+  <line>43</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffTags.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>length</highlighted_element>
+  <language>Python</language>
+  <offset>55</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffTags.py</file>
+  <line>43</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/PIL/TiffTags.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>enum or {}</highlighted_element>
+  <language>Python</language>
+  <offset>63</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/cfgv.py</file>
+  <line>299</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/cfgv.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>of=of</highlighted_element>
+  <language>Python</language>
+  <offset>36</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/cfgv.py</file>
+  <line>299</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/cfgv.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>allow_empty=allow_empty</highlighted_element>
+  <language>Python</language>
+  <offset>43</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/cfgv.py</file>
+  <line>331</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/cfgv.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>values=values</highlighted_element>
+  <language>Python</language>
+  <offset>36</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/cfgv.py</file>
+  <line>344</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/cfgv.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>values=values</highlighted_element>
+  <language>Python</language>
+  <offset>36</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/six.py</file>
+  <line>579</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/six.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>obj.__class__</highlighted_element>
+  <language>Python</language>
+  <offset>43</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/six.py</file>
+  <line>582</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/six.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>cls</highlighted_element>
+  <language>Python</language>
+  <offset>44</offset>
+  <length>3</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>1631</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Function '__init__' lacks a positional argument</description>
+  <highlighted_element>@_ExtensionsSpecialForm</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2108</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>_typevar_types=(TypeVar, ParamSpec)</highlighted_element>
+  <language>Python</language>
+  <offset>40</offset>
+  <length>35</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2109</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>_paramspec_tvars=True</highlighted_element>
+  <language>Python</language>
+  <offset>40</offset>
+  <length>21</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2147</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Function '__init__' lacks a positional argument</description>
+  <highlighted_element>@_ExtensionsSpecialForm</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2167</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Function '__init__' lacks a positional argument</description>
+  <highlighted_element>@_ExtensionsSpecialForm</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2220</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Function '__init__' lacks a positional argument</description>
+  <highlighted_element>@_ExtensionsSpecialForm</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2273</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Function '__init__' lacks a positional argument</description>
+  <highlighted_element>@_TypeFormForm</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2376</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Function '__init__' lacks a positional argument</description>
+  <highlighted_element>@_ExtensionsSpecialForm</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2396</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Function '__init__' lacks a positional argument</description>
+  <highlighted_element>@_ExtensionsSpecialForm</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2417</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Function '__init__' lacks a positional argument</description>
+  <highlighted_element>@_ExtensionsSpecialForm</highlighted_element>
+  <language>Python</language>
+  <offset>4</offset>
+  <length>23</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2967</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Parameter(s) unfilled. Possible callees: type.__new__(cls: type[type], __o: object) type.__new__(cls: type[Self], __name: str, __bases: tuple[type, ...], __namespace: dict[str, Any], **kwds)</description>
+  <highlighted_element>)</highlighted_element>
+  <language>Python</language>
+  <offset>47</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2980</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>*args</highlighted_element>
+  <language>Python</language>
+  <offset>54</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2980</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>**kwargs</highlighted_element>
+  <language>Python</language>
+  <offset>61</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2989</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>*args</highlighted_element>
+  <language>Python</language>
+  <offset>54</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py</file>
+  <line>2989</line>
+  <module>grid</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/venv/Lib/site-packages/typing_extensions.py" />
+  <problem_class id="PyArgumentListInspection" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Incorrect call arguments</problem_class>
+  <description>Unexpected argument</description>
+  <highlighted_element>**kwargs</highlighted_element>
+  <language>Python</language>
+  <offset>61</offset>
+  <length>8</length>
+</problem>
+</problems>

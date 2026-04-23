@@ -1,0 +1,48 @@
+# Lo7 — three-language manifest parity (step 8(b)) and Python-only regression
+name: Lo7
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main, develop]
+
+jobs:
+  lo7-parity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@38f3f104447c67c051c4a08e39b64a148898af3a # v4
+      - name: Set up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Go
+        uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5
+        with:
+          go-version: "1.22"
+
+      - name: Set up Rust
+        uses: dtolnay/rust-toolchain@29eef336d9b2848a0b548edc03f92a220660cdb8 # stable
+
+      - name: Python deps
+        run: uv sync --group test
+
+      - name: Build Rust lo7-manifest-service
+        working-directory: prototype/rust
+        run: cargo build -p lo7-manifest-service
+
+      - name: Build Go service
+        working-directory: prototype/go/lo7_manifest_service
+        run: |
+          go mod download
+          go build -o /tmp/lo7-go .
+
+      - name: Lo7 integration tests
+        run: |
+          export LO7_GO_BIN=/tmp/lo7-go
+          uv run --group test pytest tests/integration/test_lo7_manifest_parity.py -v --tb=short
+        env:
+          UV_LINK_MODE: copy

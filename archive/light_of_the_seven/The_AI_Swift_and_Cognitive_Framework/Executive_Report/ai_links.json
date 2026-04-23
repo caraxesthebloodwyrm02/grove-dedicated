@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Links for Cognitive Framework",
+  "description": "Bridges abstract AI concepts to concrete examples and deep-dive connections.",
+  "type": "object",
+  "properties": {
+    "adaptive_learning_streaming": {
+      "classical_concept": "adaptive_learning_system",
+      "concrete_example": "streaming_service_recommendations",
+      "script": "An adaptive learning system works like a streaming service's recommendation engine. It learns from your interactions (what you watch, skip, or rate) and adjusts its suggestions to match your preferences. Similarly, an adaptive learning system observes your performance and tailors its content to help you learn more effectively.",
+      "deep_dive": "Want to explore how adaptive learning systems are used in education or corporate training?"
+    },
+    "reinforcement_learning_games": {
+      "classical_concept": "reinforcement_learning",
+      "concrete_example": "video_game_ai",
+      "script": "Reinforcement learning is like training an AI to play a video game. The AI (agent) learns to perform actions (like jumping or shooting) that maximize its score (reward). Over time, it develops strategies to achieve its goals, just like how you might learn to beat a game through trial and error.",
+      "deep_dive": "Want to dive into how reinforcement learning is used in robotics or autonomous systems?"
+    },
+    "nas_hardware_design": {
+      "classical_concept": "neural_architecture_search",
+      "concrete_example": "hardware_optimization",
+      "script": "Neural Architecture Search (NAS) is like an automated engineer designing the perfect chip for a specific task. It experiments with different neural network architectures to find the one that performs best, much like an engineer tests different circuit designs to optimize performance and power efficiency.",
+      "deep_dive": "Want to explore how NAS impacts hardware choices for AI accelerators?"
+    },
+    "user_model_personalization": {
+      "classical_concept": "user_model",
+      "concrete_example": "ecommerce_recommendations",
+      "script": "A user model is like a personal shopper who remembers your preferences. It learns from your behavior (what you buy, browse, or ignore) and tailors its recommendations to suit your tastes. Similarly, AI systems use user models to personalize content, ads, or even user interfaces.",
+      "deep_dive": "Want to discuss how user models are built and maintained in large-scale systems?"
+    },
+    "workload_memory_hierarchy": {
+      "classical_concept": "ai_workload",
+      "concrete_example": "memory_management",
+      "script": "An AI workload's memory hierarchy is like a chef's kitchen. Frequently used ingredients (data) are kept within arm's reach (cache), while less frequently used items are stored in the pantry (RAM) or even off-site (storage). Optimizing this hierarchy ensures the AI runs efficiently, just like a well-organized kitchen helps a chef work faster.",
+      "deep_dive": "Want to explore how workload characteristics influence hardware design?"
+    }
+  },
+  "additionalProperties": false
+}

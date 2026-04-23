@@ -1,0 +1,247 @@
+[
+  {
+    "row_id": "r1",
+    "at": "2025-12-14T00:01:00Z",
+    "speaker_id": "p_fac",
+    "speaker": "Facilitator",
+    "kind": "question",
+    "content": "What exactly is our task right now, in one sentence?",
+    "tone_tag": "calm",
+    "criteria_ids": [
+      "c_clarity"
+    ],
+    "criteria_names": [
+      "Clarity"
+    ],
+    "criteria_touched": "Clarity",
+    "option_ids": [],
+    "option_labels": [],
+    "options_referenced": "",
+    "decision_id": "",
+    "decision_title": "",
+    "decision_status": "",
+    "bridge_used": "",
+    "decision_ref": "",
+    "action_id": "",
+    "action_title": "",
+    "action_owner_id": "",
+    "action_owner": "",
+    "action_due_at": "",
+    "action_status": "",
+    "action_ref": ""
+  },
+  {
+    "row_id": "r2",
+    "at": "2025-12-14T00:01:20Z",
+    "speaker_id": "p_scientist",
+    "speaker": "Scientist",
+    "kind": "claim",
+    "content": "This version should show how parts work in unison; we still need more time to know what's really going on.",
+    "tone_tag": "tense",
+    "criteria_ids": [
+      "c_clarity",
+      "c_risk"
+    ],
+    "criteria_names": [
+      "Clarity",
+      "Risk"
+    ],
+    "criteria_touched": "Clarity; Risk",
+    "option_ids": [],
+    "option_labels": [],
+    "options_referenced": "",
+    "decision_id": "",
+    "decision_title": "",
+    "decision_status": "",
+    "bridge_used": "",
+    "decision_ref": "",
+    "action_id": "",
+    "action_title": "",
+    "action_owner_id": "",
+    "action_owner": "",
+    "action_due_at": "",
+    "action_status": "",
+    "action_ref": ""
+  },
+  {
+    "row_id": "r3",
+    "at": "2025-12-14T00:02:00Z",
+    "speaker_id": "p_scr",
+    "speaker": "Scribe",
+    "kind": "evidence",
+    "content": "We cannot currently locate expected files (e.g., semantic_grep.py); searches return 0 matches. Tool-visible roots seem limited.",
+    "tone_tag": "direct",
+    "criteria_ids": [
+      "c_risk",
+      "c_clarity"
+    ],
+    "criteria_names": [
+      "Risk",
+      "Clarity"
+    ],
+    "criteria_touched": "Risk; Clarity",
+    "option_ids": [],
+    "option_labels": [],
+    "options_referenced": "",
+    "decision_id": "",
+    "decision_title": "",
+    "decision_status": "",
+    "bridge_used": "",
+    "decision_ref": "",
+    "action_id": "",
+    "action_title": "",
+    "action_owner_id": "",
+    "action_owner": "",
+    "action_due_at": "",
+    "action_status": "",
+    "action_ref": ""
+  },
+  {
+    "row_id": "r4",
+    "at": "2025-12-14T00:03:00Z",
+    "speaker_id": "p_fac",
+    "speaker": "Facilitator",
+    "kind": "proposal",
+    "content": "Choose A: build a streaming table builder that generates CSV + receipt, even if schema evolves.",
+    "tone_tag": "calm",
+    "criteria_ids": [
+      "c_speed",
+      "c_clarity"
+    ],
+    "criteria_names": [
+      "Speed",
+      "Clarity"
+    ],
+    "criteria_touched": "Speed; Clarity",
+    "option_ids": [
+      "o_a"
+    ],
+    "option_labels": [
+      "Option A: build the CLI table builder now"
+    ],
+    "options_referenced": "Option A: build the CLI table builder now",
+    "decision_id": "",
+    "decision_title": "",
+    "decision_status": "",
+    "bridge_used": "",
+    "decision_ref": "",
+    "action_id": "",
+    "action_title": "",
+    "action_owner_id": "",
+    "action_owner": "",
+    "action_due_at": "",
+    "action_status": "",
+    "action_ref": ""
+  },
+  {
+    "row_id": "r5",
+    "at": "2025-12-14T00:03:30Z",
+    "speaker_id": "p_scientist",
+    "speaker": "Scientist",
+    "kind": "proposal",
+    "content": "Choose B: fix root visibility and schema first to reduce rework.",
+    "tone_tag": "analytical",
+    "criteria_ids": [
+      "c_risk",
+      "c_clarity"
+    ],
+    "criteria_names": [
+      "Risk",
+      "Clarity"
+    ],
+    "criteria_touched": "Risk; Clarity",
+    "option_ids": [
+      "o_b"
+    ],
+    "option_labels": [
+      "Option B: wait for full schema/tool visibility first"
+    ],
+    "options_referenced": "Option B: wait for full schema/tool visibility first",
+    "decision_id": "",
+    "decision_title": "",
+    "decision_status": "",
+    "bridge_used": "",
+    "decision_ref": "",
+    "action_id": "",
+    "action_title": "",
+    "action_owner_id": "",
+    "action_owner": "",
+    "action_due_at": "",
+    "action_status": "",
+    "action_ref": ""
+  },
+  {
+    "row_id": "r6",
+    "at": "2025-12-14T00:04:00Z",
+    "speaker_id": "p_fac",
+    "speaker": "Facilitator",
+    "kind": "bridge",
+    "content": "Meet halfway: ship a minimal CLI now (A), but treat parsing/schema as flexible; revisit after root visibility is fixed.",
+    "tone_tag": "calm",
+    "criteria_ids": [
+      "c_risk",
+      "c_speed",
+      "c_clarity"
+    ],
+    "criteria_names": [
+      "Risk",
+      "Speed",
+      "Clarity"
+    ],
+    "criteria_touched": "Risk; Speed; Clarity",
+    "option_ids": [
+      "o_a",
+      "o_b"
+    ],
+    "option_labels": [
+      "Option A: build the CLI table builder now",
+      "Option B: wait for full schema/tool visibility first"
+    ],
+    "options_referenced": "Option A: build the CLI table builder now; Option B: wait for full schema/tool visibility first",
+    "decision_id": "",
+    "decision_title": "",
+    "decision_status": "",
+    "bridge_used": "",
+    "decision_ref": "",
+    "action_id": "",
+    "action_title": "",
+    "action_owner_id": "",
+    "action_owner": "",
+    "action_due_at": "",
+    "action_status": "",
+    "action_ref": ""
+  },
+  {
+    "row_id": "r7",
+    "at": "2025-12-14T00:06:10Z",
+    "speaker_id": "p_scr",
+    "speaker": "Scribe",
+    "kind": "note",
+    "content": "After outputs look right, integrate real stream sources and expand parser to full JSON library.",
+    "tone_tag": "calm",
+    "criteria_ids": [
+      "c_speed",
+      "c_risk"
+    ],
+    "criteria_names": [
+      "Speed",
+      "Risk"
+    ],
+    "criteria_touched": "Speed; Risk",
+    "option_ids": [],
+    "option_labels": [],
+    "options_referenced": "",
+    "decision_id": "d1",
+    "decision_title": "Proceed with minimal streaming CLI now",
+    "decision_status": "made",
+    "bridge_used": "Time-boxed trial: implement v1 CLI now; upgrade JSON parsing once the ecosystem root is visible.",
+    "decision_ref": "Proceed with minimal streaming CLI now (made)",
+    "action_id": "a1",
+    "action_title": "Run table builder on example_stream.jsonl and inspect outputs",
+    "action_owner_id": "p_scr",
+    "action_owner": "Scribe",
+    "action_due_at": "2025-12-14T02:00:00Z",
+    "action_status": "open",
+    "action_ref": "Run table builder on example_stream.jsonl and inspect outputs (Owner: Scribe)"
+  }
+]
