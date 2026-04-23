@@ -89,6 +89,7 @@ See [docs/PACKAGING.md](docs/PACKAGING.md) for build and publish workflows.
 
 - [Lo7 runbook (manifest + heatmap)](docs/LO7_RUNBOOK.md) - corpus config, §2.1 defaults, three-language tests
 - [Lo7 quickstart (examples)](examples/lo7_quickstart/README.md) - copy-paste commands for manifest + heatmap
+- [Notebook engine guide](docs/notebook-engine-guide.md) - knowledge-worker flows, CLIs, APIs, examples, gesture/canvas patterns, deployment sketches
 - [Packaging Guide](docs/PACKAGING.md) - Build, install, and publish
 - [Installation Guide](INSTALLATION.md) - Detailed setup instructions
 - [Development Guide](docs/DEVELOPMENT.md) - Development environment setup
