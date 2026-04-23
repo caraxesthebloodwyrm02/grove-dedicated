@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "mangroveBiome": {
+    "mythos": "Portrait with open drawers (after Dalí): the figure is the mangrove; each drawer is a memory-compartment (tooling, trust, echo, seed). Continuity: horizon → canopy → pith → drawers → under-story.",
+    "continuity": [
+      { "act": 1, "name": "Horizon & the tide", "emoji": "🌅", "drawer": "Surface — what ships first: Cascade, constellations, nerve center" },
+      { "act": 2, "name": "The breathing canopy", "emoji": "🍃", "drawer": "Leaf / lung — afloat, echoes, shipped light" },
+      { "act": 3, "name": "Pith & anchor", "emoji": "🪵", "drawer": "Third drawer — wood remembers weight: roots, GRID, glimpse" },
+      { "act": 4, "name": "The small drawer", "emoji": "🌱", "drawer": "Propagule, templates, the Unbreakable Vow" },
+      { "act": 5, "name": "The frame & forest floor", "emoji": "🌲", "drawer": "The portrait’s edge — this repo, irfankabir02" },
+      { "act": 6, "name": "Annex & diorama", "emoji": "🖼", "drawer": "Museum case — dedicated docs, research, long arcs" }
+    ],
+    "visualPerks": [
+      { "id": "beam", "label": "Gallery light", "role": "Line highlight = soft halation (not a flat bar)" },
+      { "id": "gilding", "label": "Gilded edge", "role": "Tab / activity = bright gold rim on lifted charcoal" },
+      { "id": "drawer-pull", "label": "Drawer pull", "role": "Focus ring = oblong brass, not neon hairline" },
+      { "id": "coral-bloom", "label": "Coral sky", "role": "Info / secondary accent = one cool bloom against warm walls (museum air)" }
+    ],
+    "tokens": {
+      "canvas": { "ink": "#0E0D0B", "wall": "#181510", "fresco": "#1E1C16", "spackle": "rgba(255, 230, 180, 0.06)" },
+      "lumos": { "gold": "#E8B84A", "honey": "#F0C96A", "ember": "#C87820", "thread": "rgba(240, 200, 100, 0.22)" },
+      "atmosphere": { "dawnMist": "#6BA3C7", "coralNote": "rgba(232, 150, 130, 0.15)" },
+      "drawer": { "bark": "#2A1F14", "silkLining": "#2A2218" },
+      "prose": { "chalk": "#F7F1E8", "paper": "#E5DFD2", "whisper": "#7A7670" }
+    },
+    "workspaceFile": "mangrove-biome.code-workspace"
+  }
+}

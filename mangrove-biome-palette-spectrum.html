@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Mangrove + GRID — palette spectrum</title>
+  <style>
+    :root { font-family: 'Manrope', system-ui, sans-serif; background: #0A0A0F; color: #F5F5F8; }
+    body { max-width: 900px; margin: 0 auto; padding: 1.5rem; }
+    h1 { font-size: 1.1rem; font-weight: 600; }
+    h2 { font-size: 0.9rem; margin-top: 1.5rem; color: #BABAC8; }
+    canvas { display: block; background: #14141A; border-radius: 8px; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.8rem; margin-top: 0.5rem; }
+    th, td { text-align: left; padding: 0.35rem 0.5rem; border-bottom: 1px solid #2A2A36; }
+    th { color: #8A8A9E; font-weight: 500; }
+    tr.warn td:first-child { box-shadow: inset 3px 0 0 #F59E0B; }
+    tr.ok td:first-child { box-shadow: inset 3px 0 0 #059669; }
+    .hex { font-family: ui-monospace, monospace; }
+    .note { font-size: 0.8rem; color: #94a3b8; line-height: 1.5; }
+    .sw { width: 1.2rem; height: 1.2rem; border-radius: 3px; display: inline-block; vertical-align: middle; margin-right: 0.25rem; border: 1px solid #334155; }
+  </style>
+</head>
+<body>
+  <h1>Mangrove + GRID — workbench color distribution</h1>
+  <p class="note">
+    <strong>Source of truth:</strong> <code>~/.claude/skills/grid/colors_and_type.css</code> (graphite neutrals, amber primary <code>#F59E0B</code>, cyan <code>#00D9FF</code> for data only — <strong>not</strong> in editor chrome here).
+  </p>
+
+  <h2>Hue distribution (accent anchor ≈ 38° = amber-500)</h2>
+  <canvas id="wheel" width="360" height="360"></canvas>
+
+  <h2>Tokens (HSL in sRGB)</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Role</th>
+        <th>Hex</th>
+        <th>H°</th>
+        <th>S%</th>
+        <th>L%</th>
+        <th>ΔH from 38°</th>
+        <th>Note</th>
+      </tr>
+    </thead>
+    <tbody id="rows"></tbody>
+  </table>
+
+  <h2>GRID rules applied to VS Code workbench</h2>
+  <ul class="note">
+    <li><strong>Surfaces</strong> — <code class="hex">#14141A</code> (bg-1) for bars/tabs, <code class="hex">#17171F</code> (surface-card) for sidebar, <code class="hex">#1E1E28</code> (surface-raised) for status, <code class="hex">#2A2A36</code> (graphite-700) for list selection, <code class="hex">#1F1F28</code> (graphite-800) for list hover.</li>
+    <li><strong>Text</strong> — <code class="hex">#F5F5F8</code> (fg-1) titles, <code class="hex">#BABAC8</code> (fg-2) activity/status, <code class="hex">#8A8A9E</code> (fg-3) inactive activity icons.</li>
+    <li><strong>Accents</strong> — <code class="hex">#F59E0B</code> (amber-500) for active border, focus, tab line; <code class="hex">#1A0F00</code> (primary-fg) on badge; <code class="hex">#D97706</code> (amber-600) for prominent status; debug bar warm-tinted <code class="hex">#2A1E1A</code> (not slate-blue).</li>
+  </ul>
+
+  <script>
+  function hexToRgb(hex) {
+    const h = hex.replace('#', '');
+    return [parseInt(h.slice(0, 2), 16), parseInt(h.slice(2, 4), 16), parseInt(h.slice(4, 6), 16)];
+  }
+  function rgbToHsl(r, g, b) {
+    r /= 255; g /= 255; b /= 255;
+    const max = Math.max(r, g, b), min = Math.min(r, g, b);
+    let h, s, l = (max + min) / 2;
+    if (max === min) { h = s = 0; }
+    else {
+      const d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max - min);
+      switch (max) {
+        case r: h = ((g - b) / d + (g < b ? 6 : 0)); break;
+        case g: h = (b - r) / d + 2; break;
+        default: h = (r - g) / d + 4;
+      }
+      h /= 6;
+    }
+    return { h: (h * 360 + 360) % 360, s: s * 100, l: l * 100 };
+  }
+  const BASE = 38; // amber-500 hue (GRID primary)
+  const FLAT = [
+    { role: 'activityBar.background (bg-1)', hex: '#14141A' },
+    { role: 'activityBar.foreground (fg-2)', hex: '#BABAC8' },
+    { role: 'activityBar.inactiveForeground (fg-3)', hex: '#8A8A9E' },
+    { role: 'activityBar.activeBorder (primary)', hex: '#F59E0B' },
+    { role: 'activityBarBadge.background (primary)', hex: '#F59E0B' },
+    { role: 'activityBarBadge.foreground (primary-fg)', hex: '#1A0F00' },
+    { role: 'sideBar.background (surface-card)', hex: '#17171F' },
+    { role: 'sideBarTitle.foreground (fg-1)', hex: '#F5F5F8' },
+    { role: 'list.activeSelectionBackground (graphite-700)', hex: '#2A2A36' },
+    { role: 'list.hoverBackground (graphite-800)', hex: '#1F1F28' },
+    { role: 'titleBar.activeForeground (fg-1)', hex: '#F5F5F8' },
+    { role: 'statusBar.background (surface-raised)', hex: '#1E1E28' },
+    { role: 'statusBar.foreground (fg-2)', hex: '#BABAC8' },
+    { role: 'statusBar.debuggingBackground (ember tint)', hex: '#2A1E1A' },
+    { role: 'statusBarItem.prominent (amber-600)', hex: '#D97706' },
+    { role: 'tab + focus (primary)', hex: '#F59E0B' },
+  ];
+
+  const tbody = document.getElementById('rows');
+  for (const { role, hex } of FLAT) {
+    const hxc = hex.toUpperCase();
+    const [r, g, b] = hexToRgb(hex);
+    const { h, s, l } = rgbToHsl(r, g, b);
+    const dh = Math.min(Math.abs(h - BASE), 360 - Math.abs(h - BASE));
+    let rowClass = 'ok';
+    let note = 'graphite / neutral (ignore ΔH if S is low)';
+    if (hxc === '#1A0F00') { rowClass = 'ok'; note = 'primary-fg (badge)'; }
+    else if (['#F59E0B', '#D97706'].includes(hxc)) { rowClass = ''; note = 'GRID amber primary / press'; }
+    else if (s < 16) { rowClass = 'ok'; note = 'graphite (surface / fg)'; }
+    else if (dh > 45 && s > 20) { rowClass = 'warn'; note = 'chromatic — review'; }
+    const tr = document.createElement('tr');
+    tr.className = rowClass;
+    tr.innerHTML = `
+      <td><span class="sw" style="background:${hex}"></span>${role}</td>
+      <td class="hex">${hex}</td>
+      <td>${h.toFixed(1)}</td>
+      <td>${s.toFixed(1)}</td>
+      <td>${l.toFixed(1)}</td>
+      <td>${dh.toFixed(1)}°</td>
+      <td>${note}</td>
+    `;
+    tbody.appendChild(tr);
+  }
+
+  // Hue wheel: plot each color
+  const ctx = document.getElementById('wheel').getContext('2d');
+  const cx = 180, cy = 180, R = 150;
+  ctx.fillStyle = '#1F1F28';
+  ctx.beginPath();
+  ctx.arc(cx, cy, R + 6, 0, Math.PI * 2);
+  ctx.fill();
+  for (let a = 0; a < 360; a += 2) {
+    const rad = (a - 90) * Math.PI / 180;
+    ctx.strokeStyle = `hsl(${a} 45% 36%)`;
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.lineTo(cx + Math.cos(rad) * R, cy + Math.sin(rad) * R);
+    ctx.stroke();
+  }
+  ctx.fillStyle = '#0A0A0F';
+  ctx.beginPath();
+  ctx.arc(cx, cy, 40, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = '#BABAC8';
+  ctx.font = '12px system-ui';
+  ctx.textAlign = 'center';
+  ctx.fillText('~38°', cx, cy + 4);
+
+  // Polar plot: angle = H, radius = f(S) so chroma is visible
+  FLAT.forEach(({ hex }) => {
+    const [r, g, b] = hexToRgb(hex);
+    const { h, s, l } = rgbToHsl(r, g, b);
+    if (s < 1.5) return;
+    const rad = (h - 90) * Math.PI / 180;
+    const rpix = 55 + s * 0.85;
+    const x = cx + Math.cos(rad) * rpix;
+    const y = cy + Math.sin(rad) * rpix;
+    ctx.fillStyle = hex;
+    ctx.beginPath();
+    ctx.arc(x, y, 7, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.strokeStyle = 'rgba(226,232,240,0.4)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  });
+  </script>
+</body>
+</html>

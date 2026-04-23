@@ -1,0 +1,12 @@
+{
+  "demo.schema": "mangrove.cursor-demo.v1",
+  "biome.anchorHue": 215,
+  "biome.narrativeFile": "mangrove-biome-tokens.json",
+  "workspace.manifest": "mangrove-biome.code-workspace",
+  "roots.primary": "/home/irfankabir/CascadeProjects/grove",
+  "roots.dedicated": "/home/irfankabir/CascadeProjects/grove/grove-dedicated",
+  "signal.cascade": "Ⅱ SIGHT ①",
+  "signal.archData": "/mnt/arch_data",
+  "demo.artifactsDir": "docs/cursor-demo-assets",
+  "demo.safeToDelete": true
+}
