@@ -59,7 +59,9 @@ def test_python_manifest_regression() -> None:
 @pytest.mark.usefixtures("_fixed_mtimes")
 def test_three_language_parity() -> None:
     if not (PY.exists() and RS.exists()):
-        pytest.skip("build Python venv and: cd prototype/rust && cargo build -p lo7-manifest-service")
+        pytest.skip(
+            "build Python venv and: cd prototype/rust && cargo build -p lo7-manifest-service"
+        )
     go_bin = os.environ.get("LO7_GO_BIN", "/tmp/lo7-go")
     if not Path(go_bin).exists():
         pytest.skip("run: cd prototype/go/lo7_manifest_service && go build -o /tmp/lo7-go .")
@@ -91,3 +93,10 @@ def test_heatmap_renders_from_manifest_only() -> None:
     assert "grid" in html
     assert "Indexed Silence" in html
     assert "days" in html
+    # Well-formed document shell (E2E HTML contract; no browser required)
+    low = html.lower()
+    assert low.lstrip().startswith("<!doctype html")
+    assert "<html" in low and "</html>" in html
+    assert 'charset="utf-8"' in low
+    assert 'role="grid"' in html
+    assert len(html) >= 2500, "heatmap HTML unexpectedly small; possible empty render"

@@ -1,4 +1,5 @@
-# Lo7 — three-language manifest parity (step 8(b)) and Python-only regression
+# Lo7 — three-language manifest parity + heatmap E2E (tests/integration/test_lo7_manifest_parity.py)
+# Single pytest file: manifest regression, py/rs/go parity, HTML shell invariants (no headless browser).
 name: Lo7
 
 on:
@@ -40,7 +41,8 @@ jobs:
           go mod download
           go build -o /tmp/lo7-go .
 
-      - name: Lo7 integration tests
+      # P0: one file only — do not duplicate runs elsewhere; keep in sync with docs/PACKAGING.md
+      - name: Lo7 integration tests (CLI + heatmap E2E)
         run: |
           export LO7_GO_BIN=/tmp/lo7-go
           uv run --group test pytest tests/integration/test_lo7_manifest_parity.py -v --tb=short

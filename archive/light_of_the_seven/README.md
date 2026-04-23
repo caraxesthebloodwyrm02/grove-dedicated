@@ -35,7 +35,20 @@ source .venv/bin/activate  # On Windows: .\.venv\Scripts\Activate.ps1
 pip install -e .
 ```
 
-Optional extras: `[test]`, `[dev]`, `[ibm]`, `[cuda]`. Example: `pip install -e ".[dev,test]"` or `uv sync --extra dev --extra test`. See [docs/PACKAGING.md](docs/PACKAGING.md) for details.
+**Recommended:** `uv sync --group dev --group test` (matches Lo7 CI; see [docs/PACKAGING.md](docs/PACKAGING.md) for *groups* vs legacy `pip install -e ".[test]"` extras). Optional extras: `[ibm]`, `[cuda]`, etc.
+
+### Lo7 quick start (~2 minutes)
+
+From the repo root, after `uv sync --group test`:
+
+```bash
+mkdir -p _lo7
+uv run lo7-manifest --config lo7_corpus.test.yaml --ref-date 2019-02-15 --out _lo7/manifest.json
+uv run lo7-heatmap --in _lo7/manifest.json --out _lo7/heatmap.html
+# Open _lo7/heatmap.html in a browser
+```
+
+For three-language parity and native builds, see [docs/LO7_RUNBOOK.md](docs/LO7_RUNBOOK.md). Release and test gates: [docs/PACKAGING.md](docs/PACKAGING.md#tests-and-release-gates-lo7--packaging).
 
 ## Key Components
 
@@ -75,6 +88,7 @@ See [docs/PACKAGING.md](docs/PACKAGING.md) for build and publish workflows.
 ## Documentation
 
 - [Lo7 runbook (manifest + heatmap)](docs/LO7_RUNBOOK.md) - corpus config, §2.1 defaults, three-language tests
+- [Lo7 quickstart (examples)](examples/lo7_quickstart/README.md) - copy-paste commands for manifest + heatmap
 - [Packaging Guide](docs/PACKAGING.md) - Build, install, and publish
 - [Installation Guide](INSTALLATION.md) - Detailed setup instructions
 - [Development Guide](docs/DEVELOPMENT.md) - Development environment setup
