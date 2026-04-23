@@ -6,3 +6,6 @@ Thumbs.db
 .env
 .env.local
 *.log
+
+# Nested working copy of grove-dedicated (separate repo); do not track in parent
+grove-dedicated/
