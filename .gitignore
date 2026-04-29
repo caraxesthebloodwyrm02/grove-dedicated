@@ -7,5 +7,9 @@ Thumbs.db
 .env.local
 *.log
 
+__pycache__/
+*.pyc
+.pytest_cache/
+
 # Nested working copy of grove-dedicated (separate repo); do not track in parent
 grove-dedicated/
